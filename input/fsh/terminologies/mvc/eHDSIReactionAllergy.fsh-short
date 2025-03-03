@@ -1,0 +1,28 @@
+// -------------------------------------------------------------------------------					
+//  Value Set. File: 					eHDSIReactionAllergy.fsh
+// -------------------------------------------------------------------------------					
+ValueSet: EHDSIReactionAllergy
+Id: eHDSIReactionAllergy
+Title: "eHDSI Reaction Allergy"
+Description: "Value Set is used to encode clinical manifestation of the allergic reaction.
+Value Set is limited for the ci-build purpose only"
+
+// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
+// * ^status = #active					
+* ^experimental = false
+
+* insert SNOMEDCopyrightForVS
+* insert SetFmmandStatusRule ( 1, draft )
+* insert setOID (1.3.6.1.4.1.12559.11.10.1.3.1.42.11)
+* insert setUrl ( eHDSIReactionAllergy )
+
+* $sct#39579001 "Anaphylaxis"
+* $sct#195967001 "Asthma"
+* $sct#24079001 "Atopic dermatitis"
+* $sct#4386001 "Bronchospasm"
+* $sct#271759003 "Bullous eruption"
+* $sct#698247007 "Cardiac arrhythmia"
+* $sct#410430005 "Cardiorespiratory arrest"
+* $sct#9826008 "Conjunctivitis"
+* $sct#49727002 "Cough"
+* $sct#702809001 "Drug reaction with eosinophilia and systemic symptoms"

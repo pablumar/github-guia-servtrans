@@ -1,0 +1,22 @@
+// -------------------------------------------------------------------------------					
+//  Value Set. File: 					eHDSIRareDisease.fsh
+// -------------------------------------------------------------------------------					
+ValueSet: EHDSIRareDisease
+Id: eHDSIRareDisease
+Title: "eHDSI Rare Disease"
+Description: """The Value Set is used to describe the problems and medication reasons.
+Value Set is limited for the ci-build purpose only"""
+				
+* ^experimental = false
+
+* insert SetFmmandStatusRule ( 1, draft )
+* insert setOID (1.3.6.1.4.1.12559.11.10.1.3.1.42.63)
+* insert setUrl ( eHDSIRareDisease )
+
+* $orpha#10 "48,XXYY syndrome"
+* $orpha#100 "Ataxia-telangiectasia"
+* $orpha#1000 "Ocular albinism with late-onset sensorineural deafness"
+* $orpha#100000 "Reticular perineurioma"
+* $orpha#100001 "Sclerosing perineurioma"
+* $orpha#100002 "Extraneural perineurioma"
+* $orpha#100003 "Intraneural perineurioma"

@@ -1,0 +1,50 @@
+ValueSet:      EHDSIHealthcareProfessionalRole
+Id:	       eHDSIHealthcareProfessionalRole
+Title:	       "eHDSI Healthcare Professional Role"
+Description:   "This Value Set is used to define Healthcare Professional Role"
+* ^status = #draft
+* ^experimental = false
+
+* insert SetFmmandStatusRule ( 1, draft )
+* insert setOID ( 1.3.6.1.4.1.12559.11.10.1.3.1.42.1 )
+* insert setUrl ( EHDSIHealthcareProfessionalRole )
+
+* $ISCO-08#22 "Health professionals"
+* $ISCO-08#221 "Medical doctors"
+* $ISCO-08#2211 "Generalist medical practitioners"
+* $ISCO-08#2212 "Specialist medical practitioners"
+* $ISCO-08#222 "Nursing and midwifery professionals"
+* $ISCO-08#2221 "Nursing professionals"
+* $ISCO-08#2222 "Midwifery professionals"
+* $ISCO-08#223 "Traditional and complementary medicine professionals"
+* $ISCO-08#224 "Paramedical practitioners"
+* $ISCO-08#225 "Veterinarians"
+* $ISCO-08#226 "Other health professionals"
+* $ISCO-08#2261 "Dentists"
+* $ISCO-08#2262 "Pharmacists"
+* $ISCO-08#2263 "Environmental and occupational health and hygiene professionals"
+* $ISCO-08#2264 "Physiotherapists"
+* $ISCO-08#2265 "Dieticians and nutritionists"
+* $ISCO-08#2266 "Audiologists and speech therapists"
+* $ISCO-08#2267 "Optometrists and ophthalmic opticians"
+* $ISCO-08#2269 "Health professionals not elsewhere classified"
+* $ISCO-08#32 "Health associate professionals"
+* $ISCO-08#321 "Medical and pharmaceutical technicians"
+* $ISCO-08#3211 "Medical imaging and therapeutic equipment technicians"
+* $ISCO-08#3212 "Medical and pathology laboratory technicians"
+* $ISCO-08#3213 "Pharmaceutical technicians and assistants"
+* $ISCO-08#3214 "Medical and dental prosthetic technicians"
+* $ISCO-08#322 "Nursing and midwifery associate professionals"
+* $ISCO-08#3221 "Nursing associate professionals"
+* $ISCO-08#3222 "Midwifery associate professionals"
+* $ISCO-08#323 "Traditional and complementary medicine associate professionals"
+* $ISCO-08#325 "Other health associate professionals"
+* $ISCO-08#3251 "Dental assistants and therapists"
+* $ISCO-08#3252 "Medical records and health information technicians"
+* $ISCO-08#3253 "Community health workers"
+* $ISCO-08#3254 "Dispensing opticians"
+* $ISCO-08#3255 "Physiotherapy technicians and assistants"
+* $ISCO-08#3256 "Medical assistants"
+* $ISCO-08#3257 "Environmental and occupational health inspectors and associates"
+* $ISCO-08#3258 "Ambulance workers"
+* $ISCO-08#3259 "Health associate professionals not elsewhere classified"

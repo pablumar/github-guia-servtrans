@@ -1,0 +1,50 @@
+ValueSet:      EHDSIObservationInterpretation
+Id:	       eHDSIObservationInterpretation
+Title:	       "eHDSI Observation Interpretation"
+Description:   "This Value Set is used for a rough qualitative interpretation of the Laboratory Observation Results"
+* ^status = #draft
+* ^experimental = false
+
+* insert SetFmmandStatusRule ( 1, draft )
+* insert setOID ( 1.3.6.1.4.1.12559.11.10.1.3.1.42.73 )
+* insert setUrl ( eHDSIObservationInterpretation )
+
+* $obs-interpretation#< "Off scale low"
+* $obs-interpretation#> "Off scale high"
+* $obs-interpretation#A "Abnormal"
+* $obs-interpretation#AA "Critical abnormal"
+* $obs-interpretation#B "Better"
+* $obs-interpretation#CAR "Carrier"
+* $obs-interpretation#D "Significant change down"
+* $obs-interpretation#DET "Detected"
+* $obs-interpretation#E "Equivocal"
+* $obs-interpretation#EX "outside threshold"
+* $obs-interpretation#EXP "Expected"
+* $obs-interpretation#H "High"
+* $obs-interpretation#HH "Critical high"
+* $obs-interpretation#HU "Significantly high"
+* $obs-interpretation#HX "above high threshold"
+* $obs-interpretation#I "Intermediate"
+* $obs-interpretation#IE "Insufficient evidence"
+* $obs-interpretation#IND "Indeterminate"
+* $obs-interpretation#L "Low"
+* $obs-interpretation#LL "Critical low"
+* $obs-interpretation#LU "Significantly low"
+* $obs-interpretation#LX "below low threshold"
+* $obs-interpretation#N "Normal"
+* $obs-interpretation#NCL "No CLSI defined breakpoint"
+* $obs-interpretation#ND "Not detected"
+* $obs-interpretation#NEG "Negative"
+* $obs-interpretation#NR "Non-reactive"
+* $obs-interpretation#NS "Non-susceptible"
+* $obs-interpretation#POS "Positive"
+* $obs-interpretation#R "Resistant"
+* $obs-interpretation#RR "Reactive"
+* $obs-interpretation#S "Susceptible"
+* $obs-interpretation#U "Significant change up"
+* $obs-interpretation#UNE "Unexpected"
+* $obs-interpretation#W "Worse"
+* $obs-interpretation#WR "Weakly reactive"
+* $obs-interpretation#SYN-R "Synergy - resistant"
+* $obs-interpretation#SDD "Susceptible-dose dependent"
+* $obs-interpretation#SYN-S "Synergy - susceptible"

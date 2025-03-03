@@ -1,0 +1,76 @@
+// -------------------------------------------------------------------------------					
+//  Value Set. File: 					eHDSILabSpecimenType.fsh
+// -------------------------------------------------------------------------------					
+ValueSet: EHDSILabSpecimenType					
+Id: eHDSILabSpecimenType					
+Title: "eHDSI Laboratory Specimen Type"					
+Description: """This Value Set is used for the kind of material that forms the specimen"""					
+// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
+// * ^status = #active					
+* ^experimental = false
+* ^version = "8.0.1"
+
+* insert SNOMEDCopyrightForVS
+* insert SetFmmandStatusRule ( 1, draft )
+* insert setOID ( 1.3.6.1.4.1.12559.11.10.1.3.1.42.67 )
+* insert setUrl ( eHDSILabSpecimenType ) 
+					
+* $sct#119376003  "Tissue specimen"
+* $sct#122571007  "Pericardial fluid specimen"
+* $sct#119297000  "Blood specimen"
+* $sct#418564007  "Pleural fluid specimen"
+* $sct#122554006  "Capillary blood specimen"
+* $sct#258450006  "Cerebrospinal fluid specimen"
+* $sct#119327009  "Nail specimen"
+* $sct#119361006  "Plasma specimen"
+* $sct#119334006  "Sputum specimen"
+* $sct#119339001  "Stool specimen"
+* $sct#122552005  "Arterial blood specimen"
+* $sct#119341000  "Bile specimen"
+* $sct#122555007  "Venous blood specimen"
+* $sct#119342007  "Saliva specimen"
+* $sct#122575003  "Urine specimen"
+* $sct#309051001  "Body fluid specimen"
+* $sct#119351004  "Erythrocyte specimen"
+* $sct#119364003  "Serum specimen"
+* $sct#119312009  "Catheter tip submitted as specimen"
+* $sct#258529004  "Throat swab"
+* $sct#119323008  "Pus specimen"
+* $sct#258607008  "Bronchoalveolar lavage fluid specimen"
+* $sct#122556008  "Cord blood specimen"
+* $sct#258530009  "Urethral swab"
+* $sct#440500007  "Dried blood spot specimen"
+* $sct#258574006  "Mid-stream urine specimen"
+* $sct#119332005  "Synovial fluid specimen"
+* $sct#258455001  "Drainage fluid specimen"
+* $sct#119371008  "Specimen from abscess"
+* $sct#168139001  "Peritoneal fluid specimen"
+* $sct#258528007  "Rectal swab"
+* $sct#258591005  "White blood cell specimen"
+* $sct#432825001  "Body secretion specimen"
+* $sct#258503004  "Skin swab"
+* $sct#119318008  "Water specimen"
+* $sct#122565001  "Urinary catheter specimen"
+* $sct#309210009  "Esophageal brushings specimen"
+* $sct#708049000  "Plasma specimen with ethylenediamine tetraacetic acid"
+* $sct#440473005  "Contact lens submitted as specimen"
+* $sct#446846006  "Urine specimen obtained via indwelling urinary catheter"
+* $sct#258441009  "Exudate specimen"
+* $sct#119350003  "Calculus specimen"
+* $sct#119329007  "Colostrum specimen"
+* $sct#258459007  "Gastric fluid specimen"
+* $sct#258603007  "Specimen from respiratory system"
+* $sct#309176002  "Bronchial brushings specimen"
+* $sct#119300005  "Specimen from blood product"
+* $sct#439961009  "Implant submitted as specimen"
+* $sct#119336008  "Exhaled air specimen"
+* $sct#258482009  "Vesicle fluid specimen"
+* $sct#258498002  "Conjunctival swab"
+* $sct#122572000  "Vomitus specimen"
+* $sct#258500001  "Nasopharyngeal swab"
+* $sct#168141000  "Nasal fluid specimen"
+* $sct#257261003  "Swab"
+* $sct#258411007  "Nasopharyngeal aspirate"
+* $sct#708048008  "Plasma specimen with citrate"
+* $sct#258415003  "Biopsy specimen"
+
