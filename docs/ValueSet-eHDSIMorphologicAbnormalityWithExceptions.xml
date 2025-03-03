@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="eHDSIMorphologicAbnormalityWithExceptions"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet eHDSIMorphologicAbnormalityWithExceptions</b></p><a name="eHDSIMorphologicAbnormalityWithExceptions"> </a><a name="hceHDSIMorphologicAbnormalityWithExceptions"> </a><a name="eHDSIMorphologicAbnormalityWithExceptions-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="ValueSet-eHDSIExceptionalValue.html">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href="ValueSet-eHDSIMorphologicAbnormality.html">eHDSI Morphologic Abnormality</a></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIMorphologicAbnormalityWithExceptions"/>
+  <version value="0.0.1"/>
+  <name value="EHDSIMorphologicAbnormalityWithExceptions"/>
+  <title value="eHDSI Morphologic Abnormality with exceptions"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="The Value Set is used to code the morphological abnormalities of the anatomical location where the material is taken.&#xA;It also includes exceptional values."/>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"/>
+    </include>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIMorphologicAbnormality"/>
+    </include>
+  </compose>
+</ValueSet>

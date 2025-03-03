@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIBodySiteWithExceptions> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eHDSIBodySiteWithExceptions"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet eHDSIBodySiteWithExceptions</b></p><a name=\"eHDSIBodySiteWithExceptions\"> </a><a name=\"hceHDSIBodySiteWithExceptions\"> </a><a name=\"eHDSIBodySiteWithExceptions-en-US\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIExceptionalValue.html\">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIBodySite.html\">eHDSI Body Site</a></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v "1"^^xsd:integer
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "draft"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIBodySiteWithExceptions"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.0.1"] ; # 
+  fhir:name [ fhir:v "EHDSIBodySiteWithExceptions"] ; # 
+  fhir:title [ fhir:v "eHDSI Body Site with exceptions"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2025-03-03T08:58:37+01:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "SNS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "SNS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://sns.gob.es" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The Value Set is used for the details about the anatomical location of a specimen in the Laboratory Result Report or the target body location of a procedure in the Patient Summary.\nIt includes also exceptional values."] ; # 
+  fhir:copyright [ fhir:v "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:valueSet ( [
+         fhir:v "http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"^^xsd:anyURI ;
+         fhir:link <http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue>
+       ] )
+     ] [
+       fhir:valueSet ( [
+         fhir:v "http://terminology.ehdsi.eu/ValueSet/eHDSIBodySite"^^xsd:anyURI ;
+         fhir:link <http://terminology.ehdsi.eu/ValueSet/eHDSIBodySite>
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

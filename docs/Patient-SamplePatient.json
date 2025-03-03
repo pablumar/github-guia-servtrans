@@ -1,0 +1,29 @@
+{
+  "resourceType" : "Patient",
+  "id" : "SamplePatient",
+  "meta" : {
+    "profile" : ["http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-lab-myhealtheu"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient SamplePatient</b></p><a name=\"SamplePatient\"> </a><a name=\"hcSamplePatient\"> </a><a name=\"SamplePatient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976\u00a0(use:\u00a0official,\u00a0))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">Breydelstraat 4 Brussels 1000 BE </td></tr></table></div>"
+  },
+  "identifier" : [{
+    "use" : "official",
+    "system" : "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin",
+    "value" : "89121210976"
+  }],
+  "name" : [{
+    "family" : "Doe",
+    "given" : ["John",
+    "Albertus"]
+  }],
+  "gender" : "male",
+  "birthDate" : "1989-12-12",
+  "address" : [{
+    "line" : ["Breydelstraat 4"],
+    "city" : "Brussels",
+    "postalCode" : "1000",
+    "country" : "BE"
+  }]
+}

@@ -1,0 +1,41 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "eHDSIMedicalDeviceWithExceptions",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet eHDSIMedicalDeviceWithExceptions</b></p><a name=\"eHDSIMedicalDeviceWithExceptions\"> </a><a name=\"hceHDSIMedicalDeviceWithExceptions\"> </a><a name=\"eHDSIMedicalDeviceWithExceptions-en-US\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIExceptionalValue.html\">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIMedicalDevice.html\">eHDSI Medical Device</a></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "draft"
+  }],
+  "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIMedicalDeviceWithExceptions",
+  "version" : "0.0.1",
+  "name" : "EHDSIMedicalDeviceWithExceptions",
+  "title" : "eHDSI Medical Device with exceptions",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-03-03T08:58:37+01:00",
+  "publisher" : "SNS",
+  "contact" : [{
+    "name" : "SNS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://sns.gob.es"
+    }]
+  }],
+  "description" : "eHDSI Medical Device. The Value Set contains exceptional values.",
+  "copyright" : "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"]
+    },
+    {
+      "valueSet" : ["http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice"]
+    }]
+  }
+}

@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="result2FHIR-lab-myhealtheu"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap result2FHIR-lab-myhealtheu</b></p><a name="result2FHIR-lab-myhealtheu"> </a><a name="hcresult2FHIR-lab-myhealtheu"> </a><a name="result2FHIR-lab-myhealtheu-en-US"> </a><p>Mapping from <a href="StructureDefinition-Result.html">Results data elements</a> to <a href="StructureDefinition-Bundle-lab-myhealtheu.html">Bundle: Laboratory</a></p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-Result.html">Results data elements</a> to <a href="StructureDefinition-Observation-resultslab-lab-myhealtheu.html">Observation Results: Laboratory</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Result.observation (Observation details)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation</td><td/></tr><tr><td>Result.observation.dateTime (Observation date)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.effective[x]</td><td>intended as the clinical relevant time (i.e. when the specimen was collected)</td></tr><tr><td>Result.observation.dateTime (Observation date)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.issued</td><td>as the date the result is made available.</td></tr><tr><td>Result.observation.code (Observation code)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.code</td><td>depends on the type of test</td></tr><tr><td>Result.observation.code (Observation code)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.hasMember.code</td><td>depends on the type of test</td></tr><tr><td>Result.observation.code (Observation code)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.component.code</td><td>depends on the type of test</td></tr><tr><td>Result.observation.code.code (Observation code)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.code.coding.code</td><td>The mapping refers to the case 'code' mapped to Observation.code.</td></tr><tr><td>Result.observation.code.name (Observation name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.code.coding.display</td><td>The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases. This element typically represents the 'full specified name' designation, compared to the 'short name' of the 'Observation display name' element. It is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept.</td></tr><tr><td>Result.observation.code.originalName (Observation original name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.code.text</td><td>The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases.</td></tr><tr><td>Result.observation.code.displayName (Observation display name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.code.coding.display</td><td>The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases. This element typically represents the' short name' designation, compared to the 'full specified name' of the 'Observation name' element. It is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept.</td></tr><tr><td>Result.observation.method (Observation method)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.method</td><td/></tr><tr><td>Result.observation.device (Observation device)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.device</td><td>When it refers to the measuring device, including kits, and device of type Device. See details in the Device group below.</td></tr><tr><td>Result.observation.device (Observation device)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.device.device</td><td>When it refers to the measuring device and device of type DeviceMeasure
+See details in the Device group below.</td></tr><tr><td>Result.observation.device (Observation device)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.device</td><td>With device of type DeviceMeasure.
+Thsi resource can be used to capture some information about the setting (including calibration)</td></tr><tr><td>Result.observation.device.labKit (Laboratory Kit Information)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation</td><td>TO BE MAPPED</td></tr><tr><td>Result.observation.referenceMaterial (Certified Reference Material)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation</td><td>TO BE MAPPED</td></tr><tr><td>Result.observation.order (Order)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.basedOn</td><td/></tr><tr><td>Result.observation.specimen (Specimen)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.specimen</td><td/></tr><tr><td>Result.observation.performer (Performer)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer</td><td>performer can be a Practitionaer a PractitionerRole or an Organization. In this mapping the PractitionerRole case is considered, but others can be applied.</td></tr><tr><td>Result.observation.performer.identifier (Performer identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.identifier</td><td/></tr><tr><td>Result.observation.performer.name (Performer Name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.practitioner.name</td><td/></tr><tr><td>Result.observation.performer.telecom (Performer telecom)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.telecom</td><td/></tr><tr><td>Result.observation.performer.role (Performer Role)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.code</td><td/></tr><tr><td>Result.observation.performer.organization (Performer Organization)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.code</td><td/></tr><tr><td>Result.observation.performer.organization.name (Organization Name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.organization</td><td/></tr><tr><td>Result.observation.performer.organization.address (Organization Address)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.organization.address</td><td/></tr><tr><td>Result.observation.performer.organization.telecom (Organization telecom)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.organization.telecom</td><td/></tr><tr><td>Result.observation.reporter (Reporter)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.performer</td><td>For interpreter: performer.extension:performerFunction = AUT (author)
+If the person responsible for validation:  performer.extension:performerFunction = AUTHEN or LA</td></tr><tr><td>Result.observation.reporter.name (Reporter Name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.performer.practitioner.name</td><td>performer.resolve.ofType(PractitionerRole)</td></tr><tr><td>Result.observation.reporter.telecom (Reporter telecom)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.performer.telecom</td><td/></tr><tr><td>Result.observation.reporter.role (Reporter Role)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.performer.code</td><td/></tr><tr><td>Result.observation.reporter.organization (Reporter Organization)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.organization</td><td>performer.resolve.ofType(PractitionerRole)</td></tr><tr><td>Result.observation.reporter.organization.name (Organization Name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.organization.name</td><td>performer.resolve.ofType(PractitionerRole)</td></tr><tr><td>Result.observation.reporter.organization.address (Organization Address)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.organization.address</td><td>performer.resolve.ofType(PractitionerRole)</td></tr><tr><td>Result.observation.reporter.organization.telecom (Organization telecom)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.performer.organization.telecom</td><td>performer.resolve.ofType(PractitionerRole)</td></tr><tr><td>Result.observation.result (Observation result)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.value[x]</td><td>depends on the type of test</td></tr><tr><td>Result.observation.result (Observation result)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.component.value[x]</td><td>depends on the type of test</td></tr><tr><td>Result.observation.result.text (Textual Result)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.valueString</td><td>This map refers to the value[x] case, other options follow the same pattern.</td></tr><tr><td>Result.observation.result.text (Textual Result)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.valueCodeableConcept.text</td><td>This map refers to the value[x] case, other options follow the same pattern.</td></tr><tr><td>Result.observation.result.numeric (Numeric Result)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.valueQuantity</td><td>Depending on the type of result it could be a Ratio, a Range,..
+This map refers to the value[x] case, other options follow the same pattern.</td></tr><tr><td>Result.observation.result.coded (Coded Result)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Observation.valueCodeableConcept</td><td>This map refers to the value[x] case, other options follow the same pattern.</td></tr><tr><td>Result.observation.interpretation (Observation interpretation)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.interpretation</td><td>depends on the type of test</td></tr><tr><td>Result.observation.interpretation (Observation interpretation)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.component.interpretation</td><td>depends on the type of test</td></tr><tr><td>Result.observation.interpretation.code (Result interpretation code)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.interpretation.coding</td><td>This map refers to the interpretation case, other options follow the same pattern.</td></tr><tr><td>Result.observation.interpretation.referenceRange (Standard reference range)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.referenceRange</td><td>depends on the type of test</td></tr><tr><td>Result.observation.interpretation.referenceRange (Standard reference range)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.component.referenceRange</td><td>depends on the type of test</td></tr><tr><td>Result.observation.description (Result description)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.text</td><td>to be checked</td></tr><tr><td>Result.observation.accreditationStatus (Accreditation status)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.performer.qualification</td><td>performer ofType PractitionerRole</td></tr><tr><td>Result.observation.accreditationStatus (Accreditation status)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Observation.performer.organization.qualification</td><td>performer ofType Organization</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-Result.html">Results data elements</a> to <code>DeviceMeasuringMyHealthEu</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Result.observation.device (Observation device)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Device</td><td/></tr><tr><td>Result.observation.device.name (Device Name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Device.deviceName.name</td><td>with deviceName.type = 'manufacturer-name'</td></tr><tr><td>Result.observation.device.modelName (Model Name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Device.deviceName.name</td><td>with deviceName.type = 'model-name'.</td></tr><tr><td>Result.observation.device.identifier (Device Identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Device.identifier</td><td/></tr><tr><td>Result.observation.device.identifier (Device Identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Device.udiCarrier</td><td/></tr><tr><td>Result.observation.device.type (Device Type)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Device.type</td><td/></tr><tr><td>Result.observation.device.manufacturer (Manufacturer)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Device.manufacturer</td><td/></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href="StructureDefinition-Result.html">Results data elements</a> to <a href="StructureDefinition-DiagnosticReport-lab-myhealtheu.html">DiagnosticReport: Laboratory</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Result.narrative (Laboratory report narrative)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport</td><td/></tr><tr><td>Result.narrative.report (Narrative report)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.text</td><td/></tr><tr><td>Result.narrative.notes (Comments, interpretation and recommendations)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.conclusion</td><td>if related to the overall report conclusions</td></tr><tr><td>Result.observation (Observation details)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <a href="StructureDefinition-Result.html">Results data elements</a> to <a href="StructureDefinition-Composition-lab-myhealtheu.html">Composition: Laboratory</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Result.narrative (Laboratory report narrative)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition</td><td/></tr><tr><td>Result.narrative.report (Narrative report)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.text</td><td/></tr><tr><td>Result.narrative.report (Narrative report)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.section:lab-no-subsections.text</td><td>if single section</td></tr><tr><td>Result.narrative.report (Narrative report)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.section:lab-subsections.section.text</td><td>if multiple sections</td></tr><tr><td>Result.narrative.notes (Comments, interpretation and recommendations)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.section:lab-no-subsections.text</td><td>if single section</td></tr><tr><td>Result.narrative.notes (Comments, interpretation and recommendations)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.section:lab-subsections.section.text</td><td>if multiple sections</td></tr><tr><td>Result.observation (Observation details)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>if single section. see details in the Observation group</td></tr><tr><td>Result.observation (Observation details)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.section:lab-subsections.section.entry</td><td>if multiple sections. see details in the Observation group</td></tr></table></div>
+  </text>
+  <url value="http://fhir.ehdsi.eu/laboratory/ConceptMap/result2FHIR-lab-myhealtheu"/>
+  <version value="0.0.1"/>
+  <name value="LabRptResult2FHIR"/>
+  <title value="MyHealth@EUResult to this guide Map"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="MyHealth@EUResult Model to this guide Map"/>
+  <purpose value="It shows how the Result data set defined by the EU MyHealth@EUguidelines is mapped into this guide"/>
+  <sourceUri value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Result"/>
+  <targetUri value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Bundle-lab-myhealtheu"/>
+  <group>
+    <source value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Result"/>
+    <target value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-resultslab-lab-myhealtheu"/>
+    <element>
+      <code value="Result.observation"/>
+      <display value="Observation details"/>
+      <target>
+        <code value="Observation"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.dateTime"/>
+      <display value="Observation date"/>
+      <target>
+        <code value="Observation.effective[x]"/>
+        <equivalence value="equivalent"/>
+        <comment value="intended as the clinical relevant time (i.e. when the specimen was collected)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.dateTime"/>
+      <display value="Observation date"/>
+      <target>
+        <code value="Observation.issued"/>
+        <equivalence value="equivalent"/>
+        <comment value="as the date the result is made available."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.code"/>
+      <display value="Observation code"/>
+      <target>
+        <code value="Observation.code"/>
+        <equivalence value="relatedto"/>
+        <comment value="depends on the type of test"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.code"/>
+      <display value="Observation code"/>
+      <target>
+        <code value="Observation.hasMember.code"/>
+        <equivalence value="relatedto"/>
+        <comment value="depends on the type of test"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.code"/>
+      <display value="Observation code"/>
+      <target>
+        <code value="Observation.component.code"/>
+        <equivalence value="relatedto"/>
+        <comment value="depends on the type of test"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.code.code"/>
+      <display value="Observation code"/>
+      <target>
+        <code value="Observation.code.coding.code"/>
+        <equivalence value="equivalent"/>
+        <comment value="The mapping refers to the case 'code' mapped to Observation.code."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.code.name"/>
+      <display value="Observation name"/>
+      <target>
+        <code value="Observation.code.coding.display"/>
+        <equivalence value="equivalent"/>
+        <comment value="The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases. This element typically represents the 'full specified name' designation, compared to the 'short name' of the 'Observation display name' element. It is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.code.originalName"/>
+      <display value="Observation original name"/>
+      <target>
+        <code value="Observation.code.text"/>
+        <equivalence value="equivalent"/>
+        <comment value="The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.code.displayName"/>
+      <display value="Observation display name"/>
+      <target>
+        <code value="Observation.code.coding.display"/>
+        <equivalence value="equivalent"/>
+        <comment value="The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases. This element typically represents the' short name' designation, compared to the 'full specified name' of the 'Observation name' element. It is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.method"/>
+      <display value="Observation method"/>
+      <target>
+        <code value="Observation.method"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.device"/>
+      <display value="Observation device"/>
+      <target>
+        <code value="Observation.device"/>
+        <equivalence value="relatedto"/>
+        <comment value="When it refers to the measuring device, including kits, and device of type Device. See details in the Device group below."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.device"/>
+      <display value="Observation device"/>
+      <target>
+        <code value="Observation.device.device"/>
+        <equivalence value="relatedto"/>
+        <comment value="When it refers to the measuring device and device of type DeviceMeasure&#xA;See details in the Device group below."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.device"/>
+      <display value="Observation device"/>
+      <target>
+        <code value="Observation.device"/>
+        <equivalence value="relatedto"/>
+        <comment value="With device of type DeviceMeasure.&#xA;Thsi resource can be used to capture some information about the setting (including calibration)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.device.labKit"/>
+      <display value="Laboratory Kit Information"/>
+      <target>
+        <code value="Observation"/>
+        <equivalence value="relatedto"/>
+        <comment value="TO BE MAPPED"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.referenceMaterial"/>
+      <display value="Certified Reference Material"/>
+      <target>
+        <code value="Observation"/>
+        <equivalence value="relatedto"/>
+        <comment value="TO BE MAPPED"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.order"/>
+      <display value="Order"/>
+      <target>
+        <code value="Observation.basedOn"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.specimen"/>
+      <display value="Specimen"/>
+      <target>
+        <code value="Observation.specimen"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.performer"/>
+      <display value="Performer"/>
+      <target>
+        <code value="Observation.performer"/>
+        <equivalence value="equivalent"/>
+        <comment value="performer can be a Practitionaer a PractitionerRole or an Organization. In this mapping the PractitionerRole case is considered, but others can be applied."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.performer.identifier"/>
+      <display value="Performer identifier"/>
+      <target>
+        <code value="Observation.performer.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.performer.name"/>
+      <display value="Performer Name"/>
+      <target>
+        <code value="Observation.performer.practitioner.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.performer.telecom"/>
+      <display value="Performer telecom"/>
+      <target>
+        <code value="Observation.performer.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.performer.role"/>
+      <display value="Performer Role"/>
+      <target>
+        <code value="Observation.performer.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.performer.organization"/>
+      <display value="Performer Organization"/>
+      <target>
+        <code value="Observation.performer.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.performer.organization.name"/>
+      <display value="Organization Name"/>
+      <target>
+        <code value="Observation.performer.organization"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.performer.organization.address"/>
+      <display value="Organization Address"/>
+      <target>
+        <code value="Observation.performer.organization.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.performer.organization.telecom"/>
+      <display value="Organization telecom"/>
+      <target>
+        <code value="Observation.performer.organization.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.reporter"/>
+      <display value="Reporter"/>
+      <target>
+        <code value="Observation.performer"/>
+        <equivalence value="relatedto"/>
+        <comment value="For interpreter: performer.extension:performerFunction = AUT (author)&#xA;If the person responsible for validation:  performer.extension:performerFunction = AUTHEN or LA"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.reporter.name"/>
+      <display value="Reporter Name"/>
+      <target>
+        <code value="Observation.performer.practitioner.name"/>
+        <equivalence value="relatedto"/>
+        <comment value="performer.resolve.ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.reporter.telecom"/>
+      <display value="Reporter telecom"/>
+      <target>
+        <code value="Observation.performer.telecom"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.reporter.role"/>
+      <display value="Reporter Role"/>
+      <target>
+        <code value="Observation.performer.code"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.reporter.organization"/>
+      <display value="Reporter Organization"/>
+      <target>
+        <code value="Observation.performer.organization"/>
+        <equivalence value="equivalent"/>
+        <comment value="performer.resolve.ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.reporter.organization.name"/>
+      <display value="Organization Name"/>
+      <target>
+        <code value="Observation.performer.organization.name"/>
+        <equivalence value="equivalent"/>
+        <comment value="performer.resolve.ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.reporter.organization.address"/>
+      <display value="Organization Address"/>
+      <target>
+        <code value="Observation.performer.organization.address"/>
+        <equivalence value="equivalent"/>
+        <comment value="performer.resolve.ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.reporter.organization.telecom"/>
+      <display value="Organization telecom"/>
+      <target>
+        <code value="Observation.performer.organization.telecom"/>
+        <equivalence value="equivalent"/>
+        <comment value="performer.resolve.ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.result"/>
+      <display value="Observation result"/>
+      <target>
+        <code value="Observation.value[x]"/>
+        <equivalence value="equivalent"/>
+        <comment value="depends on the type of test"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.result"/>
+      <display value="Observation result"/>
+      <target>
+        <code value="Observation.component.value[x]"/>
+        <equivalence value="equivalent"/>
+        <comment value="depends on the type of test"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.result.text"/>
+      <display value="Textual Result"/>
+      <target>
+        <code value="Observation.valueString"/>
+        <equivalence value="equivalent"/>
+        <comment value="This map refers to the value[x] case, other options follow the same pattern."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.result.text"/>
+      <display value="Textual Result"/>
+      <target>
+        <code value="Observation.valueCodeableConcept.text"/>
+        <equivalence value="equivalent"/>
+        <comment value="This map refers to the value[x] case, other options follow the same pattern."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.result.numeric"/>
+      <display value="Numeric Result"/>
+      <target>
+        <code value="Observation.valueQuantity"/>
+        <equivalence value="relatedto"/>
+        <comment value="Depending on the type of result it could be a Ratio, a Range,..&#xA;This map refers to the value[x] case, other options follow the same pattern."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.result.coded"/>
+      <display value="Coded Result"/>
+      <target>
+        <code value="Observation.valueCodeableConcept"/>
+        <equivalence value="equivalent"/>
+        <comment value="This map refers to the value[x] case, other options follow the same pattern."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.interpretation"/>
+      <display value="Observation interpretation"/>
+      <target>
+        <code value="Observation.interpretation"/>
+        <equivalence value="relatedto"/>
+        <comment value="depends on the type of test"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.interpretation"/>
+      <display value="Observation interpretation"/>
+      <target>
+        <code value="Observation.component.interpretation"/>
+        <equivalence value="relatedto"/>
+        <comment value="depends on the type of test"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.interpretation.code"/>
+      <display value="Result interpretation code"/>
+      <target>
+        <code value="Observation.interpretation.coding"/>
+        <equivalence value="relatedto"/>
+        <comment value="This map refers to the interpretation case, other options follow the same pattern."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.interpretation.referenceRange"/>
+      <display value="Standard reference range"/>
+      <target>
+        <code value="Observation.referenceRange"/>
+        <equivalence value="relatedto"/>
+        <comment value="depends on the type of test"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.interpretation.referenceRange"/>
+      <display value="Standard reference range"/>
+      <target>
+        <code value="Observation.component.referenceRange"/>
+        <equivalence value="relatedto"/>
+        <comment value="depends on the type of test"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.description"/>
+      <display value="Result description"/>
+      <target>
+        <code value="Observation.text"/>
+        <equivalence value="relatedto"/>
+        <comment value="to be checked"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.accreditationStatus"/>
+      <display value="Accreditation status"/>
+      <target>
+        <code value="Observation.performer.qualification"/>
+        <equivalence value="relatedto"/>
+        <comment value="performer ofType PractitionerRole"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.accreditationStatus"/>
+      <display value="Accreditation status"/>
+      <target>
+        <code value="Observation.performer.organization.qualification"/>
+        <equivalence value="relatedto"/>
+        <comment value="performer ofType Organization"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Result"/>
+    <target value="DeviceMeasuringMyHealthEu"/>
+    <element>
+      <code value="Result.observation.device"/>
+      <display value="Observation device"/>
+      <target>
+        <code value="Device"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.device.name"/>
+      <display value="Device Name"/>
+      <target>
+        <code value="Device.deviceName.name"/>
+        <equivalence value="equivalent"/>
+        <comment value="with deviceName.type = 'manufacturer-name'"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.device.modelName"/>
+      <display value="Model Name"/>
+      <target>
+        <code value="Device.deviceName.name"/>
+        <equivalence value="equivalent"/>
+        <comment value="with deviceName.type = 'model-name'."/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.device.identifier"/>
+      <display value="Device Identifier"/>
+      <target>
+        <code value="Device.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.device.identifier"/>
+      <display value="Device Identifier"/>
+      <target>
+        <code value="Device.udiCarrier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.device.type"/>
+      <display value="Device Type"/>
+      <target>
+        <code value="Device.type"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation.device.manufacturer"/>
+      <display value="Manufacturer"/>
+      <target>
+        <code value="Device.manufacturer"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Result"/>
+    <target value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/DiagnosticReport-lab-myhealtheu"/>
+    <element>
+      <code value="Result.narrative"/>
+      <display value="Laboratory report narrative"/>
+      <target>
+        <code value="DiagnosticReport"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.narrative.report"/>
+      <display value="Narrative report"/>
+      <target>
+        <code value="DiagnosticReport.text"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.narrative.notes"/>
+      <display value="Comments, interpretation and recommendations"/>
+      <target>
+        <code value="DiagnosticReport.conclusion"/>
+        <equivalence value="relatedto"/>
+        <comment value="if related to the overall report conclusions"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation"/>
+      <display value="Observation details"/>
+      <target>
+        <code value="DiagnosticReport.result"/>
+        <equivalence value="relatedto"/>
+        <comment value="see details in the Observation group"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Result"/>
+    <target value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Composition-lab-myhealtheu"/>
+    <element>
+      <code value="Result.narrative"/>
+      <display value="Laboratory report narrative"/>
+      <target>
+        <code value="Composition"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.narrative.report"/>
+      <display value="Narrative report"/>
+      <target>
+        <code value="Composition.text"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.narrative.report"/>
+      <display value="Narrative report"/>
+      <target>
+        <code value="Composition.section:lab-no-subsections.text"/>
+        <equivalence value="relatedto"/>
+        <comment value="if single section"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.narrative.report"/>
+      <display value="Narrative report"/>
+      <target>
+        <code value="Composition.section:lab-subsections.section.text"/>
+        <equivalence value="relatedto"/>
+        <comment value="if multiple sections"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.narrative.notes"/>
+      <display value="Comments, interpretation and recommendations"/>
+      <target>
+        <code value="Composition.section:lab-no-subsections.text"/>
+        <equivalence value="relatedto"/>
+        <comment value="if single section"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.narrative.notes"/>
+      <display value="Comments, interpretation and recommendations"/>
+      <target>
+        <code value="Composition.section:lab-subsections.section.text"/>
+        <equivalence value="relatedto"/>
+        <comment value="if multiple sections"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation"/>
+      <display value="Observation details"/>
+      <target>
+        <code value="Composition.section:lab-no-subsections.entry"/>
+        <equivalence value="relatedto"/>
+        <comment value="if single section. see details in the Observation group"/>
+      </target>
+    </element>
+    <element>
+      <code value="Result.observation"/>
+      <display value="Observation details"/>
+      <target>
+        <code value="Composition.section:lab-subsections.section.entry"/>
+        <equivalence value="relatedto"/>
+        <comment value="if multiple sections. see details in the Observation group"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Transfronterizo - ROL A Consulta de referencias de informes - Guía de Implementación Servicios Transfronterizos v0.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<div>
+  <table width="100%">
+    <tr >
+      <td align="center">
+        <img src="assets/images/logoGlobal.png"></td></tr></table></td></tr></table>
+      </td>
+    </tr>
+  </table>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación Servicios Transfronterizos</span>
+            <br/>
+            <span style="display:inline-block;">0.0.1 - qa-preview
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Introducción</a>
+  </li>
+  <li>
+    <a href="toc.html">Listado de Contenidos</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Diagrama de Secuencia
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="diagramaSecInf.html">Busqueda Paciente</a>
+      </li>
+      <li>
+        <a href="diagramaSecPac.html">Funcionamiento roles</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Escenarios
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="consultaReferenciasROL-A.html">Transfronterizo - ROL A Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoROL-A.html">Transfronterizo - ROL A Consulta de documento estructurado</a>
+      </li>
+      <li>
+        <a href="consultaPacienteROL-B.html">Transfronterizo - ROL B Consulta de Paciente</a>
+      </li>
+      <li>
+        <a href="consultaReferenciasROL-B.html">Transfronterizo - ROL B Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoROL-B.html">Transfronterizo - ROL B Consulta de documento</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementación
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ConsultaCiudadanoTransfronterizoCUROL-A.html">Transfronterizo - ROL A Consulta de un ciudadano desde servicio transfronterizo</a>
+      </li>
+      <li>
+        <a href="consultaReferenciasCUROL-A.html">Transfronterizo - ROL A Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoCUROL-A.html">Transfronterizo - ROL A Consulta de documento estructurado</a>
+      </li>
+      <li>
+        <a href="consultaPacienteCUROL-B.html">Transfronterizo - ROL B Consulta de Paciente</a>
+      </li>
+      <li>
+        <a href="consultaReferenciasCUROL-B.html">Transfronterizo - ROL B Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoCUROL-B.html">Transfronterizo - ROL B Consulta de documento estructurado</a>
+      </li>
+      <li>
+        <a href="auditoriaOperacionesCU.html">Transfronterizo - Auditoría de operaciones</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guías Relacionadas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://fhir.ehdsi.eu/laboratory/index.html">MyHealth@Eu Laboratory Report</a>
+      </li>
+      <li>
+        <a href="https://build-fhir.ehdsi.eu/ncp-api/">MyHealth@Eu NCPeH API</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artefactos
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Listado</a>
+      </li>
+      <li>
+        <a href="mapeo.html">Mapeos</a>
+      </li>
+      <li>
+        <a href="terminologias.html">Terminologias</a>
+      </li>
+      <li>
+        <a href="seguridad.html">Seguridad</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Transfronterizo - ROL A Consulta de referencias de informes</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación Servicios Transfronterizos - Local Development build (v0.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhir.ehdsi.eu/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Transfronterizo - ROL A Consulta de referencias de informes</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>Este servicio permite la consulta y recuperación de referencias de
+documentos clínicos asociados a la historia clínica de un paciente.
+Utilizando el recurso FHIR <strong>DocumentReference</strong> para
+transmitir metadatos sobre los documentos clínicos, este recurso permite
+que los distintos agentes, CCAA, servicios transfronterizos, … accedan a
+las referencias distribuidas de manera centralizada y organizada.</p>
+<p>En un escenario típico, cuando desde un servicio cross-border
+requiere las referencias de la historia clínica de un paciente, envía
+una solicitud a OpenNCP, el cual reenvía dicha solicitud a HCDSNS_BE.
+Este recibe dicha solicitud, consulta las referencias a HC que tiene el
+ciudadano y realiza una búsqueda en todas ellas para recuperar el
+listado de referencias de informes. Cada CA con información responde con
+un bundle de <strong>DocumentReference</strong>, los cuales son
+recopilados por HCDSNS_BE. Posteriormente, consolida todos estos
+<strong>Bundles</strong> en uno solo y lo envía de vuelta al agente
+peticionario, proporcionando al profesional de salud una vista unificada
+y completa de las referencias de la historia clínica del paciente.</p>
+<h5 id="openncp-solicitud-de-referencias-de-documentos">OpenNCP:
+Solicitud de Referencias de Documentos</h5>
+<p><strong>Descripción del Escenario:</strong></p>
+<p>Desde otro país europeo un profesional necesita acceder a las
+referencias de documentos clínicos de un paciente que está siendo
+atendido en dicho país, en este caso informes de laboratorio con código
+LOINC: 11502-2, y envía una solicitud al HCDSNS-BE para obtener estos
+<strong>DocumentReferences</strong>.</p>
+<p>Se enviará una petición y en este caso será HCDSNS_BE quien se
+encargue de enviar N mensajes a cada uno de los servicios de salud donde
+el paciente dispone de HC.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>GET
+$server/DocumentReference?type=http://loinc.org|11502-2&amp;patient.identifier=https://ncez.mzcr.cz/standards/fhir/sid/rid|456789123&amp;date=ge2023-02-20</p>
+<p>Authorization: [token]</p>
+<h5 id="hcdsns-be-consolidación-de-referencias-de-documentos-por-el-backend">HCDSNS-BE:
+Consolidación de Referencias de Documentos por el Backend</h5>
+<p><strong>Descripción del Escenario:</strong></p>
+<p>HCDSNS_BE envía un mensaje a cada uno de los servicios de salud donde
+el paciente dispone de HC, que previamente se han recuperado mediante la
+consulta de servicios de salud.</p>
+<p>Conforme recibe las respuestas el HCDSNS_BE de cada uno de los
+servicios de salud, los consolida en un único bundle que se devolverá
+como respuesta a la petición original.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>GET
+/DocumentReference?patient=2.16.724.4.40|BBBBBBBBBB009933&amp;type=http://loinc.org|11502-2</p>
+<p>Authorization: [token]</p>
+<p><strong>Pasos del Proceso</strong>:</p>
+<ol type="1">
+<li><p>El servicio transfronterizo envía una solicitud de referencias de
+documentos del paciente BBBBBBBBBB009933 a HCDSNS-BE.</p></li>
+<li><p>HCDSNS_BE verifica que existen varias referencias en distintas
+CCAA para el paciente solicitado.</p></li>
+<li><p>HCDSNS_BE envía una solicitud de referencias a cada CA que posee
+información sobre el paciente.</p></li>
+<li><p>Cada <strong>CA</strong> con información responde enviando su
+propio bundle de <strong>DocumentReference</strong> a
+HCDSNS-BE.</p></li>
+<li><p>HCDSNS-BE espera recibir todos los bundle, los unifica en un
+único bundle consolidado consolidado y lo envía al servicio
+peticionario.</p></li>
+</ol>
+<h5 id="hcdsns-ca-respuesta-de-la-ca-con-un-bundle">HCDSNS-CA: Respuesta
+de la CA con un Bundle </h5>
+<p><strong>Descripción del Escenario:</strong></p>
+<p>Una CA recibe una solicitud de referencias de historia clínica de un
+paciente desde HCDSNS-BE. La CA reúne la información disponible en su
+sistema, monta un <strong>Bundle</strong> con las referencias de
+documentos clínicos del paciente y lo envía de vuelta a HCDSNS-BE.</p>
+<p><strong>Ejemplo:</strong></p>
+<ul>
+<li><p><strong>Solicitud de HCDSNS-BE a la CA</strong>:</p></li>
+</ul>
+<p>GET
+/DocumentReference?patient=2.16.724.4.40|BBBBBBBBBB009933&amp;type=http://loinc.org|11502-2&amp;custodian=20160201</p>
+<p>Authorization: [token]</p>
+<ul>
+<li><p><strong>Respuesta de la CA</strong>:</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;"><blockquote>
+<p>{</p>
+<p>"resourceType": "Bundle",</p>
+<p>"id": "b5cc9dd1-4b9b-4616-ab30-493de41a1605",</p>
+<p>"meta": {</p>
+<p>"lastUpdated": "2024-12-17T18:07:57.251+01:00"</p>
+<p>},</p>
+<p>"type": "searchset",</p>
+<p>"link": [</p>
+<p>{</p>
+<p>"relation": "self",</p>
+<p>"url": "http://localhost:7001/HcdsnsFhir/DocumentReference?</p>
+<p>custodian=Organization%2F20160201&amp;patient=BBBBBBBBBB134064&amp;type=11502-2"</p>
+<p>}</p>
+<p>],</p>
+<p>"entry": [</p>
+<p>{</p>
+<p>"resource": {</p>
+<p>"resourceType": "DocumentReference",</p>
+<p>"id": "DocumentReferenceMinimal",</p>
+<p>"meta": {</p>
+<p>"profile": [</p>
+<p>"https://sns.gob.es/fhir/hcdsns/StructureDefinition/DocumentReference-minimal-sns"</p>
+<p>]</p>
+<p>},</p>
+<p>"masterIdentifier": {</p>
+<p>"system": "http://example.org",</p>
+<p>"value": "ba91c64b-f30c-4137-a484-34bbba5e8804"</p>
+<p>},</p>
+<p>"status": "current",</p>
+<p>"type": {</p>
+<p>"coding": [</p>
+<p>{</p>
+<p>"system":
+"http://myhealth.eu/fhir/ncp-api/ValueSet/eHDSILaboratoryReportType",</p>
+<p>"code": "11502-2",</p>
+<p>"display": "Laboratory report"</p>
+<p>}</p>
+<p>]</p>
+<p>},</p>
+<p>"category": [</p>
+<p>{</p>
+<p>"coding": [</p>
+<p>{</p>
+<p>"system": "http://fhir.ehdsi.eu/mvc/eHDSILabStudyTypes",</p>
+<p>"code": "18719-5",</p>
+<p>"display": "Chemistry studies (set)"</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+<p>],</p>
+<p>"subject": {</p>
+<p>"identifier": {</p>
+<p>"system": "2.16.724.4.40",</p>
+<p>"value": "BBBBBBBBBB009931"</p>
+<p>},</p>
+<p>“display”: “nombre Paciente”</p>
+<p>},</p>
+<p>"date": "2022-03-30T11:24:26+01:00",</p>
+<p>"description": "Informe Prueba Laboratorio",</p>
+<p>"content": [</p>
+<p>{</p>
+<p>"attachment": {</p>
+<p>"contentType": "application/fhir+json",</p>
+<p>"language": "cs",</p>
+<p>"url": "/bundle/20160201-XXXXXXX"</p>
+<p>}</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+</blockquote></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p><strong>Explicación del Resultado:</strong></p>
+<p>La <strong>CA</strong> envía un <strong>Bundle</strong> con
+referencias de documentos clínicos del paciente BBBBBBBBBB009933 a
+HCDSNS_BE. Este <strong>Bundle</strong> incluye los
+<strong>DocumentReferences</strong> que posee la CA para dicho
+paciente.</p>
+<p>En la url del bundle se incluyen dos partes, por un lado, el
+identificador de la CA a la que invocar, y en segundo lugar el
+identificador del bundle.</p>
+<p><strong>Error:</strong></p>
+<ul>
+<li><p><strong>Error</strong>: No se puede encontrar ninguna referencia
+para el paciente solicitado en la CA.</p>
+<ul>
+<li><p><strong>Respuesta del Servidor</strong>:</p></li>
+</ul></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th><p>{</p>
+<p>"resourceType": "OperationOutcome",</p>
+<p>"issue": [</p>
+<p>{</p>
+<p>"severity": "warning",</p>
+<p>"code": "not-found",</p>
+<p>"details": {</p>
+<p>"text": "No se encontraron referencias de historia clínica para el
+paciente con ID SNS12345 en esta CA."</p>
+<p>}</p>
+<p>}</p>
+<p>]</p>
+<p>}</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://sns.gob.es">SNS</a>.  Package servtrans.sns.implementationGuide#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 09:01+0100">2025-03-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="eHDSIOrderReason"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet eHDSIOrderReason</b></p><a name="eHDSIOrderReason"> </a><a name="hceHDSIOrderReason"> </a><a name="eHDSIOrderReason-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="ValueSet-eHDSIExceptionalValue.html">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href="ValueSet-eHDSIIllnessandDisorder.html">eHDSI Illness and Disorder</a></li><li>Import all the codes that are contained in <a href="ValueSet-eHDSIRareDisease.html">eHDSI Rare Disease</a></li><li>Import all the codes that are contained in <a href="ValueSet-eHDSIReactionAllergy.html">eHDSI Reaction Allergy</a></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIOrderReason"/>
+  <version value="0.0.1"/>
+  <name value="EHDSIOrderReason"/>
+  <title value="eHDSI Order Reason"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="The Value Set is used to code clinical conditions relevant for the laboratory results interpretation.&#xA;It is defined as the union of:&#xA;(a) EHDSIIllnessandDisorder&#xA;(b) EHDSIRareDisease&#xA;(c) EHDSIReactionAllergy&#xA;(d) EHDSIExceptionalValue"/>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"/>
+    </include>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder"/>
+    </include>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIRareDisease"/>
+    </include>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy"/>
+    </include>
+  </compose>
+</ValueSet>

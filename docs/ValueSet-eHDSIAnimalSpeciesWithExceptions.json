@@ -1,0 +1,41 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "eHDSIAnimalSpeciesWithExceptions",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet eHDSIAnimalSpeciesWithExceptions</b></p><a name=\"eHDSIAnimalSpeciesWithExceptions\"> </a><a name=\"hceHDSIAnimalSpeciesWithExceptions\"> </a><a name=\"eHDSIAnimalSpeciesWithExceptions-en-US\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIExceptionalValue.html\">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIAnimalSpecies.html\">eHDSI Animal Species</a></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "draft"
+  }],
+  "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIAnimalSpeciesWithExceptions",
+  "version" : "0.0.1",
+  "name" : "EHDSIAnimalSpeciesWithExceptions",
+  "title" : "eHDSI Animal Species with exceptions",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-03-03T08:58:37+01:00",
+  "publisher" : "SNS",
+  "contact" : [{
+    "name" : "SNS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://sns.gob.es"
+    }]
+  }],
+  "description" : "The Value Set is used to code the animal species of specimen subject (animal of the patient). It also includes exceptional values.",
+  "copyright" : "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"]
+    },
+    {
+      "valueSet" : ["http://terminology.ehdsi.eu/ValueSet/eHDSIAnimalSpecies"]
+    }]
+  }
+}

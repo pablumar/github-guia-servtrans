@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="eHDSIPresenceAbsence"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet eHDSIPresenceAbsence</b></p><a name="eHDSIPresenceAbsence"> </a><a name="hceHDSIPresenceAbsence"> </a><a name="eHDSIPresenceAbsence-en-US"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/441614007">441614007</a></td><td>Present one plus out of three plus</td></tr><tr><td><a href="http://snomed.info/id/441521003">441521003</a></td><td>Present three plus out of three plus</td></tr><tr><td><a href="http://snomed.info/id/441517005">441517005</a></td><td>Present two plus out of three plus</td></tr><tr><td><a href="http://snomed.info/id/260415000">260415000</a></td><td>Not detected</td></tr><tr><td><a href="http://snomed.info/id/260392004">260392004</a></td><td>Non-patent</td></tr><tr><td><a href="http://snomed.info/id/260385009">260385009</a></td><td>Negative</td></tr><tr><td><a href="http://snomed.info/id/260373001">260373001</a></td><td>Detected</td></tr><tr><td><a href="http://snomed.info/id/260350009">260350009</a></td><td>++++</td></tr><tr><td><a href="http://snomed.info/id/260349009">260349009</a></td><td>+++</td></tr><tr><td><a href="http://snomed.info/id/260348001">260348001</a></td><td>++</td></tr><tr><td><a href="http://snomed.info/id/260347006">260347006</a></td><td>+</td></tr><tr><td><a href="http://snomed.info/id/52101004">52101004</a></td><td>Present</td></tr><tr><td><a href="http://snomed.info/id/10828004">10828004</a></td><td>Positive</td></tr><tr><td><a href="http://snomed.info/id/2667000">2667000</a></td><td>Absent</td></tr><tr><td><a href="http://snomed.info/id/895231008">895231008</a></td><td>Not detected in pooled specimen</td></tr><tr><td><a href="http://snomed.info/id/720735008">720735008</a></td><td>Presumptive positive</td></tr><tr><td><a href="http://snomed.info/id/373067005">373067005</a></td><td>No</td></tr><tr><td><a href="http://snomed.info/id/373066001">373066001</a></td><td>Yes</td></tr><tr><td><a href="http://snomed.info/id/264887000">264887000</a></td><td>Not isolated</td></tr><tr><td><a href="http://snomed.info/id/264868006">264868006</a></td><td>No growth</td></tr><tr><td><a href="http://snomed.info/id/260413007">260413007</a></td><td>None</td></tr><tr><td><a href="http://snomed.info/id/260408008">260408008</a></td><td>Weakly positive</td></tr><tr><td><a href="http://snomed.info/id/260405006">260405006</a></td><td>Trace</td></tr><tr><td><a href="http://snomed.info/id/260389003">260389003</a></td><td>No reaction</td></tr><tr><td><a href="http://snomed.info/id/46651001">46651001</a></td><td>Isolated</td></tr><tr><td><a href="http://snomed.info/id/419984006">419984006</a></td><td>Inconclusive</td></tr><tr><td><a href="http://snomed.info/id/42425007">42425007</a></td><td>Equivocal</td></tr><tr><td><a href="http://snomed.info/id/82334004">82334004</a></td><td>Indeterminate</td></tr><tr><td><a href="http://snomed.info/id/62482003">62482003</a></td><td>Low</td></tr><tr><td><a href="http://snomed.info/id/11214006">11214006</a></td><td>Reactive</td></tr><tr><td><a href="http://snomed.info/id/131194007">131194007</a></td><td>Non-Reactive</td></tr><tr><td><a href="http://snomed.info/id/280416009">280416009</a></td><td>Indeterminate result</td></tr><tr><td><a href="http://snomed.info/id/75540009">75540009</a></td><td>High</td></tr><tr><td><a href="http://snomed.info/id/455371000124106">455371000124106</a></td><td>Invalid result</td></tr><tr><td><a href="http://snomed.info/id/89292003">89292003</a></td><td>Rare</td></tr><tr><td><a href="http://snomed.info/id/262008008">262008008</a></td><td>Not performed</td></tr><tr><td><a href="http://snomed.info/id/17621005">17621005</a></td><td>Normal</td></tr><tr><td><a href="http://snomed.info/id/277025001">277025001</a></td><td>Proven</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="http://terminology.ehdsi.eu/ValueSet/eHDSIPresenceAbsence"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.42.77"/>
+  </identifier>
+  <version value="0.0.1"/>
+  <name value="EHDSIPresenceAbsence"/>
+  <title value="eHDSI Presence Absence"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="The Value Set is used to describe presence and absence findings (qualifier values) of the Laboratory Test Results"/>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="441614007"/>
+        <display value="Present one plus out of three plus"/>
+      </concept>
+      <concept>
+        <code value="441521003"/>
+        <display value="Present three plus out of three plus"/>
+      </concept>
+      <concept>
+        <code value="441517005"/>
+        <display value="Present two plus out of three plus"/>
+      </concept>
+      <concept>
+        <code value="260415000"/>
+        <display value="Not detected"/>
+      </concept>
+      <concept>
+        <code value="260392004"/>
+        <display value="Non-patent"/>
+      </concept>
+      <concept>
+        <code value="260385009"/>
+        <display value="Negative"/>
+      </concept>
+      <concept>
+        <code value="260373001"/>
+        <display value="Detected"/>
+      </concept>
+      <concept>
+        <code value="260350009"/>
+        <display value="++++"/>
+      </concept>
+      <concept>
+        <code value="260349009"/>
+        <display value="+++"/>
+      </concept>
+      <concept>
+        <code value="260348001"/>
+        <display value="++"/>
+      </concept>
+      <concept>
+        <code value="260347006"/>
+        <display value="+"/>
+      </concept>
+      <concept>
+        <code value="52101004"/>
+        <display value="Present"/>
+      </concept>
+      <concept>
+        <code value="10828004"/>
+        <display value="Positive"/>
+      </concept>
+      <concept>
+        <code value="2667000"/>
+        <display value="Absent"/>
+      </concept>
+      <concept>
+        <code value="895231008"/>
+        <display value="Not detected in pooled specimen"/>
+      </concept>
+      <concept>
+        <code value="720735008"/>
+        <display value="Presumptive positive"/>
+      </concept>
+      <concept>
+        <code value="373067005"/>
+        <display value="No"/>
+      </concept>
+      <concept>
+        <code value="373066001"/>
+        <display value="Yes"/>
+      </concept>
+      <concept>
+        <code value="264887000"/>
+        <display value="Not isolated"/>
+      </concept>
+      <concept>
+        <code value="264868006"/>
+        <display value="No growth"/>
+      </concept>
+      <concept>
+        <code value="260413007"/>
+        <display value="None"/>
+      </concept>
+      <concept>
+        <code value="260408008"/>
+        <display value="Weakly positive"/>
+      </concept>
+      <concept>
+        <code value="260405006"/>
+        <display value="Trace"/>
+      </concept>
+      <concept>
+        <code value="260389003"/>
+        <display value="No reaction"/>
+      </concept>
+      <concept>
+        <code value="46651001"/>
+        <display value="Isolated"/>
+      </concept>
+      <concept>
+        <code value="419984006"/>
+        <display value="Inconclusive"/>
+      </concept>
+      <concept>
+        <code value="42425007"/>
+        <display value="Equivocal"/>
+      </concept>
+      <concept>
+        <code value="82334004"/>
+        <display value="Indeterminate"/>
+      </concept>
+      <concept>
+        <code value="62482003"/>
+        <display value="Low"/>
+      </concept>
+      <concept>
+        <code value="11214006"/>
+        <display value="Reactive"/>
+      </concept>
+      <concept>
+        <code value="131194007"/>
+        <display value="Non-Reactive"/>
+      </concept>
+      <concept>
+        <code value="280416009"/>
+        <display value="Indeterminate result"/>
+      </concept>
+      <concept>
+        <code value="75540009"/>
+        <display value="High"/>
+      </concept>
+      <concept>
+        <code value="455371000124106"/>
+        <display value="Invalid result"/>
+      </concept>
+      <concept>
+        <code value="89292003"/>
+        <display value="Rare"/>
+      </concept>
+      <concept>
+        <code value="262008008"/>
+        <display value="Not performed"/>
+      </concept>
+      <concept>
+        <code value="17621005"/>
+        <display value="Normal"/>
+      </concept>
+      <concept>
+        <code value="277025001"/>
+        <display value="Proven"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

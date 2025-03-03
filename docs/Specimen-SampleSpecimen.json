@@ -1,0 +1,52 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "SampleSpecimen",
+  "meta" : {
+    "profile" : ["http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-lab-myhealtheu"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen SampleSpecimen</b></p><a name=\"SampleSpecimen\"> </a><a name=\"hcSampleSpecimen\"> </a><a name=\"SampleSpecimen-en-US\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119297000}\">Blood</span></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td></tr><tr><td style=\"display: none\">*</td><td/></tr></table><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: BodyStructure #BodyStructureSample</b></p><a name=\"SampleSpecimen/BodyStructureSample\"> </a><a name=\"hcSampleSpecimen/BodyStructureSample\"> </a><a name=\"SampleSpecimen/BodyStructureSample-en-US\"> </a><p><b>morphology</b>: <span title=\"Codes:{http://snomed.info/sct 789563006}\">Arterial ulcer</span></p><p><b>location</b>: <span title=\"Codes:{http://snomed.info/sct 818983003}\">Abdomen</span></p><p><b>patient</b>: <a href=\"Patient-SamplePatient.html\">John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976\u00a0(use:\u00a0official,\u00a0))</a></p></blockquote></div>"
+  },
+  "contained" : [{
+    "resourceType" : "BodyStructure",
+    "id" : "BodyStructureSample",
+    "meta" : {
+      "profile" : ["http://fhir.ehdsi.eu/laboratory/StructureDefinition/BodyStructure-lab-myhealtheu"]
+    },
+    "morphology" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "789563006",
+        "display" : "Arterial ulcer"
+      }]
+    },
+    "location" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "818983003",
+        "display" : "Abdomen"
+      }]
+    },
+    "patient" : {
+      "reference" : "Patient/SamplePatient"
+    }
+  }],
+  "status" : "available",
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "119297000",
+      "display" : "Blood specimen"
+    }],
+    "text" : "Blood"
+  },
+  "collection" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/bodySite",
+      "valueReference" : {
+        "reference" : "#BodyStructureSample"
+      }
+    }]
+  }
+}

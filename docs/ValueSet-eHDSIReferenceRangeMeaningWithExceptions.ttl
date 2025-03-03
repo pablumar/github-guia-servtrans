@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIReferenceRangeMeaningWithExceptions> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eHDSIReferenceRangeMeaningWithExceptions"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet eHDSIReferenceRangeMeaningWithExceptions</b></p><a name=\"eHDSIReferenceRangeMeaningWithExceptions\"> </a><a name=\"hceHDSIReferenceRangeMeaningWithExceptions\"> </a><a name=\"eHDSIReferenceRangeMeaningWithExceptions-en-US\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIExceptionalValue.html\">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIReferenceRangeMeaning.html\">eHDSI Reference Range Meaning</a></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v "1"^^xsd:integer
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "draft"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIReferenceRangeMeaningWithExceptions"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.0.1"] ; # 
+  fhir:name [ fhir:v "EHDSIReferenceRangeMeaningWithExceptions"] ; # 
+  fhir:title [ fhir:v "eHDSI Reference Range Meaning with exceptions"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2025-03-03T08:58:37+01:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "SNS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "SNS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://sns.gob.es" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This value set defines a set of codes for a reference range qualifier. It also includes exceptional values."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:valueSet ( [
+         fhir:v "http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"^^xsd:anyURI ;
+         fhir:link <http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue>
+       ] )
+     ] [
+       fhir:valueSet ( [
+         fhir:v "http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeMeaning"^^xsd:anyURI ;
+         fhir:link <http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeMeaning>
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

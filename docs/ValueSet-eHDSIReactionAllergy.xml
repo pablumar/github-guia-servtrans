@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="eHDSIReactionAllergy"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet eHDSIReactionAllergy</b></p><a name="eHDSIReactionAllergy"> </a><a name="hceHDSIReactionAllergy"> </a><a name="eHDSIReactionAllergy-en-US"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/39579001">39579001</a></td><td>Anaphylaxis</td></tr><tr><td><a href="http://snomed.info/id/195967001">195967001</a></td><td>Asthma</td></tr><tr><td><a href="http://snomed.info/id/24079001">24079001</a></td><td>Atopic dermatitis</td></tr><tr><td><a href="http://snomed.info/id/4386001">4386001</a></td><td>Bronchospasm</td></tr><tr><td><a href="http://snomed.info/id/271759003">271759003</a></td><td>Bullous eruption</td></tr><tr><td><a href="http://snomed.info/id/698247007">698247007</a></td><td>Cardiac arrhythmia</td></tr><tr><td><a href="http://snomed.info/id/410430005">410430005</a></td><td>Cardiorespiratory arrest</td></tr><tr><td><a href="http://snomed.info/id/9826008">9826008</a></td><td>Conjunctivitis</td></tr><tr><td><a href="http://snomed.info/id/49727002">49727002</a></td><td>Cough</td></tr><tr><td><a href="http://snomed.info/id/702809001">702809001</a></td><td>Drug reaction with eosinophilia and systemic symptoms</td></tr><tr><td><a href="http://snomed.info/id/162290004">162290004</a></td><td>Dry eyes</td></tr><tr><td><a href="http://snomed.info/id/43116000">43116000</a></td><td>Eczema</td></tr><tr><td><a href="http://snomed.info/id/418363000">418363000</a></td><td>Itching of skin</td></tr><tr><td><a href="http://snomed.info/id/422587007">422587007</a></td><td>Nausea</td></tr><tr><td><a href="http://snomed.info/id/271757001">271757001</a></td><td>Papular eruption</td></tr><tr><td><a href="http://snomed.info/id/70076002">70076002</a></td><td>Rhinitis</td></tr><tr><td><a href="http://snomed.info/id/91175000">91175000</a></td><td>Seizure</td></tr><tr><td><a href="http://snomed.info/id/76067001">76067001</a></td><td>Sneezing</td></tr><tr><td><a href="http://snomed.info/id/73442001">73442001</a></td><td>Stevens-Johnson syndrome</td></tr><tr><td><a href="http://snomed.info/id/23924001">23924001</a></td><td>Tight chest</td></tr><tr><td><a href="http://snomed.info/id/126485001">126485001</a></td><td>Urticaria</td></tr><tr><td><a href="http://snomed.info/id/31996006">31996006</a></td><td>Vasculitis</td></tr><tr><td><a href="http://snomed.info/id/247472004">247472004</a></td><td>Weal</td></tr><tr><td><a href="http://snomed.info/id/41291007">41291007</a></td><td>Angioedema</td></tr><tr><td><a href="http://snomed.info/id/62315008">62315008</a></td><td>Diarrhea</td></tr><tr><td><a href="http://snomed.info/id/267036007">267036007</a></td><td>Dyspnea</td></tr><tr><td><a href="http://snomed.info/id/51599000">51599000</a></td><td>Edema of larynx</td></tr><tr><td><a href="http://snomed.info/id/781682005">781682005</a></td><td>Hyperemia of eye</td></tr><tr><td><a href="http://snomed.info/id/271807003">271807003</a></td><td>Eruption</td></tr><tr><td><a href="http://snomed.info/id/768962006">768962006</a></td><td>Lyell syndrome</td></tr><tr><td><a href="http://snomed.info/id/422400008">422400008</a></td><td>Vomiting</td></tr><tr><td><a href="http://snomed.info/id/281239006">281239006</a></td><td>Acute asthma</td></tr><tr><td><a href="http://snomed.info/id/195951007">195951007</a></td><td>Acute exacerbation of chronic obstructive airways disease</td></tr><tr><td><a href="http://snomed.info/id/44416002">44416002</a></td><td>Airway constriction</td></tr><tr><td><a href="http://snomed.info/id/402407004">402407004</a></td><td>Angioedema of tongue</td></tr><tr><td><a href="http://snomed.info/id/7231009">7231009</a></td><td>Bullous dermatosis</td></tr><tr><td><a href="http://snomed.info/id/40275004">40275004</a></td><td>Contact dermatitis</td></tr><tr><td><a href="http://snomed.info/id/230145002">230145002</a></td><td>Difficulty breathing</td></tr><tr><td><a href="http://snomed.info/id/386789004">386789004</a></td><td>Eosinophil count raised</td></tr><tr><td><a href="http://snomed.info/id/247441003">247441003</a></td><td>Erythema</td></tr><tr><td><a href="http://snomed.info/id/444827008">444827008</a></td><td>Erythema of skin</td></tr><tr><td><a href="http://snomed.info/id/399992009">399992009</a></td><td>Erythroderma</td></tr><tr><td><a href="http://snomed.info/id/271811009">271811009</a></td><td>Face goes red</td></tr><tr><td><a href="http://snomed.info/id/373932008">373932008</a></td><td>Feels hot</td></tr><tr><td><a href="http://snomed.info/id/276444007">276444007</a></td><td>Generalized pruritus</td></tr><tr><td><a href="http://snomed.info/id/60555002">60555002</a></td><td>Hypersensitivity angiitis</td></tr><tr><td><a href="http://snomed.info/id/191306005">191306005</a></td><td>Immunoglobulin A vasculitis</td></tr><tr><td><a href="http://snomed.info/id/418290006">418290006</a></td><td>Itching</td></tr><tr><td><a href="http://snomed.info/id/74776002">74776002</a></td><td>Itching of eye</td></tr><tr><td><a href="http://snomed.info/id/271756005">271756005</a></td><td>Macular eruption</td></tr><tr><td><a href="http://snomed.info/id/247471006">247471006</a></td><td>Maculopapular eruption</td></tr><tr><td><a href="http://snomed.info/id/247470007">247470007</a></td><td>Morbilliform eruption</td></tr><tr><td><a href="http://snomed.info/id/35001004">35001004</a></td><td>Non-allergic anaphylaxis</td></tr><tr><td><a href="http://snomed.info/id/2129002">2129002</a></td><td>Edema of pharynx</td></tr><tr><td><a href="http://snomed.info/id/81950002">81950002</a></td><td>Edema of the tongue</td></tr><tr><td><a href="http://snomed.info/id/432807008">432807008</a></td><td>Pollen-food allergy</td></tr><tr><td><a href="http://snomed.info/id/22649008">22649008</a></td><td>Photodermatitis</td></tr><tr><td><a href="http://snomed.info/id/90128006">90128006</a></td><td>Photosensitivity</td></tr><tr><td><a href="http://snomed.info/id/64144002">64144002</a></td><td>Pruritic rash</td></tr><tr><td><a href="http://snomed.info/id/279333002">279333002</a></td><td>Pruritus of skin</td></tr><tr><td><a href="http://snomed.info/id/271825005">271825005</a></td><td>Respiratory distress</td></tr><tr><td><a href="http://snomed.info/id/421262002">421262002</a></td><td>Tongue swelling</td></tr><tr><td><a href="http://snomed.info/id/79893008">79893008</a></td><td>Vesicular eruption</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.42.11"/>
+  </identifier>
+  <version value="0.0.1"/>
+  <name value="EHDSIReactionAllergy"/>
+  <title value="eHDSI Reaction Allergy"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="Value Set is used to encode clinical manifestation of the allergic reaction."/>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="39579001"/>
+        <display value="Anaphylaxis"/>
+      </concept>
+      <concept>
+        <code value="195967001"/>
+        <display value="Asthma"/>
+      </concept>
+      <concept>
+        <code value="24079001"/>
+        <display value="Atopic dermatitis"/>
+      </concept>
+      <concept>
+        <code value="4386001"/>
+        <display value="Bronchospasm"/>
+      </concept>
+      <concept>
+        <code value="271759003"/>
+        <display value="Bullous eruption"/>
+      </concept>
+      <concept>
+        <code value="698247007"/>
+        <display value="Cardiac arrhythmia"/>
+      </concept>
+      <concept>
+        <code value="410430005"/>
+        <display value="Cardiorespiratory arrest"/>
+      </concept>
+      <concept>
+        <code value="9826008"/>
+        <display value="Conjunctivitis"/>
+      </concept>
+      <concept>
+        <code value="49727002"/>
+        <display value="Cough"/>
+      </concept>
+      <concept>
+        <code value="702809001"/>
+        <display value="Drug reaction with eosinophilia and systemic symptoms"/>
+      </concept>
+      <concept>
+        <code value="162290004"/>
+        <display value="Dry eyes"/>
+      </concept>
+      <concept>
+        <code value="43116000"/>
+        <display value="Eczema"/>
+      </concept>
+      <concept>
+        <code value="418363000"/>
+        <display value="Itching of skin"/>
+      </concept>
+      <concept>
+        <code value="422587007"/>
+        <display value="Nausea"/>
+      </concept>
+      <concept>
+        <code value="271757001"/>
+        <display value="Papular eruption"/>
+      </concept>
+      <concept>
+        <code value="70076002"/>
+        <display value="Rhinitis"/>
+      </concept>
+      <concept>
+        <code value="91175000"/>
+        <display value="Seizure"/>
+      </concept>
+      <concept>
+        <code value="76067001"/>
+        <display value="Sneezing"/>
+      </concept>
+      <concept>
+        <code value="73442001"/>
+        <display value="Stevens-Johnson syndrome"/>
+      </concept>
+      <concept>
+        <code value="23924001"/>
+        <display value="Tight chest"/>
+      </concept>
+      <concept>
+        <code value="126485001"/>
+        <display value="Urticaria"/>
+      </concept>
+      <concept>
+        <code value="31996006"/>
+        <display value="Vasculitis"/>
+      </concept>
+      <concept>
+        <code value="247472004"/>
+        <display value="Weal"/>
+      </concept>
+      <concept>
+        <code value="41291007"/>
+        <display value="Angioedema"/>
+      </concept>
+      <concept>
+        <code value="62315008"/>
+        <display value="Diarrhea"/>
+      </concept>
+      <concept>
+        <code value="267036007"/>
+        <display value="Dyspnea"/>
+      </concept>
+      <concept>
+        <code value="51599000"/>
+        <display value="Edema of larynx"/>
+      </concept>
+      <concept>
+        <code value="781682005"/>
+        <display value="Hyperemia of eye"/>
+      </concept>
+      <concept>
+        <code value="271807003"/>
+        <display value="Eruption"/>
+      </concept>
+      <concept>
+        <code value="768962006"/>
+        <display value="Lyell syndrome"/>
+      </concept>
+      <concept>
+        <code value="422400008"/>
+        <display value="Vomiting"/>
+      </concept>
+      <concept>
+        <code value="281239006"/>
+        <display value="Acute asthma"/>
+      </concept>
+      <concept>
+        <code value="195951007"/>
+        <display value="Acute exacerbation of chronic obstructive airways disease"/>
+      </concept>
+      <concept>
+        <code value="44416002"/>
+        <display value="Airway constriction"/>
+      </concept>
+      <concept>
+        <code value="402407004"/>
+        <display value="Angioedema of tongue"/>
+      </concept>
+      <concept>
+        <code value="7231009"/>
+        <display value="Bullous dermatosis"/>
+      </concept>
+      <concept>
+        <code value="40275004"/>
+        <display value="Contact dermatitis"/>
+      </concept>
+      <concept>
+        <code value="230145002"/>
+        <display value="Difficulty breathing"/>
+      </concept>
+      <concept>
+        <code value="386789004"/>
+        <display value="Eosinophil count raised"/>
+      </concept>
+      <concept>
+        <code value="247441003"/>
+        <display value="Erythema"/>
+      </concept>
+      <concept>
+        <code value="444827008"/>
+        <display value="Erythema of skin"/>
+      </concept>
+      <concept>
+        <code value="399992009"/>
+        <display value="Erythroderma"/>
+      </concept>
+      <concept>
+        <code value="271811009"/>
+        <display value="Face goes red"/>
+      </concept>
+      <concept>
+        <code value="373932008"/>
+        <display value="Feels hot"/>
+      </concept>
+      <concept>
+        <code value="276444007"/>
+        <display value="Generalized pruritus"/>
+      </concept>
+      <concept>
+        <code value="60555002"/>
+        <display value="Hypersensitivity angiitis"/>
+      </concept>
+      <concept>
+        <code value="191306005"/>
+        <display value="Immunoglobulin A vasculitis"/>
+      </concept>
+      <concept>
+        <code value="418290006"/>
+        <display value="Itching"/>
+      </concept>
+      <concept>
+        <code value="74776002"/>
+        <display value="Itching of eye"/>
+      </concept>
+      <concept>
+        <code value="271756005"/>
+        <display value="Macular eruption"/>
+      </concept>
+      <concept>
+        <code value="247471006"/>
+        <display value="Maculopapular eruption"/>
+      </concept>
+      <concept>
+        <code value="247470007"/>
+        <display value="Morbilliform eruption"/>
+      </concept>
+      <concept>
+        <code value="35001004"/>
+        <display value="Non-allergic anaphylaxis"/>
+      </concept>
+      <concept>
+        <code value="2129002"/>
+        <display value="Edema of pharynx"/>
+      </concept>
+      <concept>
+        <code value="81950002"/>
+        <display value="Edema of the tongue"/>
+      </concept>
+      <concept>
+        <code value="432807008"/>
+        <display value="Pollen-food allergy"/>
+      </concept>
+      <concept>
+        <code value="22649008"/>
+        <display value="Photodermatitis"/>
+      </concept>
+      <concept>
+        <code value="90128006"/>
+        <display value="Photosensitivity"/>
+      </concept>
+      <concept>
+        <code value="64144002"/>
+        <display value="Pruritic rash"/>
+      </concept>
+      <concept>
+        <code value="279333002"/>
+        <display value="Pruritus of skin"/>
+      </concept>
+      <concept>
+        <code value="271825005"/>
+        <display value="Respiratory distress"/>
+      </concept>
+      <concept>
+        <code value="421262002"/>
+        <display value="Tongue swelling"/>
+      </concept>
+      <concept>
+        <code value="79893008"/>
+        <display value="Vesicular eruption"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

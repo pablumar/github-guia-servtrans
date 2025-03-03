@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="eHDSILabCodeWithExceptions"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet eHDSILabCodeWithExceptions</b></p><a name="eHDSILabCodeWithExceptions"> </a><a name="hceHDSILabCodeWithExceptions"> </a><a name="eHDSILabCodeWithExceptions-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="ValueSet-eHDSIExceptionalValue.html">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href="ValueSet-eHDSILabCode.html">eHDSI Laboratory Codes</a></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabCodeWithExceptions"/>
+  <version value="0.0.1"/>
+  <name value="EHDSILabCodeWithExceptions"/>
+  <title value="eHDSI Laboratory Codes with exceptions"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="This Value Set is used for the standard laboratory codes.&#xA;It also includes exceptional values."/>
+  <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+  <compose>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"/>
+    </include>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSILabCode"/>
+    </include>
+  </compose>
+</ValueSet>

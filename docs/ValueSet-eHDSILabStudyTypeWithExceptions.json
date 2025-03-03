@@ -1,0 +1,41 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "eHDSILabStudyTypeWithExceptions",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet eHDSILabStudyTypeWithExceptions</b></p><a name=\"eHDSILabStudyTypeWithExceptions\"> </a><a name=\"hceHDSILabStudyTypeWithExceptions\"> </a><a name=\"eHDSILabStudyTypeWithExceptions-en-US\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIExceptionalValue.html\">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSILabStudyType.html\">eHDSI Laboratory Study Types</a></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "draft"
+  }],
+  "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabStudyTypeWithExceptions",
+  "version" : "0.0.1",
+  "name" : "EHDSILabStudyTypeWithExceptions",
+  "title" : "eHDSI Laboratory Study Types with exceptions",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-03-03T08:58:37+01:00",
+  "publisher" : "SNS",
+  "contact" : [{
+    "name" : "SNS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://sns.gob.es"
+    }]
+  }],
+  "description" : "eHDSI Laboratory Study Types. \nNotes:\nNote 1: 26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2: Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3: Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.\nIt includes also exceptional values.",
+  "copyright" : "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"]
+    },
+    {
+      "valueSet" : ["http://terminology.ehdsi.eu/ValueSet/eHDSILabStudyType"]
+    }]
+  }
+}

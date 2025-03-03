@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="specimen2FHIR-lab-myhealtheu"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap specimen2FHIR-lab-myhealtheu</b></p><a name="specimen2FHIR-lab-myhealtheu"> </a><a name="hcspecimen2FHIR-lab-myhealtheu"> </a><a name="specimen2FHIR-lab-myhealtheu-en-US"> </a><p>Mapping from <a href="StructureDefinition-SpecimenLab.html">Specimen information</a> to <a href="StructureDefinition-Specimen-lab-myhealtheu.html">Specimen: Laboratory</a></p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-SpecimenLab.html">Specimen information</a> to <a href="StructureDefinition-Specimen-lab-myhealtheu.html">Specimen: Laboratory</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>SpecimenLab.identifier (Specimen identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.identifier</td><td/></tr><tr><td>SpecimenLab.speciesType (Type of species)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Specimen.subject.extension:patient-animal.extension:species</td><td>subject.ofType(Patient)</td></tr><tr><td>SpecimenLab.material (Material)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.type</td><td/></tr><tr><td>SpecimenLab.collected (Collection period)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.collection.collected[x]</td><td/></tr><tr><td>SpecimenLab.anatomicLocation (Anatomic location)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Specimen.collection.bodySite</td><td/></tr><tr><td>SpecimenLab.anatomicLocation (Anatomic location)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Specimen.collection.extension:bodySite</td><td>see Group 2 for details</td></tr><tr><td>SpecimenLab.anatomicLocation.location (Body location)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Specimen.collection.bodySite</td><td/></tr><tr><td>SpecimenLab.anatomicLocation.location (Body location)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Specimen.collection.extension:bodySite</td><td>see Group 2 for details</td></tr><tr><td>SpecimenLab.anatomicLocation.laterality (Laterality)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Specimen.collection.extension:bodySite</td><td>see Group 2 for details</td></tr><tr><td>SpecimenLab.anatomicLocation.qualifier (Specimen site qualifier)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Specimen.collection.extension:bodySite</td><td>see Group 2 for details</td></tr><tr><td>SpecimenLab.morphology (Morphology)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Specimen.collection.extension:bodySite</td><td>see Group 2 for details</td></tr><tr><td>SpecimenLab.sourceDevice (Source Device)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Specimen.subject</td><td>When the device (e.g. the catheter) is what has been examinated. In this case the subject is of type Device
+If the device is meant instead as the mean used to collect the specimen (e.g blood collected from the catheter), then, this is represented by the collectionMethod attribute and mapped into the Specimen.collection.method</td></tr><tr><td>SpecimenLab.sourceDevice.type (Type of device)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.subject.type</td><td>When the device (e.g. the catheter) is what has been examinated.</td></tr><tr><td>SpecimenLab.sourceDevice.name (Device Name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.subject.manufacturer</td><td>When the device (e.g. the catheter) is what has been examinated.</td></tr><tr><td>SpecimenLab.sourceDevice.modelName (Model Name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.subject.deviceName.name</td><td>When the device (e.g. the catheter) is what has been examinated.</td></tr><tr><td>SpecimenLab.sourceDevice.identifier (Device Identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.subject.udiCarrier</td><td>When the device (e.g. the catheter) is what has been examinated.</td></tr><tr><td>SpecimenLab.sourceDevice.identifier (Device Identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.subject.identifier</td><td>When the device (e.g. the catheter) is what has been examinated.</td></tr><tr><td>SpecimenLab.sourceDevice.manufacturer (Manufacturer)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.subject.manufacturer</td><td>When the device (e.g. the catheter) is what has been examinated.</td></tr><tr><td>SpecimenLab.collectionMethod (Collection procedure/method)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.collection.method</td><td/></tr><tr><td>SpecimenLab.receivedDateTime (Received date)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.receivedTime</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-SpecimenLab.html">Specimen information</a> to <code>BodyStructureMyHealthEu</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>SpecimenLab.anatomicLocation (Anatomic location)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>BodyStructure.</td></tr><tr><td>SpecimenLab.anatomicLocation.location (Body location)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>BodyStructure.location</td></tr><tr><td>SpecimenLab.anatomicLocation.laterality (Laterality)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>BodyStructure.extension:laterality</td></tr><tr><td>SpecimenLab.anatomicLocation.qualifier (Specimen site qualifier)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>BodyStructure.locationQualifier</td></tr><tr><td>SpecimenLab.morphology (Morphology)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>BodyStructure.morphology</td></tr></table></div>
+  </text>
+  <url value="http://fhir.ehdsi.eu/laboratory/ConceptMap/specimen2FHIR-lab-myhealtheu"/>
+  <version value="0.0.1"/>
+  <name value="Specimen2Fhir"/>
+  <title value="MyHealth@EUSpecimen to this guide Map"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="MyHealth@EUSpecimen Model to this guide Map"/>
+  <purpose value="It shows how the Specimen data set defined by the EU MyHealth@EUguidelines is mapped into this guide"/>
+  <sourceUri value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/SpecimenLab"/>
+  <targetUri value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-lab-myhealtheu"/>
+  <group>
+    <source value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/SpecimenLab"/>
+    <target value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-lab-myhealtheu"/>
+    <element>
+      <code value="SpecimenLab.identifier"/>
+      <display value="Specimen identifier"/>
+      <target>
+        <code value="Specimen.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.speciesType"/>
+      <display value="Type of species"/>
+      <target>
+        <code value="Specimen.subject.extension:patient-animal.extension:species"/>
+        <equivalence value="relatedto"/>
+        <comment value="subject.ofType(Patient)"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.material"/>
+      <display value="Material"/>
+      <target>
+        <code value="Specimen.type"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.collected"/>
+      <display value="Collection period"/>
+      <target>
+        <code value="Specimen.collection.collected[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.anatomicLocation"/>
+      <display value="Anatomic location"/>
+      <target>
+        <code value="Specimen.collection.bodySite"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.anatomicLocation"/>
+      <display value="Anatomic location"/>
+      <target>
+        <code value="Specimen.collection.extension:bodySite"/>
+        <equivalence value="relatedto"/>
+        <comment value="see Group 2 for details"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.anatomicLocation.location"/>
+      <display value="Body location"/>
+      <target>
+        <code value="Specimen.collection.bodySite"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.anatomicLocation.location"/>
+      <display value="Body location"/>
+      <target>
+        <code value="Specimen.collection.extension:bodySite"/>
+        <equivalence value="relatedto"/>
+        <comment value="see Group 2 for details"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.anatomicLocation.laterality"/>
+      <display value="Laterality"/>
+      <target>
+        <code value="Specimen.collection.extension:bodySite"/>
+        <equivalence value="relatedto"/>
+        <comment value="see Group 2 for details"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.anatomicLocation.qualifier"/>
+      <display value="Specimen site qualifier"/>
+      <target>
+        <code value="Specimen.collection.extension:bodySite"/>
+        <equivalence value="relatedto"/>
+        <comment value="see Group 2 for details"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.morphology"/>
+      <display value="Morphology"/>
+      <target>
+        <code value="Specimen.collection.extension:bodySite"/>
+        <equivalence value="relatedto"/>
+        <comment value="see Group 2 for details"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.sourceDevice"/>
+      <display value="Source Device"/>
+      <target>
+        <code value="Specimen.subject"/>
+        <equivalence value="relatedto"/>
+        <comment value="When the device (e.g. the catheter) is what has been examinated. In this case the subject is of type Device&#xA;If the device is meant instead as the mean used to collect the specimen (e.g blood collected from the catheter), then, this is represented by the collectionMethod attribute and mapped into the Specimen.collection.method"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.sourceDevice.type"/>
+      <display value="Type of device"/>
+      <target>
+        <code value="Specimen.subject.type"/>
+        <equivalence value="equivalent"/>
+        <comment value="When the device (e.g. the catheter) is what has been examinated."/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.sourceDevice.name"/>
+      <display value="Device Name"/>
+      <target>
+        <code value="Specimen.subject.manufacturer"/>
+        <equivalence value="equivalent"/>
+        <comment value="When the device (e.g. the catheter) is what has been examinated."/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.sourceDevice.modelName"/>
+      <display value="Model Name"/>
+      <target>
+        <code value="Specimen.subject.deviceName.name"/>
+        <equivalence value="equivalent"/>
+        <comment value="When the device (e.g. the catheter) is what has been examinated."/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.sourceDevice.identifier"/>
+      <display value="Device Identifier"/>
+      <target>
+        <code value="Specimen.subject.udiCarrier"/>
+        <equivalence value="equivalent"/>
+        <comment value="When the device (e.g. the catheter) is what has been examinated."/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.sourceDevice.identifier"/>
+      <display value="Device Identifier"/>
+      <target>
+        <code value="Specimen.subject.identifier"/>
+        <equivalence value="equivalent"/>
+        <comment value="When the device (e.g. the catheter) is what has been examinated."/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.sourceDevice.manufacturer"/>
+      <display value="Manufacturer"/>
+      <target>
+        <code value="Specimen.subject.manufacturer"/>
+        <equivalence value="equivalent"/>
+        <comment value="When the device (e.g. the catheter) is what has been examinated."/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.collectionMethod"/>
+      <display value="Collection procedure/method"/>
+      <target>
+        <code value="Specimen.collection.method"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.receivedDateTime"/>
+      <display value="Received date"/>
+      <target>
+        <code value="Specimen.receivedTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/SpecimenLab"/>
+    <target value="BodyStructureMyHealthEu"/>
+    <element>
+      <code value="SpecimenLab.anatomicLocation"/>
+      <display value="Anatomic location"/>
+      <target>
+        <code value="BodyStructure."/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.anatomicLocation.location"/>
+      <display value="Body location"/>
+      <target>
+        <code value="BodyStructure.location"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.anatomicLocation.laterality"/>
+      <display value="Laterality"/>
+      <target>
+        <code value="BodyStructure.extension:laterality"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.anatomicLocation.qualifier"/>
+      <display value="Specimen site qualifier"/>
+      <target>
+        <code value="BodyStructure.locationQualifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SpecimenLab.morphology"/>
+      <display value="Morphology"/>
+      <target>
+        <code value="BodyStructure.morphology"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

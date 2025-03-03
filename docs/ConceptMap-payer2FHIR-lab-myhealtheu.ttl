@@ -1,0 +1,169 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ehdsi.eu/laboratory/ConceptMap/payer2FHIR-lab-myhealtheu> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "payer2FHIR-lab-myhealtheu"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap payer2FHIR-lab-myhealtheu</b></p><a name=\"payer2FHIR-lab-myhealtheu\"> </a><a name=\"hcpayer2FHIR-lab-myhealtheu\"> </a><a name=\"payer2FHIR-lab-myhealtheu-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-Payer.html\">Health insurance and payment information</a> to <a href=\"StructureDefinition-Bundle-lab-myhealtheu.html\">Bundle: Laboratory</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Payer.html\">Health insurance and payment information</a> to <a href=\"StructureDefinition-ServiceRequest-lab-myhealtheu.html\">ServiceRequest: Laboratory</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Payer.insurance (Health insurance information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.insurance</td><td>insurance.ofType(Coverage)</td></tr><tr><td>Payer.insurance.identifier (Health insurance code)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.insurance</td><td>details in Group 2</td></tr><tr><td>Payer.insurance.name (Health insurance name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.insurance</td><td>details in Group 2</td></tr><tr><td>Payer.insurance.subjectIdentifier (Health insurance number)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.insurance</td><td>details in Group 2</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-Payer.html\">Health insurance and payment information</a> to <a href=\"http://hl7.org/fhir/R4/coverage.html\">Coverage</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Payer.insurance (Health insurance information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Coverage</td><td/></tr><tr><td>Payer.insurance.identifier (Health insurance code)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Coverage.payor.identifier</td><td>payor.ofType(Organization)</td></tr><tr><td>Payer.insurance.name (Health insurance name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Coverage.payor.name</td><td>payor.ofType(Organization)</td></tr><tr><td>Payer.insurance.subjectIdentifier (Health insurance number)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Coverage.policyHolder.identifier</td><td>If it refers to the owner of the policy</td></tr><tr><td>Payer.insurance.subjectIdentifier (Health insurance number)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Coverage.beneficiary.identifier</td><td>If it refers to the plan beneficiary</td></tr><tr><td>Payer.insurance.subjectIdentifier (Health insurance number)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Coverage.subscriberId</td><td>If it is the ID assigned to the subscriber</td></tr><tr><td>Payer.insurance.subjectIdentifier (Health insurance number)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Coverage.subscriber.identifier</td><td>If it refers to the subscriber to the policy and the Subscriber is of type Patient</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href=\"StructureDefinition-Payer.html\">Health insurance and payment information</a> to <a href=\"StructureDefinition-Patient-lab-myhealtheu.html\">Patient: Laboratory</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Payer.insurance (Health insurance information)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Payer.insurance.identifier (Health insurance code)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Payer.insurance.name (Health insurance name)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Payer.insurance.subjectIdentifier (Health insurance number)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Patient.identifier</td><td>Sometimes the identifier assigned by the payor (e.g. the SSN) is used as one of the Patient Identifiers</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://fhir.ehdsi.eu/laboratory/ConceptMap/payer2FHIR-lab-myhealtheu"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.0.1"] ; # 
+  fhir:name [ fhir:v "Payer2Fhir"] ; # 
+  fhir:title [ fhir:v "MyHealth@EUPayer to this guide Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2025-03-03T08:58:37+01:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "SNS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "SNS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://sns.gob.es" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "MyHealth@EUPayer Model to this guide Map"] ; # 
+  fhir:purpose [ fhir:v "It shows how the Laboratory Report Payer data set defined by the EU MyHealth@EUguidelines is mapped into this guide"] ; # 
+  fhir:source [
+     a fhir:uri ;
+     fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Payer"^^xsd:anyURI
+  ] ; # 
+  fhir:target [
+     a fhir:uri ;
+     fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Bundle-lab-myhealtheu"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Payer"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-lab-myhealtheu"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "Payer.insurance" ] ;
+       fhir:display [ fhir:v "Health insurance information" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.insurance" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "insurance.ofType(Coverage)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.identifier" ] ;
+       fhir:display [ fhir:v "Health insurance code" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.insurance" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "details in Group 2" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.name" ] ;
+       fhir:display [ fhir:v "Health insurance name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.insurance" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "details in Group 2" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.subjectIdentifier" ] ;
+       fhir:display [ fhir:v "Health insurance number" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.insurance" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "details in Group 2" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [ fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Payer"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.org/fhir/StructureDefinition/Coverage"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "Payer.insurance" ] ;
+       fhir:display [ fhir:v "Health insurance information" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Coverage" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.identifier" ] ;
+       fhir:display [ fhir:v "Health insurance code" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Coverage.payor.identifier" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "payor.ofType(Organization)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.name" ] ;
+       fhir:display [ fhir:v "Health insurance name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Coverage.payor.name" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "payor.ofType(Organization)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.subjectIdentifier" ] ;
+       fhir:display [ fhir:v "Health insurance number" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Coverage.policyHolder.identifier" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "If it refers to the owner of the policy" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.subjectIdentifier" ] ;
+       fhir:display [ fhir:v "Health insurance number" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Coverage.beneficiary.identifier" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "If it refers to the plan beneficiary" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.subjectIdentifier" ] ;
+       fhir:display [ fhir:v "Health insurance number" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Coverage.subscriberId" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "If it is the ID assigned to the subscriber" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.subjectIdentifier" ] ;
+       fhir:display [ fhir:v "Health insurance number" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Coverage.subscriber.identifier" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "If it refers to the subscriber to the policy and the Subscriber is of type Patient" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [ fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Payer"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-lab-myhealtheu"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "Payer.insurance" ] ;
+       fhir:display [ fhir:v "Health insurance information" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.identifier" ] ;
+       fhir:display [ fhir:v "Health insurance code" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.name" ] ;
+       fhir:display [ fhir:v "Health insurance name" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Payer.insurance.subjectIdentifier" ] ;
+       fhir:display [ fhir:v "Health insurance number" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.identifier" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "Sometimes the identifier assigned by the payor (e.g. the SSN) is used as one of the Patient Identifiers" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

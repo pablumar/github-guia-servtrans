@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="SampleServiceRequest"/>
+  <meta>
+    <profile value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-lab-myhealtheu"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest SampleServiceRequest</b></p><a name="SampleServiceRequest"> </a><a name="hcSampleServiceRequest"> </a><a name="SampleServiceRequest-en-US"> </a><p><b>identifier</b>: <code>http://example.org</code>/a4310756-a193-4a48-8feb-598c87a1d3f</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://loinc.org 24360-0}">Hemoglobin and Hematocrit panel - Blood</span></p><p><b>subject</b>: <a href="Patient-SamplePatient.html">John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976 (use: official, ))</a></p><p><b>insurance</b>: <a href="#hcSampleServiceRequest/SampleCoverage">Coverage: status = active</a></p><p><b>specimen</b>: <a href="Specimen-SampleSpecimen.html">Specimen: status = available; type = Blood specimen</a></p><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Coverage #SampleCoverage</b></p><a name="SampleServiceRequest/SampleCoverage"> </a><a name="hcSampleServiceRequest/SampleCoverage"> </a><a name="SampleServiceRequest/SampleCoverage-en-US"> </a><p><b>status</b>: Active</p><p><b>beneficiary</b>: <a href="Patient-SamplePatient.html">John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976 (use: official, ))</a></p><p><b>payor</b>: Best Insurance</p></blockquote></div>
+  </text>
+  <contained>
+    <Coverage>
+      <id value="SampleCoverage"/>
+      <meta>
+        <profile value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Coverage-lab-myhealtheu"/>
+      </meta>
+      <status value="active"/>
+      <beneficiary>
+        <reference value="Patient/SamplePatient"/>
+      </beneficiary>
+      <payor>
+        <display value="Best Insurance"/>
+      </payor>
+    </Coverage>
+  </contained>
+  <identifier>
+    <system value="http://example.org"/>
+    <value value="a4310756-a193-4a48-8feb-598c87a1d3f"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="24360-0"/>
+      <display value="Hemoglobin and Hematocrit panel - Blood"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/SamplePatient"/>
+  </subject>
+  <insurance>
+    <reference value="#SampleCoverage"/>
+  </insurance>
+  <specimen>
+    <reference value="Specimen/SampleSpecimen"/>
+  </specimen>
+</ServiceRequest>

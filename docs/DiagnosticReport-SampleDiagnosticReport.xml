@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="SampleDiagnosticReport"/>
+  <meta>
+    <profile value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/DiagnosticReport-lab-myhealtheu"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DiagnosticReport SampleDiagnosticReport</b></p><a name="SampleDiagnosticReport"> </a><a name="hcSampleDiagnosticReport"> </a><a name="SampleDiagnosticReport-en-US"> </a><h2><span title="Codes:{http://loinc.org 11502-2}">Laboratory report</span> (<span title="Codes:{http://loinc.org 18717-9}">Blood bank studies (set)</span>) </h2><table class="grid"><tr><td>Subject</td><td>John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976 (use: official, ))</td></tr><tr><td>When For</td><td>2023-04-19 15:46:00+0100</td></tr><tr><td>Identifier</td><td> <a href="http://terminology.hl7.org/5.5.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>When For</b></td></tr><tr><td><a href="Observation-SampleBloodGroupObservation.html"><span title="Codes:{http://loinc.org 883-9}">Blood Group</span></a></td><td><span title="Codes:{http://snomed.info/sct 112144000}">A</span></td><td>Final</td><td>2023-03-09 13:35:00+0100</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition">
+    <valueReference>
+      <reference value="Composition/SampleComposition"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"/>
+  </identifier>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="18717-9"/>
+      <display value="Blood bank studies (set)"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11502-2"/>
+      <display value="Laboratory report"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/SamplePatient"/>
+  </subject>
+  <effectiveDateTime value="2023-04-19T15:46:00+01:00"/>
+  <result>
+    <reference value="Observation/SampleBloodGroupObservation"/>
+  </result>
+</DiagnosticReport>

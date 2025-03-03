@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="labRpt2FHIR-lab-myhealtheu"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap labRpt2FHIR-lab-myhealtheu</b></p><a name="labRpt2FHIR-lab-myhealtheu"> </a><a name="hclabRpt2FHIR-lab-myhealtheu"> </a><a name="labRpt2FHIR-lab-myhealtheu-en-US"> </a><p>Mapping from <a href="StructureDefinition-LabReport.html">Laboratory Result Content</a> to <a href="StructureDefinition-Bundle-lab-myhealtheu.html">Bundle: Laboratory</a></p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-LabReport.html">Laboratory Result Content</a> to <a href="StructureDefinition-DiagnosticReport-lab-myhealtheu.html">DiagnosticReport: Laboratory</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>LabReport.header (Report header)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport</td><td/></tr><tr><td>LabReport.header.subject (Patient/subject)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.subject</td><td/></tr><tr><td>LabReport.header.payer (Health insurance and payment information)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.basedOn.insurance</td><td>basedOn.resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)</td></tr><tr><td>LabReport.header.informationRecipient (Information recipient)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>LabReport.header.author (Author)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.resultsInterpreter</td><td>If the author is the interpreter</td></tr><tr><td>LabReport.header.author (Author)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.performer</td><td>If the author is the perfomer</td></tr><tr><td>LabReport.header.legalAuthenticator (Legal authenticator)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>LabReport.header.validator (Result validator)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>LabReport.header.metadata (Laboratory report metadata)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport</td><td/></tr><tr><td>LabReport.header.metadata.documentId (Document Id)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.identifier</td><td>If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier</td></tr><tr><td>LabReport.header.metadata.type (Document type)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DiagnosticReport.code</td><td/></tr><tr><td>LabReport.header.metadata.status (Document status)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.status</td><td>For FHIR R4 the more granular status is recorded in the DiagnosticReport.status</td></tr><tr><td>LabReport.header.metadata.dateTime (Report date and time)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DiagnosticReport.effectiveDateTime</td><td/></tr><tr><td>LabReport.header.metadata.title (Document title)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>LabReport.header.metadata.studyType (Study type)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.category:studyType</td><td/></tr><tr><td>LabReport.header.metadata.custodian (Report custodian)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>LabReport.header.metadata.confidentiality (Confidentiality)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>LabReport.header.metadata.language (Language)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DiagnosticReport.language</td><td/></tr><tr><td>LabReport.header.metadata.version (Version)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>LabReport.order (Order)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.basedOn</td><td>basedOn.resolve().ofType(ServiceRequest)</td></tr><tr><td>LabReport.specimen (Specimen information)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.specimen</td><td/></tr><tr><td>LabReport.specimen (Specimen information)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.result.specimen</td><td>result.resolve().ofType(Observation)</td></tr><tr><td>LabReport.result (Results data elements)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.result</td><td/></tr><tr><td>LabReport.pdf (PDF document)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DiagnosticReport.presentedForm</td><td>If the PDF to be added is the representation of the entire Laboratory report, then this will be recorded in the optional element presentedForm
+In case of images or other kinds of additional data (that can be a pdf document) used as support for the interpretation of the report, this is realized by using the optional element media.</td></tr><tr><td>LabReport.media (Media)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>DiagnosticReport.media</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-LabReport.html">Laboratory Result Content</a> to <a href="StructureDefinition-Composition-lab-myhealtheu.html">Composition: Laboratory</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>LabReport.header (Report header)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition</td><td/></tr><tr><td>LabReport.header.subject (Patient/subject)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.subject</td><td/></tr><tr><td>LabReport.header.payer (Health insurance and payment information)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.extension:basedOn-order-or-requisition.insurance</td><td>extension(http://fhir.ehdsi.eu/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)</td></tr><tr><td>LabReport.header.informationRecipient (Information recipient)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.extension:information-recipient</td><td/></tr><tr><td>LabReport.header.author (Author)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.author</td><td/></tr><tr><td>LabReport.header.legalAuthenticator (Legal authenticator)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party</td><td>The person authenticated the content and accepted legal responsibility for its content.
+attester.where(mode='legal')</td></tr><tr><td>LabReport.header.validator (Result validator)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party</td><td>The person authenticated the content in their professional capacity.
+attester.where(mode='professional')</td></tr><tr><td>LabReport.header.metadata (Laboratory report metadata)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition</td><td/></tr><tr><td>LabReport.header.metadata.documentId (Document Id)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.identifier</td><td>If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier</td></tr><tr><td>LabReport.header.metadata.type (Document type)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.type</td><td/></tr><tr><td>LabReport.header.metadata.status (Document status)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.status</td><td>For FHIR R4 the more granular status is recorded in the DiagnosticReport.status. Mapping rules for valuing the Compisition.status are specified in http://fhir.ehdsi.eu/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus</td></tr><tr><td>LabReport.header.metadata.dateTime (Report date and time)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.date</td><td/></tr><tr><td>LabReport.header.metadata.title (Document title)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.title</td><td/></tr><tr><td>LabReport.header.metadata.studyType (Study type)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.category:studyType</td><td/></tr><tr><td>LabReport.header.metadata.custodian (Report custodian)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.custodian</td><td/></tr><tr><td>LabReport.header.metadata.confidentiality (Confidentiality)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.confidentiality</td><td/></tr><tr><td>LabReport.header.metadata.language (Language)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.language</td><td/></tr><tr><td>LabReport.header.metadata.version (Version)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.extension:versionNumber</td><td>if it refers to the business report version</td></tr><tr><td>LabReport.order (Order)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.extension:basedOn-order-or-requisition.insurance</td><td>extension(http://fhir.ehdsi.eu/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest)</td></tr><tr><td>LabReport.specimen (Specimen information)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.section:lab-no-subsections.entry.specimen</td><td>If no sub sections</td></tr><tr><td>LabReport.specimen (Specimen information)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.section:lab-subsections.section.entry.specimen</td><td>If sub sections</td></tr><tr><td>LabReport.result (Results data elements)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>If no sub sections</td></tr><tr><td>LabReport.result (Results data elements)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Composition.section:lab-subsections.section.entry</td><td>If sub sections</td></tr><tr><td>LabReport.pdf (PDF document)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>LabReport.media (Media)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr></table></div>
+  </text>
+  <url value="http://fhir.ehdsi.eu/laboratory/ConceptMap/labRpt2FHIR-lab-myhealtheu"/>
+  <version value="0.0.1"/>
+  <name value="LabRpt2FHIR"/>
+  <title value="MyHealth@EULab Report to this guide Map"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="MyHealth@EULab Report to this guide Map"/>
+  <purpose value="It shows how the Laboratory Report data set defined by the EU MyHealth@EUguidelines is mapped into this guide"/>
+  <sourceUri value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/LabReport"/>
+  <targetUri value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Bundle-lab-myhealtheu"/>
+  <group>
+    <source value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/LabReport"/>
+    <target value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/DiagnosticReport-lab-myhealtheu"/>
+    <element>
+      <code value="LabReport.header"/>
+      <display value="Report header"/>
+      <target>
+        <code value="DiagnosticReport"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.subject"/>
+      <display value="Patient/subject"/>
+      <target>
+        <code value="DiagnosticReport.subject"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.payer"/>
+      <display value="Health insurance and payment information"/>
+      <target>
+        <code value="DiagnosticReport.basedOn.insurance"/>
+        <equivalence value="relatedto"/>
+        <comment value="basedOn.resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.informationRecipient"/>
+      <display value="Information recipient"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.author"/>
+      <display value="Author"/>
+      <target>
+        <code value="DiagnosticReport.resultsInterpreter"/>
+        <equivalence value="relatedto"/>
+        <comment value="If the author is the interpreter"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.author"/>
+      <display value="Author"/>
+      <target>
+        <code value="DiagnosticReport.performer"/>
+        <equivalence value="relatedto"/>
+        <comment value="If the author is the perfomer"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.legalAuthenticator"/>
+      <display value="Legal authenticator"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Mapped in the Composition resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.validator"/>
+      <display value="Result validator"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Mapped in the Composition resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata"/>
+      <display value="Laboratory report metadata"/>
+      <target>
+        <code value="DiagnosticReport"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.documentId"/>
+      <display value="Document Id"/>
+      <target>
+        <code value="DiagnosticReport.identifier"/>
+        <equivalence value="relatedto"/>
+        <comment value="If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.type"/>
+      <display value="Document type"/>
+      <target>
+        <code value="DiagnosticReport.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.status"/>
+      <display value="Document status"/>
+      <target>
+        <code value="DiagnosticReport.status"/>
+        <equivalence value="relatedto"/>
+        <comment value="For FHIR R4 the more granular status is recorded in the DiagnosticReport.status"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.dateTime"/>
+      <display value="Report date and time"/>
+      <target>
+        <code value="DiagnosticReport.effectiveDateTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.title"/>
+      <display value="Document title"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Mapped in the Composition resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.studyType"/>
+      <display value="Study type"/>
+      <target>
+        <code value="DiagnosticReport.category:studyType"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.custodian"/>
+      <display value="Report custodian"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Mapped in the Composition resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.confidentiality"/>
+      <display value="Confidentiality"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Mapped in the Composition resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.language"/>
+      <display value="Language"/>
+      <target>
+        <code value="DiagnosticReport.language"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.version"/>
+      <display value="Version"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Mapped in the Composition resource if it refers to the business report version"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.order"/>
+      <display value="Order"/>
+      <target>
+        <code value="DiagnosticReport.basedOn"/>
+        <equivalence value="relatedto"/>
+        <comment value="basedOn.resolve().ofType(ServiceRequest)"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.specimen"/>
+      <display value="Specimen information"/>
+      <target>
+        <code value="DiagnosticReport.specimen"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.specimen"/>
+      <display value="Specimen information"/>
+      <target>
+        <code value="DiagnosticReport.result.specimen"/>
+        <equivalence value="relatedto"/>
+        <comment value="result.resolve().ofType(Observation)"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.result"/>
+      <display value="Results data elements"/>
+      <target>
+        <code value="DiagnosticReport.result"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.pdf"/>
+      <display value="PDF document"/>
+      <target>
+        <code value="DiagnosticReport.presentedForm"/>
+        <equivalence value="equivalent"/>
+        <comment value="If the PDF to be added is the representation of the entire Laboratory report, then this will be recorded in the optional element presentedForm&#xA;In case of images or other kinds of additional data (that can be a pdf document) used as support for the interpretation of the report, this is realized by using the optional element media."/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.media"/>
+      <display value="Media"/>
+      <target>
+        <code value="DiagnosticReport.media"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/LabReport"/>
+    <target value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Composition-lab-myhealtheu"/>
+    <element>
+      <code value="LabReport.header"/>
+      <display value="Report header"/>
+      <target>
+        <code value="Composition"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.subject"/>
+      <display value="Patient/subject"/>
+      <target>
+        <code value="Composition.subject"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.payer"/>
+      <display value="Health insurance and payment information"/>
+      <target>
+        <code value="Composition.extension:basedOn-order-or-requisition.insurance"/>
+        <equivalence value="relatedto"/>
+        <comment value="extension(http://fhir.ehdsi.eu/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.informationRecipient"/>
+      <display value="Information recipient"/>
+      <target>
+        <code value="Composition.extension:information-recipient"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.author"/>
+      <display value="Author"/>
+      <target>
+        <code value="Composition.author"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.legalAuthenticator"/>
+      <display value="Legal authenticator"/>
+      <target>
+        <code value="Composition.attester.party"/>
+        <equivalence value="equivalent"/>
+        <comment value="The person authenticated the content and accepted legal responsibility for its content.&#xA;attester.where(mode='legal')"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.validator"/>
+      <display value="Result validator"/>
+      <target>
+        <code value="Composition.attester.party"/>
+        <equivalence value="equivalent"/>
+        <comment value="The person authenticated the content in their professional capacity.&#xA;attester.where(mode='professional')"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata"/>
+      <display value="Laboratory report metadata"/>
+      <target>
+        <code value="Composition"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.documentId"/>
+      <display value="Document Id"/>
+      <target>
+        <code value="Composition.identifier"/>
+        <equivalence value="equivalent"/>
+        <comment value="If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.type"/>
+      <display value="Document type"/>
+      <target>
+        <code value="Composition.type"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.status"/>
+      <display value="Document status"/>
+      <target>
+        <code value="Composition.status"/>
+        <equivalence value="relatedto"/>
+        <comment value="For FHIR R4 the more granular status is recorded in the DiagnosticReport.status. Mapping rules for valuing the Compisition.status are specified in http://fhir.ehdsi.eu/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.dateTime"/>
+      <display value="Report date and time"/>
+      <target>
+        <code value="Composition.date"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.title"/>
+      <display value="Document title"/>
+      <target>
+        <code value="Composition.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.studyType"/>
+      <display value="Study type"/>
+      <target>
+        <code value="Composition.category:studyType"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.custodian"/>
+      <display value="Report custodian"/>
+      <target>
+        <code value="Composition.custodian"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.confidentiality"/>
+      <display value="Confidentiality"/>
+      <target>
+        <code value="Composition.confidentiality"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.language"/>
+      <display value="Language"/>
+      <target>
+        <code value="Composition.language"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.header.metadata.version"/>
+      <display value="Version"/>
+      <target>
+        <code value="Composition.extension:versionNumber"/>
+        <equivalence value="equivalent"/>
+        <comment value="if it refers to the business report version"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.order"/>
+      <display value="Order"/>
+      <target>
+        <code value="Composition.extension:basedOn-order-or-requisition.insurance"/>
+        <equivalence value="relatedto"/>
+        <comment value="extension(http://fhir.ehdsi.eu/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest)"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.specimen"/>
+      <display value="Specimen information"/>
+      <target>
+        <code value="Composition.section:lab-no-subsections.entry.specimen"/>
+        <equivalence value="relatedto"/>
+        <comment value="If no sub sections"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.specimen"/>
+      <display value="Specimen information"/>
+      <target>
+        <code value="Composition.section:lab-subsections.section.entry.specimen"/>
+        <equivalence value="relatedto"/>
+        <comment value="If sub sections"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.result"/>
+      <display value="Results data elements"/>
+      <target>
+        <code value="Composition.section:lab-no-subsections.entry"/>
+        <equivalence value="relatedto"/>
+        <comment value="If no sub sections"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.result"/>
+      <display value="Results data elements"/>
+      <target>
+        <code value="Composition.section:lab-subsections.section.entry"/>
+        <equivalence value="relatedto"/>
+        <comment value="If sub sections"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.pdf"/>
+      <display value="PDF document"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="LabReport.media"/>
+      <display value="Media"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="subject2FHIR-lab-myhealtheu"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap subject2FHIR-lab-myhealtheu</b></p><a name="subject2FHIR-lab-myhealtheu"> </a><a name="hcsubject2FHIR-lab-myhealtheu"> </a><a name="subject2FHIR-lab-myhealtheu-en-US"> </a><p>Mapping from <a href="StructureDefinition-Subject.html">Patient/subject</a> to <a href="StructureDefinition-Patient-lab-myhealtheu.html">Patient: Laboratory</a></p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-Subject.html">Patient/subject</a> to <a href="StructureDefinition-Patient-lab-myhealtheu.html">Patient: Laboratory</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Subject.identification (Identification of the patient/subject)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Patient</td></tr><tr><td>Subject.identification.familyName (Family name/surname)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.name.family</td></tr><tr><td>Subject.identification.givenName (Given name)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.name.given</td></tr><tr><td>Subject.identification.dateOfBirth (Date of birth)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.birthDate</td></tr><tr><td>Subject.identification.identifier (Personal identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.identifier</td></tr><tr><td>Subject.identification.gender (Gender)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.gender</td></tr><tr><td>Subject.identification.sex (Sex for clinical use)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.extension:sex-for-clinical-use</td></tr><tr><td>Subject.addressTelecom (Patient/subject related contact information)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>Patient</td></tr><tr><td>Subject.addressTelecom.address (Address)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address</td></tr><tr><td>Subject.addressTelecom.address.street (Street)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address.line</td></tr><tr><td>Subject.addressTelecom.address.street (Street)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address.line.extension:streetName</td></tr><tr><td>Subject.addressTelecom.address.houseNumber (House Number)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address.line.extension:houseNumber</td></tr><tr><td>Subject.addressTelecom.address.postBox (Post Box)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address.line.extension:postBox</td></tr><tr><td>Subject.addressTelecom.address.postalCode (Postal Code)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address.postalCode</td></tr><tr><td>Subject.addressTelecom.address.stateOrProvince (State or Province)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address.code</td></tr><tr><td>Subject.addressTelecom.address.city (City)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address.city</td></tr><tr><td>Subject.addressTelecom.address.countryCode (Country Code)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address.country.extension:countryCode</td></tr><tr><td>Subject.addressTelecom.address.use (Use of Address)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address.use</td></tr><tr><td>Subject.addressTelecom.address.type (Type of address)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address.type</td></tr><tr><td>Subject.addressTelecom.telecom (Telecom)</td><td><a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Patient.telecom</td></tr></table></div>
+  </text>
+  <url value="http://fhir.ehdsi.eu/laboratory/ConceptMap/subject2FHIR-lab-myhealtheu"/>
+  <version value="0.0.1"/>
+  <name value="LabRptSubject2Fhir"/>
+  <title value="MyHealth@EUSubject to this guide Map"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="MyHealth@EUSubject Model to this guide Map"/>
+  <purpose value="It shows how the Laboratory Report Subject data set defined by the EU MyHealth@EUguidelines is mapped into this guide"/>
+  <sourceUri value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Subject"/>
+  <targetUri value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-lab-myhealtheu"/>
+  <group>
+    <source value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Subject"/>
+    <target value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-lab-myhealtheu"/>
+    <element>
+      <code value="Subject.identification"/>
+      <display value="Identification of the patient/subject"/>
+      <target>
+        <code value="Patient"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.identification.familyName"/>
+      <display value="Family name/surname"/>
+      <target>
+        <code value="Patient.name.family"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.identification.givenName"/>
+      <display value="Given name"/>
+      <target>
+        <code value="Patient.name.given"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.identification.dateOfBirth"/>
+      <display value="Date of birth"/>
+      <target>
+        <code value="Patient.birthDate"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.identification.identifier"/>
+      <display value="Personal identifier"/>
+      <target>
+        <code value="Patient.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.identification.gender"/>
+      <display value="Gender"/>
+      <target>
+        <code value="Patient.gender"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.identification.sex"/>
+      <display value="Sex for clinical use"/>
+      <target>
+        <code value="Patient.extension:sex-for-clinical-use"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom"/>
+      <display value="Patient/subject related contact information"/>
+      <target>
+        <code value="Patient"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address"/>
+      <display value="Address"/>
+      <target>
+        <code value="Patient.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address.street"/>
+      <display value="Street"/>
+      <target>
+        <code value="Patient.address.line"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address.street"/>
+      <display value="Street"/>
+      <target>
+        <code value="Patient.address.line.extension:streetName"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address.houseNumber"/>
+      <display value="House Number"/>
+      <target>
+        <code value="Patient.address.line.extension:houseNumber"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address.postBox"/>
+      <display value="Post Box"/>
+      <target>
+        <code value="Patient.address.line.extension:postBox"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address.postalCode"/>
+      <display value="Postal Code"/>
+      <target>
+        <code value="Patient.address.postalCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address.stateOrProvince"/>
+      <display value="State or Province"/>
+      <target>
+        <code value="Patient.address.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address.city"/>
+      <display value="City"/>
+      <target>
+        <code value="Patient.address.city"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address.countryCode"/>
+      <display value="Country Code"/>
+      <target>
+        <code value="Patient.address.country.extension:countryCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address.use"/>
+      <display value="Use of Address"/>
+      <target>
+        <code value="Patient.address.use"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.address.type"/>
+      <display value="Type of address"/>
+      <target>
+        <code value="Patient.address.type"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Subject.addressTelecom.telecom"/>
+      <display value="Telecom"/>
+      <target>
+        <code value="Patient.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

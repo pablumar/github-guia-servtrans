@@ -1,0 +1,667 @@
+[
+  {
+    "id" : "author2FHIR-lab-myhealtheu",
+    "type" : "ConceptMap",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/author2FHIR-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "LabRptAuthor2FHIR"
+  },
+  {
+    "id" : "labRpt2FHIR-lab-myhealtheu",
+    "type" : "ConceptMap",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/labRpt2FHIR-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "LabRpt2FHIR"
+  },
+  {
+    "id" : "legalAuth2FHIR-lab-myhealtheu",
+    "type" : "ConceptMap",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/legalAuth2FHIR-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "LegalAuth2Fhir"
+  },
+  {
+    "id" : "order2FHIR-lab-myhealtheu",
+    "type" : "ConceptMap",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/order2FHIR-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "Order2Fhir"
+  },
+  {
+    "id" : "payer2FHIR-lab-myhealtheu",
+    "type" : "ConceptMap",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/payer2FHIR-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "Payer2Fhir"
+  },
+  {
+    "id" : "recipient2FHIR-lab-myhealtheu",
+    "type" : "ConceptMap",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/recipient2FHIR-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "Recipient2FHIR"
+  },
+  {
+    "id" : "result2FHIR-lab-myhealtheu",
+    "type" : "ConceptMap",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/result2FHIR-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "LabRptResult2FHIR"
+  },
+  {
+    "id" : "specimen2FHIR-lab-myhealtheu",
+    "type" : "ConceptMap",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/specimen2FHIR-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "Specimen2Fhir"
+  },
+  {
+    "id" : "subject2FHIR-lab-myhealtheu",
+    "type" : "ConceptMap",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/subject2FHIR-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "LabRptSubject2Fhir"
+  },
+  {
+    "id" : "validator2FHIR-lab-myhealtheu",
+    "type" : "ConceptMap",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/validator2FHIR-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "Validator2Fhir"
+  },
+  {
+    "id" : "servtrans.sns.implementationGuide",
+    "type" : "ImplementationGuide",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ImplementationGuide/servtrans.sns.implementationGuide",
+    "version" : "0.0.1",
+    "name" : "ServiciosTransfronterizosIG"
+  },
+  {
+    "id" : "Author",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Author",
+    "version" : "0.0.1",
+    "name" : "AuthorLabMyHEU"
+  },
+  {
+    "id" : "BodyStructure-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/BodyStructure-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "BodyStructureMyHealthEu"
+  },
+  {
+    "id" : "Bundle-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Bundle-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "BundleLabReportMyHealthEu"
+  },
+  {
+    "id" : "Composition-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Composition-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "CompositionLabReportMyHealthEu"
+  },
+  {
+    "id" : "Coverage-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Coverage-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "CoverageLabMyHealthEu"
+  },
+  {
+    "id" : "Device-measuring-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Device-measuring-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "DeviceMeasuringMyHealthEu"
+  },
+  {
+    "id" : "Device-specimen-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Device-specimen-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "DeviceSpecimenMyHealthEu"
+  },
+  {
+    "id" : "DiagnosticReport-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/DiagnosticReport-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "DiagnosticReportLabMyHealthEu"
+  },
+  {
+    "id" : "DocumentReference-minimal-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/DocumentReference-minimal-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "DocumentReferenceMyHealthEu"
+  },
+  {
+    "id" : "HumanName-obl-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/HumanName-obl-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "HumanNameEuObligations"
+  },
+  {
+    "id" : "LabReport",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/LabReport",
+    "version" : "0.0.1",
+    "name" : "LabReportMyHEU"
+  },
+  {
+    "id" : "LegalAuthenticator",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/LegalAuthenticator",
+    "version" : "0.0.1",
+    "name" : "LegalAuthenticatorLabMyHEU"
+  },
+  {
+    "id" : "Observation-obl-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-obl-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "ObservationEuObligations"
+  },
+  {
+    "id" : "Observation-resultslab-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-resultslab-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "ObservationResultsLaboratoryMyHealthEu"
+  },
+  {
+    "id" : "Order",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Order",
+    "version" : "0.0.1",
+    "name" : "OrderLabMyHEU"
+  },
+  {
+    "id" : "Organization-eu-myhealth-eu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Organization-eu-myhealth-eu",
+    "version" : "0.0.1",
+    "name" : "OrganizationMyHealthEu"
+  },
+  {
+    "id" : "Patient-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "PatientMyHealthEu"
+  },
+  {
+    "id" : "Patient-minimal-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-minimal-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "PatientMinimalMyHealthEu"
+  },
+  {
+    "id" : "Patient-obl-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-obl-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "PatientEuObligations"
+  },
+  {
+    "id" : "Payer",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Payer",
+    "version" : "0.0.1",
+    "name" : "PayerLabMyHEU"
+  },
+  {
+    "id" : "Practitioner-eu-myhealth-eu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Practitioner-eu-myhealth-eu",
+    "version" : "0.0.1",
+    "name" : "PractitionerMyHealthEu"
+  },
+  {
+    "id" : "PractitionerRole-eu-myhealth-eu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/PractitionerRole-eu-myhealth-eu",
+    "version" : "0.0.1",
+    "name" : "PractitionerRoleMyHealthEu"
+  },
+  {
+    "id" : "Quantity-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Quantity-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "QuantityMyHealthEu"
+  },
+  {
+    "id" : "Ratio-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Ratio-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "RatioMyHealthEu"
+  },
+  {
+    "id" : "Recipient",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Recipient",
+    "version" : "0.0.1",
+    "name" : "RecipientLabMyHEU"
+  },
+  {
+    "id" : "Result",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Result",
+    "version" : "0.0.1",
+    "name" : "ResultLabMyHEU"
+  },
+  {
+    "id" : "ServiceRequest-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "ServiceRequestLabMyHealthEu"
+  },
+  {
+    "id" : "ServiceRequest-obl-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-obl-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "ServiceRequestEuObligations"
+  },
+  {
+    "id" : "Specimen-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "SpecimenMyHealthEu"
+  },
+  {
+    "id" : "Specimen-obl-lab-myhealtheu",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-obl-lab-myhealtheu",
+    "version" : "0.0.1",
+    "name" : "SpecimenEuObligations"
+  },
+  {
+    "id" : "SpecimenLab",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/SpecimenLab",
+    "version" : "0.0.1",
+    "name" : "SpecimenLabMyHEU"
+  },
+  {
+    "id" : "Subject",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Subject",
+    "version" : "0.0.1",
+    "name" : "SubjectLabMyHEU"
+  },
+  {
+    "id" : "Validator",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Validator",
+    "version" : "0.0.1",
+    "name" : "ValidatorLabMyHEU"
+  },
+  {
+    "id" : "eHDSIAnimalSpeciesWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIAnimalSpeciesWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSIAnimalSpeciesWithExceptions"
+  },
+  {
+    "id" : "eHDSIBodySiteWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIBodySiteWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSIBodySiteWithExceptions"
+  },
+  {
+    "id" : "eHDSIBodyStructureLocationWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIBodyStructureLocationWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSIBodyStructureLocationWithExceptions"
+  },
+  {
+    "id" : "eHDSILabCodeWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabCodeWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSILabCodeWithExceptions"
+  },
+  {
+    "id" : "eHDSILabSpecimenTypeWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabSpecimenTypeWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSILabSpecimenTypeWithExceptions"
+  },
+  {
+    "id" : "eHDSILabStudyTypeWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabStudyTypeWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSILabStudyTypeWithExceptions"
+  },
+  {
+    "id" : "eHDSILabTechniqueWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabTechniqueWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSILabTechniqueWithExceptions"
+  },
+  {
+    "id" : "eHDSILaboratoryReportType",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILaboratoryReportType",
+    "version" : "0.0.1",
+    "name" : "EHDSILaboratoryReportType",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.52"]
+  },
+  {
+    "id" : "eHDSIMedicalDeviceWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIMedicalDeviceWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSIMedicalDeviceWithExceptions"
+  },
+  {
+    "id" : "eHDSIMorphologicAbnormalityWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIMorphologicAbnormalityWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSIMorphologicAbnormalityWithExceptions"
+  },
+  {
+    "id" : "eHDSIObservationInterpretationWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIObservationInterpretationWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSIObservationInterpretationWithExceptions"
+  },
+  {
+    "id" : "eHDSIOrderReason",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIOrderReason",
+    "version" : "0.0.1",
+    "name" : "EHDSIOrderReason"
+  },
+  {
+    "id" : "eHDSIReferenceRangeAppliesToWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIReferenceRangeAppliesToWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSIReferenceRangeAppliesToWithExceptions"
+  },
+  {
+    "id" : "eHDSIReferenceRangeMeaningWithExceptions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIReferenceRangeMeaningWithExceptions",
+    "version" : "0.0.1",
+    "name" : "EHDSIReferenceRangeMeaningWithExceptions"
+  },
+  {
+    "id" : "eHDSIResultsCodedValueLaboratory",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIResultsCodedValueLaboratory",
+    "version" : "0.0.1",
+    "name" : "EHDSIResultsCodedValueLaboratory"
+  },
+  {
+    "id" : "eHDSILabStudyTypes",
+    "type" : "ValueSet",
+    "url" : "http://fhir.ehdsi.eu/mvc/eHDSILabStudyTypes",
+    "version" : "0.0.1",
+    "name" : "EHDSILabStudyTypes",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.66"]
+  },
+  {
+    "id" : "actor-consumer-eu-lab",
+    "type" : "ActorDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab",
+    "version" : "0.0.1",
+    "name" : "LabReportConsumer"
+  },
+  {
+    "id" : "actor-creator-eu-lab",
+    "type" : "ActorDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/actor-creator-eu-lab",
+    "version" : "0.0.1",
+    "name" : "LabReportCreator"
+  },
+  {
+    "id" : "actor-handler-eu-lab",
+    "type" : "ActorDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/actor-handler-eu-lab",
+    "version" : "0.0.1",
+    "name" : "LabReportHandler"
+  },
+  {
+    "id" : "actor-repos-eu-lab",
+    "type" : "ActorDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/actor-repos-eu-lab",
+    "version" : "0.0.1",
+    "name" : "LabReportRepos"
+  },
+  {
+    "id" : "eHDSIHealthcareProfessionalRole",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/EHDSIHealthcareProfessionalRole",
+    "version" : "0.0.1",
+    "name" : "EHDSIHealthcareProfessionalRole",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.1"]
+  },
+  {
+    "id" : "eHDSIAnimalSpecies",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIAnimalSpecies",
+    "version" : "0.0.1",
+    "name" : "EHDSIAnimalSpecies",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.72"]
+  },
+  {
+    "id" : "eHDSIBloodGroup",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup",
+    "version" : "0.0.1",
+    "name" : "EHDSIBloodGroup",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.20"]
+  },
+  {
+    "id" : "eHDSIBodySite",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBodySite",
+    "version" : "0.0.1",
+    "name" : "EHDSIBodySite",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.65"]
+  },
+  {
+    "id" : "eHDSIBodySiteLaterality",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBodySiteLaterality",
+    "version" : "0.0.1",
+    "name" : "EHDSIBodySiteLaterality",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.68"]
+  },
+  {
+    "id" : "eHDSIBodyStructureLocation",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBodyStructureLocation",
+    "version" : "0.0.1",
+    "name" : "EHDSIBodyStructureLocation",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.80"]
+  },
+  {
+    "id" : "eHDSICountry",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSICountry",
+    "version" : "0.0.1",
+    "name" : "EHDSICountry"
+  },
+  {
+    "id" : "eHDSIExceptionalValue",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue",
+    "version" : "0.0.1",
+    "name" : "EHDSIExceptionalValue",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.81"]
+  },
+  {
+    "id" : "eHDSIIllnessandDisorder",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder",
+    "version" : "0.0.1",
+    "name" : "EHDSIIllnessandDisorder",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.5"]
+  },
+  {
+    "id" : "eHDSILabCode",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabCode",
+    "version" : "0.0.1",
+    "name" : "EHDSILabCode",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.70"]
+  },
+  {
+    "id" : "eHDSILabSpecimenType",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabSpecimenType",
+    "version" : "0.0.1",
+    "name" : "EHDSILabSpecimenType",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.67"]
+  },
+  {
+    "id" : "eHDSILabStudyType",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabStudyType",
+    "version" : "0.0.1",
+    "name" : "EHDSILabStudyType",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.66"]
+  },
+  {
+    "id" : "eHDSILabTechnique",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabTechnique",
+    "version" : "0.0.1",
+    "name" : "EHDSILabTechnique",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.79"]
+  },
+  {
+    "id" : "eHDSILaboratoryReportTypes",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILaboratoryReportTypes",
+    "version" : "0.0.1",
+    "name" : "EHDSILaboratoryReportTypes",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.52"]
+  },
+  {
+    "id" : "eHDSILanguage",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILanguage",
+    "version" : "0.0.1",
+    "name" : "EHDSILanguage",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.6"]
+  },
+  {
+    "id" : "eHDSIMedicalDevice",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice",
+    "version" : "0.0.1",
+    "name" : "EHDSIMedicalDevice",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.8"]
+  },
+  {
+    "id" : "eHDSIMicroorganism",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIMicroorganism",
+    "version" : "0.0.1",
+    "name" : "EHDSIMicroorganism",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.78"]
+  },
+  {
+    "id" : "eHDSIMorphologicAbnormality",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIMorphologicAbnormality",
+    "version" : "0.0.1",
+    "name" : "EHDSIMorphologicAbnormality",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.69"]
+  },
+  {
+    "id" : "eHDSIObservationCategory",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIObservationCategory",
+    "version" : "0.0.1",
+    "name" : "EHDSIObservationCategory",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.71"]
+  },
+  {
+    "id" : "eHDSIObservationInterpretation",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIObservationInterpretation",
+    "version" : "0.0.1",
+    "name" : "EHDSIObservationInterpretation",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.73"]
+  },
+  {
+    "id" : "eHDSIPerformerFunction",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIPerformerFunction",
+    "version" : "0.0.1",
+    "name" : "EHDSIPerformerFunction",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.76"]
+  },
+  {
+    "id" : "eHDSIPresenceAbsence",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIPresenceAbsence",
+    "version" : "0.0.1",
+    "name" : "EHDSIPresenceAbsence",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.77"]
+  },
+  {
+    "id" : "eHDSIRareDisease",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIRareDisease",
+    "version" : "0.0.1",
+    "name" : "EHDSIRareDisease",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.63"]
+  },
+  {
+    "id" : "eHDSIReactionAllergy",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy",
+    "version" : "0.0.1",
+    "name" : "EHDSIReactionAllergy",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.11"]
+  },
+  {
+    "id" : "eHDSIReferenceRangeAppliesTo",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeAppliesTo",
+    "version" : "0.0.1",
+    "name" : "EHDSIReferenceRangeAppliesTo",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.75"]
+  },
+  {
+    "id" : "eHDSIReferenceRangeMeaning",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeMeaning",
+    "version" : "0.0.1",
+    "name" : "EHDSIReferenceRangeMeaning",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.74"]
+  },
+  {
+    "id" : "eHDSIUnit",
+    "type" : "ValueSet",
+    "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIUnit",
+    "version" : "0.0.1",
+    "name" : "EHDSIUnit",
+    "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.16"]
+  }
+]

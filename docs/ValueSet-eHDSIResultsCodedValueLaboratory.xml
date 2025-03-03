@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="eHDSIResultsCodedValueLaboratory"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet eHDSIResultsCodedValueLaboratory</b></p><a name="eHDSIResultsCodedValueLaboratory"> </a><a name="hceHDSIResultsCodedValueLaboratory"> </a><a name="eHDSIResultsCodedValueLaboratory-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="ValueSet-eHDSIExceptionalValue.html">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href="ValueSet-eHDSIBloodGroup.html">eHDSI Blood Group</a></li><li>Import all the codes that are contained in <a href="ValueSet-eHDSIPresenceAbsence.html">eHDSI Presence Absence</a></li><li>Import all the codes that are contained in <a href="ValueSet-eHDSIMicroorganism.html">eHDSI Microorganism</a></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIResultsCodedValueLaboratory"/>
+  <version value="0.0.1"/>
+  <name value="EHDSIResultsCodedValueLaboratory"/>
+  <title value="eHDSI Results Coded Value Laboratory with exceptions"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="The Value Set is used to code the value of laboratory observation result.&#xA;It is defined as the union of:&#xA;(a) eHDSIBloodGroup&#xA;(b) eHDSIPresenceAbsence&#xA;(c) eHDSIMicroorganism&#xA;(d) eHDSIExceptionalValue"/>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"/>
+    </include>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup"/>
+    </include>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIPresenceAbsence"/>
+    </include>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIMicroorganism"/>
+    </include>
+  </compose>
+</ValueSet>

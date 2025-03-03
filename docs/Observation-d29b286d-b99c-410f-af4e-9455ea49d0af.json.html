@@ -1,0 +1,441 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Observation: Ratio example - JSON Representation - Guía de Implementación Servicios Transfronterizos v0.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"19.96"}
+    h3,h4,h5,h6{--heading-prefix:"19.96"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<div>
+  <table width="100%">
+    <tr >
+      <td align="center">
+        <img src="assets/images/logoGlobal.png"></td></tr></table></td></tr></table>
+      </td>
+    </tr>
+  </table>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación Servicios Transfronterizos</span>
+            <br/>
+            <span style="display:inline-block;">0.0.1 - qa-preview
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Introducción</a>
+  </li>
+  <li>
+    <a href="toc.html">Listado de Contenidos</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Diagrama de Secuencia
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="diagramaSecInf.html">Busqueda Paciente</a>
+      </li>
+      <li>
+        <a href="diagramaSecPac.html">Funcionamiento roles</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Escenarios
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="consultaReferenciasROL-A.html">Transfronterizo - ROL A Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoROL-A.html">Transfronterizo - ROL A Consulta de documento estructurado</a>
+      </li>
+      <li>
+        <a href="consultaPacienteROL-B.html">Transfronterizo - ROL B Consulta de Paciente</a>
+      </li>
+      <li>
+        <a href="consultaReferenciasROL-B.html">Transfronterizo - ROL B Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoROL-B.html">Transfronterizo - ROL B Consulta de documento</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementación
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ConsultaCiudadanoTransfronterizoCUROL-A.html">Transfronterizo - ROL A Consulta de un ciudadano desde servicio transfronterizo</a>
+      </li>
+      <li>
+        <a href="consultaReferenciasCUROL-A.html">Transfronterizo - ROL A Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoCUROL-A.html">Transfronterizo - ROL A Consulta de documento estructurado</a>
+      </li>
+      <li>
+        <a href="consultaPacienteCUROL-B.html">Transfronterizo - ROL B Consulta de Paciente</a>
+      </li>
+      <li>
+        <a href="consultaReferenciasCUROL-B.html">Transfronterizo - ROL B Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoCUROL-B.html">Transfronterizo - ROL B Consulta de documento estructurado</a>
+      </li>
+      <li>
+        <a href="auditoriaOperacionesCU.html">Transfronterizo - Auditoría de operaciones</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guías Relacionadas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://fhir.ehdsi.eu/laboratory/index.html">MyHealth@Eu Laboratory Report</a>
+      </li>
+      <li>
+        <a href="https://build-fhir.ehdsi.eu/ncp-api/">MyHealth@Eu NCPeH API</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artefactos
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Listado</a>
+      </li>
+      <li>
+        <a href="mapeo.html">Mapeos</a>
+      </li>
+      <li>
+        <a href="terminologias.html">Terminologias</a>
+      </li>
+      <li>
+        <a href="seguridad.html">Seguridad</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Observation: Ratio example</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Guía de Implementación Servicios Transfronterizos - Local Development build (v0.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhir.ehdsi.eu/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Observation-d29b286d-b99c-410f-af4e-9455ea49d0af.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Observation-d29b286d-b99c-410f-af4e-9455ea49d0af.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Observation-d29b286d-b99c-410f-af4e-9455ea49d0af.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Observation: Ratio example - JSON Representation</h2>
+
+
+<p><a href="Observation-d29b286d-b99c-410f-af4e-9455ea49d0af.json" no-download="true">Raw json</a> | <a href="Observation-d29b286d-b99c-410f-af4e-9455ea49d0af.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resourceType</a>" : "Observation",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "d29b286d-b99c-410f-af4e-9455ea49d0af",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-Observation-resultslab-lab-myhealtheu.html" style="color: Maroon">&#x1F517;</a> "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-resultslab-lab-myhealtheu"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation d29b286d-b99c-410f-af4e-9455ea49d0af&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;d29b286d-b99c-410f-af4e-9455ea49d0af\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcd29b286d-b99c-410f-af4e-9455ea49d0af\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;d29b286d-b99c-410f-af4e-9455ea49d0af-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;Device Laboratory Test Kit&lt;/b&gt;: &lt;a href=\&quot;#hcd29b286d-b99c-410f-af4e-9455ea49d0af/TestKitExample\&quot;&gt;Device: manufacturer = Best manufacturer&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\&quot;&gt;Laboratory&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 1755-8}\&quot;&gt;Albumin (24H U) [Mass/Time]&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-SamplePatient.html\&quot;&gt;John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976\u00a0(use:\u00a0official,\u00a0))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2023-03-27 11:24:26+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;: Jan Laborant&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 15 mg&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM  codemg = 'mg')&lt;/span&gt;/24 h&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM  codeh = 'h')&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;device&lt;/b&gt;: &lt;a href=\&quot;#hcd29b286d-b99c-410f-af4e-9455ea49d0af/AnalyzerExample\&quot;&gt;Device: manufacturer = Best manufacturer&lt;/a&gt;&lt;/p&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Device #TestKitExample&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;d29b286d-b99c-410f-af4e-9455ea49d0af/TestKitExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcd29b286d-b99c-410f-af4e-9455ea49d0af/TestKitExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;d29b286d-b99c-410f-af4e-9455ea49d0af/TestKitExample-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;manufacturer&lt;/b&gt;: Best manufacturer&lt;/p&gt;&lt;h3&gt;DeviceNames&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;BEST® Micro Albuminuria Test Kit&lt;/td&gt;&lt;td&gt;Manufacturer name&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Device #AnalyzerExample&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;d29b286d-b99c-410f-af4e-9455ea49d0af/AnalyzerExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcd29b286d-b99c-410f-af4e-9455ea49d0af/AnalyzerExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;d29b286d-b99c-410f-af4e-9455ea49d0af/AnalyzerExample-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;manufacturer&lt;/b&gt;: Best manufacturer&lt;/p&gt;&lt;h3&gt;DeviceNames&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;BEST® FLUORESCENCE PLUS ANALYZER&lt;/td&gt;&lt;td&gt;Manufacturer name&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/device.html#Device">contained</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/device.html">resourceType</a>" : "Device",
+      "<a href="http://hl7.org/fhir/R4/device.html#Device.id">id</a>" : "TestKitExample",
+      "<a href="http://hl7.org/fhir/R4/device.html#Device.meta">meta</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+          <a href="StructureDefinition-Device-measuring-lab-myhealtheu.html" style="color: Maroon">&#x1F517;</a> "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Device-measuring-lab-myhealtheu"
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/device.html#Device.manufacturer">manufacturer</a>" : "Best manufacturer",
+      "<a href="http://hl7.org/fhir/R4/device.html#Device.deviceName">deviceName</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/device.html#Device.deviceName.name">name</a>" : "BEST® Micro Albuminuria Test Kit",
+          "<a href="http://hl7.org/fhir/R4/device.html#Device.deviceName.type">type</a>" : "manufacturer-name"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/device.html">resourceType</a>" : "Device",
+      "<a href="http://hl7.org/fhir/R4/device.html#Device.id">id</a>" : "AnalyzerExample",
+      "<a href="http://hl7.org/fhir/R4/device.html#Device.meta">meta</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+          <a href="StructureDefinition-Device-measuring-lab-myhealtheu.html" style="color: Maroon">&#x1F517;</a> "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Device-measuring-lab-myhealtheu"
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/device.html#Device.manufacturer">manufacturer</a>" : "Best manufacturer",
+      "<a href="http://hl7.org/fhir/R4/device.html#Device.deviceName">deviceName</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/device.html#Device.deviceName.name">name</a>" : "BEST® FLUORESCENCE PLUS ANALYZER",
+          "<a href="http://hl7.org/fhir/R4/device.html#Device.deviceName.type">type</a>" : "manufacturer-name"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-deviceLabTestKit",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#TestKitExample"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "laboratory"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "1755-8",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Albumin [Mass/time] in 24 hour Urine"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Albumin (24H U) [Mass/Time]"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>" : {
+    <a href="Patient-SamplePatient.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/SamplePatient"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective[x]">effectiveDateTime</a>" : "2023-03-27T11:24:26+01:00",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.performer">performer</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Jan Laborant"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value[x]">valueRatio</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 15,
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "mg",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
+    },
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.denominator">denominator</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 24,
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "h",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "h"
+    }
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.device">device</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#AnalyzerExample"
+  }
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://sns.gob.es">SNS</a>.  Package servtrans.sns.implementationGuide#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 09:01+0100">2025-03-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

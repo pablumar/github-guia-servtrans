@@ -1,0 +1,188 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ehdsi.eu/laboratory/ConceptMap/subject2FHIR-lab-myhealtheu> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "subject2FHIR-lab-myhealtheu"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap subject2FHIR-lab-myhealtheu</b></p><a name=\"subject2FHIR-lab-myhealtheu\"> </a><a name=\"hcsubject2FHIR-lab-myhealtheu\"> </a><a name=\"subject2FHIR-lab-myhealtheu-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-Subject.html\">Patient/subject</a> to <a href=\"StructureDefinition-Patient-lab-myhealtheu.html\">Patient: Laboratory</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Subject.html\">Patient/subject</a> to <a href=\"StructureDefinition-Patient-lab-myhealtheu.html\">Patient: Laboratory</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Subject.identification (Identification of the patient/subject)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Patient</td></tr><tr><td>Subject.identification.familyName (Family name/surname)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.name.family</td></tr><tr><td>Subject.identification.givenName (Given name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.name.given</td></tr><tr><td>Subject.identification.dateOfBirth (Date of birth)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.birthDate</td></tr><tr><td>Subject.identification.identifier (Personal identifier)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.identifier</td></tr><tr><td>Subject.identification.gender (Gender)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.gender</td></tr><tr><td>Subject.identification.sex (Sex for clinical use)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.extension:sex-for-clinical-use</td></tr><tr><td>Subject.addressTelecom (Patient/subject related contact information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Patient</td></tr><tr><td>Subject.addressTelecom.address (Address)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address</td></tr><tr><td>Subject.addressTelecom.address.street (Street)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address.line</td></tr><tr><td>Subject.addressTelecom.address.street (Street)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address.line.extension:streetName</td></tr><tr><td>Subject.addressTelecom.address.houseNumber (House Number)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address.line.extension:houseNumber</td></tr><tr><td>Subject.addressTelecom.address.postBox (Post Box)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address.line.extension:postBox</td></tr><tr><td>Subject.addressTelecom.address.postalCode (Postal Code)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address.postalCode</td></tr><tr><td>Subject.addressTelecom.address.stateOrProvince (State or Province)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address.code</td></tr><tr><td>Subject.addressTelecom.address.city (City)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address.city</td></tr><tr><td>Subject.addressTelecom.address.countryCode (Country Code)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address.country.extension:countryCode</td></tr><tr><td>Subject.addressTelecom.address.use (Use of Address)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address.use</td></tr><tr><td>Subject.addressTelecom.address.type (Type of address)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.address.type</td></tr><tr><td>Subject.addressTelecom.telecom (Telecom)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Patient.telecom</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://fhir.ehdsi.eu/laboratory/ConceptMap/subject2FHIR-lab-myhealtheu"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.0.1"] ; # 
+  fhir:name [ fhir:v "LabRptSubject2Fhir"] ; # 
+  fhir:title [ fhir:v "MyHealth@EUSubject to this guide Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2025-03-03T08:58:37+01:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "SNS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "SNS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://sns.gob.es" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "MyHealth@EUSubject Model to this guide Map"] ; # 
+  fhir:purpose [ fhir:v "It shows how the Laboratory Report Subject data set defined by the EU MyHealth@EUguidelines is mapped into this guide"] ; # 
+  fhir:source [
+     a fhir:uri ;
+     fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Subject"^^xsd:anyURI
+  ] ; # 
+  fhir:target [
+     a fhir:uri ;
+     fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-lab-myhealtheu"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Subject"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-lab-myhealtheu"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "Subject.identification" ] ;
+       fhir:display [ fhir:v "Identification of the patient/subject" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.identification.familyName" ] ;
+       fhir:display [ fhir:v "Family name/surname" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.name.family" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.identification.givenName" ] ;
+       fhir:display [ fhir:v "Given name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.name.given" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.identification.dateOfBirth" ] ;
+       fhir:display [ fhir:v "Date of birth" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.birthDate" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.identification.identifier" ] ;
+       fhir:display [ fhir:v "Personal identifier" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.identifier" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.identification.gender" ] ;
+       fhir:display [ fhir:v "Gender" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.gender" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.identification.sex" ] ;
+       fhir:display [ fhir:v "Sex for clinical use" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.extension:sex-for-clinical-use" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom" ] ;
+       fhir:display [ fhir:v "Patient/subject related contact information" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address" ] ;
+       fhir:display [ fhir:v "Address" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address.street" ] ;
+       fhir:display [ fhir:v "Street" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address.line" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address.street" ] ;
+       fhir:display [ fhir:v "Street" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address.line.extension:streetName" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address.houseNumber" ] ;
+       fhir:display [ fhir:v "House Number" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address.line.extension:houseNumber" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address.postBox" ] ;
+       fhir:display [ fhir:v "Post Box" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address.line.extension:postBox" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address.postalCode" ] ;
+       fhir:display [ fhir:v "Postal Code" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address.postalCode" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address.stateOrProvince" ] ;
+       fhir:display [ fhir:v "State or Province" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address.code" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address.city" ] ;
+       fhir:display [ fhir:v "City" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address.city" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address.countryCode" ] ;
+       fhir:display [ fhir:v "Country Code" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address.country.extension:countryCode" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address.use" ] ;
+       fhir:display [ fhir:v "Use of Address" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address.use" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.address.type" ] ;
+       fhir:display [ fhir:v "Type of address" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.address.type" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Subject.addressTelecom.telecom" ] ;
+       fhir:display [ fhir:v "Telecom" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Patient.telecom" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

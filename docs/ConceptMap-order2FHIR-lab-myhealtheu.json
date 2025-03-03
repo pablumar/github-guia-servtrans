@@ -1,0 +1,195 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "order2FHIR-lab-myhealtheu",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap order2FHIR-lab-myhealtheu</b></p><a name=\"order2FHIR-lab-myhealtheu\"> </a><a name=\"hcorder2FHIR-lab-myhealtheu\"> </a><a name=\"order2FHIR-lab-myhealtheu-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-Order.html\">Order information and reason</a> to <a href=\"StructureDefinition-ServiceRequest-lab-myhealtheu.html\">ServiceRequest: Laboratory</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Order.html\">Order information and reason</a> to <a href=\"StructureDefinition-ServiceRequest-lab-myhealtheu.html\">ServiceRequest: Laboratory</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Order.orderDetails (Order Information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest</td><td/></tr><tr><td>Order.orderDetails.identifier (Order Id)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.identifier</td><td/></tr><tr><td>Order.orderDetails.identifier (Order Id)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requisition</td><td>if the Composite Request ID.</td></tr><tr><td>Order.orderDetails.dateTime (Order date and time)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.authoredOn</td><td/></tr><tr><td>Order.orderDetails.orderPlacer (Order Placer)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.requester</td><td/></tr><tr><td>Order.orderDetails.orderPlacer.identifier (Order placer identifier)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.identifier</td><td>if the Composite Request ID.</td></tr><tr><td>Order.orderDetails.orderPlacer.name (Order placer name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.name</td><td>requester.resolve().ofType(Practitioner).name</td></tr><tr><td>Order.orderDetails.orderPlacer.name (Order placer name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.practitioner.name</td><td>requester.resolve().ofType(PractitionerRole).practitioner.resolve().name</td></tr><tr><td>Order.orderDetails.orderPlacer.specialty (Order placer specialty)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.practitioner.specialty</td><td>requester.resolve().ofType(PractitionerRole).specialty</td></tr><tr><td>Order.orderDetails.orderPlacer.contacts (Order placer contact details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.telecom</td><td>requester.resolve().ofType(Practitioner).telecom</td></tr><tr><td>Order.orderDetails.orderPlacer.contacts (Order placer contact details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.address</td><td>requester.resolve().ofType(Practitioner).address</td></tr><tr><td>Order.orderDetails.orderPlacer.contacts (Order placer contact details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.telecom</td><td>requester.resolve().ofType(PractitionerRole).telecom</td></tr><tr><td>Order.orderDetails.orderPlacer.organization (Order placer organization)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.requester.organization</td><td>requester.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Order.orderDetails.orderPlacer.organization.name (Organization Name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.requester.organization.name</td><td>requester.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Order.orderDetails.orderPlacer.organization.address (Organization Address)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.requester.organization.address</td><td>requester.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Order.orderDetails.orderPlacer.organization.telecom (Organization telecom)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.requester.organization.telecom</td><td>requester.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Order.reason (Order reason)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.reasonCode</td><td/></tr><tr><td>Order.reason (Order reason)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.reasonReference</td><td/></tr><tr><td>Order.reason.code (Problem / diagnosis / condition description)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.reasonCode</td><td/></tr></table></div>"
+  },
+  "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/order2FHIR-lab-myhealtheu",
+  "version" : "0.0.1",
+  "name" : "Order2Fhir",
+  "title" : "MyHealth@EUOrder to this guide Map",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-03-03T08:58:37+01:00",
+  "publisher" : "SNS",
+  "contact" : [{
+    "name" : "SNS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://sns.gob.es"
+    }]
+  }],
+  "description" : "MyHealth@EUOrder to this guide Map",
+  "purpose" : "It shows how the Order data set defined by the EU MyHealth@EUguidelines is mapped into this guide",
+  "sourceUri" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Order",
+  "targetUri" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-lab-myhealtheu",
+  "group" : [{
+    "source" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Order",
+    "target" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-lab-myhealtheu",
+    "element" : [{
+      "code" : "Order.orderDetails",
+      "display" : "Order Information",
+      "target" : [{
+        "code" : "ServiceRequest",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.identifier",
+      "display" : "Order Id",
+      "target" : [{
+        "code" : "ServiceRequest.identifier",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.identifier",
+      "display" : "Order Id",
+      "target" : [{
+        "code" : "ServiceRequest.requisition",
+        "equivalence" : "relatedto",
+        "comment" : "if the Composite Request ID."
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.dateTime",
+      "display" : "Order date and time",
+      "target" : [{
+        "code" : "ServiceRequest.authoredOn",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer",
+      "display" : "Order Placer",
+      "target" : [{
+        "code" : "ServiceRequest.requester",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.identifier",
+      "display" : "Order placer identifier",
+      "target" : [{
+        "code" : "ServiceRequest.requester.identifier",
+        "equivalence" : "relatedto",
+        "comment" : "if the Composite Request ID."
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.name",
+      "display" : "Order placer name",
+      "target" : [{
+        "code" : "ServiceRequest.requester.name",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(Practitioner).name"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.name",
+      "display" : "Order placer name",
+      "target" : [{
+        "code" : "ServiceRequest.requester.practitioner.name",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(PractitionerRole).practitioner.resolve().name"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.specialty",
+      "display" : "Order placer specialty",
+      "target" : [{
+        "code" : "ServiceRequest.requester.practitioner.specialty",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(PractitionerRole).specialty"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.contacts",
+      "display" : "Order placer contact details",
+      "target" : [{
+        "code" : "ServiceRequest.requester.telecom",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(Practitioner).telecom"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.contacts",
+      "display" : "Order placer contact details",
+      "target" : [{
+        "code" : "ServiceRequest.requester.address",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(Practitioner).address"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.contacts",
+      "display" : "Order placer contact details",
+      "target" : [{
+        "code" : "ServiceRequest.requester.telecom",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(PractitionerRole).telecom"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.organization",
+      "display" : "Order placer organization",
+      "target" : [{
+        "code" : "ServiceRequest.requester.organization",
+        "equivalence" : "equivalent",
+        "comment" : "requester.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.organization.name",
+      "display" : "Organization Name",
+      "target" : [{
+        "code" : "ServiceRequest.requester.organization.name",
+        "equivalence" : "equivalent",
+        "comment" : "requester.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.organization.address",
+      "display" : "Organization Address",
+      "target" : [{
+        "code" : "ServiceRequest.requester.organization.address",
+        "equivalence" : "equivalent",
+        "comment" : "requester.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacer.organization.telecom",
+      "display" : "Organization telecom",
+      "target" : [{
+        "code" : "ServiceRequest.requester.organization.telecom",
+        "equivalence" : "equivalent",
+        "comment" : "requester.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "Order.reason",
+      "display" : "Order reason",
+      "target" : [{
+        "code" : "ServiceRequest.reasonCode",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "Order.reason",
+      "display" : "Order reason",
+      "target" : [{
+        "code" : "ServiceRequest.reasonReference",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "Order.reason.code",
+      "display" : "Problem / diagnosis / condition description",
+      "target" : [{
+        "code" : "ServiceRequest.reasonCode",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

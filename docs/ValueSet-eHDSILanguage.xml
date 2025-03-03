@@ -1,0 +1,1559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="eHDSILanguage"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet eHDSILanguage</b></p><a name="eHDSILanguage"> </a><a name="hceHDSILanguage"> </a><a name="eHDSILanguage-en-US"> </a><ul><li>Include these codes as defined in <a href="http://terminology.hl7.org/5.5.0/CodeSystem-v3-ietf3066.html"><code>urn:ietf:bcp:47</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>af-NA</td><td>Afrikaans-NAMIBIA</td></tr><tr><td>af-ZA</td><td>Afrikaans-SOUTH AFRICA</td></tr><tr><td>ak-GH</td><td>Akan-GHANA</td></tr><tr><td>am-ET</td><td>Amharic-ETHIOPIA</td></tr><tr><td>ar-AE</td><td>Arabic-UNITED ARAB EMIRATES</td></tr><tr><td>ar-BH</td><td>Arabic-BAHRAIN</td></tr><tr><td>ar-DJ</td><td>Arabic-DJIBOUTI</td></tr><tr><td>ar-DZ</td><td>Arabic-ALGERIA</td></tr><tr><td>ar-EG</td><td>Arabic-EGYPT</td></tr><tr><td>ar-EH</td><td>Arabic-WESTERN SAHARA</td></tr><tr><td>ar-ER</td><td>Arabic-ERITREA</td></tr><tr><td>ar-IL</td><td>Arabic-ISRAEL</td></tr><tr><td>ar-IQ</td><td>Arabic-IRAQ</td></tr><tr><td>ar-JO</td><td>Arabic-JORDAN</td></tr><tr><td>ar-KM</td><td>Arabic-COMOROS</td></tr><tr><td>ar-KW</td><td>Arabic-KUWAIT</td></tr><tr><td>ar-LB</td><td>Arabic-LEBANON</td></tr><tr><td>ar-LY</td><td>Arabic-LIBYA</td></tr><tr><td>ar-MA</td><td>Arabic-MOROCCO</td></tr><tr><td>ar-MR</td><td>Arabic-MAURITANIA</td></tr><tr><td>ar-OM</td><td>Arabic-OMAN</td></tr><tr><td>ar-PS</td><td>Arabic-PALESTINE, STATE OF</td></tr><tr><td>ar-QA</td><td>Arabic-QATAR</td></tr><tr><td>ar-SA</td><td>Arabic-SAUDI ARABIA</td></tr><tr><td>ar-SD</td><td>Arabic-SUDAN</td></tr><tr><td>ar-SO</td><td>Arabic-SOMALIA</td></tr><tr><td>ar-SS</td><td>Arabic-SOUTH SUDAN</td></tr><tr><td>ar-SY</td><td>Arabic-SYRIAN ARAB REPUBLIC</td></tr><tr><td>ar-TD</td><td>Arabic-CHAD</td></tr><tr><td>ar-TN</td><td>Arabic-TUNISIA</td></tr><tr><td>ar-YE</td><td>Arabic-YEMEN</td></tr><tr><td>as-IN</td><td>Assamese-INDIA</td></tr><tr><td>az-AZ</td><td>Azerbaijani-AZERBAIJAN</td></tr><tr><td>be-BY</td><td>Belarusian-BELARUS</td></tr><tr><td>bg-BG</td><td>Bulgarian-BULGARIA</td></tr><tr><td>bm-ML</td><td>Bambara-MALI</td></tr><tr><td>bn-BD</td><td>Bengali-BANGLADESH</td></tr><tr><td>bn-IN</td><td>Bengali-INDIA</td></tr><tr><td>bo-CN</td><td>Tibetan-CHINA</td></tr><tr><td>bo-IN</td><td>Tibetan-INDIA</td></tr><tr><td>br-FR</td><td>Breton-FRANCE</td></tr><tr><td>bs-BA</td><td>Bosnian-BOSNIA AND HERZEGOVINA</td></tr><tr><td>ca-AD</td><td>Catalan; Valencian-ANDORRA</td></tr><tr><td>ca-ES</td><td>Catalan; Valencian-SPAIN</td></tr><tr><td>ca-FR</td><td>Catalan; Valencian-FRANCE</td></tr><tr><td>ca-IT</td><td>Catalan; Valencian-ITALY</td></tr><tr><td>cs-CZ</td><td>Czech-CZECH REPUBLIC</td></tr><tr><td>cy-GB</td><td>Welsh-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</td></tr><tr><td>da-DK</td><td>Danish-DENMARK</td></tr><tr><td>da-GL</td><td>Danish-GREENLAND</td></tr><tr><td>de-AT</td><td>German-AUSTRIA</td></tr><tr><td>de-BE</td><td>German-BELGIUM</td></tr><tr><td>de-CH</td><td>German-SWITZERLAND</td></tr><tr><td>de-DE</td><td>German-GERMANY</td></tr><tr><td>de-LI</td><td>German-LIECHTENSTEIN</td></tr><tr><td>de-LU</td><td>German-LUXEMBOURG</td></tr><tr><td>dz-BT</td><td>Dzongkha-BHUTAN</td></tr><tr><td>ee-GH</td><td>Ewe-GHANA</td></tr><tr><td>ee-TG</td><td>Ewe-TOGO</td></tr><tr><td>el-CY</td><td>Greek, Modern (1453-)-CYPRUS</td></tr><tr><td>el-GR</td><td>Greek, Modern (1453-)-GREECE</td></tr><tr><td>en-AG</td><td>English-ANTIGUA AND BARBUDA</td></tr><tr><td>en-AI</td><td>English-ANGUILLA</td></tr><tr><td>en-AS</td><td>English-AMERICAN SAMOA</td></tr><tr><td>en-AU</td><td>English-AUSTRALIA</td></tr><tr><td>en-BB</td><td>English-BARBADOS</td></tr><tr><td>en-BE</td><td>English-BELGIUM</td></tr><tr><td>en-BM</td><td>English-BERMUDA</td></tr><tr><td>en-BS</td><td>English-BAHAMAS</td></tr><tr><td>en-BW</td><td>English-BOTSWANA</td></tr><tr><td>en-BZ</td><td>English-BELIZE</td></tr><tr><td>en-CA</td><td>English-CANADA</td></tr><tr><td>en-CC</td><td>English-COCOS (KEELING) ISLANDS</td></tr><tr><td>en-CK</td><td>English-COOK ISLANDS</td></tr><tr><td>en-CM</td><td>English-CAMEROON</td></tr><tr><td>en-CX</td><td>English-CHRISTMAS ISLAND</td></tr><tr><td>en-DM</td><td>English-DOMINICA</td></tr><tr><td>en-ER</td><td>English-ERITREA</td></tr><tr><td>en-FJ</td><td>English-FIJI</td></tr><tr><td>en-FK</td><td>English-FALKLAND ISLANDS (MALVINAS)</td></tr><tr><td>en-FM</td><td>English-MICRONESIA (FEDERATED STATES OF)</td></tr><tr><td>en-GB</td><td>English-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</td></tr><tr><td>en-GD</td><td>English-GRENADA</td></tr><tr><td>en-GG</td><td>English-GUERNSEY</td></tr><tr><td>en-GH</td><td>English-GHANA</td></tr><tr><td>en-GI</td><td>English-GIBRALTAR</td></tr><tr><td>en-GM</td><td>English-GAMBIA</td></tr><tr><td>en-GU</td><td>English-GUAM</td></tr><tr><td>en-GY</td><td>English-GUYANA</td></tr><tr><td>en-HK</td><td>English-HONG KONG</td></tr><tr><td>en-IE</td><td>English-IRELAND</td></tr><tr><td>en-IM</td><td>English-ISLE OF MAN</td></tr><tr><td>en-IN</td><td>English-INDIA</td></tr><tr><td>en-IO</td><td>English-BRITISH INDIAN OCEAN TERRITORY</td></tr><tr><td>en-JE</td><td>English-JERSEY</td></tr><tr><td>en-JM</td><td>English-JAMAICA</td></tr><tr><td>en-KE</td><td>English-KENYA</td></tr><tr><td>en-KI</td><td>English-KIRIBATI</td></tr><tr><td>en-KN</td><td>English-SAINT KITTS AND NEVIS</td></tr><tr><td>en-KY</td><td>English-CAYMAN ISLANDS</td></tr><tr><td>en-LC</td><td>English-SAINT LUCIA</td></tr><tr><td>en-LR</td><td>English-LIBERIA</td></tr><tr><td>en-LS</td><td>English-LESOTHO</td></tr><tr><td>en-MG</td><td>English-MADAGASCAR</td></tr><tr><td>en-MH</td><td>English-MARSHALL ISLANDS</td></tr><tr><td>en-MO</td><td>English-MACAO</td></tr><tr><td>en-MP</td><td>English-NORTHERN MARIANA ISLANDS</td></tr><tr><td>en-MS</td><td>English-MONTSERRAT</td></tr><tr><td>en-MT</td><td>English-MALTA</td></tr><tr><td>en-MU</td><td>English-MAURITIUS</td></tr><tr><td>en-MW</td><td>English-MALAWI</td></tr><tr><td>en-MY</td><td>English-MALAYSIA</td></tr><tr><td>en-NA</td><td>English-NAMIBIA</td></tr><tr><td>en-NF</td><td>English-NORFOLK ISLAND</td></tr><tr><td>en-NG</td><td>English-NIGERIA</td></tr><tr><td>en-NR</td><td>English-NAURU</td></tr><tr><td>en-NU</td><td>English-NIUE</td></tr><tr><td>en-NZ</td><td>English-NEW ZEALAND</td></tr><tr><td>en-PG</td><td>English-PAPUA NEW GUINEA</td></tr><tr><td>en-PH</td><td>English-PHILIPPINES</td></tr><tr><td>en-PK</td><td>English-PAKISTAN</td></tr><tr><td>en-PN</td><td>English-PITCAIRN</td></tr><tr><td>en-PR</td><td>English-PUERTO RICO</td></tr><tr><td>en-PW</td><td>English-PALAU</td></tr><tr><td>en-RW</td><td>English-RWANDA</td></tr><tr><td>en-SB</td><td>English-SOLOMON ISLANDS</td></tr><tr><td>en-SC</td><td>English-SEYCHELLES</td></tr><tr><td>en-SD</td><td>English-SUDAN</td></tr><tr><td>en-SG</td><td>English-SINGAPORE</td></tr><tr><td>en-SH</td><td>English-SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA</td></tr><tr><td>en-SL</td><td>English-SIERRA LEONE</td></tr><tr><td>en-SS</td><td>English-SOUTH SUDAN</td></tr><tr><td>en-SX</td><td>English-SINT MAARTEN (DUTCH PART)</td></tr><tr><td>en-SZ</td><td>English-SWAZILAND</td></tr><tr><td>en-TC</td><td>English-TURKS AND CAICOS ISLANDS</td></tr><tr><td>en-TK</td><td>English-TOKELAU</td></tr><tr><td>en-TO</td><td>English-TONGA</td></tr><tr><td>en-TT</td><td>English-TRINIDAD AND TOBAGO</td></tr><tr><td>en-TV</td><td>English-TUVALU</td></tr><tr><td>en-TZ</td><td>English-TANZANIA, UNITED REPUBLIC OF</td></tr><tr><td>en-UG</td><td>English-UGANDA</td></tr><tr><td>en-UM</td><td>English-UNITED STATES MINOR OUTLYING ISLANDS</td></tr><tr><td>en-US</td><td>English-UNITED STATES OF AMERICA</td></tr><tr><td>en-VC</td><td>English-SAINT VINCENT AND THE GRENADINES</td></tr><tr><td>en-VG</td><td>English-VIRGIN ISLANDS, BRITISH</td></tr><tr><td>en-VI</td><td>English-VIRGIN ISLANDS, U.S.</td></tr><tr><td>en-VU</td><td>English-VANUATU</td></tr><tr><td>en-WS</td><td>English-SAMOA</td></tr><tr><td>en-ZA</td><td>English-SOUTH AFRICA</td></tr><tr><td>en-ZM</td><td>English-ZAMBIA</td></tr><tr><td>en-ZW</td><td>English-ZIMBABWE</td></tr><tr><td>es-AR</td><td>Spanish; Castilian-ARGENTINA</td></tr><tr><td>es-BO</td><td>Spanish; Castilian-BOLIVIA (PLURINATIONAL STATE OF)</td></tr><tr><td>es-CL</td><td>Spanish; Castilian-CHILE</td></tr><tr><td>es-CO</td><td>Spanish; Castilian-COLOMBIA</td></tr><tr><td>es-CR</td><td>Spanish; Castilian-COSTA RICA</td></tr><tr><td>es-CU</td><td>Spanish; Castilian-CUBA</td></tr><tr><td>es-DO</td><td>Spanish; Castilian-DOMINICAN REPUBLIC</td></tr><tr><td>es-EC</td><td>Spanish; Castilian-ECUADOR</td></tr><tr><td>es-ES</td><td>Spanish; Castilian-SPAIN</td></tr><tr><td>es-GQ</td><td>Spanish; Castilian-EQUATORIAL GUINEA</td></tr><tr><td>es-GT</td><td>Spanish; Castilian-GUATEMALA</td></tr><tr><td>es-HN</td><td>Spanish; Castilian-HONDURAS</td></tr><tr><td>es-MX</td><td>Spanish; Castilian-MEXICO</td></tr><tr><td>es-NI</td><td>Spanish; Castilian-NICARAGUA</td></tr><tr><td>es-PA</td><td>Spanish; Castilian-PANAMA</td></tr><tr><td>es-PE</td><td>Spanish; Castilian-PERU</td></tr><tr><td>es-PH</td><td>Spanish; Castilian-PHILIPPINES</td></tr><tr><td>es-PR</td><td>Spanish; Castilian-PUERTO RICO</td></tr><tr><td>es-PY</td><td>Spanish; Castilian-PARAGUAY</td></tr><tr><td>es-SV</td><td>Spanish; Castilian-EL SALVADOR</td></tr><tr><td>es-US</td><td>Spanish; Castilian-UNITED STATES OF AMERICA</td></tr><tr><td>es-UY</td><td>Spanish; Castilian-URUGUAY</td></tr><tr><td>es-VE</td><td>Spanish; Castilian-VENEZUELA (BOLIVARIAN REPUBLIC OF)</td></tr><tr><td>et-EE</td><td>Estonian-ESTONIA</td></tr><tr><td>eu-ES</td><td>Basque-SPAIN</td></tr><tr><td>fa-AF</td><td>Persian-AFGHANISTAN</td></tr><tr><td>fa-IR</td><td>Persian-IRAN (ISLAMIC REPUBLIC OF)</td></tr><tr><td>ff-CM</td><td>Fulah-CAMEROON</td></tr><tr><td>ff-GN</td><td>Fulah-GUINEA</td></tr><tr><td>ff-MR</td><td>Fulah-MAURITANIA</td></tr><tr><td>ff-SN</td><td>Fulah-SENEGAL</td></tr><tr><td>fi-FI</td><td>Finnish-FINLAND</td></tr><tr><td>fo-FO</td><td>Faroese-FAROE ISLANDS</td></tr><tr><td>fr-BE</td><td>French-BELGIUM</td></tr><tr><td>fr-BF</td><td>French-BURKINA FASO</td></tr><tr><td>fr-BI</td><td>French-BURUNDI</td></tr><tr><td>fr-BJ</td><td>French-BENIN</td></tr><tr><td>fr-BL</td><td>French-SAINT BARTHÉLEMY</td></tr><tr><td>fr-CA</td><td>French-CANADA</td></tr><tr><td>fr-CD</td><td>French-CONGO, DEMOCRATIC REPUBLIC OF</td></tr><tr><td>fr-CF</td><td>French-CENTRAL AFRICAN REPUBLIC</td></tr><tr><td>fr-CG</td><td>French-CONGO</td></tr><tr><td>fr-CH</td><td>French-SWITZERLAND</td></tr><tr><td>fr-CI</td><td>French-COTE D'IVOIRE</td></tr><tr><td>fr-CM</td><td>French-CAMEROON</td></tr><tr><td>fr-DJ</td><td>French-DJIBOUTI</td></tr><tr><td>fr-DZ</td><td>French-ALGERIA</td></tr><tr><td>fr-FR</td><td>French-FRANCE</td></tr><tr><td>fr-GA</td><td>French-GABON</td></tr><tr><td>fr-GF</td><td>French-FRENCH GUIANA</td></tr><tr><td>fr-GN</td><td>French-GUINEA</td></tr><tr><td>fr-GP</td><td>French-GUADELOUPE</td></tr><tr><td>fr-GQ</td><td>French-EQUATORIAL GUINEA</td></tr><tr><td>fr-HT</td><td>French-HAITI</td></tr><tr><td>fr-KM</td><td>French-COMOROS</td></tr><tr><td>fr-LU</td><td>French-LUXEMBOURG</td></tr><tr><td>fr-MA</td><td>French-MOROCCO</td></tr><tr><td>fr-MC</td><td>French-MONACO</td></tr><tr><td>fr-MF</td><td>French-SAINT MARTIN (FRENCH PART)</td></tr><tr><td>fr-MG</td><td>French-MADAGASCAR</td></tr><tr><td>fr-ML</td><td>French-MALI</td></tr><tr><td>fr-MQ</td><td>French-MARTINIQUE</td></tr><tr><td>fr-MR</td><td>French-MAURITANIA</td></tr><tr><td>fr-MU</td><td>French-MAURITIUS</td></tr><tr><td>fr-NC</td><td>French-NEW CALEDONIA</td></tr><tr><td>fr-NE</td><td>French-NIGER</td></tr><tr><td>fr-PF</td><td>French-FRENCH POLYNESIA</td></tr><tr><td>fr-PM</td><td>French-SAINT PIERRE AND MIQUELON</td></tr><tr><td>fr-RE</td><td>French-REUNION</td></tr><tr><td>fr-RW</td><td>French-RWANDA</td></tr><tr><td>fr-SC</td><td>French-SEYCHELLES</td></tr><tr><td>fr-SN</td><td>French-SENEGAL</td></tr><tr><td>fr-SY</td><td>French-SYRIAN ARAB REPUBLIC</td></tr><tr><td>fr-TD</td><td>French-CHAD</td></tr><tr><td>fr-TG</td><td>French-TOGO</td></tr><tr><td>fr-TN</td><td>French-TUNISIA</td></tr><tr><td>fr-VU</td><td>French-VANUATU</td></tr><tr><td>fr-WF</td><td>French-WALLIS AND FUTUNA</td></tr><tr><td>fr-YT</td><td>French-MAYOTTE</td></tr><tr><td>fy-NL</td><td>Western Frisian-NETHERLANDS</td></tr><tr><td>ga-IE</td><td>Irish-IRELAND</td></tr><tr><td>gd-GB</td><td>Gaelic; Scottish Gaelic-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</td></tr><tr><td>gl-ES</td><td>Galician-SPAIN</td></tr><tr><td>gu-IN</td><td>Gujarati-INDIA</td></tr><tr><td>gv-IM</td><td>Manx-ISLE OF MAN</td></tr><tr><td>ha-GH</td><td>Hausa-GHANA</td></tr><tr><td>ha-NE</td><td>Hausa-NIGER</td></tr><tr><td>ha-NG</td><td>Hausa-NIGERIA</td></tr><tr><td>he-IL</td><td>Hebrew-ISRAEL</td></tr><tr><td>hi-IN</td><td>Hindi-INDIA</td></tr><tr><td>hr-BA</td><td>Croatian-BOSNIA AND HERZEGOVINA</td></tr><tr><td>hr-HR</td><td>Croatian-CROATIA</td></tr><tr><td>hu-HU</td><td>Hungarian-HUNGARY</td></tr><tr><td>hy-AM</td><td>Armenian-ARMENIA</td></tr><tr><td>id-ID</td><td>Indonesian-INDONESIA</td></tr><tr><td>ig-NG</td><td>Igbo-NIGERIA</td></tr><tr><td>ii-CN</td><td>Sichuan Yi; Nuosu-CHINA</td></tr><tr><td>is-IS</td><td>Icelandic-ICELAND</td></tr><tr><td>it-CH</td><td>Italian-SWITZERLAND</td></tr><tr><td>it-IT</td><td>Italian-ITALY</td></tr><tr><td>it-SM</td><td>Italian-SAN MARINO</td></tr><tr><td>ja-JP</td><td>Japanese-JAPAN</td></tr><tr><td>ka-GE</td><td>Georgian-GEORGIA</td></tr><tr><td>ki-KE</td><td>Kikuyu; Gikuyu-KENYA</td></tr><tr><td>kk-KZ</td><td>Kazakh-KAZAKHSTAN</td></tr><tr><td>kl-GL</td><td>Kalaallisut; Greenlandic-GREENLAND</td></tr><tr><td>km-KH</td><td>Central Khmer-CAMBODIA</td></tr><tr><td>kn-IN</td><td>Kannada-INDIA</td></tr><tr><td>ko-KP</td><td>Korean-KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)</td></tr><tr><td>ko-KR</td><td>Korean-KOREA, REPUBLIC OF</td></tr><tr><td>ks-IN</td><td>Kashmiri-INDIA</td></tr><tr><td>kw-GB</td><td>Cornish-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</td></tr><tr><td>ky-KG</td><td>Kirghiz; Kyrgyz-KYRGYZSTAN</td></tr><tr><td>lb-LU</td><td>Luxembourgish; Letzeburgesch-LUXEMBOURG</td></tr><tr><td>lg-UG</td><td>Ganda-UGANDA</td></tr><tr><td>ln-AO</td><td>Lingala-ANGOLA</td></tr><tr><td>ln-CD</td><td>Lingala-CONGO, DEMOCRATIC REPUBLIC OF</td></tr><tr><td>ln-CF</td><td>Lingala-CENTRAL AFRICAN REPUBLIC</td></tr><tr><td>ln-CG</td><td>Lingala-CONGO</td></tr><tr><td>lo-LA</td><td>Lao-LAO PEOPLE'S DEMOCRATIC REPUBLIC</td></tr><tr><td>lt-LT</td><td>Lithuanian-LITHUANIA</td></tr><tr><td>lu-CD</td><td>Luba-Katanga-CONGO, DEMOCRATIC REPUBLIC OF</td></tr><tr><td>lv-LV</td><td>Latvian-LATVIA</td></tr><tr><td>mg-MG</td><td>Malagasy-MADAGASCAR</td></tr><tr><td>mk-MK</td><td>Macedonian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</td></tr><tr><td>ml-IN</td><td>Malayalam-INDIA</td></tr><tr><td>mn-MN</td><td>Mongolian-MONGOLIA</td></tr><tr><td>mr-IN</td><td>Marathi-INDIA</td></tr><tr><td>ms-BN</td><td>Malay-BRUNEI DARUSSALAM</td></tr><tr><td>ms-MY</td><td>Malay-MALAYSIA</td></tr><tr><td>ms-SG</td><td>Malay-SINGAPORE</td></tr><tr><td>mt-MT</td><td>Maltese-MALTA</td></tr><tr><td>my-MM</td><td>Burmese-MYANMAR</td></tr><tr><td>nb-NO</td><td>Bokmål, Norwegian; Norwegian Bokmål-NORWAY</td></tr><tr><td>nb-SJ</td><td>Bokmål, Norwegian; Norwegian Bokmål-SVALBARD AND JAN MAYEN</td></tr><tr><td>nd-ZW</td><td>Ndebele, North; North Ndebele-ZIMBABWE</td></tr><tr><td>ne-IN</td><td>Nepali-INDIA</td></tr><tr><td>ne-NP</td><td>Nepali-NEPAL</td></tr><tr><td>nl-AW</td><td>Dutch; Flemish-ARUBA</td></tr><tr><td>nl-BE</td><td>Dutch; Flemish-BELGIUM</td></tr><tr><td>nl-BQ</td><td>Dutch; Flemish-BONAIRE, SINT EUSTATIUS AND SABA</td></tr><tr><td>nl-CW</td><td>Dutch; Flemish-CURAÇAO</td></tr><tr><td>nl-NL</td><td>Dutch; Flemish-NETHERLANDS</td></tr><tr><td>nl-SR</td><td>Dutch; Flemish-SURINAME</td></tr><tr><td>nl-SX</td><td>Dutch; Flemish-SINT MAARTEN (DUTCH PART)</td></tr><tr><td>nn-NO</td><td>Norwegian Nynorsk; Nynorsk, Norwegian-NORWAY</td></tr><tr><td>om-ET</td><td>Oromo-ETHIOPIA</td></tr><tr><td>om-KE</td><td>Oromo-KENYA</td></tr><tr><td>or-IN</td><td>Oriya-INDIA</td></tr><tr><td>os-GE</td><td>Ossetian; Ossetic-GEORGIA</td></tr><tr><td>os-RU</td><td>Ossetian; Ossetic-RUSSIAN FEDERATION</td></tr><tr><td>pa-PK</td><td>Panjabi; Punjabi-PAKISTAN</td></tr><tr><td>pa-IN</td><td>Panjabi; Punjabi-INDIA</td></tr><tr><td>pl-PL</td><td>Polish-POLAND</td></tr><tr><td>ps-AF</td><td>Pushto; Pashto-AFGHANISTAN</td></tr><tr><td>pt-AO</td><td>Portuguese-ANGOLA</td></tr><tr><td>pt-BR</td><td>Portuguese-BRAZIL</td></tr><tr><td>pt-CV</td><td>Portuguese-CAPE VERDE</td></tr><tr><td>pt-GW</td><td>Portuguese-GUINEA-BISSAU</td></tr><tr><td>pt-MO</td><td>Portuguese-MACAO</td></tr><tr><td>pt-MZ</td><td>Portuguese-MOZAMBIQUE</td></tr><tr><td>pt-PT</td><td>Portuguese-PORTUGAL</td></tr><tr><td>pt-ST</td><td>Portuguese-SAO TOME AND PRINCIPE</td></tr><tr><td>pt-TL</td><td>Portuguese-TIMOR-LESTE</td></tr><tr><td>qu-BO</td><td>Quechua-BOLIVIA (PLURINATIONAL STATE OF)</td></tr><tr><td>qu-EC</td><td>Quechua-ECUADOR</td></tr><tr><td>qu-PE</td><td>Quechua-PERU</td></tr><tr><td>rm-CH</td><td>Romansh-SWITZERLAND</td></tr><tr><td>rn-BI</td><td>Rundi-BURUNDI</td></tr><tr><td>ro-MD</td><td>Romanian; Moldavian; Moldovan-MOLDOVA, REPUBLIC OF</td></tr><tr><td>ro-RO</td><td>Romanian; Moldavian; Moldovan-ROMANIA</td></tr><tr><td>ru-BY</td><td>Russian-BELARUS</td></tr><tr><td>ru-KG</td><td>Russian-KYRGYZSTAN</td></tr><tr><td>ru-KZ</td><td>Russian-KAZAKHSTAN</td></tr><tr><td>ru-MD</td><td>Russian-MOLDOVA, REPUBLIC OF</td></tr><tr><td>ru-RU</td><td>Russian-RUSSIAN FEDERATION</td></tr><tr><td>ru-UA</td><td>Russian-UKRAINE</td></tr><tr><td>rw-RW</td><td>Kinyarwanda-RWANDA</td></tr><tr><td>se-FI</td><td>Northern Sami-FINLAND</td></tr><tr><td>se-NO</td><td>Northern Sami-NORWAY</td></tr><tr><td>se-SE</td><td>Northern Sami-SWEDEN</td></tr><tr><td>sg-CF</td><td>Sango-CENTRAL AFRICAN REPUBLIC</td></tr><tr><td>si-LK</td><td>Sinhala; Sinhalese-SRI LANKA</td></tr><tr><td>sk-SK</td><td>Slovak-SLOVAKIA</td></tr><tr><td>sl-SI</td><td>Slovenian-SLOVENIA</td></tr><tr><td>sn-ZW</td><td>Shona-ZIMBABWE</td></tr><tr><td>so-DJ</td><td>Somali-DJIBOUTI</td></tr><tr><td>so-ET</td><td>Somali-ETHIOPIA</td></tr><tr><td>so-KE</td><td>Somali-KENYA</td></tr><tr><td>so-SO</td><td>Somali-SOMALIA</td></tr><tr><td>sq-AL</td><td>Albanian-ALBANIA</td></tr><tr><td>sq-MK</td><td>Albanian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</td></tr><tr><td>sr-BA</td><td>Serbian-BOSNIA AND HERZEGOVINA</td></tr><tr><td>sr-ME</td><td>Serbian-MONTENEGRO</td></tr><tr><td>sr-RS</td><td>Serbian-SERBIA</td></tr><tr><td>sv-AX</td><td>Swedish-ÅLAND ISLANDS</td></tr><tr><td>sv-FI</td><td>Swedish-FINLAND</td></tr><tr><td>sv-SE</td><td>Swedish-SWEDEN</td></tr><tr><td>sw-CD</td><td>Swahili-CONGO, DEMOCRATIC REPUBLIC OF</td></tr><tr><td>sw-KE</td><td>Swahili-KENYA</td></tr><tr><td>sw-TZ</td><td>Swahili-TANZANIA, UNITED REPUBLIC OF</td></tr><tr><td>sw-UG</td><td>Swahili-UGANDA</td></tr><tr><td>ta-IN</td><td>Tamil-INDIA</td></tr><tr><td>ta-LK</td><td>Tamil-SRI LANKA</td></tr><tr><td>ta-MY</td><td>Tamil-MALAYSIA</td></tr><tr><td>ta-SG</td><td>Tamil-SINGAPORE</td></tr><tr><td>te-IN</td><td>Telugu-INDIA</td></tr><tr><td>th-TH</td><td>Thai-THAILAND</td></tr><tr><td>ti-ER</td><td>Tigrinya-ERITREA</td></tr><tr><td>ti-ET</td><td>Tigrinya-ETHIOPIA</td></tr><tr><td>to-TO</td><td>Tonga (Tonga Islands)-TONGA</td></tr><tr><td>tr-CY</td><td>Turkish-CYPRUS</td></tr><tr><td>tr-TR</td><td>Turkish-TURKEY</td></tr><tr><td>ug-CN</td><td>Uighur; Uyghur-CHINA</td></tr><tr><td>uk-UA</td><td>Ukrainian-UKRAINE</td></tr><tr><td>ur-IN</td><td>Urdu-INDIA</td></tr><tr><td>ur-PK</td><td>Urdu-PAKISTAN</td></tr><tr><td>uz-AF</td><td>Uzbek-AFGHANISTAN</td></tr><tr><td>uz-UZ</td><td>Uzbek-UZBEKISTAN</td></tr><tr><td>vi-VN</td><td>Vietnamese-VIET NAM</td></tr><tr><td>yo-BJ</td><td>Yoruba-BENIN</td></tr><tr><td>yo-NG</td><td>Yoruba-NIGERIA</td></tr><tr><td>zh-CN</td><td>Chinese-CHINA</td></tr><tr><td>zh-HK</td><td>Chinese-HONG KONG</td></tr><tr><td>zh-MO</td><td>Chinese-MACAO</td></tr><tr><td>zh-SG</td><td>Chinese-SINGAPORE</td></tr><tr><td>zh-TW</td><td>Chinese-TAIWAN, PROVINCE OF CHINA</td></tr><tr><td>zu-ZA</td><td>Zulu-SOUTH AFRICA</td></tr><tr><td>no-NO</td><td>Norwegian-NORWAY</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="http://terminology.ehdsi.eu/ValueSet/eHDSILanguage"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.42.6"/>
+  </identifier>
+  <version value="0.0.1"/>
+  <name value="EHDSILanguage"/>
+  <title value="eHDSI Language"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="The Value Set is used to identify the language the document will be written with."/>
+  <compose>
+    <include>
+      <system value="urn:ietf:bcp:47"/>
+      <concept>
+        <code value="af-NA"/>
+        <display value="Afrikaans-NAMIBIA"/>
+      </concept>
+      <concept>
+        <code value="af-ZA"/>
+        <display value="Afrikaans-SOUTH AFRICA"/>
+      </concept>
+      <concept>
+        <code value="ak-GH"/>
+        <display value="Akan-GHANA"/>
+      </concept>
+      <concept>
+        <code value="am-ET"/>
+        <display value="Amharic-ETHIOPIA"/>
+      </concept>
+      <concept>
+        <code value="ar-AE"/>
+        <display value="Arabic-UNITED ARAB EMIRATES"/>
+      </concept>
+      <concept>
+        <code value="ar-BH"/>
+        <display value="Arabic-BAHRAIN"/>
+      </concept>
+      <concept>
+        <code value="ar-DJ"/>
+        <display value="Arabic-DJIBOUTI"/>
+      </concept>
+      <concept>
+        <code value="ar-DZ"/>
+        <display value="Arabic-ALGERIA"/>
+      </concept>
+      <concept>
+        <code value="ar-EG"/>
+        <display value="Arabic-EGYPT"/>
+      </concept>
+      <concept>
+        <code value="ar-EH"/>
+        <display value="Arabic-WESTERN SAHARA"/>
+      </concept>
+      <concept>
+        <code value="ar-ER"/>
+        <display value="Arabic-ERITREA"/>
+      </concept>
+      <concept>
+        <code value="ar-IL"/>
+        <display value="Arabic-ISRAEL"/>
+      </concept>
+      <concept>
+        <code value="ar-IQ"/>
+        <display value="Arabic-IRAQ"/>
+      </concept>
+      <concept>
+        <code value="ar-JO"/>
+        <display value="Arabic-JORDAN"/>
+      </concept>
+      <concept>
+        <code value="ar-KM"/>
+        <display value="Arabic-COMOROS"/>
+      </concept>
+      <concept>
+        <code value="ar-KW"/>
+        <display value="Arabic-KUWAIT"/>
+      </concept>
+      <concept>
+        <code value="ar-LB"/>
+        <display value="Arabic-LEBANON"/>
+      </concept>
+      <concept>
+        <code value="ar-LY"/>
+        <display value="Arabic-LIBYA"/>
+      </concept>
+      <concept>
+        <code value="ar-MA"/>
+        <display value="Arabic-MOROCCO"/>
+      </concept>
+      <concept>
+        <code value="ar-MR"/>
+        <display value="Arabic-MAURITANIA"/>
+      </concept>
+      <concept>
+        <code value="ar-OM"/>
+        <display value="Arabic-OMAN"/>
+      </concept>
+      <concept>
+        <code value="ar-PS"/>
+        <display value="Arabic-PALESTINE, STATE OF"/>
+      </concept>
+      <concept>
+        <code value="ar-QA"/>
+        <display value="Arabic-QATAR"/>
+      </concept>
+      <concept>
+        <code value="ar-SA"/>
+        <display value="Arabic-SAUDI ARABIA"/>
+      </concept>
+      <concept>
+        <code value="ar-SD"/>
+        <display value="Arabic-SUDAN"/>
+      </concept>
+      <concept>
+        <code value="ar-SO"/>
+        <display value="Arabic-SOMALIA"/>
+      </concept>
+      <concept>
+        <code value="ar-SS"/>
+        <display value="Arabic-SOUTH SUDAN"/>
+      </concept>
+      <concept>
+        <code value="ar-SY"/>
+        <display value="Arabic-SYRIAN ARAB REPUBLIC"/>
+      </concept>
+      <concept>
+        <code value="ar-TD"/>
+        <display value="Arabic-CHAD"/>
+      </concept>
+      <concept>
+        <code value="ar-TN"/>
+        <display value="Arabic-TUNISIA"/>
+      </concept>
+      <concept>
+        <code value="ar-YE"/>
+        <display value="Arabic-YEMEN"/>
+      </concept>
+      <concept>
+        <code value="as-IN"/>
+        <display value="Assamese-INDIA"/>
+      </concept>
+      <concept>
+        <code value="az-AZ"/>
+        <display value="Azerbaijani-AZERBAIJAN"/>
+      </concept>
+      <concept>
+        <code value="be-BY"/>
+        <display value="Belarusian-BELARUS"/>
+      </concept>
+      <concept>
+        <code value="bg-BG"/>
+        <display value="Bulgarian-BULGARIA"/>
+      </concept>
+      <concept>
+        <code value="bm-ML"/>
+        <display value="Bambara-MALI"/>
+      </concept>
+      <concept>
+        <code value="bn-BD"/>
+        <display value="Bengali-BANGLADESH"/>
+      </concept>
+      <concept>
+        <code value="bn-IN"/>
+        <display value="Bengali-INDIA"/>
+      </concept>
+      <concept>
+        <code value="bo-CN"/>
+        <display value="Tibetan-CHINA"/>
+      </concept>
+      <concept>
+        <code value="bo-IN"/>
+        <display value="Tibetan-INDIA"/>
+      </concept>
+      <concept>
+        <code value="br-FR"/>
+        <display value="Breton-FRANCE"/>
+      </concept>
+      <concept>
+        <code value="bs-BA"/>
+        <display value="Bosnian-BOSNIA AND HERZEGOVINA"/>
+      </concept>
+      <concept>
+        <code value="ca-AD"/>
+        <display value="Catalan; Valencian-ANDORRA"/>
+      </concept>
+      <concept>
+        <code value="ca-ES"/>
+        <display value="Catalan; Valencian-SPAIN"/>
+      </concept>
+      <concept>
+        <code value="ca-FR"/>
+        <display value="Catalan; Valencian-FRANCE"/>
+      </concept>
+      <concept>
+        <code value="ca-IT"/>
+        <display value="Catalan; Valencian-ITALY"/>
+      </concept>
+      <concept>
+        <code value="cs-CZ"/>
+        <display value="Czech-CZECH REPUBLIC"/>
+      </concept>
+      <concept>
+        <code value="cy-GB"/>
+        <display value="Welsh-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"/>
+      </concept>
+      <concept>
+        <code value="da-DK"/>
+        <display value="Danish-DENMARK"/>
+      </concept>
+      <concept>
+        <code value="da-GL"/>
+        <display value="Danish-GREENLAND"/>
+      </concept>
+      <concept>
+        <code value="de-AT"/>
+        <display value="German-AUSTRIA"/>
+      </concept>
+      <concept>
+        <code value="de-BE"/>
+        <display value="German-BELGIUM"/>
+      </concept>
+      <concept>
+        <code value="de-CH"/>
+        <display value="German-SWITZERLAND"/>
+      </concept>
+      <concept>
+        <code value="de-DE"/>
+        <display value="German-GERMANY"/>
+      </concept>
+      <concept>
+        <code value="de-LI"/>
+        <display value="German-LIECHTENSTEIN"/>
+      </concept>
+      <concept>
+        <code value="de-LU"/>
+        <display value="German-LUXEMBOURG"/>
+      </concept>
+      <concept>
+        <code value="dz-BT"/>
+        <display value="Dzongkha-BHUTAN"/>
+      </concept>
+      <concept>
+        <code value="ee-GH"/>
+        <display value="Ewe-GHANA"/>
+      </concept>
+      <concept>
+        <code value="ee-TG"/>
+        <display value="Ewe-TOGO"/>
+      </concept>
+      <concept>
+        <code value="el-CY"/>
+        <display value="Greek, Modern (1453-)-CYPRUS"/>
+      </concept>
+      <concept>
+        <code value="el-GR"/>
+        <display value="Greek, Modern (1453-)-GREECE"/>
+      </concept>
+      <concept>
+        <code value="en-AG"/>
+        <display value="English-ANTIGUA AND BARBUDA"/>
+      </concept>
+      <concept>
+        <code value="en-AI"/>
+        <display value="English-ANGUILLA"/>
+      </concept>
+      <concept>
+        <code value="en-AS"/>
+        <display value="English-AMERICAN SAMOA"/>
+      </concept>
+      <concept>
+        <code value="en-AU"/>
+        <display value="English-AUSTRALIA"/>
+      </concept>
+      <concept>
+        <code value="en-BB"/>
+        <display value="English-BARBADOS"/>
+      </concept>
+      <concept>
+        <code value="en-BE"/>
+        <display value="English-BELGIUM"/>
+      </concept>
+      <concept>
+        <code value="en-BM"/>
+        <display value="English-BERMUDA"/>
+      </concept>
+      <concept>
+        <code value="en-BS"/>
+        <display value="English-BAHAMAS"/>
+      </concept>
+      <concept>
+        <code value="en-BW"/>
+        <display value="English-BOTSWANA"/>
+      </concept>
+      <concept>
+        <code value="en-BZ"/>
+        <display value="English-BELIZE"/>
+      </concept>
+      <concept>
+        <code value="en-CA"/>
+        <display value="English-CANADA"/>
+      </concept>
+      <concept>
+        <code value="en-CC"/>
+        <display value="English-COCOS (KEELING) ISLANDS"/>
+      </concept>
+      <concept>
+        <code value="en-CK"/>
+        <display value="English-COOK ISLANDS"/>
+      </concept>
+      <concept>
+        <code value="en-CM"/>
+        <display value="English-CAMEROON"/>
+      </concept>
+      <concept>
+        <code value="en-CX"/>
+        <display value="English-CHRISTMAS ISLAND"/>
+      </concept>
+      <concept>
+        <code value="en-DM"/>
+        <display value="English-DOMINICA"/>
+      </concept>
+      <concept>
+        <code value="en-ER"/>
+        <display value="English-ERITREA"/>
+      </concept>
+      <concept>
+        <code value="en-FJ"/>
+        <display value="English-FIJI"/>
+      </concept>
+      <concept>
+        <code value="en-FK"/>
+        <display value="English-FALKLAND ISLANDS (MALVINAS)"/>
+      </concept>
+      <concept>
+        <code value="en-FM"/>
+        <display value="English-MICRONESIA (FEDERATED STATES OF)"/>
+      </concept>
+      <concept>
+        <code value="en-GB"/>
+        <display value="English-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"/>
+      </concept>
+      <concept>
+        <code value="en-GD"/>
+        <display value="English-GRENADA"/>
+      </concept>
+      <concept>
+        <code value="en-GG"/>
+        <display value="English-GUERNSEY"/>
+      </concept>
+      <concept>
+        <code value="en-GH"/>
+        <display value="English-GHANA"/>
+      </concept>
+      <concept>
+        <code value="en-GI"/>
+        <display value="English-GIBRALTAR"/>
+      </concept>
+      <concept>
+        <code value="en-GM"/>
+        <display value="English-GAMBIA"/>
+      </concept>
+      <concept>
+        <code value="en-GU"/>
+        <display value="English-GUAM"/>
+      </concept>
+      <concept>
+        <code value="en-GY"/>
+        <display value="English-GUYANA"/>
+      </concept>
+      <concept>
+        <code value="en-HK"/>
+        <display value="English-HONG KONG"/>
+      </concept>
+      <concept>
+        <code value="en-IE"/>
+        <display value="English-IRELAND"/>
+      </concept>
+      <concept>
+        <code value="en-IM"/>
+        <display value="English-ISLE OF MAN"/>
+      </concept>
+      <concept>
+        <code value="en-IN"/>
+        <display value="English-INDIA"/>
+      </concept>
+      <concept>
+        <code value="en-IO"/>
+        <display value="English-BRITISH INDIAN OCEAN TERRITORY"/>
+      </concept>
+      <concept>
+        <code value="en-JE"/>
+        <display value="English-JERSEY"/>
+      </concept>
+      <concept>
+        <code value="en-JM"/>
+        <display value="English-JAMAICA"/>
+      </concept>
+      <concept>
+        <code value="en-KE"/>
+        <display value="English-KENYA"/>
+      </concept>
+      <concept>
+        <code value="en-KI"/>
+        <display value="English-KIRIBATI"/>
+      </concept>
+      <concept>
+        <code value="en-KN"/>
+        <display value="English-SAINT KITTS AND NEVIS"/>
+      </concept>
+      <concept>
+        <code value="en-KY"/>
+        <display value="English-CAYMAN ISLANDS"/>
+      </concept>
+      <concept>
+        <code value="en-LC"/>
+        <display value="English-SAINT LUCIA"/>
+      </concept>
+      <concept>
+        <code value="en-LR"/>
+        <display value="English-LIBERIA"/>
+      </concept>
+      <concept>
+        <code value="en-LS"/>
+        <display value="English-LESOTHO"/>
+      </concept>
+      <concept>
+        <code value="en-MG"/>
+        <display value="English-MADAGASCAR"/>
+      </concept>
+      <concept>
+        <code value="en-MH"/>
+        <display value="English-MARSHALL ISLANDS"/>
+      </concept>
+      <concept>
+        <code value="en-MO"/>
+        <display value="English-MACAO"/>
+      </concept>
+      <concept>
+        <code value="en-MP"/>
+        <display value="English-NORTHERN MARIANA ISLANDS"/>
+      </concept>
+      <concept>
+        <code value="en-MS"/>
+        <display value="English-MONTSERRAT"/>
+      </concept>
+      <concept>
+        <code value="en-MT"/>
+        <display value="English-MALTA"/>
+      </concept>
+      <concept>
+        <code value="en-MU"/>
+        <display value="English-MAURITIUS"/>
+      </concept>
+      <concept>
+        <code value="en-MW"/>
+        <display value="English-MALAWI"/>
+      </concept>
+      <concept>
+        <code value="en-MY"/>
+        <display value="English-MALAYSIA"/>
+      </concept>
+      <concept>
+        <code value="en-NA"/>
+        <display value="English-NAMIBIA"/>
+      </concept>
+      <concept>
+        <code value="en-NF"/>
+        <display value="English-NORFOLK ISLAND"/>
+      </concept>
+      <concept>
+        <code value="en-NG"/>
+        <display value="English-NIGERIA"/>
+      </concept>
+      <concept>
+        <code value="en-NR"/>
+        <display value="English-NAURU"/>
+      </concept>
+      <concept>
+        <code value="en-NU"/>
+        <display value="English-NIUE"/>
+      </concept>
+      <concept>
+        <code value="en-NZ"/>
+        <display value="English-NEW ZEALAND"/>
+      </concept>
+      <concept>
+        <code value="en-PG"/>
+        <display value="English-PAPUA NEW GUINEA"/>
+      </concept>
+      <concept>
+        <code value="en-PH"/>
+        <display value="English-PHILIPPINES"/>
+      </concept>
+      <concept>
+        <code value="en-PK"/>
+        <display value="English-PAKISTAN"/>
+      </concept>
+      <concept>
+        <code value="en-PN"/>
+        <display value="English-PITCAIRN"/>
+      </concept>
+      <concept>
+        <code value="en-PR"/>
+        <display value="English-PUERTO RICO"/>
+      </concept>
+      <concept>
+        <code value="en-PW"/>
+        <display value="English-PALAU"/>
+      </concept>
+      <concept>
+        <code value="en-RW"/>
+        <display value="English-RWANDA"/>
+      </concept>
+      <concept>
+        <code value="en-SB"/>
+        <display value="English-SOLOMON ISLANDS"/>
+      </concept>
+      <concept>
+        <code value="en-SC"/>
+        <display value="English-SEYCHELLES"/>
+      </concept>
+      <concept>
+        <code value="en-SD"/>
+        <display value="English-SUDAN"/>
+      </concept>
+      <concept>
+        <code value="en-SG"/>
+        <display value="English-SINGAPORE"/>
+      </concept>
+      <concept>
+        <code value="en-SH"/>
+        <display value="English-SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"/>
+      </concept>
+      <concept>
+        <code value="en-SL"/>
+        <display value="English-SIERRA LEONE"/>
+      </concept>
+      <concept>
+        <code value="en-SS"/>
+        <display value="English-SOUTH SUDAN"/>
+      </concept>
+      <concept>
+        <code value="en-SX"/>
+        <display value="English-SINT MAARTEN (DUTCH PART)"/>
+      </concept>
+      <concept>
+        <code value="en-SZ"/>
+        <display value="English-SWAZILAND"/>
+      </concept>
+      <concept>
+        <code value="en-TC"/>
+        <display value="English-TURKS AND CAICOS ISLANDS"/>
+      </concept>
+      <concept>
+        <code value="en-TK"/>
+        <display value="English-TOKELAU"/>
+      </concept>
+      <concept>
+        <code value="en-TO"/>
+        <display value="English-TONGA"/>
+      </concept>
+      <concept>
+        <code value="en-TT"/>
+        <display value="English-TRINIDAD AND TOBAGO"/>
+      </concept>
+      <concept>
+        <code value="en-TV"/>
+        <display value="English-TUVALU"/>
+      </concept>
+      <concept>
+        <code value="en-TZ"/>
+        <display value="English-TANZANIA, UNITED REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="en-UG"/>
+        <display value="English-UGANDA"/>
+      </concept>
+      <concept>
+        <code value="en-UM"/>
+        <display value="English-UNITED STATES MINOR OUTLYING ISLANDS"/>
+      </concept>
+      <concept>
+        <code value="en-US"/>
+        <display value="English-UNITED STATES OF AMERICA"/>
+      </concept>
+      <concept>
+        <code value="en-VC"/>
+        <display value="English-SAINT VINCENT AND THE GRENADINES"/>
+      </concept>
+      <concept>
+        <code value="en-VG"/>
+        <display value="English-VIRGIN ISLANDS, BRITISH"/>
+      </concept>
+      <concept>
+        <code value="en-VI"/>
+        <display value="English-VIRGIN ISLANDS, U.S."/>
+      </concept>
+      <concept>
+        <code value="en-VU"/>
+        <display value="English-VANUATU"/>
+      </concept>
+      <concept>
+        <code value="en-WS"/>
+        <display value="English-SAMOA"/>
+      </concept>
+      <concept>
+        <code value="en-ZA"/>
+        <display value="English-SOUTH AFRICA"/>
+      </concept>
+      <concept>
+        <code value="en-ZM"/>
+        <display value="English-ZAMBIA"/>
+      </concept>
+      <concept>
+        <code value="en-ZW"/>
+        <display value="English-ZIMBABWE"/>
+      </concept>
+      <concept>
+        <code value="es-AR"/>
+        <display value="Spanish; Castilian-ARGENTINA"/>
+      </concept>
+      <concept>
+        <code value="es-BO"/>
+        <display value="Spanish; Castilian-BOLIVIA (PLURINATIONAL STATE OF)"/>
+      </concept>
+      <concept>
+        <code value="es-CL"/>
+        <display value="Spanish; Castilian-CHILE"/>
+      </concept>
+      <concept>
+        <code value="es-CO"/>
+        <display value="Spanish; Castilian-COLOMBIA"/>
+      </concept>
+      <concept>
+        <code value="es-CR"/>
+        <display value="Spanish; Castilian-COSTA RICA"/>
+      </concept>
+      <concept>
+        <code value="es-CU"/>
+        <display value="Spanish; Castilian-CUBA"/>
+      </concept>
+      <concept>
+        <code value="es-DO"/>
+        <display value="Spanish; Castilian-DOMINICAN REPUBLIC"/>
+      </concept>
+      <concept>
+        <code value="es-EC"/>
+        <display value="Spanish; Castilian-ECUADOR"/>
+      </concept>
+      <concept>
+        <code value="es-ES"/>
+        <display value="Spanish; Castilian-SPAIN"/>
+      </concept>
+      <concept>
+        <code value="es-GQ"/>
+        <display value="Spanish; Castilian-EQUATORIAL GUINEA"/>
+      </concept>
+      <concept>
+        <code value="es-GT"/>
+        <display value="Spanish; Castilian-GUATEMALA"/>
+      </concept>
+      <concept>
+        <code value="es-HN"/>
+        <display value="Spanish; Castilian-HONDURAS"/>
+      </concept>
+      <concept>
+        <code value="es-MX"/>
+        <display value="Spanish; Castilian-MEXICO"/>
+      </concept>
+      <concept>
+        <code value="es-NI"/>
+        <display value="Spanish; Castilian-NICARAGUA"/>
+      </concept>
+      <concept>
+        <code value="es-PA"/>
+        <display value="Spanish; Castilian-PANAMA"/>
+      </concept>
+      <concept>
+        <code value="es-PE"/>
+        <display value="Spanish; Castilian-PERU"/>
+      </concept>
+      <concept>
+        <code value="es-PH"/>
+        <display value="Spanish; Castilian-PHILIPPINES"/>
+      </concept>
+      <concept>
+        <code value="es-PR"/>
+        <display value="Spanish; Castilian-PUERTO RICO"/>
+      </concept>
+      <concept>
+        <code value="es-PY"/>
+        <display value="Spanish; Castilian-PARAGUAY"/>
+      </concept>
+      <concept>
+        <code value="es-SV"/>
+        <display value="Spanish; Castilian-EL SALVADOR"/>
+      </concept>
+      <concept>
+        <code value="es-US"/>
+        <display value="Spanish; Castilian-UNITED STATES OF AMERICA"/>
+      </concept>
+      <concept>
+        <code value="es-UY"/>
+        <display value="Spanish; Castilian-URUGUAY"/>
+      </concept>
+      <concept>
+        <code value="es-VE"/>
+        <display value="Spanish; Castilian-VENEZUELA (BOLIVARIAN REPUBLIC OF)"/>
+      </concept>
+      <concept>
+        <code value="et-EE"/>
+        <display value="Estonian-ESTONIA"/>
+      </concept>
+      <concept>
+        <code value="eu-ES"/>
+        <display value="Basque-SPAIN"/>
+      </concept>
+      <concept>
+        <code value="fa-AF"/>
+        <display value="Persian-AFGHANISTAN"/>
+      </concept>
+      <concept>
+        <code value="fa-IR"/>
+        <display value="Persian-IRAN (ISLAMIC REPUBLIC OF)"/>
+      </concept>
+      <concept>
+        <code value="ff-CM"/>
+        <display value="Fulah-CAMEROON"/>
+      </concept>
+      <concept>
+        <code value="ff-GN"/>
+        <display value="Fulah-GUINEA"/>
+      </concept>
+      <concept>
+        <code value="ff-MR"/>
+        <display value="Fulah-MAURITANIA"/>
+      </concept>
+      <concept>
+        <code value="ff-SN"/>
+        <display value="Fulah-SENEGAL"/>
+      </concept>
+      <concept>
+        <code value="fi-FI"/>
+        <display value="Finnish-FINLAND"/>
+      </concept>
+      <concept>
+        <code value="fo-FO"/>
+        <display value="Faroese-FAROE ISLANDS"/>
+      </concept>
+      <concept>
+        <code value="fr-BE"/>
+        <display value="French-BELGIUM"/>
+      </concept>
+      <concept>
+        <code value="fr-BF"/>
+        <display value="French-BURKINA FASO"/>
+      </concept>
+      <concept>
+        <code value="fr-BI"/>
+        <display value="French-BURUNDI"/>
+      </concept>
+      <concept>
+        <code value="fr-BJ"/>
+        <display value="French-BENIN"/>
+      </concept>
+      <concept>
+        <code value="fr-BL"/>
+        <display value="French-SAINT BARTHÉLEMY"/>
+      </concept>
+      <concept>
+        <code value="fr-CA"/>
+        <display value="French-CANADA"/>
+      </concept>
+      <concept>
+        <code value="fr-CD"/>
+        <display value="French-CONGO, DEMOCRATIC REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="fr-CF"/>
+        <display value="French-CENTRAL AFRICAN REPUBLIC"/>
+      </concept>
+      <concept>
+        <code value="fr-CG"/>
+        <display value="French-CONGO"/>
+      </concept>
+      <concept>
+        <code value="fr-CH"/>
+        <display value="French-SWITZERLAND"/>
+      </concept>
+      <concept>
+        <code value="fr-CI"/>
+        <display value="French-COTE D'IVOIRE"/>
+      </concept>
+      <concept>
+        <code value="fr-CM"/>
+        <display value="French-CAMEROON"/>
+      </concept>
+      <concept>
+        <code value="fr-DJ"/>
+        <display value="French-DJIBOUTI"/>
+      </concept>
+      <concept>
+        <code value="fr-DZ"/>
+        <display value="French-ALGERIA"/>
+      </concept>
+      <concept>
+        <code value="fr-FR"/>
+        <display value="French-FRANCE"/>
+      </concept>
+      <concept>
+        <code value="fr-GA"/>
+        <display value="French-GABON"/>
+      </concept>
+      <concept>
+        <code value="fr-GF"/>
+        <display value="French-FRENCH GUIANA"/>
+      </concept>
+      <concept>
+        <code value="fr-GN"/>
+        <display value="French-GUINEA"/>
+      </concept>
+      <concept>
+        <code value="fr-GP"/>
+        <display value="French-GUADELOUPE"/>
+      </concept>
+      <concept>
+        <code value="fr-GQ"/>
+        <display value="French-EQUATORIAL GUINEA"/>
+      </concept>
+      <concept>
+        <code value="fr-HT"/>
+        <display value="French-HAITI"/>
+      </concept>
+      <concept>
+        <code value="fr-KM"/>
+        <display value="French-COMOROS"/>
+      </concept>
+      <concept>
+        <code value="fr-LU"/>
+        <display value="French-LUXEMBOURG"/>
+      </concept>
+      <concept>
+        <code value="fr-MA"/>
+        <display value="French-MOROCCO"/>
+      </concept>
+      <concept>
+        <code value="fr-MC"/>
+        <display value="French-MONACO"/>
+      </concept>
+      <concept>
+        <code value="fr-MF"/>
+        <display value="French-SAINT MARTIN (FRENCH PART)"/>
+      </concept>
+      <concept>
+        <code value="fr-MG"/>
+        <display value="French-MADAGASCAR"/>
+      </concept>
+      <concept>
+        <code value="fr-ML"/>
+        <display value="French-MALI"/>
+      </concept>
+      <concept>
+        <code value="fr-MQ"/>
+        <display value="French-MARTINIQUE"/>
+      </concept>
+      <concept>
+        <code value="fr-MR"/>
+        <display value="French-MAURITANIA"/>
+      </concept>
+      <concept>
+        <code value="fr-MU"/>
+        <display value="French-MAURITIUS"/>
+      </concept>
+      <concept>
+        <code value="fr-NC"/>
+        <display value="French-NEW CALEDONIA"/>
+      </concept>
+      <concept>
+        <code value="fr-NE"/>
+        <display value="French-NIGER"/>
+      </concept>
+      <concept>
+        <code value="fr-PF"/>
+        <display value="French-FRENCH POLYNESIA"/>
+      </concept>
+      <concept>
+        <code value="fr-PM"/>
+        <display value="French-SAINT PIERRE AND MIQUELON"/>
+      </concept>
+      <concept>
+        <code value="fr-RE"/>
+        <display value="French-REUNION"/>
+      </concept>
+      <concept>
+        <code value="fr-RW"/>
+        <display value="French-RWANDA"/>
+      </concept>
+      <concept>
+        <code value="fr-SC"/>
+        <display value="French-SEYCHELLES"/>
+      </concept>
+      <concept>
+        <code value="fr-SN"/>
+        <display value="French-SENEGAL"/>
+      </concept>
+      <concept>
+        <code value="fr-SY"/>
+        <display value="French-SYRIAN ARAB REPUBLIC"/>
+      </concept>
+      <concept>
+        <code value="fr-TD"/>
+        <display value="French-CHAD"/>
+      </concept>
+      <concept>
+        <code value="fr-TG"/>
+        <display value="French-TOGO"/>
+      </concept>
+      <concept>
+        <code value="fr-TN"/>
+        <display value="French-TUNISIA"/>
+      </concept>
+      <concept>
+        <code value="fr-VU"/>
+        <display value="French-VANUATU"/>
+      </concept>
+      <concept>
+        <code value="fr-WF"/>
+        <display value="French-WALLIS AND FUTUNA"/>
+      </concept>
+      <concept>
+        <code value="fr-YT"/>
+        <display value="French-MAYOTTE"/>
+      </concept>
+      <concept>
+        <code value="fy-NL"/>
+        <display value="Western Frisian-NETHERLANDS"/>
+      </concept>
+      <concept>
+        <code value="ga-IE"/>
+        <display value="Irish-IRELAND"/>
+      </concept>
+      <concept>
+        <code value="gd-GB"/>
+        <display value="Gaelic; Scottish Gaelic-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"/>
+      </concept>
+      <concept>
+        <code value="gl-ES"/>
+        <display value="Galician-SPAIN"/>
+      </concept>
+      <concept>
+        <code value="gu-IN"/>
+        <display value="Gujarati-INDIA"/>
+      </concept>
+      <concept>
+        <code value="gv-IM"/>
+        <display value="Manx-ISLE OF MAN"/>
+      </concept>
+      <concept>
+        <code value="ha-GH"/>
+        <display value="Hausa-GHANA"/>
+      </concept>
+      <concept>
+        <code value="ha-NE"/>
+        <display value="Hausa-NIGER"/>
+      </concept>
+      <concept>
+        <code value="ha-NG"/>
+        <display value="Hausa-NIGERIA"/>
+      </concept>
+      <concept>
+        <code value="he-IL"/>
+        <display value="Hebrew-ISRAEL"/>
+      </concept>
+      <concept>
+        <code value="hi-IN"/>
+        <display value="Hindi-INDIA"/>
+      </concept>
+      <concept>
+        <code value="hr-BA"/>
+        <display value="Croatian-BOSNIA AND HERZEGOVINA"/>
+      </concept>
+      <concept>
+        <code value="hr-HR"/>
+        <display value="Croatian-CROATIA"/>
+      </concept>
+      <concept>
+        <code value="hu-HU"/>
+        <display value="Hungarian-HUNGARY"/>
+      </concept>
+      <concept>
+        <code value="hy-AM"/>
+        <display value="Armenian-ARMENIA"/>
+      </concept>
+      <concept>
+        <code value="id-ID"/>
+        <display value="Indonesian-INDONESIA"/>
+      </concept>
+      <concept>
+        <code value="ig-NG"/>
+        <display value="Igbo-NIGERIA"/>
+      </concept>
+      <concept>
+        <code value="ii-CN"/>
+        <display value="Sichuan Yi; Nuosu-CHINA"/>
+      </concept>
+      <concept>
+        <code value="is-IS"/>
+        <display value="Icelandic-ICELAND"/>
+      </concept>
+      <concept>
+        <code value="it-CH"/>
+        <display value="Italian-SWITZERLAND"/>
+      </concept>
+      <concept>
+        <code value="it-IT"/>
+        <display value="Italian-ITALY"/>
+      </concept>
+      <concept>
+        <code value="it-SM"/>
+        <display value="Italian-SAN MARINO"/>
+      </concept>
+      <concept>
+        <code value="ja-JP"/>
+        <display value="Japanese-JAPAN"/>
+      </concept>
+      <concept>
+        <code value="ka-GE"/>
+        <display value="Georgian-GEORGIA"/>
+      </concept>
+      <concept>
+        <code value="ki-KE"/>
+        <display value="Kikuyu; Gikuyu-KENYA"/>
+      </concept>
+      <concept>
+        <code value="kk-KZ"/>
+        <display value="Kazakh-KAZAKHSTAN"/>
+      </concept>
+      <concept>
+        <code value="kl-GL"/>
+        <display value="Kalaallisut; Greenlandic-GREENLAND"/>
+      </concept>
+      <concept>
+        <code value="km-KH"/>
+        <display value="Central Khmer-CAMBODIA"/>
+      </concept>
+      <concept>
+        <code value="kn-IN"/>
+        <display value="Kannada-INDIA"/>
+      </concept>
+      <concept>
+        <code value="ko-KP"/>
+        <display value="Korean-KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)"/>
+      </concept>
+      <concept>
+        <code value="ko-KR"/>
+        <display value="Korean-KOREA, REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="ks-IN"/>
+        <display value="Kashmiri-INDIA"/>
+      </concept>
+      <concept>
+        <code value="kw-GB"/>
+        <display value="Cornish-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"/>
+      </concept>
+      <concept>
+        <code value="ky-KG"/>
+        <display value="Kirghiz; Kyrgyz-KYRGYZSTAN"/>
+      </concept>
+      <concept>
+        <code value="lb-LU"/>
+        <display value="Luxembourgish; Letzeburgesch-LUXEMBOURG"/>
+      </concept>
+      <concept>
+        <code value="lg-UG"/>
+        <display value="Ganda-UGANDA"/>
+      </concept>
+      <concept>
+        <code value="ln-AO"/>
+        <display value="Lingala-ANGOLA"/>
+      </concept>
+      <concept>
+        <code value="ln-CD"/>
+        <display value="Lingala-CONGO, DEMOCRATIC REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="ln-CF"/>
+        <display value="Lingala-CENTRAL AFRICAN REPUBLIC"/>
+      </concept>
+      <concept>
+        <code value="ln-CG"/>
+        <display value="Lingala-CONGO"/>
+      </concept>
+      <concept>
+        <code value="lo-LA"/>
+        <display value="Lao-LAO PEOPLE'S DEMOCRATIC REPUBLIC"/>
+      </concept>
+      <concept>
+        <code value="lt-LT"/>
+        <display value="Lithuanian-LITHUANIA"/>
+      </concept>
+      <concept>
+        <code value="lu-CD"/>
+        <display value="Luba-Katanga-CONGO, DEMOCRATIC REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="lv-LV"/>
+        <display value="Latvian-LATVIA"/>
+      </concept>
+      <concept>
+        <code value="mg-MG"/>
+        <display value="Malagasy-MADAGASCAR"/>
+      </concept>
+      <concept>
+        <code value="mk-MK"/>
+        <display value="Macedonian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="ml-IN"/>
+        <display value="Malayalam-INDIA"/>
+      </concept>
+      <concept>
+        <code value="mn-MN"/>
+        <display value="Mongolian-MONGOLIA"/>
+      </concept>
+      <concept>
+        <code value="mr-IN"/>
+        <display value="Marathi-INDIA"/>
+      </concept>
+      <concept>
+        <code value="ms-BN"/>
+        <display value="Malay-BRUNEI DARUSSALAM"/>
+      </concept>
+      <concept>
+        <code value="ms-MY"/>
+        <display value="Malay-MALAYSIA"/>
+      </concept>
+      <concept>
+        <code value="ms-SG"/>
+        <display value="Malay-SINGAPORE"/>
+      </concept>
+      <concept>
+        <code value="mt-MT"/>
+        <display value="Maltese-MALTA"/>
+      </concept>
+      <concept>
+        <code value="my-MM"/>
+        <display value="Burmese-MYANMAR"/>
+      </concept>
+      <concept>
+        <code value="nb-NO"/>
+        <display value="Bokmål, Norwegian; Norwegian Bokmål-NORWAY"/>
+      </concept>
+      <concept>
+        <code value="nb-SJ"/>
+        <display value="Bokmål, Norwegian; Norwegian Bokmål-SVALBARD AND JAN MAYEN"/>
+      </concept>
+      <concept>
+        <code value="nd-ZW"/>
+        <display value="Ndebele, North; North Ndebele-ZIMBABWE"/>
+      </concept>
+      <concept>
+        <code value="ne-IN"/>
+        <display value="Nepali-INDIA"/>
+      </concept>
+      <concept>
+        <code value="ne-NP"/>
+        <display value="Nepali-NEPAL"/>
+      </concept>
+      <concept>
+        <code value="nl-AW"/>
+        <display value="Dutch; Flemish-ARUBA"/>
+      </concept>
+      <concept>
+        <code value="nl-BE"/>
+        <display value="Dutch; Flemish-BELGIUM"/>
+      </concept>
+      <concept>
+        <code value="nl-BQ"/>
+        <display value="Dutch; Flemish-BONAIRE, SINT EUSTATIUS AND SABA"/>
+      </concept>
+      <concept>
+        <code value="nl-CW"/>
+        <display value="Dutch; Flemish-CURAÇAO"/>
+      </concept>
+      <concept>
+        <code value="nl-NL"/>
+        <display value="Dutch; Flemish-NETHERLANDS"/>
+      </concept>
+      <concept>
+        <code value="nl-SR"/>
+        <display value="Dutch; Flemish-SURINAME"/>
+      </concept>
+      <concept>
+        <code value="nl-SX"/>
+        <display value="Dutch; Flemish-SINT MAARTEN (DUTCH PART)"/>
+      </concept>
+      <concept>
+        <code value="nn-NO"/>
+        <display value="Norwegian Nynorsk; Nynorsk, Norwegian-NORWAY"/>
+      </concept>
+      <concept>
+        <code value="om-ET"/>
+        <display value="Oromo-ETHIOPIA"/>
+      </concept>
+      <concept>
+        <code value="om-KE"/>
+        <display value="Oromo-KENYA"/>
+      </concept>
+      <concept>
+        <code value="or-IN"/>
+        <display value="Oriya-INDIA"/>
+      </concept>
+      <concept>
+        <code value="os-GE"/>
+        <display value="Ossetian; Ossetic-GEORGIA"/>
+      </concept>
+      <concept>
+        <code value="os-RU"/>
+        <display value="Ossetian; Ossetic-RUSSIAN FEDERATION"/>
+      </concept>
+      <concept>
+        <code value="pa-PK"/>
+        <display value="Panjabi; Punjabi-PAKISTAN"/>
+      </concept>
+      <concept>
+        <code value="pa-IN"/>
+        <display value="Panjabi; Punjabi-INDIA"/>
+      </concept>
+      <concept>
+        <code value="pl-PL"/>
+        <display value="Polish-POLAND"/>
+      </concept>
+      <concept>
+        <code value="ps-AF"/>
+        <display value="Pushto; Pashto-AFGHANISTAN"/>
+      </concept>
+      <concept>
+        <code value="pt-AO"/>
+        <display value="Portuguese-ANGOLA"/>
+      </concept>
+      <concept>
+        <code value="pt-BR"/>
+        <display value="Portuguese-BRAZIL"/>
+      </concept>
+      <concept>
+        <code value="pt-CV"/>
+        <display value="Portuguese-CAPE VERDE"/>
+      </concept>
+      <concept>
+        <code value="pt-GW"/>
+        <display value="Portuguese-GUINEA-BISSAU"/>
+      </concept>
+      <concept>
+        <code value="pt-MO"/>
+        <display value="Portuguese-MACAO"/>
+      </concept>
+      <concept>
+        <code value="pt-MZ"/>
+        <display value="Portuguese-MOZAMBIQUE"/>
+      </concept>
+      <concept>
+        <code value="pt-PT"/>
+        <display value="Portuguese-PORTUGAL"/>
+      </concept>
+      <concept>
+        <code value="pt-ST"/>
+        <display value="Portuguese-SAO TOME AND PRINCIPE"/>
+      </concept>
+      <concept>
+        <code value="pt-TL"/>
+        <display value="Portuguese-TIMOR-LESTE"/>
+      </concept>
+      <concept>
+        <code value="qu-BO"/>
+        <display value="Quechua-BOLIVIA (PLURINATIONAL STATE OF)"/>
+      </concept>
+      <concept>
+        <code value="qu-EC"/>
+        <display value="Quechua-ECUADOR"/>
+      </concept>
+      <concept>
+        <code value="qu-PE"/>
+        <display value="Quechua-PERU"/>
+      </concept>
+      <concept>
+        <code value="rm-CH"/>
+        <display value="Romansh-SWITZERLAND"/>
+      </concept>
+      <concept>
+        <code value="rn-BI"/>
+        <display value="Rundi-BURUNDI"/>
+      </concept>
+      <concept>
+        <code value="ro-MD"/>
+        <display value="Romanian; Moldavian; Moldovan-MOLDOVA, REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="ro-RO"/>
+        <display value="Romanian; Moldavian; Moldovan-ROMANIA"/>
+      </concept>
+      <concept>
+        <code value="ru-BY"/>
+        <display value="Russian-BELARUS"/>
+      </concept>
+      <concept>
+        <code value="ru-KG"/>
+        <display value="Russian-KYRGYZSTAN"/>
+      </concept>
+      <concept>
+        <code value="ru-KZ"/>
+        <display value="Russian-KAZAKHSTAN"/>
+      </concept>
+      <concept>
+        <code value="ru-MD"/>
+        <display value="Russian-MOLDOVA, REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="ru-RU"/>
+        <display value="Russian-RUSSIAN FEDERATION"/>
+      </concept>
+      <concept>
+        <code value="ru-UA"/>
+        <display value="Russian-UKRAINE"/>
+      </concept>
+      <concept>
+        <code value="rw-RW"/>
+        <display value="Kinyarwanda-RWANDA"/>
+      </concept>
+      <concept>
+        <code value="se-FI"/>
+        <display value="Northern Sami-FINLAND"/>
+      </concept>
+      <concept>
+        <code value="se-NO"/>
+        <display value="Northern Sami-NORWAY"/>
+      </concept>
+      <concept>
+        <code value="se-SE"/>
+        <display value="Northern Sami-SWEDEN"/>
+      </concept>
+      <concept>
+        <code value="sg-CF"/>
+        <display value="Sango-CENTRAL AFRICAN REPUBLIC"/>
+      </concept>
+      <concept>
+        <code value="si-LK"/>
+        <display value="Sinhala; Sinhalese-SRI LANKA"/>
+      </concept>
+      <concept>
+        <code value="sk-SK"/>
+        <display value="Slovak-SLOVAKIA"/>
+      </concept>
+      <concept>
+        <code value="sl-SI"/>
+        <display value="Slovenian-SLOVENIA"/>
+      </concept>
+      <concept>
+        <code value="sn-ZW"/>
+        <display value="Shona-ZIMBABWE"/>
+      </concept>
+      <concept>
+        <code value="so-DJ"/>
+        <display value="Somali-DJIBOUTI"/>
+      </concept>
+      <concept>
+        <code value="so-ET"/>
+        <display value="Somali-ETHIOPIA"/>
+      </concept>
+      <concept>
+        <code value="so-KE"/>
+        <display value="Somali-KENYA"/>
+      </concept>
+      <concept>
+        <code value="so-SO"/>
+        <display value="Somali-SOMALIA"/>
+      </concept>
+      <concept>
+        <code value="sq-AL"/>
+        <display value="Albanian-ALBANIA"/>
+      </concept>
+      <concept>
+        <code value="sq-MK"/>
+        <display value="Albanian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="sr-BA"/>
+        <display value="Serbian-BOSNIA AND HERZEGOVINA"/>
+      </concept>
+      <concept>
+        <code value="sr-ME"/>
+        <display value="Serbian-MONTENEGRO"/>
+      </concept>
+      <concept>
+        <code value="sr-RS"/>
+        <display value="Serbian-SERBIA"/>
+      </concept>
+      <concept>
+        <code value="sv-AX"/>
+        <display value="Swedish-ÅLAND ISLANDS"/>
+      </concept>
+      <concept>
+        <code value="sv-FI"/>
+        <display value="Swedish-FINLAND"/>
+      </concept>
+      <concept>
+        <code value="sv-SE"/>
+        <display value="Swedish-SWEDEN"/>
+      </concept>
+      <concept>
+        <code value="sw-CD"/>
+        <display value="Swahili-CONGO, DEMOCRATIC REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="sw-KE"/>
+        <display value="Swahili-KENYA"/>
+      </concept>
+      <concept>
+        <code value="sw-TZ"/>
+        <display value="Swahili-TANZANIA, UNITED REPUBLIC OF"/>
+      </concept>
+      <concept>
+        <code value="sw-UG"/>
+        <display value="Swahili-UGANDA"/>
+      </concept>
+      <concept>
+        <code value="ta-IN"/>
+        <display value="Tamil-INDIA"/>
+      </concept>
+      <concept>
+        <code value="ta-LK"/>
+        <display value="Tamil-SRI LANKA"/>
+      </concept>
+      <concept>
+        <code value="ta-MY"/>
+        <display value="Tamil-MALAYSIA"/>
+      </concept>
+      <concept>
+        <code value="ta-SG"/>
+        <display value="Tamil-SINGAPORE"/>
+      </concept>
+      <concept>
+        <code value="te-IN"/>
+        <display value="Telugu-INDIA"/>
+      </concept>
+      <concept>
+        <code value="th-TH"/>
+        <display value="Thai-THAILAND"/>
+      </concept>
+      <concept>
+        <code value="ti-ER"/>
+        <display value="Tigrinya-ERITREA"/>
+      </concept>
+      <concept>
+        <code value="ti-ET"/>
+        <display value="Tigrinya-ETHIOPIA"/>
+      </concept>
+      <concept>
+        <code value="to-TO"/>
+        <display value="Tonga (Tonga Islands)-TONGA"/>
+      </concept>
+      <concept>
+        <code value="tr-CY"/>
+        <display value="Turkish-CYPRUS"/>
+      </concept>
+      <concept>
+        <code value="tr-TR"/>
+        <display value="Turkish-TURKEY"/>
+      </concept>
+      <concept>
+        <code value="ug-CN"/>
+        <display value="Uighur; Uyghur-CHINA"/>
+      </concept>
+      <concept>
+        <code value="uk-UA"/>
+        <display value="Ukrainian-UKRAINE"/>
+      </concept>
+      <concept>
+        <code value="ur-IN"/>
+        <display value="Urdu-INDIA"/>
+      </concept>
+      <concept>
+        <code value="ur-PK"/>
+        <display value="Urdu-PAKISTAN"/>
+      </concept>
+      <concept>
+        <code value="uz-AF"/>
+        <display value="Uzbek-AFGHANISTAN"/>
+      </concept>
+      <concept>
+        <code value="uz-UZ"/>
+        <display value="Uzbek-UZBEKISTAN"/>
+      </concept>
+      <concept>
+        <code value="vi-VN"/>
+        <display value="Vietnamese-VIET NAM"/>
+      </concept>
+      <concept>
+        <code value="yo-BJ"/>
+        <display value="Yoruba-BENIN"/>
+      </concept>
+      <concept>
+        <code value="yo-NG"/>
+        <display value="Yoruba-NIGERIA"/>
+      </concept>
+      <concept>
+        <code value="zh-CN"/>
+        <display value="Chinese-CHINA"/>
+      </concept>
+      <concept>
+        <code value="zh-HK"/>
+        <display value="Chinese-HONG KONG"/>
+      </concept>
+      <concept>
+        <code value="zh-MO"/>
+        <display value="Chinese-MACAO"/>
+      </concept>
+      <concept>
+        <code value="zh-SG"/>
+        <display value="Chinese-SINGAPORE"/>
+      </concept>
+      <concept>
+        <code value="zh-TW"/>
+        <display value="Chinese-TAIWAN, PROVINCE OF CHINA"/>
+      </concept>
+      <concept>
+        <code value="zu-ZA"/>
+        <display value="Zulu-SOUTH AFRICA"/>
+      </concept>
+      <concept>
+        <code value="no-NO"/>
+        <display value="Norwegian-NORWAY"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

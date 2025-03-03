@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ehdsi.eu/laboratory/ServiceRequest/SampleServiceRequest> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "SampleServiceRequest"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-lab-myhealtheu"^^xsd:anyURI ;
+       fhir:link <http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-lab-myhealtheu>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest SampleServiceRequest</b></p><a name=\"SampleServiceRequest\"> </a><a name=\"hcSampleServiceRequest\"> </a><a name=\"SampleServiceRequest-en-US\"> </a><p><b>identifier</b>: <code>http://example.org</code>/a4310756-a193-4a48-8feb-598c87a1d3f</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 24360-0}\">Hemoglobin and Hematocrit panel - Blood</span></p><p><b>subject</b>: <a href=\"Patient-SamplePatient.html\">John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976 (use: official, ))</a></p><p><b>insurance</b>: <a href=\"#hcSampleServiceRequest/SampleCoverage\">Coverage: status = active</a></p><p><b>specimen</b>: <a href=\"Specimen-SampleSpecimen.html\">Specimen: status = available; type = Blood specimen</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Coverage #SampleCoverage</b></p><a name=\"SampleServiceRequest/SampleCoverage\"> </a><a name=\"hcSampleServiceRequest/SampleCoverage\"> </a><a name=\"SampleServiceRequest/SampleCoverage-en-US\"> </a><p><b>status</b>: Active</p><p><b>beneficiary</b>: <a href=\"Patient-SamplePatient.html\">John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976 (use: official, ))</a></p><p><b>payor</b>: Best Insurance</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Coverage ;
+     fhir:id [ fhir:v "SampleCoverage" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Coverage-lab-myhealtheu"^^xsd:anyURI ;
+         fhir:link <http://fhir.ehdsi.eu/laboratory/StructureDefinition/Coverage-lab-myhealtheu>
+       ] )
+     ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:beneficiary [
+       fhir:link <http://fhir.ehdsi.eu/laboratory/Patient/SamplePatient> ;
+       fhir:reference [ fhir:v "Patient/SamplePatient" ]
+     ] ;
+     fhir:payor ( [
+       fhir:display [ fhir:v "Best Insurance" ]
+     ] )
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://example.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "a4310756-a193-4a48-8feb-598c87a1d3f" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:24360-0 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "24360-0" ] ;
+       fhir:display [ fhir:v "Hemoglobin and Hematocrit panel - Blood" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.ehdsi.eu/laboratory/Patient/SamplePatient> ;
+     fhir:reference [ fhir:v "Patient/SamplePatient" ]
+  ] ; # 
+  fhir:insurance ( [
+     fhir:reference [ fhir:v "#SampleCoverage" ]
+  ] ) ; # 
+  fhir:specimen ( [
+     fhir:link <http://fhir.ehdsi.eu/laboratory/Specimen/SampleSpecimen> ;
+     fhir:reference [ fhir:v "Specimen/SampleSpecimen" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

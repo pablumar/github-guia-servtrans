@@ -1,0 +1,1930 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>eHDSI Language - JSON Representation - Guía de Implementación Servicios Transfronterizos v0.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"19.43"}
+    h3,h4,h5,h6{--heading-prefix:"19.43"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<div>
+  <table width="100%">
+    <tr >
+      <td align="center">
+        <img src="assets/images/logoGlobal.png"></td></tr></table>
+      </td>
+    </tr>
+  </table>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación Servicios Transfronterizos</span>
+            <br/>
+            <span style="display:inline-block;">0.0.1 - qa-preview
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Introducción</a>
+  </li>
+  <li>
+    <a href="toc.html">Listado de Contenidos</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Diagrama de Secuencia
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="diagramaSecInf.html">Busqueda Paciente</a>
+      </li>
+      <li>
+        <a href="diagramaSecPac.html">Funcionamiento roles</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Escenarios
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="consultaReferenciasROL-A.html">Transfronterizo - ROL A Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoROL-A.html">Transfronterizo - ROL A Consulta de documento estructurado</a>
+      </li>
+      <li>
+        <a href="consultaPacienteROL-B.html">Transfronterizo - ROL B Consulta de Paciente</a>
+      </li>
+      <li>
+        <a href="consultaReferenciasROL-B.html">Transfronterizo - ROL B Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoROL-B.html">Transfronterizo - ROL B Consulta de documento</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementación
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ConsultaCiudadanoTransfronterizoCUROL-A.html">Transfronterizo - ROL A Consulta de un ciudadano desde servicio transfronterizo</a>
+      </li>
+      <li>
+        <a href="consultaReferenciasCUROL-A.html">Transfronterizo - ROL A Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoCUROL-A.html">Transfronterizo - ROL A Consulta de documento estructurado</a>
+      </li>
+      <li>
+        <a href="consultaPacienteCUROL-B.html">Transfronterizo - ROL B Consulta de Paciente</a>
+      </li>
+      <li>
+        <a href="consultaReferenciasCUROL-B.html">Transfronterizo - ROL B Consulta de referencias de informes</a>
+      </li>
+      <li>
+        <a href="consultaDocuEstructuradoCUROL-B.html">Transfronterizo - ROL B Consulta de documento estructurado</a>
+      </li>
+      <li>
+        <a href="auditoriaOperacionesCU.html">Transfronterizo - Auditoría de operaciones</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guías Relacionadas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://fhir.ehdsi.eu/laboratory/index.html">MyHealth@Eu Laboratory Report</a>
+      </li>
+      <li>
+        <a href="https://build-fhir.ehdsi.eu/ncp-api/">MyHealth@Eu NCPeH API</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artefactos
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Listado</a>
+      </li>
+      <li>
+        <a href="mapeo.html">Mapeos</a>
+      </li>
+      <li>
+        <a href="terminologias.html">Terminologias</a>
+      </li>
+      <li>
+        <a href="seguridad.html">Seguridad</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>eHDSI Language</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Guía de Implementación Servicios Transfronterizos - Local Development build (v0.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhir.ehdsi.eu/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ValueSet-eHDSILanguage.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-eHDSILanguage.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-eHDSILanguage.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: eHDSI Language - JSON Representation</h2>
+
+  <table class="colstu">
+    <tr>
+
+      <td colspan="1">
+        
+          <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Draft</a>
+          
+        
+      </td>
+
+      <td>
+        <a href="http://hl7.org/fhir/versions.html#maturity">Maturity Level</a>: 1
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ValueSet-eHDSILanguage.json" no-download="true">Raw json</a> | <a href="ValueSet-eHDSILanguage.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a>" : "eHDSILanguage",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet eHDSILanguage&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;eHDSILanguage\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hceHDSILanguage\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;eHDSILanguage-en-US\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;http://terminology.hl7.org/5.5.0/CodeSystem-v3-ietf3066.html\&quot;&gt;&lt;code&gt;urn:ietf:bcp:47&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;af-NA&lt;/td&gt;&lt;td&gt;Afrikaans-NAMIBIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;af-ZA&lt;/td&gt;&lt;td&gt;Afrikaans-SOUTH AFRICA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ak-GH&lt;/td&gt;&lt;td&gt;Akan-GHANA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;am-ET&lt;/td&gt;&lt;td&gt;Amharic-ETHIOPIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-AE&lt;/td&gt;&lt;td&gt;Arabic-UNITED ARAB EMIRATES&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-BH&lt;/td&gt;&lt;td&gt;Arabic-BAHRAIN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-DJ&lt;/td&gt;&lt;td&gt;Arabic-DJIBOUTI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-DZ&lt;/td&gt;&lt;td&gt;Arabic-ALGERIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-EG&lt;/td&gt;&lt;td&gt;Arabic-EGYPT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-EH&lt;/td&gt;&lt;td&gt;Arabic-WESTERN SAHARA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-ER&lt;/td&gt;&lt;td&gt;Arabic-ERITREA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-IL&lt;/td&gt;&lt;td&gt;Arabic-ISRAEL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-IQ&lt;/td&gt;&lt;td&gt;Arabic-IRAQ&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-JO&lt;/td&gt;&lt;td&gt;Arabic-JORDAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-KM&lt;/td&gt;&lt;td&gt;Arabic-COMOROS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-KW&lt;/td&gt;&lt;td&gt;Arabic-KUWAIT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-LB&lt;/td&gt;&lt;td&gt;Arabic-LEBANON&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-LY&lt;/td&gt;&lt;td&gt;Arabic-LIBYA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-MA&lt;/td&gt;&lt;td&gt;Arabic-MOROCCO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-MR&lt;/td&gt;&lt;td&gt;Arabic-MAURITANIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-OM&lt;/td&gt;&lt;td&gt;Arabic-OMAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-PS&lt;/td&gt;&lt;td&gt;Arabic-PALESTINE, STATE OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-QA&lt;/td&gt;&lt;td&gt;Arabic-QATAR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-SA&lt;/td&gt;&lt;td&gt;Arabic-SAUDI ARABIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-SD&lt;/td&gt;&lt;td&gt;Arabic-SUDAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-SO&lt;/td&gt;&lt;td&gt;Arabic-SOMALIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-SS&lt;/td&gt;&lt;td&gt;Arabic-SOUTH SUDAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-SY&lt;/td&gt;&lt;td&gt;Arabic-SYRIAN ARAB REPUBLIC&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-TD&lt;/td&gt;&lt;td&gt;Arabic-CHAD&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-TN&lt;/td&gt;&lt;td&gt;Arabic-TUNISIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ar-YE&lt;/td&gt;&lt;td&gt;Arabic-YEMEN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;as-IN&lt;/td&gt;&lt;td&gt;Assamese-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;az-AZ&lt;/td&gt;&lt;td&gt;Azerbaijani-AZERBAIJAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;be-BY&lt;/td&gt;&lt;td&gt;Belarusian-BELARUS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;bg-BG&lt;/td&gt;&lt;td&gt;Bulgarian-BULGARIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;bm-ML&lt;/td&gt;&lt;td&gt;Bambara-MALI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;bn-BD&lt;/td&gt;&lt;td&gt;Bengali-BANGLADESH&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;bn-IN&lt;/td&gt;&lt;td&gt;Bengali-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;bo-CN&lt;/td&gt;&lt;td&gt;Tibetan-CHINA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;bo-IN&lt;/td&gt;&lt;td&gt;Tibetan-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;br-FR&lt;/td&gt;&lt;td&gt;Breton-FRANCE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;bs-BA&lt;/td&gt;&lt;td&gt;Bosnian-BOSNIA AND HERZEGOVINA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ca-AD&lt;/td&gt;&lt;td&gt;Catalan; Valencian-ANDORRA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ca-ES&lt;/td&gt;&lt;td&gt;Catalan; Valencian-SPAIN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ca-FR&lt;/td&gt;&lt;td&gt;Catalan; Valencian-FRANCE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ca-IT&lt;/td&gt;&lt;td&gt;Catalan; Valencian-ITALY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cs-CZ&lt;/td&gt;&lt;td&gt;Czech-CZECH REPUBLIC&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cy-GB&lt;/td&gt;&lt;td&gt;Welsh-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;da-DK&lt;/td&gt;&lt;td&gt;Danish-DENMARK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;da-GL&lt;/td&gt;&lt;td&gt;Danish-GREENLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;de-AT&lt;/td&gt;&lt;td&gt;German-AUSTRIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;de-BE&lt;/td&gt;&lt;td&gt;German-BELGIUM&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;de-CH&lt;/td&gt;&lt;td&gt;German-SWITZERLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;de-DE&lt;/td&gt;&lt;td&gt;German-GERMANY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;de-LI&lt;/td&gt;&lt;td&gt;German-LIECHTENSTEIN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;de-LU&lt;/td&gt;&lt;td&gt;German-LUXEMBOURG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dz-BT&lt;/td&gt;&lt;td&gt;Dzongkha-BHUTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ee-GH&lt;/td&gt;&lt;td&gt;Ewe-GHANA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ee-TG&lt;/td&gt;&lt;td&gt;Ewe-TOGO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;el-CY&lt;/td&gt;&lt;td&gt;Greek, Modern (1453-)-CYPRUS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;el-GR&lt;/td&gt;&lt;td&gt;Greek, Modern (1453-)-GREECE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-AG&lt;/td&gt;&lt;td&gt;English-ANTIGUA AND BARBUDA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-AI&lt;/td&gt;&lt;td&gt;English-ANGUILLA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-AS&lt;/td&gt;&lt;td&gt;English-AMERICAN SAMOA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-AU&lt;/td&gt;&lt;td&gt;English-AUSTRALIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-BB&lt;/td&gt;&lt;td&gt;English-BARBADOS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-BE&lt;/td&gt;&lt;td&gt;English-BELGIUM&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-BM&lt;/td&gt;&lt;td&gt;English-BERMUDA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-BS&lt;/td&gt;&lt;td&gt;English-BAHAMAS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-BW&lt;/td&gt;&lt;td&gt;English-BOTSWANA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-BZ&lt;/td&gt;&lt;td&gt;English-BELIZE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-CA&lt;/td&gt;&lt;td&gt;English-CANADA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-CC&lt;/td&gt;&lt;td&gt;English-COCOS (KEELING) ISLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-CK&lt;/td&gt;&lt;td&gt;English-COOK ISLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-CM&lt;/td&gt;&lt;td&gt;English-CAMEROON&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-CX&lt;/td&gt;&lt;td&gt;English-CHRISTMAS ISLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-DM&lt;/td&gt;&lt;td&gt;English-DOMINICA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-ER&lt;/td&gt;&lt;td&gt;English-ERITREA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-FJ&lt;/td&gt;&lt;td&gt;English-FIJI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-FK&lt;/td&gt;&lt;td&gt;English-FALKLAND ISLANDS (MALVINAS)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-FM&lt;/td&gt;&lt;td&gt;English-MICRONESIA (FEDERATED STATES OF)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-GB&lt;/td&gt;&lt;td&gt;English-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-GD&lt;/td&gt;&lt;td&gt;English-GRENADA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-GG&lt;/td&gt;&lt;td&gt;English-GUERNSEY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-GH&lt;/td&gt;&lt;td&gt;English-GHANA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-GI&lt;/td&gt;&lt;td&gt;English-GIBRALTAR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-GM&lt;/td&gt;&lt;td&gt;English-GAMBIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-GU&lt;/td&gt;&lt;td&gt;English-GUAM&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-GY&lt;/td&gt;&lt;td&gt;English-GUYANA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-HK&lt;/td&gt;&lt;td&gt;English-HONG KONG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-IE&lt;/td&gt;&lt;td&gt;English-IRELAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-IM&lt;/td&gt;&lt;td&gt;English-ISLE OF MAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-IN&lt;/td&gt;&lt;td&gt;English-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-IO&lt;/td&gt;&lt;td&gt;English-BRITISH INDIAN OCEAN TERRITORY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-JE&lt;/td&gt;&lt;td&gt;English-JERSEY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-JM&lt;/td&gt;&lt;td&gt;English-JAMAICA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-KE&lt;/td&gt;&lt;td&gt;English-KENYA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-KI&lt;/td&gt;&lt;td&gt;English-KIRIBATI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-KN&lt;/td&gt;&lt;td&gt;English-SAINT KITTS AND NEVIS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-KY&lt;/td&gt;&lt;td&gt;English-CAYMAN ISLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-LC&lt;/td&gt;&lt;td&gt;English-SAINT LUCIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-LR&lt;/td&gt;&lt;td&gt;English-LIBERIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-LS&lt;/td&gt;&lt;td&gt;English-LESOTHO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-MG&lt;/td&gt;&lt;td&gt;English-MADAGASCAR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-MH&lt;/td&gt;&lt;td&gt;English-MARSHALL ISLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-MO&lt;/td&gt;&lt;td&gt;English-MACAO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-MP&lt;/td&gt;&lt;td&gt;English-NORTHERN MARIANA ISLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-MS&lt;/td&gt;&lt;td&gt;English-MONTSERRAT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-MT&lt;/td&gt;&lt;td&gt;English-MALTA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-MU&lt;/td&gt;&lt;td&gt;English-MAURITIUS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-MW&lt;/td&gt;&lt;td&gt;English-MALAWI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-MY&lt;/td&gt;&lt;td&gt;English-MALAYSIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-NA&lt;/td&gt;&lt;td&gt;English-NAMIBIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-NF&lt;/td&gt;&lt;td&gt;English-NORFOLK ISLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-NG&lt;/td&gt;&lt;td&gt;English-NIGERIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-NR&lt;/td&gt;&lt;td&gt;English-NAURU&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-NU&lt;/td&gt;&lt;td&gt;English-NIUE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-NZ&lt;/td&gt;&lt;td&gt;English-NEW ZEALAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-PG&lt;/td&gt;&lt;td&gt;English-PAPUA NEW GUINEA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-PH&lt;/td&gt;&lt;td&gt;English-PHILIPPINES&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-PK&lt;/td&gt;&lt;td&gt;English-PAKISTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-PN&lt;/td&gt;&lt;td&gt;English-PITCAIRN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-PR&lt;/td&gt;&lt;td&gt;English-PUERTO RICO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-PW&lt;/td&gt;&lt;td&gt;English-PALAU&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-RW&lt;/td&gt;&lt;td&gt;English-RWANDA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-SB&lt;/td&gt;&lt;td&gt;English-SOLOMON ISLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-SC&lt;/td&gt;&lt;td&gt;English-SEYCHELLES&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-SD&lt;/td&gt;&lt;td&gt;English-SUDAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-SG&lt;/td&gt;&lt;td&gt;English-SINGAPORE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-SH&lt;/td&gt;&lt;td&gt;English-SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-SL&lt;/td&gt;&lt;td&gt;English-SIERRA LEONE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-SS&lt;/td&gt;&lt;td&gt;English-SOUTH SUDAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-SX&lt;/td&gt;&lt;td&gt;English-SINT MAARTEN (DUTCH PART)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-SZ&lt;/td&gt;&lt;td&gt;English-SWAZILAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-TC&lt;/td&gt;&lt;td&gt;English-TURKS AND CAICOS ISLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-TK&lt;/td&gt;&lt;td&gt;English-TOKELAU&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-TO&lt;/td&gt;&lt;td&gt;English-TONGA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-TT&lt;/td&gt;&lt;td&gt;English-TRINIDAD AND TOBAGO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-TV&lt;/td&gt;&lt;td&gt;English-TUVALU&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-TZ&lt;/td&gt;&lt;td&gt;English-TANZANIA, UNITED REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-UG&lt;/td&gt;&lt;td&gt;English-UGANDA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-UM&lt;/td&gt;&lt;td&gt;English-UNITED STATES MINOR OUTLYING ISLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-US&lt;/td&gt;&lt;td&gt;English-UNITED STATES OF AMERICA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-VC&lt;/td&gt;&lt;td&gt;English-SAINT VINCENT AND THE GRENADINES&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-VG&lt;/td&gt;&lt;td&gt;English-VIRGIN ISLANDS, BRITISH&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-VI&lt;/td&gt;&lt;td&gt;English-VIRGIN ISLANDS, U.S.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-VU&lt;/td&gt;&lt;td&gt;English-VANUATU&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-WS&lt;/td&gt;&lt;td&gt;English-SAMOA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-ZA&lt;/td&gt;&lt;td&gt;English-SOUTH AFRICA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-ZM&lt;/td&gt;&lt;td&gt;English-ZAMBIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;en-ZW&lt;/td&gt;&lt;td&gt;English-ZIMBABWE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-AR&lt;/td&gt;&lt;td&gt;Spanish; Castilian-ARGENTINA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-BO&lt;/td&gt;&lt;td&gt;Spanish; Castilian-BOLIVIA (PLURINATIONAL STATE OF)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-CL&lt;/td&gt;&lt;td&gt;Spanish; Castilian-CHILE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-CO&lt;/td&gt;&lt;td&gt;Spanish; Castilian-COLOMBIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-CR&lt;/td&gt;&lt;td&gt;Spanish; Castilian-COSTA RICA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-CU&lt;/td&gt;&lt;td&gt;Spanish; Castilian-CUBA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-DO&lt;/td&gt;&lt;td&gt;Spanish; Castilian-DOMINICAN REPUBLIC&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-EC&lt;/td&gt;&lt;td&gt;Spanish; Castilian-ECUADOR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-ES&lt;/td&gt;&lt;td&gt;Spanish; Castilian-SPAIN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-GQ&lt;/td&gt;&lt;td&gt;Spanish; Castilian-EQUATORIAL GUINEA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-GT&lt;/td&gt;&lt;td&gt;Spanish; Castilian-GUATEMALA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-HN&lt;/td&gt;&lt;td&gt;Spanish; Castilian-HONDURAS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-MX&lt;/td&gt;&lt;td&gt;Spanish; Castilian-MEXICO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-NI&lt;/td&gt;&lt;td&gt;Spanish; Castilian-NICARAGUA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-PA&lt;/td&gt;&lt;td&gt;Spanish; Castilian-PANAMA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-PE&lt;/td&gt;&lt;td&gt;Spanish; Castilian-PERU&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-PH&lt;/td&gt;&lt;td&gt;Spanish; Castilian-PHILIPPINES&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-PR&lt;/td&gt;&lt;td&gt;Spanish; Castilian-PUERTO RICO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-PY&lt;/td&gt;&lt;td&gt;Spanish; Castilian-PARAGUAY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-SV&lt;/td&gt;&lt;td&gt;Spanish; Castilian-EL SALVADOR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-US&lt;/td&gt;&lt;td&gt;Spanish; Castilian-UNITED STATES OF AMERICA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-UY&lt;/td&gt;&lt;td&gt;Spanish; Castilian-URUGUAY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;es-VE&lt;/td&gt;&lt;td&gt;Spanish; Castilian-VENEZUELA (BOLIVARIAN REPUBLIC OF)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;et-EE&lt;/td&gt;&lt;td&gt;Estonian-ESTONIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;eu-ES&lt;/td&gt;&lt;td&gt;Basque-SPAIN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fa-AF&lt;/td&gt;&lt;td&gt;Persian-AFGHANISTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fa-IR&lt;/td&gt;&lt;td&gt;Persian-IRAN (ISLAMIC REPUBLIC OF)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ff-CM&lt;/td&gt;&lt;td&gt;Fulah-CAMEROON&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ff-GN&lt;/td&gt;&lt;td&gt;Fulah-GUINEA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ff-MR&lt;/td&gt;&lt;td&gt;Fulah-MAURITANIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ff-SN&lt;/td&gt;&lt;td&gt;Fulah-SENEGAL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fi-FI&lt;/td&gt;&lt;td&gt;Finnish-FINLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fo-FO&lt;/td&gt;&lt;td&gt;Faroese-FAROE ISLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-BE&lt;/td&gt;&lt;td&gt;French-BELGIUM&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-BF&lt;/td&gt;&lt;td&gt;French-BURKINA FASO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-BI&lt;/td&gt;&lt;td&gt;French-BURUNDI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-BJ&lt;/td&gt;&lt;td&gt;French-BENIN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-BL&lt;/td&gt;&lt;td&gt;French-SAINT BARTHÉLEMY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-CA&lt;/td&gt;&lt;td&gt;French-CANADA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-CD&lt;/td&gt;&lt;td&gt;French-CONGO, DEMOCRATIC REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-CF&lt;/td&gt;&lt;td&gt;French-CENTRAL AFRICAN REPUBLIC&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-CG&lt;/td&gt;&lt;td&gt;French-CONGO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-CH&lt;/td&gt;&lt;td&gt;French-SWITZERLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-CI&lt;/td&gt;&lt;td&gt;French-COTE D'IVOIRE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-CM&lt;/td&gt;&lt;td&gt;French-CAMEROON&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-DJ&lt;/td&gt;&lt;td&gt;French-DJIBOUTI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-DZ&lt;/td&gt;&lt;td&gt;French-ALGERIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-FR&lt;/td&gt;&lt;td&gt;French-FRANCE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-GA&lt;/td&gt;&lt;td&gt;French-GABON&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-GF&lt;/td&gt;&lt;td&gt;French-FRENCH GUIANA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-GN&lt;/td&gt;&lt;td&gt;French-GUINEA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-GP&lt;/td&gt;&lt;td&gt;French-GUADELOUPE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-GQ&lt;/td&gt;&lt;td&gt;French-EQUATORIAL GUINEA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-HT&lt;/td&gt;&lt;td&gt;French-HAITI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-KM&lt;/td&gt;&lt;td&gt;French-COMOROS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-LU&lt;/td&gt;&lt;td&gt;French-LUXEMBOURG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-MA&lt;/td&gt;&lt;td&gt;French-MOROCCO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-MC&lt;/td&gt;&lt;td&gt;French-MONACO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-MF&lt;/td&gt;&lt;td&gt;French-SAINT MARTIN (FRENCH PART)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-MG&lt;/td&gt;&lt;td&gt;French-MADAGASCAR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-ML&lt;/td&gt;&lt;td&gt;French-MALI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-MQ&lt;/td&gt;&lt;td&gt;French-MARTINIQUE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-MR&lt;/td&gt;&lt;td&gt;French-MAURITANIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-MU&lt;/td&gt;&lt;td&gt;French-MAURITIUS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-NC&lt;/td&gt;&lt;td&gt;French-NEW CALEDONIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-NE&lt;/td&gt;&lt;td&gt;French-NIGER&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-PF&lt;/td&gt;&lt;td&gt;French-FRENCH POLYNESIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-PM&lt;/td&gt;&lt;td&gt;French-SAINT PIERRE AND MIQUELON&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-RE&lt;/td&gt;&lt;td&gt;French-REUNION&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-RW&lt;/td&gt;&lt;td&gt;French-RWANDA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-SC&lt;/td&gt;&lt;td&gt;French-SEYCHELLES&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-SN&lt;/td&gt;&lt;td&gt;French-SENEGAL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-SY&lt;/td&gt;&lt;td&gt;French-SYRIAN ARAB REPUBLIC&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-TD&lt;/td&gt;&lt;td&gt;French-CHAD&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-TG&lt;/td&gt;&lt;td&gt;French-TOGO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-TN&lt;/td&gt;&lt;td&gt;French-TUNISIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-VU&lt;/td&gt;&lt;td&gt;French-VANUATU&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-WF&lt;/td&gt;&lt;td&gt;French-WALLIS AND FUTUNA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fr-YT&lt;/td&gt;&lt;td&gt;French-MAYOTTE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;fy-NL&lt;/td&gt;&lt;td&gt;Western Frisian-NETHERLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ga-IE&lt;/td&gt;&lt;td&gt;Irish-IRELAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;gd-GB&lt;/td&gt;&lt;td&gt;Gaelic; Scottish Gaelic-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;gl-ES&lt;/td&gt;&lt;td&gt;Galician-SPAIN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;gu-IN&lt;/td&gt;&lt;td&gt;Gujarati-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;gv-IM&lt;/td&gt;&lt;td&gt;Manx-ISLE OF MAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ha-GH&lt;/td&gt;&lt;td&gt;Hausa-GHANA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ha-NE&lt;/td&gt;&lt;td&gt;Hausa-NIGER&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ha-NG&lt;/td&gt;&lt;td&gt;Hausa-NIGERIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;he-IL&lt;/td&gt;&lt;td&gt;Hebrew-ISRAEL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;hi-IN&lt;/td&gt;&lt;td&gt;Hindi-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;hr-BA&lt;/td&gt;&lt;td&gt;Croatian-BOSNIA AND HERZEGOVINA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;hr-HR&lt;/td&gt;&lt;td&gt;Croatian-CROATIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;hu-HU&lt;/td&gt;&lt;td&gt;Hungarian-HUNGARY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;hy-AM&lt;/td&gt;&lt;td&gt;Armenian-ARMENIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;id-ID&lt;/td&gt;&lt;td&gt;Indonesian-INDONESIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ig-NG&lt;/td&gt;&lt;td&gt;Igbo-NIGERIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ii-CN&lt;/td&gt;&lt;td&gt;Sichuan Yi; Nuosu-CHINA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;is-IS&lt;/td&gt;&lt;td&gt;Icelandic-ICELAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;it-CH&lt;/td&gt;&lt;td&gt;Italian-SWITZERLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;it-IT&lt;/td&gt;&lt;td&gt;Italian-ITALY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;it-SM&lt;/td&gt;&lt;td&gt;Italian-SAN MARINO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ja-JP&lt;/td&gt;&lt;td&gt;Japanese-JAPAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ka-GE&lt;/td&gt;&lt;td&gt;Georgian-GEORGIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ki-KE&lt;/td&gt;&lt;td&gt;Kikuyu; Gikuyu-KENYA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;kk-KZ&lt;/td&gt;&lt;td&gt;Kazakh-KAZAKHSTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;kl-GL&lt;/td&gt;&lt;td&gt;Kalaallisut; Greenlandic-GREENLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;km-KH&lt;/td&gt;&lt;td&gt;Central Khmer-CAMBODIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;kn-IN&lt;/td&gt;&lt;td&gt;Kannada-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ko-KP&lt;/td&gt;&lt;td&gt;Korean-KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ko-KR&lt;/td&gt;&lt;td&gt;Korean-KOREA, REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ks-IN&lt;/td&gt;&lt;td&gt;Kashmiri-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;kw-GB&lt;/td&gt;&lt;td&gt;Cornish-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ky-KG&lt;/td&gt;&lt;td&gt;Kirghiz; Kyrgyz-KYRGYZSTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;lb-LU&lt;/td&gt;&lt;td&gt;Luxembourgish; Letzeburgesch-LUXEMBOURG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;lg-UG&lt;/td&gt;&lt;td&gt;Ganda-UGANDA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ln-AO&lt;/td&gt;&lt;td&gt;Lingala-ANGOLA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ln-CD&lt;/td&gt;&lt;td&gt;Lingala-CONGO, DEMOCRATIC REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ln-CF&lt;/td&gt;&lt;td&gt;Lingala-CENTRAL AFRICAN REPUBLIC&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ln-CG&lt;/td&gt;&lt;td&gt;Lingala-CONGO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;lo-LA&lt;/td&gt;&lt;td&gt;Lao-LAO PEOPLE'S DEMOCRATIC REPUBLIC&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;lt-LT&lt;/td&gt;&lt;td&gt;Lithuanian-LITHUANIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;lu-CD&lt;/td&gt;&lt;td&gt;Luba-Katanga-CONGO, DEMOCRATIC REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;lv-LV&lt;/td&gt;&lt;td&gt;Latvian-LATVIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mg-MG&lt;/td&gt;&lt;td&gt;Malagasy-MADAGASCAR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mk-MK&lt;/td&gt;&lt;td&gt;Macedonian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ml-IN&lt;/td&gt;&lt;td&gt;Malayalam-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mn-MN&lt;/td&gt;&lt;td&gt;Mongolian-MONGOLIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mr-IN&lt;/td&gt;&lt;td&gt;Marathi-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ms-BN&lt;/td&gt;&lt;td&gt;Malay-BRUNEI DARUSSALAM&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ms-MY&lt;/td&gt;&lt;td&gt;Malay-MALAYSIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ms-SG&lt;/td&gt;&lt;td&gt;Malay-SINGAPORE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;mt-MT&lt;/td&gt;&lt;td&gt;Maltese-MALTA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;my-MM&lt;/td&gt;&lt;td&gt;Burmese-MYANMAR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nb-NO&lt;/td&gt;&lt;td&gt;Bokmål, Norwegian; Norwegian Bokmål-NORWAY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nb-SJ&lt;/td&gt;&lt;td&gt;Bokmål, Norwegian; Norwegian Bokmål-SVALBARD AND JAN MAYEN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nd-ZW&lt;/td&gt;&lt;td&gt;Ndebele, North; North Ndebele-ZIMBABWE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ne-IN&lt;/td&gt;&lt;td&gt;Nepali-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ne-NP&lt;/td&gt;&lt;td&gt;Nepali-NEPAL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nl-AW&lt;/td&gt;&lt;td&gt;Dutch; Flemish-ARUBA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nl-BE&lt;/td&gt;&lt;td&gt;Dutch; Flemish-BELGIUM&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nl-BQ&lt;/td&gt;&lt;td&gt;Dutch; Flemish-BONAIRE, SINT EUSTATIUS AND SABA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nl-CW&lt;/td&gt;&lt;td&gt;Dutch; Flemish-CURAÇAO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nl-NL&lt;/td&gt;&lt;td&gt;Dutch; Flemish-NETHERLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nl-SR&lt;/td&gt;&lt;td&gt;Dutch; Flemish-SURINAME&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nl-SX&lt;/td&gt;&lt;td&gt;Dutch; Flemish-SINT MAARTEN (DUTCH PART)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nn-NO&lt;/td&gt;&lt;td&gt;Norwegian Nynorsk; Nynorsk, Norwegian-NORWAY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;om-ET&lt;/td&gt;&lt;td&gt;Oromo-ETHIOPIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;om-KE&lt;/td&gt;&lt;td&gt;Oromo-KENYA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;or-IN&lt;/td&gt;&lt;td&gt;Oriya-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;os-GE&lt;/td&gt;&lt;td&gt;Ossetian; Ossetic-GEORGIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;os-RU&lt;/td&gt;&lt;td&gt;Ossetian; Ossetic-RUSSIAN FEDERATION&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pa-PK&lt;/td&gt;&lt;td&gt;Panjabi; Punjabi-PAKISTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pa-IN&lt;/td&gt;&lt;td&gt;Panjabi; Punjabi-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pl-PL&lt;/td&gt;&lt;td&gt;Polish-POLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ps-AF&lt;/td&gt;&lt;td&gt;Pushto; Pashto-AFGHANISTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pt-AO&lt;/td&gt;&lt;td&gt;Portuguese-ANGOLA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pt-BR&lt;/td&gt;&lt;td&gt;Portuguese-BRAZIL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pt-CV&lt;/td&gt;&lt;td&gt;Portuguese-CAPE VERDE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pt-GW&lt;/td&gt;&lt;td&gt;Portuguese-GUINEA-BISSAU&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pt-MO&lt;/td&gt;&lt;td&gt;Portuguese-MACAO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pt-MZ&lt;/td&gt;&lt;td&gt;Portuguese-MOZAMBIQUE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pt-PT&lt;/td&gt;&lt;td&gt;Portuguese-PORTUGAL&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pt-ST&lt;/td&gt;&lt;td&gt;Portuguese-SAO TOME AND PRINCIPE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pt-TL&lt;/td&gt;&lt;td&gt;Portuguese-TIMOR-LESTE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;qu-BO&lt;/td&gt;&lt;td&gt;Quechua-BOLIVIA (PLURINATIONAL STATE OF)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;qu-EC&lt;/td&gt;&lt;td&gt;Quechua-ECUADOR&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;qu-PE&lt;/td&gt;&lt;td&gt;Quechua-PERU&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rm-CH&lt;/td&gt;&lt;td&gt;Romansh-SWITZERLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rn-BI&lt;/td&gt;&lt;td&gt;Rundi-BURUNDI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ro-MD&lt;/td&gt;&lt;td&gt;Romanian; Moldavian; Moldovan-MOLDOVA, REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ro-RO&lt;/td&gt;&lt;td&gt;Romanian; Moldavian; Moldovan-ROMANIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ru-BY&lt;/td&gt;&lt;td&gt;Russian-BELARUS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ru-KG&lt;/td&gt;&lt;td&gt;Russian-KYRGYZSTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ru-KZ&lt;/td&gt;&lt;td&gt;Russian-KAZAKHSTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ru-MD&lt;/td&gt;&lt;td&gt;Russian-MOLDOVA, REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ru-RU&lt;/td&gt;&lt;td&gt;Russian-RUSSIAN FEDERATION&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ru-UA&lt;/td&gt;&lt;td&gt;Russian-UKRAINE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rw-RW&lt;/td&gt;&lt;td&gt;Kinyarwanda-RWANDA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;se-FI&lt;/td&gt;&lt;td&gt;Northern Sami-FINLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;se-NO&lt;/td&gt;&lt;td&gt;Northern Sami-NORWAY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;se-SE&lt;/td&gt;&lt;td&gt;Northern Sami-SWEDEN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sg-CF&lt;/td&gt;&lt;td&gt;Sango-CENTRAL AFRICAN REPUBLIC&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;si-LK&lt;/td&gt;&lt;td&gt;Sinhala; Sinhalese-SRI LANKA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sk-SK&lt;/td&gt;&lt;td&gt;Slovak-SLOVAKIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sl-SI&lt;/td&gt;&lt;td&gt;Slovenian-SLOVENIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sn-ZW&lt;/td&gt;&lt;td&gt;Shona-ZIMBABWE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;so-DJ&lt;/td&gt;&lt;td&gt;Somali-DJIBOUTI&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;so-ET&lt;/td&gt;&lt;td&gt;Somali-ETHIOPIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;so-KE&lt;/td&gt;&lt;td&gt;Somali-KENYA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;so-SO&lt;/td&gt;&lt;td&gt;Somali-SOMALIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sq-AL&lt;/td&gt;&lt;td&gt;Albanian-ALBANIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sq-MK&lt;/td&gt;&lt;td&gt;Albanian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sr-BA&lt;/td&gt;&lt;td&gt;Serbian-BOSNIA AND HERZEGOVINA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sr-ME&lt;/td&gt;&lt;td&gt;Serbian-MONTENEGRO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sr-RS&lt;/td&gt;&lt;td&gt;Serbian-SERBIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sv-AX&lt;/td&gt;&lt;td&gt;Swedish-ÅLAND ISLANDS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sv-FI&lt;/td&gt;&lt;td&gt;Swedish-FINLAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sv-SE&lt;/td&gt;&lt;td&gt;Swedish-SWEDEN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sw-CD&lt;/td&gt;&lt;td&gt;Swahili-CONGO, DEMOCRATIC REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sw-KE&lt;/td&gt;&lt;td&gt;Swahili-KENYA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sw-TZ&lt;/td&gt;&lt;td&gt;Swahili-TANZANIA, UNITED REPUBLIC OF&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;sw-UG&lt;/td&gt;&lt;td&gt;Swahili-UGANDA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ta-IN&lt;/td&gt;&lt;td&gt;Tamil-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ta-LK&lt;/td&gt;&lt;td&gt;Tamil-SRI LANKA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ta-MY&lt;/td&gt;&lt;td&gt;Tamil-MALAYSIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ta-SG&lt;/td&gt;&lt;td&gt;Tamil-SINGAPORE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;te-IN&lt;/td&gt;&lt;td&gt;Telugu-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;th-TH&lt;/td&gt;&lt;td&gt;Thai-THAILAND&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ti-ER&lt;/td&gt;&lt;td&gt;Tigrinya-ERITREA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ti-ET&lt;/td&gt;&lt;td&gt;Tigrinya-ETHIOPIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;to-TO&lt;/td&gt;&lt;td&gt;Tonga (Tonga Islands)-TONGA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;tr-CY&lt;/td&gt;&lt;td&gt;Turkish-CYPRUS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;tr-TR&lt;/td&gt;&lt;td&gt;Turkish-TURKEY&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ug-CN&lt;/td&gt;&lt;td&gt;Uighur; Uyghur-CHINA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;uk-UA&lt;/td&gt;&lt;td&gt;Ukrainian-UKRAINE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ur-IN&lt;/td&gt;&lt;td&gt;Urdu-INDIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ur-PK&lt;/td&gt;&lt;td&gt;Urdu-PAKISTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;uz-AF&lt;/td&gt;&lt;td&gt;Uzbek-AFGHANISTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;uz-UZ&lt;/td&gt;&lt;td&gt;Uzbek-UZBEKISTAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;vi-VN&lt;/td&gt;&lt;td&gt;Vietnamese-VIET NAM&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;yo-BJ&lt;/td&gt;&lt;td&gt;Yoruba-BENIN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;yo-NG&lt;/td&gt;&lt;td&gt;Yoruba-NIGERIA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;zh-CN&lt;/td&gt;&lt;td&gt;Chinese-CHINA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;zh-HK&lt;/td&gt;&lt;td&gt;Chinese-HONG KONG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;zh-MO&lt;/td&gt;&lt;td&gt;Chinese-MACAO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;zh-SG&lt;/td&gt;&lt;td&gt;Chinese-SINGAPORE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;zh-TW&lt;/td&gt;&lt;td&gt;Chinese-TAIWAN, PROVINCE OF CHINA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;zu-ZA&lt;/td&gt;&lt;td&gt;Zulu-SOUTH AFRICA&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;no-NO&lt;/td&gt;&lt;td&gt;Norwegian-NORWAY&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a>" : 1
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "draft"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://terminology.ehdsi.eu/ValueSet/eHDSILanguage",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.42.6"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "0.0.1",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "EHDSILanguage",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "eHDSI Language",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2025-03-03T08:58:37+01:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "SNS",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "SNS",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://sns.gob.es"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>" : "The Value Set is used to identify the language the document will be written with.",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "urn:ietf:bcp:47",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "af-NA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Afrikaans-NAMIBIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "af-ZA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Afrikaans-SOUTH AFRICA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ak-GH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Akan-GHANA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "am-ET",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Amharic-ETHIOPIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-AE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-UNITED ARAB EMIRATES"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-BH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-BAHRAIN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-DJ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-DJIBOUTI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-DZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-ALGERIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-EG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-EGYPT"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-EH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-WESTERN SAHARA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-ER",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-ERITREA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-IL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-ISRAEL"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-IQ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-IRAQ"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-JO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-JORDAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-KM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-COMOROS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-KW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-KUWAIT"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-LB",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-LEBANON"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-LY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-LIBYA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-MA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-MOROCCO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-MR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-MAURITANIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-OM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-OMAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-PS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-PALESTINE, STATE OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-QA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-QATAR"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-SA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-SAUDI ARABIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-SD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-SUDAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-SO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-SOMALIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-SS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-SOUTH SUDAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-SY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-SYRIAN ARAB REPUBLIC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-TD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-CHAD"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-TN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-TUNISIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ar-YE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Arabic-YEMEN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "as-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Assamese-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "az-AZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Azerbaijani-AZERBAIJAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "be-BY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Belarusian-BELARUS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "bg-BG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bulgarian-BULGARIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "bm-ML",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bambara-MALI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "bn-BD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bengali-BANGLADESH"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "bn-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bengali-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "bo-CN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tibetan-CHINA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "bo-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tibetan-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "br-FR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Breton-FRANCE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "bs-BA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bosnian-BOSNIA AND HERZEGOVINA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ca-AD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Catalan; Valencian-ANDORRA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ca-ES",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Catalan; Valencian-SPAIN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ca-FR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Catalan; Valencian-FRANCE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ca-IT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Catalan; Valencian-ITALY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "cs-CZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Czech-CZECH REPUBLIC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "cy-GB",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Welsh-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "da-DK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Danish-DENMARK"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "da-GL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Danish-GREENLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "de-AT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "German-AUSTRIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "de-BE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "German-BELGIUM"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "de-CH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "German-SWITZERLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "de-DE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "German-GERMANY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "de-LI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "German-LIECHTENSTEIN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "de-LU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "German-LUXEMBOURG"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "dz-BT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dzongkha-BHUTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ee-GH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ewe-GHANA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ee-TG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ewe-TOGO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "el-CY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Greek, Modern (1453-)-CYPRUS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "el-GR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Greek, Modern (1453-)-GREECE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-AG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-ANTIGUA AND BARBUDA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-AI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-ANGUILLA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-AS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-AMERICAN SAMOA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-AU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-AUSTRALIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-BB",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-BARBADOS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-BE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-BELGIUM"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-BM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-BERMUDA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-BS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-BAHAMAS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-BW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-BOTSWANA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-BZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-BELIZE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-CA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-CANADA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-CC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-COCOS (KEELING) ISLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-CK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-COOK ISLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-CM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-CAMEROON"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-CX",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-CHRISTMAS ISLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-DM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-DOMINICA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-ER",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-ERITREA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-FJ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-FIJI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-FK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-FALKLAND ISLANDS (MALVINAS)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-FM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-MICRONESIA (FEDERATED STATES OF)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-GB",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-GD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-GRENADA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-GG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-GUERNSEY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-GH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-GHANA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-GI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-GIBRALTAR"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-GM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-GAMBIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-GU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-GUAM"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-GY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-GUYANA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-HK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-HONG KONG"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-IE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-IRELAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-IM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-ISLE OF MAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-IO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-BRITISH INDIAN OCEAN TERRITORY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-JE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-JERSEY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-JM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-JAMAICA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-KE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-KENYA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-KI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-KIRIBATI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-KN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SAINT KITTS AND NEVIS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-KY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-CAYMAN ISLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-LC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SAINT LUCIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-LR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-LIBERIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-LS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-LESOTHO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-MG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-MADAGASCAR"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-MH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-MARSHALL ISLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-MO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-MACAO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-MP",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-NORTHERN MARIANA ISLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-MS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-MONTSERRAT"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-MT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-MALTA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-MU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-MAURITIUS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-MW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-MALAWI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-MY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-MALAYSIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-NA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-NAMIBIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-NF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-NORFOLK ISLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-NG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-NIGERIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-NR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-NAURU"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-NU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-NIUE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-NZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-NEW ZEALAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-PG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-PAPUA NEW GUINEA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-PH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-PHILIPPINES"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-PK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-PAKISTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-PN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-PITCAIRN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-PR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-PUERTO RICO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-PW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-PALAU"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-RW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-RWANDA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-SB",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SOLOMON ISLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-SC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SEYCHELLES"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-SD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SUDAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-SG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SINGAPORE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-SH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-SL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SIERRA LEONE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-SS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SOUTH SUDAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-SX",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SINT MAARTEN (DUTCH PART)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-SZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SWAZILAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-TC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-TURKS AND CAICOS ISLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-TK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-TOKELAU"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-TO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-TONGA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-TT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-TRINIDAD AND TOBAGO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-TV",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-TUVALU"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-TZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-TANZANIA, UNITED REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-UG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-UGANDA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-UM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-UNITED STATES MINOR OUTLYING ISLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-US",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-UNITED STATES OF AMERICA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-VC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SAINT VINCENT AND THE GRENADINES"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-VG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-VIRGIN ISLANDS, BRITISH"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-VI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-VIRGIN ISLANDS, U.S."
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-VU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-VANUATU"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-WS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SAMOA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-ZA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-SOUTH AFRICA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-ZM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-ZAMBIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "en-ZW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "English-ZIMBABWE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-AR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-ARGENTINA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-BO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-BOLIVIA (PLURINATIONAL STATE OF)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-CL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-CHILE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-CO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-COLOMBIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-CR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-COSTA RICA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-CU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-CUBA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-DO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-DOMINICAN REPUBLIC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-EC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-ECUADOR"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-ES",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-SPAIN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-GQ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-EQUATORIAL GUINEA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-GT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-GUATEMALA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-HN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-HONDURAS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-MX",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-MEXICO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-NI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-NICARAGUA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-PA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-PANAMA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-PE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-PERU"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-PH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-PHILIPPINES"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-PR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-PUERTO RICO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-PY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-PARAGUAY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-SV",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-EL SALVADOR"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-US",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-UNITED STATES OF AMERICA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-UY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-URUGUAY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "es-VE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spanish; Castilian-VENEZUELA (BOLIVARIAN REPUBLIC OF)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "et-EE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Estonian-ESTONIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "eu-ES",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Basque-SPAIN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fa-AF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Persian-AFGHANISTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fa-IR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Persian-IRAN (ISLAMIC REPUBLIC OF)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ff-CM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Fulah-CAMEROON"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ff-GN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Fulah-GUINEA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ff-MR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Fulah-MAURITANIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ff-SN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Fulah-SENEGAL"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fi-FI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Finnish-FINLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fo-FO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Faroese-FAROE ISLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-BE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-BELGIUM"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-BF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-BURKINA FASO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-BI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-BURUNDI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-BJ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-BENIN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-BL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-SAINT BARTHÉLEMY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-CA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-CANADA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-CD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-CONGO, DEMOCRATIC REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-CF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-CENTRAL AFRICAN REPUBLIC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-CG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-CONGO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-CH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-SWITZERLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-CI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-COTE D'IVOIRE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-CM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-CAMEROON"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-DJ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-DJIBOUTI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-DZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-ALGERIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-FR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-FRANCE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-GA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-GABON"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-GF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-FRENCH GUIANA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-GN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-GUINEA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-GP",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-GUADELOUPE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-GQ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-EQUATORIAL GUINEA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-HT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-HAITI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-KM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-COMOROS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-LU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-LUXEMBOURG"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-MA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-MOROCCO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-MC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-MONACO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-MF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-SAINT MARTIN (FRENCH PART)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-MG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-MADAGASCAR"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-ML",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-MALI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-MQ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-MARTINIQUE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-MR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-MAURITANIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-MU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-MAURITIUS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-NC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-NEW CALEDONIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-NE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-NIGER"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-PF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-FRENCH POLYNESIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-PM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-SAINT PIERRE AND MIQUELON"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-RE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-REUNION"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-RW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-RWANDA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-SC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-SEYCHELLES"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-SN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-SENEGAL"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-SY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-SYRIAN ARAB REPUBLIC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-TD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-CHAD"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-TG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-TOGO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-TN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-TUNISIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-VU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-VANUATU"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-WF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-WALLIS AND FUTUNA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fr-YT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "French-MAYOTTE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "fy-NL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Western Frisian-NETHERLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ga-IE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Irish-IRELAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "gd-GB",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Gaelic; Scottish Gaelic-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "gl-ES",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Galician-SPAIN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "gu-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Gujarati-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "gv-IM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Manx-ISLE OF MAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ha-GH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hausa-GHANA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ha-NE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hausa-NIGER"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ha-NG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hausa-NIGERIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "he-IL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hebrew-ISRAEL"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "hi-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hindi-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "hr-BA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Croatian-BOSNIA AND HERZEGOVINA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "hr-HR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Croatian-CROATIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "hu-HU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hungarian-HUNGARY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "hy-AM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Armenian-ARMENIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "id-ID",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Indonesian-INDONESIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ig-NG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Igbo-NIGERIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ii-CN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Sichuan Yi; Nuosu-CHINA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "is-IS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Icelandic-ICELAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "it-CH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Italian-SWITZERLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "it-IT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Italian-ITALY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "it-SM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Italian-SAN MARINO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ja-JP",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Japanese-JAPAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ka-GE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Georgian-GEORGIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ki-KE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Kikuyu; Gikuyu-KENYA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "kk-KZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Kazakh-KAZAKHSTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "kl-GL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Kalaallisut; Greenlandic-GREENLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "km-KH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Central Khmer-CAMBODIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "kn-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Kannada-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ko-KP",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Korean-KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ko-KR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Korean-KOREA, REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ks-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Kashmiri-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "kw-GB",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cornish-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ky-KG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Kirghiz; Kyrgyz-KYRGYZSTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "lb-LU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Luxembourgish; Letzeburgesch-LUXEMBOURG"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "lg-UG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ganda-UGANDA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ln-AO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lingala-ANGOLA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ln-CD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lingala-CONGO, DEMOCRATIC REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ln-CF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lingala-CENTRAL AFRICAN REPUBLIC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ln-CG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lingala-CONGO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "lo-LA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lao-LAO PEOPLE'S DEMOCRATIC REPUBLIC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "lt-LT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Lithuanian-LITHUANIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "lu-CD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Luba-Katanga-CONGO, DEMOCRATIC REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "lv-LV",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Latvian-LATVIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "mg-MG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Malagasy-MADAGASCAR"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "mk-MK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Macedonian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ml-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Malayalam-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "mn-MN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mongolian-MONGOLIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "mr-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Marathi-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ms-BN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Malay-BRUNEI DARUSSALAM"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ms-MY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Malay-MALAYSIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ms-SG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Malay-SINGAPORE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "mt-MT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Maltese-MALTA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "my-MM",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Burmese-MYANMAR"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nb-NO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bokmål, Norwegian; Norwegian Bokmål-NORWAY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nb-SJ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bokmål, Norwegian; Norwegian Bokmål-SVALBARD AND JAN MAYEN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nd-ZW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ndebele, North; North Ndebele-ZIMBABWE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ne-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nepali-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ne-NP",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nepali-NEPAL"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nl-AW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dutch; Flemish-ARUBA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nl-BE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dutch; Flemish-BELGIUM"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nl-BQ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dutch; Flemish-BONAIRE, SINT EUSTATIUS AND SABA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nl-CW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dutch; Flemish-CURAÇAO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nl-NL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dutch; Flemish-NETHERLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nl-SR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dutch; Flemish-SURINAME"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nl-SX",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dutch; Flemish-SINT MAARTEN (DUTCH PART)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "nn-NO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Norwegian Nynorsk; Nynorsk, Norwegian-NORWAY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "om-ET",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Oromo-ETHIOPIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "om-KE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Oromo-KENYA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "or-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Oriya-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "os-GE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ossetian; Ossetic-GEORGIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "os-RU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ossetian; Ossetic-RUSSIAN FEDERATION"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pa-PK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Panjabi; Punjabi-PAKISTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pa-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Panjabi; Punjabi-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pl-PL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Polish-POLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ps-AF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pushto; Pashto-AFGHANISTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pt-AO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Portuguese-ANGOLA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pt-BR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Portuguese-BRAZIL"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pt-CV",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Portuguese-CAPE VERDE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pt-GW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Portuguese-GUINEA-BISSAU"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pt-MO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Portuguese-MACAO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pt-MZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Portuguese-MOZAMBIQUE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pt-PT",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Portuguese-PORTUGAL"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pt-ST",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Portuguese-SAO TOME AND PRINCIPE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "pt-TL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Portuguese-TIMOR-LESTE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "qu-BO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Quechua-BOLIVIA (PLURINATIONAL STATE OF)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "qu-EC",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Quechua-ECUADOR"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "qu-PE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Quechua-PERU"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "rm-CH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Romansh-SWITZERLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "rn-BI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rundi-BURUNDI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ro-MD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Romanian; Moldavian; Moldovan-MOLDOVA, REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ro-RO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Romanian; Moldavian; Moldovan-ROMANIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ru-BY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Russian-BELARUS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ru-KG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Russian-KYRGYZSTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ru-KZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Russian-KAZAKHSTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ru-MD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Russian-MOLDOVA, REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ru-RU",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Russian-RUSSIAN FEDERATION"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ru-UA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Russian-UKRAINE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "rw-RW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Kinyarwanda-RWANDA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "se-FI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Northern Sami-FINLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "se-NO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Northern Sami-NORWAY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "se-SE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Northern Sami-SWEDEN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sg-CF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Sango-CENTRAL AFRICAN REPUBLIC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "si-LK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Sinhala; Sinhalese-SRI LANKA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sk-SK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Slovak-SLOVAKIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sl-SI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Slovenian-SLOVENIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sn-ZW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Shona-ZIMBABWE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "so-DJ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Somali-DJIBOUTI"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "so-ET",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Somali-ETHIOPIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "so-KE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Somali-KENYA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "so-SO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Somali-SOMALIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sq-AL",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Albanian-ALBANIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sq-MK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Albanian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sr-BA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Serbian-BOSNIA AND HERZEGOVINA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sr-ME",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Serbian-MONTENEGRO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sr-RS",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Serbian-SERBIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sv-AX",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Swedish-ÅLAND ISLANDS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sv-FI",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Swedish-FINLAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sv-SE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Swedish-SWEDEN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sw-CD",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Swahili-CONGO, DEMOCRATIC REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sw-KE",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Swahili-KENYA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sw-TZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Swahili-TANZANIA, UNITED REPUBLIC OF"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "sw-UG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Swahili-UGANDA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ta-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tamil-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ta-LK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tamil-SRI LANKA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ta-MY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tamil-MALAYSIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ta-SG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tamil-SINGAPORE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "te-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Telugu-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "th-TH",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Thai-THAILAND"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ti-ER",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tigrinya-ERITREA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ti-ET",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tigrinya-ETHIOPIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "to-TO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tonga (Tonga Islands)-TONGA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "tr-CY",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Turkish-CYPRUS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "tr-TR",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Turkish-TURKEY"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ug-CN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Uighur; Uyghur-CHINA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "uk-UA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ukrainian-UKRAINE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ur-IN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Urdu-INDIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "ur-PK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Urdu-PAKISTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "uz-AF",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Uzbek-AFGHANISTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "uz-UZ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Uzbek-UZBEKISTAN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "vi-VN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Vietnamese-VIET NAM"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "yo-BJ",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Yoruba-BENIN"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "yo-NG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Yoruba-NIGERIA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "zh-CN",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chinese-CHINA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "zh-HK",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chinese-HONG KONG"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "zh-MO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chinese-MACAO"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "zh-SG",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chinese-SINGAPORE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "zh-TW",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chinese-TAIWAN, PROVINCE OF CHINA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "zu-ZA",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Zulu-SOUTH AFRICA"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "no-NO",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Norwegian-NORWAY"
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://sns.gob.es">SNS</a>.  Package servtrans.sns.implementationGuide#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 09:01+0100">2025-03-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

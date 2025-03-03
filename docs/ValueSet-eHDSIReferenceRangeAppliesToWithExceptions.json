@@ -1,0 +1,40 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "eHDSIReferenceRangeAppliesToWithExceptions",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet eHDSIReferenceRangeAppliesToWithExceptions</b></p><a name=\"eHDSIReferenceRangeAppliesToWithExceptions\"> </a><a name=\"hceHDSIReferenceRangeAppliesToWithExceptions\"> </a><a name=\"eHDSIReferenceRangeAppliesToWithExceptions-en-US\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIExceptionalValue.html\">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-eHDSIReferenceRangeAppliesTo.html\">eHDSI Reference Range Applies To</a></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "draft"
+  }],
+  "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIReferenceRangeAppliesToWithExceptions",
+  "version" : "0.0.1",
+  "name" : "EHDSIReferenceRangeAppliesToWithExceptions",
+  "title" : "eHDSI Reference Range Applies To with exceptions",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-03-03T08:58:37+01:00",
+  "publisher" : "SNS",
+  "contact" : [{
+    "name" : "SNS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://sns.gob.es"
+    }]
+  }],
+  "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to. It also includes exceptional values.",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"]
+    },
+    {
+      "valueSet" : ["http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeAppliesTo"]
+    }]
+  }
+}

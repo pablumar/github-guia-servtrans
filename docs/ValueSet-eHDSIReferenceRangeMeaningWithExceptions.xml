@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="eHDSIReferenceRangeMeaningWithExceptions"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet eHDSIReferenceRangeMeaningWithExceptions</b></p><a name="eHDSIReferenceRangeMeaningWithExceptions"> </a><a name="hceHDSIReferenceRangeMeaningWithExceptions"> </a><a name="eHDSIReferenceRangeMeaningWithExceptions-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="ValueSet-eHDSIExceptionalValue.html">eHDSI Exceptional Value</a></li><li>Import all the codes that are contained in <a href="ValueSet-eHDSIReferenceRangeMeaning.html">eHDSI Reference Range Meaning</a></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIReferenceRangeMeaningWithExceptions"/>
+  <version value="0.0.1"/>
+  <name value="EHDSIReferenceRangeMeaningWithExceptions"/>
+  <title value="eHDSI Reference Range Meaning with exceptions"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="This value set defines a set of codes for a reference range qualifier. It also includes exceptional values."/>
+  <compose>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"/>
+    </include>
+    <include>
+      <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeMeaning"/>
+    </include>
+  </compose>
+</ValueSet>

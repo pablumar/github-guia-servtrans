@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ehdsi.eu/laboratory/DocumentReference/SimpleChemistryResultDocRef> a fhir:DocumentReference ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "SimpleChemistryResultDocRef"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/DocumentReference-minimal-myhealtheu"^^xsd:anyURI ;
+       fhir:link <http://fhir.ehdsi.eu/laboratory/StructureDefinition/DocumentReference-minimal-myhealtheu>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DocumentReference SimpleChemistryResultDocRef</b></p><a name=\"SimpleChemistryResultDocRef\"> </a><a name=\"hcSimpleChemistryResultDocRef\"> </a><a name=\"SimpleChemistryResultDocRef-en-US\"> </a><p><b>masterIdentifier</b>: <code>http://example.org</code>/ba91c64b-f30c-4137-a484-34bbba5e8804</p><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.2.120.4.4</code>/c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11502-2}\">Laboratory report</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 18719-5}\">Chemistry studies (set)</span></p><p><b>subject</b>: <code>urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8</code></p><p><b>date</b>: 2022-03-30 11:24:26+0100</p><p><b>description</b>: Laboratorní zpráva</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Language</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>application/fhir+json</td><td>Czech</td><td><a href=\"http://sandbox.hl7europe.eu:8080/fhir/Bundle/SimpleChemistryResultReport\">http://sandbox.hl7europe.eu:8080/fhir/Bundle/SimpleChemistryResultReport</a></td></tr></table></blockquote><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Language</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td>Czech</td><td>http.example.org/pdf/SimpleChemistryResultReport.pdf</td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:masterIdentifier [
+     fhir:system [ fhir:v "http://example.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "ba91c64b-f30c-4137-a484-34bbba5e8804" ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:18719-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18719-5" ] ;
+       fhir:display [ fhir:v "Chemistry studies (set)" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8" ]
+  ] ; # 
+  fhir:date [ fhir:v "2022-03-30T11:24:26+01:00"^^xsd:dateTime] ; # 
+  fhir:description [ fhir:v "Laboratorní zpráva"] ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/fhir+json" ] ;
+       fhir:language [ fhir:v "cs" ] ;
+       fhir:url [ fhir:v "http://sandbox.hl7europe.eu:8080/fhir/Bundle/SimpleChemistryResultReport"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:language [ fhir:v "cs" ] ;
+       fhir:url [ fhir:v "http.example.org/pdf/SimpleChemistryResultReport.pdf"^^xsd:anyURI ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ehdsi.eu/laboratory/Observation/SampleBloodGroupObservation> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "SampleBloodGroupObservation"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-resultslab-lab-myhealtheu"^^xsd:anyURI ;
+       fhir:link <http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-resultslab-lab-myhealtheu>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation SampleBloodGroupObservation</b></p><a name=\"SampleBloodGroupObservation\"> </a><a name=\"hcSampleBloodGroupObservation\"> </a><a name=\"SampleBloodGroupObservation-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 18717-9}\">Blood bank studies (set)</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 883-9}\">Blood Group</span></p><p><b>subject</b>: <a href=\"Patient-SamplePatient.html\">John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976 (use: official, ))</a></p><p><b>effective</b>: 2023-03-09 13:35:00+0100</p><p><b>performer</b>: Dr. Patrick Dempsey</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 112144000}\">A</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       a loinc:18717-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18717-9" ] ;
+       fhir:display [ fhir:v "Blood bank studies (set)" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:883-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "883-9" ] ;
+       fhir:display [ fhir:v "ABO group [Type] in Blood" ]
+     ] ) ;
+     fhir:text [ fhir:v "Blood Group" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.ehdsi.eu/laboratory/Patient/SamplePatient> ;
+     fhir:reference [ fhir:v "Patient/SamplePatient" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2023-03-09T13:35:00+01:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Dr. Patrick Dempsey" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:112144000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "112144000" ] ;
+       fhir:display [ fhir:v "Blood group A (finding)" ]
+     ] ) ;
+     fhir:text [ fhir:v "A" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

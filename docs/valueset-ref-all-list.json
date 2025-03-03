@@ -1,0 +1,1842 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIAnimalSpeciesWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIAnimalSpeciesWithExceptions",
+      "title" : "eHDSI Animal Species with exceptions",
+      "description" : "The Value Set is used to code the animal species of specimen subject (animal of the patient). It also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ]
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIBodySiteWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBodySiteWithExceptions",
+      "title" : "eHDSI Body Site with exceptions",
+      "description" : "The Value Set is used for the details about the anatomical location of a specimen in the Laboratory Result Report or the target body location of a procedure in the Patient Summary.\nIt includes also exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory",
+      "StructureDefinition-BodyStructure-lab-myhealtheu.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIBodyStructureLocationWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBodyStructureLocationWithExceptions",
+      "title" : "eHDSI Body Structure Location Qualifier with exceptions",
+      "description" : "This Value Set is used for the body structure location qualifier. Concepts modifying the anatomic location.\nIt also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructure-lab-myhealtheu.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabCodeWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabCodeWithExceptions",
+      "title" : "eHDSI Laboratory Codes with exceptions",
+      "description" : "This Value Set is used for the standard laboratory codes.\nIt also includes exceptional values.",
+      "systems" : [
+        "http://loinc.org",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabSpecimenTypeWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabSpecimenTypeWithExceptions",
+      "title" : "eHDSI Laboratory Specimen Type with exceptions",
+      "description" : "This Value Set is used for the kind of material that forms the specimen.\nIt also includes exceptional values",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabStudyTypeWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabStudyTypeWithExceptions",
+      "title" : "eHDSI Laboratory Study Types with exceptions",
+      "description" : "eHDSI Laboratory Study Types. \nNotes:\nNote 1: 26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2: Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3: Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.\nIt includes also exceptional values.",
+      "systems" : [
+        "http://loinc.org",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabTechniqueWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabTechniqueWithExceptions",
+      "title" : "eHDSI Laboratory Technique with exceptions",
+      "description" : "This Value Set is used to encode laboratory technique for the result measurement. It also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILaboratoryReportType",
+      "version" : "0.0.1",
+      "status" : "active",
+      "name" : "EHDSILaboratoryReportType",
+      "title" : "Laboratory Report Type",
+      "description" : "Laboratory Report Type",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.52"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.52"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIMedicalDeviceWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIMedicalDeviceWithExceptions",
+      "title" : "eHDSI Medical Device with exceptions",
+      "description" : "eHDSI Medical Device. The Value Set contains exceptional values.",
+      "systems" : [
+        "urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Device-specimen-lab-myhealtheu.html" : "Device: specimen subject"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIMorphologicAbnormalityWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIMorphologicAbnormalityWithExceptions",
+      "title" : "eHDSI Morphologic Abnormality with exceptions",
+      "description" : "The Value Set is used to code the morphological abnormalities of the anatomical location where the material is taken.\nIt also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructure-lab-myhealtheu.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIObservationInterpretationWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIObservationInterpretationWithExceptions",
+      "title" : "eHDSI Observation Interpretation with exceptions",
+      "description" : "This Value Set is used for a rough qualitative interpretation of the Laboratory Observation Results.\nIt also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIOrderReason",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIOrderReason",
+      "title" : "eHDSI Order Reason",
+      "description" : "The Value Set is used to code clinical conditions relevant for the laboratory results interpretation.\nIt is defined as the union of:\n(a) EHDSIIllnessandDisorder\n(b) EHDSIRareDisease\n(c) EHDSIReactionAllergy\n(d) EHDSIExceptionalValue",
+      "systems" : [
+        "urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.5",
+        "http://hl7.org/fhir/sid/icd-10",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIReferenceRangeAppliesToWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIReferenceRangeAppliesToWithExceptions",
+      "title" : "eHDSI Reference Range Applies To with exceptions",
+      "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to. It also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIReferenceRangeMeaningWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIReferenceRangeMeaningWithExceptions",
+      "title" : "eHDSI Reference Range Meaning with exceptions",
+      "description" : "This value set defines a set of codes for a reference range qualifier. It also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIResultsCodedValueLaboratory",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIResultsCodedValueLaboratory",
+      "title" : "eHDSI Results Coded Value Laboratory with exceptions",
+      "description" : "The Value Set is used to code the value of laboratory observation result.\nIt is defined as the union of:\n(a) eHDSIBloodGroup\n(b) eHDSIPresenceAbsence\n(c) eHDSIMicroorganism\n(d) eHDSIExceptionalValue",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/mvc/eHDSILabStudyTypes",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabStudyTypes",
+      "title" : "eHDSI Laboratory Study Types",
+      "description" : "eHDSI Laboratory Study Types. \nNotes:\nNote 1: 26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2: Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3: Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.66"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.66"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "LaboratoryResultStandardEuVs",
+      "title" : "Laboratory Code",
+      "description" : "Laboratory observation codes. List of Laboratory observation codes derived from the LOINC and NPU code systems.",
+      "systems" : ["http://loinc.org", "http://npu-terminology.org"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "LabOrderCodesEuVs",
+      "title" : "Laboratory Order",
+      "description" : "List of LOINC Laboratory codes of type 'Order' or 'Both. This value set is built upon the IPS value set 'Results Laboratory Observation - IPS'",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "LabSpecialtyEuVs",
+      "title" : "Laboratory Specialty",
+      "description" : "Laboratory Specialties.\nNotes:\nNote 1: This value set is based on analysis of national coding practices in 8 European countries (AT, CZ, DE, FR, IE, IT, PT, SE) and agreed by involved lab experts as a common lab specialty value set.\nNote 2: Many European countries are using additional laboratory specialty types, which should be mapped towards this value set.\nNote 3: In case of documented need, this value set could be extended.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DiagnosticReport-lab-myhealtheu.html" : "DiagnosticReport: Laboratory",
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "LabSpecimenContainerEu",
+      "title" : "Specimen Container",
+      "description" : "List of the containers commonly used to collect specimens (e.g. urine, blood,..).",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-obl-lab-myhealtheu.html" : "Specimen: Obligations",
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "LabSpecimenTypesEuVs",
+      "title" : "Specimen Types",
+      "description" : "Laboratory Specimen Types",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-obl-lab-myhealtheu.html" : "Specimen: Obligations"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "LabStudyTypesEuVs",
+      "title" : "Laboratory Study Types",
+      "description" : "Laboratory Study Types\nNotes:\nNote 1:26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2:Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-technique-eu-lab",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "LabTechniqueEuVs",
+      "title" : "Laboratory Techniques",
+      "description" : "Laboratory technique (method of measurement) used for the result measurement (based on SNOMED CT).",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/address-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AddressType",
+      "title" : "AddressType",
+      "description" : "The type of an address (physical / postal).",
+      "systems" : ["http://hl7.org/fhir/address-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.69"],
+      "sources" : ["2.16.840.1.113883.4.642.3.69"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-lab-myhealtheu.html" : "Patient: Laboratory",
+      "StructureDefinition-Subject.html" : "Patient/subject"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/address-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AddressUse",
+      "title" : "AddressUse",
+      "description" : "The use of an address.",
+      "systems" : ["http://hl7.org/fhir/address-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.67"],
+      "sources" : ["2.16.840.1.113883.4.642.3.67"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-lab-myhealtheu.html" : "Patient: Laboratory",
+      "StructureDefinition-Subject.html" : "Patient/subject"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "systems" : ["http://hl7.org/fhir/administrative-gender"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-lab-myhealtheu.html" : "Patient: Laboratory",
+      "StructureDefinition-Patient-obl-lab-myhealtheu.html" : "Patient: Obligations",
+      "StructureDefinition-Practitioner-eu-myhealth-eu.html" : "Practitioner: Laboratory",
+      "StructureDefinition-Patient-minimal-myhealtheu.html" : "Patient: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/body-site",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTBodyStructures",
+      "title" : "SNOMED CT Body Structures",
+      "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.141"],
+      "sources" : ["2.16.840.1.113883.4.642.3.141"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-obl-lab-myhealtheu.html" : "Specimen: Obligations",
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations",
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "BundleType",
+      "title" : "BundleType",
+      "description" : "Indicates the purpose of a bundle - how it is intended to be used.",
+      "systems" : ["http://hl7.org/fhir/bundle-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.620"],
+      "sources" : ["2.16.840.1.113883.4.642.3.620"],
+      "uses" : {
+      },
+      "StructureDefinition-Bundle-lab-myhealtheu.html" : "Bundle: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/c80-facilitycodes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "FacilityTypeCodeValueSet",
+      "title" : "Facility Type Code Value Set",
+      "description" : "This is the code representing the type of organizational setting where the clinical encounter, service, interaction, or treatment occurred. The value set used for Healthcare Facility Type has been defined by HITSP to be the value set reproduced from HITSP C80 Table 2-147.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.67"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.67"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/c80-practice-codes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "PracticeSettingCodeValueSet",
+      "title" : "Practice Setting Code Value Set",
+      "description" : "This is the code representing the clinical specialty of the clinician or provider who interacted with, treated, or provided a service to/for the patient. The value set used for clinical specialty has been limited by HITSP to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty Value Set Definition.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.72"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.72"],
+      "uses" : {
+      },
+      "StructureDefinition-PractitionerRole-eu-myhealth-eu.html" : "PractitionerRole: Laboratory",
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTClinicalFindings",
+      "title" : "SNOMED CT Clinical Findings",
+      "description" : "This value set includes all the \"Clinical finding\" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.232"],
+      "sources" : ["2.16.840.1.113883.4.642.3.232"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-lab-myhealtheu.html" : "DiagnosticReport: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/composition-attestation-mode",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionAttestationMode",
+      "title" : "CompositionAttestationMode",
+      "description" : "The way in which a person authenticated a composition.",
+      "systems" : ["http://hl7.org/fhir/composition-attestation-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.238"],
+      "sources" : ["2.16.840.1.113883.4.642.3.238"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/composition-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionStatus",
+      "title" : "CompositionStatus",
+      "description" : "The workflow/clinical status of the composition.",
+      "systems" : ["http://hl7.org/fhir/composition-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.241"],
+      "sources" : ["2.16.840.1.113883.4.642.3.241"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contactentity-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ContactEntityType",
+      "title" : "Contact entity type",
+      "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/contactentity-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.416"],
+      "sources" : ["2.16.840.1.113883.4.642.3.416"],
+      "uses" : {
+      },
+      "StructureDefinition-Organization-eu-myhealth-eu.html" : "Organization: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-class",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CoverageClassCodes",
+      "title" : "Coverage Class Codes",
+      "description" : "This value set includes Coverage Class codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/coverage-class"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1009"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1009"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-lab-myhealtheu.html" : "Coverage: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-copay-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CoverageCopayTypeCodes",
+      "title" : "Coverage Copay Type Codes",
+      "description" : "This value set includes sample Coverage Copayment Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/coverage-copay-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.527"],
+      "sources" : ["2.16.840.1.113883.4.642.3.527"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-lab-myhealtheu.html" : "Coverage: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-financial-exception",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ExampleCoverageFinancialExceptionCodes",
+      "title" : "Example Coverage Financial Exception Codes",
+      "description" : "This value set includes Example Coverage Financial Exception Codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1328"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1328"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-lab-myhealtheu.html" : "Coverage: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CoverageTypeAndSelf-PayCodes",
+      "title" : "Coverage Type and Self-Pay Codes",
+      "description" : "This value set includes Coverage Type codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/coverage-selfpay",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.520"],
+      "sources" : ["2.16.840.1.113883.4.642.3.520"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-lab-myhealtheu.html" : "Coverage: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DataAbsentReason",
+      "title" : "DataAbsentReason",
+      "description" : "Used to specify why the normally expected content of the data element is missing.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/data-absent-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.5"],
+      "sources" : ["2.16.840.1.113883.4.642.3.5"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DaysOfWeek",
+      "title" : "DaysOfWeek",
+      "description" : "The days of the week.",
+      "systems" : ["http://hl7.org/fhir/days-of-week"],
+      "oids" : ["2.16.840.1.113883.4.642.3.512"],
+      "sources" : ["2.16.840.1.113883.4.642.3.512"],
+      "uses" : {
+      },
+      "StructureDefinition-PractitionerRole-eu-myhealth-eu.html" : "PractitionerRole: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-nametype",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DeviceNameType",
+      "title" : "DeviceNameType",
+      "description" : "The type of name the device is referred by.",
+      "systems" : ["http://hl7.org/fhir/device-nametype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1083"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1083"],
+      "uses" : {
+      },
+      "StructureDefinition-Device-measuring-lab-myhealtheu.html" : "Device: measuring",
+      "StructureDefinition-Device-specimen-lab-myhealtheu.html" : "Device: specimen subject"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDeviceStatus",
+      "title" : "FHIRDeviceStatus",
+      "description" : "The availability status of the device.",
+      "systems" : ["http://hl7.org/fhir/device-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.209"],
+      "sources" : ["2.16.840.1.113883.4.642.3.209"],
+      "uses" : {
+      },
+      "StructureDefinition-Device-measuring-lab-myhealtheu.html" : "Device: measuring",
+      "StructureDefinition-Device-specimen-lab-myhealtheu.html" : "Device: specimen subject"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-status-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDeviceStatusReason",
+      "title" : "FHIRDeviceStatusReason",
+      "description" : "The availability status reason of the device.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/device-status-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1081"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1081"],
+      "uses" : {
+      },
+      "StructureDefinition-Device-measuring-lab-myhealtheu.html" : "Device: measuring",
+      "StructureDefinition-Device-specimen-lab-myhealtheu.html" : "Device: specimen subject"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DeviceType",
+      "title" : "Device Type",
+      "description" : "Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1376"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1376"],
+      "uses" : {
+      },
+      "StructureDefinition-Device-measuring-lab-myhealtheu.html" : "Device: measuring"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnostic-report-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosticReportStatus",
+      "title" : "DiagnosticReportStatus",
+      "description" : "The status of the diagnostic report.",
+      "systems" : ["http://hl7.org/fhir/diagnostic-report-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.235"],
+      "sources" : ["2.16.840.1.113883.4.642.3.235"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-lab-myhealtheu.html" : "DiagnosticReport: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnostic-service-sections",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosticServiceSectionCodes",
+      "title" : "Diagnostic Service Section Codes",
+      "description" : "This value set includes all the codes in HL7 V2 table 0074.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0074"],
+      "oids" : ["2.16.840.1.113883.4.642.3.234"],
+      "sources" : ["2.16.840.1.113883.4.642.3.234"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-lab-myhealtheu.html" : "DiagnosticReport: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/doc-section-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DocumentSectionCodes",
+      "title" : "Document Section Codes",
+      "description" : "Document section codes (LOINC codes used in CCDA sections).",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.237"],
+      "sources" : ["2.16.840.1.113883.4.642.3.237"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/document-classcodes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DocumentClassValueSet",
+      "title" : "Document Class Value Set",
+      "description" : "This is the code specifying the high-level kind of document (e.g. Prescription, Discharge Summary, Report, etc.). Note: Class code for documents comes from LOINC, and is based upon one of the following:The type of service described by the document. It is described at a very high level in Section 7.3 of the LOINC Manual. The type study performed. It was determined by identifying modalities for study reports. The section of the chart where the document is placed. It was determined from the SETs created for Claims Attachment requests.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.46"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.46"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/document-reference-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DocumentReferenceStatus",
+      "title" : "DocumentReferenceStatus",
+      "description" : "The status of the document reference.",
+      "systems" : ["http://hl7.org/fhir/document-reference-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.7"],
+      "sources" : ["2.16.840.1.113883.4.642.3.7"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/document-relationship-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DocumentRelationshipType",
+      "title" : "DocumentRelationshipType",
+      "description" : "The type of relationship between documents.",
+      "systems" : ["http://hl7.org/fhir/document-relationship-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.244"],
+      "sources" : ["2.16.840.1.113883.4.642.3.244"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/fm-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FinancialResourceStatusCodes",
+      "title" : "Financial Resource Status Codes",
+      "description" : "This value set includes Status codes.",
+      "systems" : ["http://hl7.org/fhir/fm-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.592"],
+      "sources" : ["2.16.840.1.113883.4.642.3.592"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-lab-myhealtheu.html" : "Coverage: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/formatcodes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DocumentReferenceFormatCodeSet",
+      "title" : "DocumentReference Format Code Set",
+      "description" : "The value set is defined to be the set of format codes defined by the IHE Technical Framework, and also including additional format codes defined by the    HL7. The value set is listed in HITSP C80 Table 2-153 Format Code Value Set Definition,    with additions published later by IHE as published    at http://wiki.ihe.net/index.php?title=IHE_Format_Codes   and with additions published later by HL7 as published at https://confluence.hl7.org/display/SD/Format+Codes+for+IHE+XDS.   This is the code specifying the technical format of the document. Along with the typeCode,    it should provide sufficient information to allow any potential document consumer to know    if it will be able to process the document. The code shall be sufficiently specific to    ensure processing/display by identifying a document encoding, structure and template. The actual list of codes here is incomplete",
+      "systems" : ["http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"],
+      "oids" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+      "sources" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/http-verb",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "HTTPVerb",
+      "title" : "HTTPVerb",
+      "description" : "HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.",
+      "systems" : ["http://hl7.org/fhir/http-verb"],
+      "oids" : ["2.16.840.1.113883.4.642.3.624"],
+      "sources" : ["2.16.840.1.113883.4.642.3.624"],
+      "uses" : {
+      },
+      "StructureDefinition-Bundle-lab-myhealtheu.html" : "Bundle: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/languages",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CommonLanguages",
+      "title" : "Common Languages",
+      "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["2.16.840.1.113883.4.642.3.20"],
+      "sources" : ["2.16.840.1.113883.4.642.3.20"],
+      "uses" : {
+      },
+      "StructureDefinition-Device-measuring-lab-myhealtheu.html" : "Device: measuring",
+      "StructureDefinition-Patient-lab-myhealtheu.html" : "Patient: Laboratory",
+      "StructureDefinition-Coverage-lab-myhealtheu.html" : "Coverage: Laboratory",
+      "StructureDefinition-Specimen-obl-lab-myhealtheu.html" : "Specimen: Obligations",
+      "StructureDefinition-Organization-eu-myhealth-eu.html" : "Organization: Laboratory",
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations",
+      "StructureDefinition-Device-specimen-lab-myhealtheu.html" : "Device: specimen subject",
+      "StructureDefinition-BodyStructure-lab-myhealtheu.html" : "Body structure: Laboratory",
+      "StructureDefinition-Patient-minimal-myhealtheu.html" : "Patient: Minimal",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory",
+      "StructureDefinition-Patient-obl-lab-myhealtheu.html" : "Patient: Obligations",
+      "StructureDefinition-Practitioner-eu-myhealth-eu.html" : "Practitioner: Laboratory",
+      "StructureDefinition-PractitionerRole-eu-myhealth-eu.html" : "PractitionerRole: Laboratory",
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal",
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations",
+      "StructureDefinition-Bundle-lab-myhealtheu.html" : "Bundle: Laboratory",
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/link-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "LinkType",
+      "title" : "LinkType",
+      "description" : "The type of link between this patient resource and another patient resource.",
+      "systems" : ["http://hl7.org/fhir/link-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.423"],
+      "sources" : ["2.16.840.1.113883.4.642.3.423"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-lab-myhealtheu.html" : "Patient: Laboratory",
+      "StructureDefinition-Patient-obl-lab-myhealtheu.html" : "Patient: Obligations",
+      "StructureDefinition-Patient-minimal-myhealtheu.html" : "Patient: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ListEmptyReasons",
+      "title" : "List Empty Reasons",
+      "description" : "General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/list-empty-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.322"],
+      "sources" : ["2.16.840.1.113883.4.642.3.322"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/list-mode",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ListMode",
+      "title" : "ListMode",
+      "description" : "The processing mode that applies to this list.",
+      "systems" : ["http://hl7.org/fhir/list-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.318"],
+      "sources" : ["2.16.840.1.113883.4.642.3.318"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/list-order",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ListOrderCodes",
+      "title" : "List Order Codes",
+      "description" : "Base values for the order of the items in a list resource.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/list-order"],
+      "oids" : ["2.16.840.1.113883.4.642.3.324"],
+      "sources" : ["2.16.840.1.113883.4.642.3.324"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/marital-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Marital Status Codes",
+      "title" : "MaritalStatus",
+      "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.29"],
+      "sources" : ["2.16.840.1.113883.4.642.3.29"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-lab-myhealtheu.html" : "Patient: Laboratory",
+      "StructureDefinition-Patient-obl-lab-myhealtheu.html" : "Patient: Obligations",
+      "StructureDefinition-Patient-minimal-myhealtheu.html" : "Patient: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationAsNeededReasonCodes",
+      "title" : "SNOMED CT Medication As Needed Reason Codes",
+      "description" : "This value set includes all clinical findings from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.96"],
+      "sources" : ["2.16.840.1.113883.4.642.3.96"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Mime Types",
+      "title" : "MimeType",
+      "description" : "This value set includes all possible codes from BCP-13 (http://tools.ietf.org/html/bcp13)",
+      "systems" : ["urn:ietf:bcp:13"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1024"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1024"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/name-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "NameUse",
+      "title" : "NameUse",
+      "description" : "The use of a human name.",
+      "systems" : ["http://hl7.org/fhir/name-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.65"],
+      "sources" : ["2.16.840.1.113883.4.642.3.65"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-lab-myhealtheu.html" : "Patient: Laboratory",
+      "StructureDefinition-Patient-obl-lab-myhealtheu.html" : "Patient: Obligations",
+      "StructureDefinition-Practitioner-eu-myhealth-eu.html" : "Practitioner: Laboratory",
+      "StructureDefinition-HumanName-obl-lab-myhealtheu.html" : "Human Name: Obligations",
+      "StructureDefinition-Patient-minimal-myhealtheu.html" : "Patient: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationCategoryCodes",
+      "title" : "Observation Category Codes",
+      "description" : "Observation Category codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.403"],
+      "sources" : ["2.16.840.1.113883.4.642.3.403"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationInterpretationCodes",
+      "title" : "Observation Interpretation Codes",
+      "description" : "A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.   \r\n   \r\n   Notes:\r\n   \r\n   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.399"],
+      "sources" : ["2.16.840.1.113883.4.642.3.399"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationStatus",
+      "title" : "ObservationStatus",
+      "description" : "Codes providing the status of an observation.",
+      "systems" : ["http://hl7.org/fhir/observation-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.400"],
+      "sources" : ["2.16.840.1.113883.4.642.3.400"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/organization-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "OrganizationType",
+      "title" : "Organization type",
+      "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/organization-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.414"],
+      "sources" : ["2.16.840.1.113883.4.642.3.414"],
+      "uses" : {
+      },
+      "StructureDefinition-Organization-eu-myhealth-eu.html" : "Organization: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/participant-role",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipantRoles",
+      "title" : "Participant Roles",
+      "description" : "Roles of participants that may be included in a care team.  Defined as: Is a Person, Healthcare professional (occupation) or Healthcare related organization (qualifier value).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.152"],
+      "sources" : ["2.16.840.1.113883.4.642.3.152"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "PatientContactRelationship",
+      "title" : "Patient Contact Relationship ",
+      "description" : "The nature of the relationship between the patient and the contact person.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1130"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1130"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-lab-myhealtheu.html" : "Patient: Laboratory",
+      "StructureDefinition-Patient-obl-lab-myhealtheu.html" : "Patient: Obligations",
+      "StructureDefinition-Patient-minimal-myhealtheu.html" : "Patient: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureReasonCodes",
+      "title" : "Procedure Reason Codes",
+      "description" : "This example value set defines the set of codes that can be used to indicate a reason for a procedure.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.432"],
+      "sources" : ["2.16.840.1.113883.4.642.3.432"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "QuantityComparator",
+      "title" : "QuantityComparator",
+      "description" : "How the Quantity should be understood and represented.",
+      "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+      "oids" : ["2.16.840.1.113883.4.642.3.59"],
+      "sources" : ["2.16.840.1.113883.4.642.3.59"],
+      "uses" : {
+      },
+      "StructureDefinition-Quantity-lab-myhealtheu.html" : "Quantity: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationReferenceRangeAppliesToCodes",
+      "title" : "Observation Reference Range Applies To Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-Race",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.407"],
+      "sources" : ["2.16.840.1.113883.4.642.3.407"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationReferenceRangeMeaningCodes",
+      "title" : "Observation Reference Range Meaning Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.397"],
+      "sources" : ["2.16.840.1.113883.4.642.3.397"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-intent",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestIntent",
+      "title" : "RequestIntent",
+      "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+      "systems" : ["http://hl7.org/fhir/request-intent"],
+      "oids" : ["2.16.840.1.113883.4.642.3.113"],
+      "sources" : ["2.16.840.1.113883.4.642.3.113"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "Request priority",
+      "description" : "The clinical priority of a diagnostic order.",
+      "systems" : ["http://hl7.org/fhir/request-priority"],
+      "oids" : ["2.16.840.1.113883.4.642.3.115"],
+      "sources" : ["2.16.840.1.113883.4.642.3.115"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestStatus",
+      "title" : "RequestStatus",
+      "description" : "Codes identifying the lifecycle stage of a request.",
+      "systems" : ["http://hl7.org/fhir/request-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.111"],
+      "sources" : ["2.16.840.1.113883.4.642.3.111"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/resource-types",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "ResourceType",
+      "description" : "One of the resource types defined as part of this version of FHIR.",
+      "systems" : ["http://hl7.org/fhir/resource-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.27"],
+      "sources" : ["2.16.840.1.113883.4.642.3.27"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "SearchEntryMode",
+      "title" : "SearchEntryMode",
+      "description" : "Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
+      "systems" : ["http://hl7.org/fhir/search-entry-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.622"],
+      "sources" : ["2.16.840.1.113883.4.642.3.622"],
+      "uses" : {
+      },
+      "StructureDefinition-Bundle-lab-myhealtheu.html" : "Bundle: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/security-labels",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "All Security Labels",
+      "title" : "SecurityLabels",
+      "description" : "A single value set for all security labels defined by FHIR.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw",
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.47"],
+      "sources" : ["2.16.840.1.113883.4.642.3.47"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/servicerequest-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ServiceRequestCategoryCodes",
+      "title" : "Service Request Category Codes",
+      "description" : "An example value set of SNOMED CT concepts that can classify a requested service",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.434"],
+      "sources" : ["2.16.840.1.113883.4.642.3.434"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ServiceRequestOrderDetailsCodes",
+      "title" : "Service Request Order Details Codes",
+      "description" : "An example value set of Codified order entry details concepts.  These concepts only make sense in the context of what is being ordered.  This example is for a patient ventilation order",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.435"],
+      "sources" : ["2.16.840.1.113883.4.642.3.435"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-collection-method",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRSpecimenCollectionMethod",
+      "title" : "FHIR Specimen Collection Method",
+      "description" : " This example value set defines a set of codes that can be used to indicate the method by which a specimen was collected.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.468"],
+      "sources" : ["2.16.840.1.113883.4.642.3.468"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-obl-lab-myhealtheu.html" : "Specimen: Obligations",
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-processing-procedure",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenProcessingProcedure",
+      "title" : "Specimen processing procedure",
+      "description" : "The technique that is used to perform the process or preserve the specimen.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0373"],
+      "oids" : ["2.16.840.1.113883.4.642.3.469"],
+      "sources" : ["2.16.840.1.113883.4.642.3.469"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-obl-lab-myhealtheu.html" : "Specimen: Obligations",
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenStatus",
+      "title" : "SpecimenStatus",
+      "description" : "Codes providing the status/availability of a specimen.",
+      "systems" : ["http://hl7.org/fhir/specimen-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.471"],
+      "sources" : ["2.16.840.1.113883.4.642.3.471"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-obl-lab-myhealtheu.html" : "Specimen: Obligations",
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/subscriber-relationship",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubscriberRelationshipCodes",
+      "title" : "SubscriberPolicyholder Relationship Codes",
+      "description" : "This value set includes codes for the relationship between the Subscriber and the Beneficiary (insured/covered party/patient).",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1385"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1385"],
+      "uses" : {
+      },
+      "StructureDefinition-Coverage-lab-myhealtheu.html" : "Coverage: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/udi-entry-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "UDIEntryType",
+      "title" : "UDIEntryType",
+      "description" : "Codes to identify how UDI data was entered.",
+      "systems" : ["http://hl7.org/fhir/udi-entry-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.211"],
+      "sources" : ["2.16.840.1.113883.4.642.3.211"],
+      "uses" : {
+      },
+      "StructureDefinition-Device-measuring-lab-myhealtheu.html" : "Device: measuring",
+      "StructureDefinition-Device-specimen-lab-myhealtheu.html" : "Device: specimen subject"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "ResultsBloodGroupSnomedCtIpsFreeSet",
+      "title" : "Results Blood Group - SNOMED CT IPS Free Set",
+      "description" : "This value set includes the codes for blood group findings from the SNOMED International Patient Set (IPS) subset of SNOMED CT (IPS Free Set).",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "ResultsCodedValuesLaboratoryUvIps",
+      "title" : "Results Coded Values Laboratory - IPS",
+      "description" : "This value set is defined as the union of: (a) Blood group [Type]; (b) Presence/Absence Indicators (2.16.840.1.113883.11.22.52) (c) Microorganisms (2.16.840.1.113883.11.22.49)",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "ResultsLaboratoryObservationUvIps",
+      "title" : "Results Laboratory Observation - IPS",
+      "description" : "Value Set Definition: LOINC {STATUS in {ACTIVE}, CLASSTYPE in {1}, CLASS exclude {CHALSKIN, H&P.HX.LAB, LABORDERS, NR STATS, PATH, PATH.\\*, MOLPATH, MOLPATH.\\*, CYTO, HL7.CYTOGEN, HL7.GENETICS}}",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-microorganism-snomed-ct-ips-free-set",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "ResultsMicroorganismSnomedCtIpsFreeSet",
+      "title" : "Results Microorganism - SNOMED CT IPS Free Set",
+      "description" : "This value set includes the codes for microorganisms from the SNOMED International Patient Set (IPS) subset of SNOMED CT (IPS Free Set).",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-presence-absence-snomed-ct-ips-free-set",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "ResultsPresenceAbsenceSnomedCtIpsFreeSet",
+      "title" : "Results Presence Absence - SNOMED CT IPS Free Set",
+      "description" : "This value set includes the codes for presence and absence findings (qualifier values) from the SNOMED International Patient Set (IPS) subset of SNOMED CT (IPS Free Set).",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-Observation-obl-lab-myhealtheu.html" : "Observation: Obligations"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/EHDSIHealthcareProfessionalRole",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIHealthcareProfessionalRole",
+      "title" : "eHDSI Healthcare Professional Role",
+      "description" : "This Value Set is used to define Healthcare Professional Role",
+      "systems" : ["urn:oid:2.16.840.1.113883.2.9.6.2.7"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.1"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.1"],
+      "uses" : {
+      },
+      "StructureDefinition-PractitionerRole-eu-myhealth-eu.html" : "PractitionerRole: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIAnimalSpecies",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIAnimalSpecies",
+      "title" : "eHDSI Animal Species",
+      "description" : "The Value Set is used to code the animal species of specimen subject (animal of the patient)",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.72"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.72"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIAnimalSpeciesWithExceptions.html" : "eHDSI Animal Species with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBloodGroup",
+      "title" : "eHDSI Blood Group",
+      "description" : "The Value Set is used to code the value of patient's blood group + Rh",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.20"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.20"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIResultsCodedValueLaboratory.html" : "eHDSI Results Coded Value Laboratory with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBodySite",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBodySite",
+      "title" : "eHDSI Body Site",
+      "description" : "The Value Set is used for the details about the anatomical location of a specimen in the Laboratory Result Report or the target body location of a procedure in the Patient Summary.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.65"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.65"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIBodySiteWithExceptions.html" : "eHDSI Body Site with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBodySiteLaterality",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBodySiteLaterality",
+      "title" : "eHDSI Body Site Laterality",
+      "description" : "This Value Set is used for the body structure site laterality qualifier. It indicates the body site laterality from which a laboratory specimen is collected.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.68"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.68"],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructure-lab-myhealtheu.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBodyStructureLocation",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBodyStructureLocation",
+      "title" : "eHDSI Body Structure Location Qualifier",
+      "description" : "This Value Set is used for the body structure location qualifier. Concepts modifying the anatomic location.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.80"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.80"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIBodyStructureLocationWithExceptions.html" : "eHDSI Body Structure Location Qualifier with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSICountry",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSICountry",
+      "title" : "eHDSI Country",
+      "description" : "The Value Set is used to identify the nationality of all persons and organizations.",
+      "systems" : ["urn:iso:std:iso:3166"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-lab-myhealtheu.html" : "Patient: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIExceptionalValue",
+      "title" : "eHDSI Exceptional Value",
+      "description" : "The Value Set is used to code exceptional values for the required binding in FHIR IGs",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.81"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.81"],
+      "uses" : {
+      },
+      "ValueSet-eHDSILabStudyTypeWithExceptions.html" : "eHDSI Laboratory Study Types with exceptions",
+      "ValueSet-eHDSILabSpecimenTypeWithExceptions.html" : "eHDSI Laboratory Specimen Type with exceptions",
+      "ValueSet-eHDSILabTechniqueWithExceptions.html" : "eHDSI Laboratory Technique with exceptions",
+      "ValueSet-eHDSIMorphologicAbnormalityWithExceptions.html" : "eHDSI Morphologic Abnormality with exceptions",
+      "ValueSet-eHDSIBodyStructureLocationWithExceptions.html" : "eHDSI Body Structure Location Qualifier with exceptions",
+      "ValueSet-eHDSIOrderReason.html" : "eHDSI Order Reason",
+      "ValueSet-eHDSIMedicalDeviceWithExceptions.html" : "eHDSI Medical Device with exceptions",
+      "ValueSet-eHDSIResultsCodedValueLaboratory.html" : "eHDSI Results Coded Value Laboratory with exceptions",
+      "ValueSet-eHDSIBodySiteWithExceptions.html" : "eHDSI Body Site with exceptions",
+      "ValueSet-eHDSIReferenceRangeAppliesToWithExceptions.html" : "eHDSI Reference Range Applies To with exceptions",
+      "ValueSet-eHDSIObservationInterpretationWithExceptions.html" : "eHDSI Observation Interpretation with exceptions",
+      "ValueSet-eHDSILabCodeWithExceptions.html" : "eHDSI Laboratory Codes with exceptions",
+      "ValueSet-eHDSIReferenceRangeMeaningWithExceptions.html" : "eHDSI Reference Range Meaning with exceptions",
+      "ValueSet-eHDSIAnimalSpeciesWithExceptions.html" : "eHDSI Animal Species with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIIllnessandDisorder",
+      "title" : "eHDSI Illness and Disorder",
+      "description" : "The complete content of ICD-10, excluding Chapter XX.",
+      "systems" : ["http://hl7.org/fhir/sid/icd-10"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.5"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.5"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIOrderReason.html" : "eHDSI Order Reason"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabCode",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabCode",
+      "title" : "eHDSI Laboratory Codes",
+      "description" : "This Value Set is used for the standard laboratory codes",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.70"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.70"],
+      "uses" : {
+      },
+      "ValueSet-eHDSILabCodeWithExceptions.html" : "eHDSI Laboratory Codes with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabSpecimenType",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabSpecimenType",
+      "title" : "eHDSI Laboratory Specimen Type",
+      "description" : "This Value Set is used for the kind of material that forms the specimen",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.67"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.67"],
+      "uses" : {
+      },
+      "ValueSet-eHDSILabSpecimenTypeWithExceptions.html" : "eHDSI Laboratory Specimen Type with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabStudyType",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabStudyType",
+      "title" : "eHDSI Laboratory Study Types",
+      "description" : "eHDSI Laboratory Study Types. \nNotes:\nNote 1: 26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2: Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3: Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.66"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.66"],
+      "uses" : {
+      },
+      "ValueSet-eHDSILabStudyTypeWithExceptions.html" : "eHDSI Laboratory Study Types with exceptions",
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DiagnosticReport-lab-myhealtheu.html" : "DiagnosticReport: Laboratory",
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal",
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabTechnique",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabTechnique",
+      "title" : "eHDSI Laboratory Technique",
+      "description" : "This Value Set is used to encode laboratory technique for the result measurement",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.79"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.79"],
+      "uses" : {
+      },
+      "ValueSet-eHDSILabTechniqueWithExceptions.html" : "eHDSI Laboratory Technique with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILaboratoryReportTypes",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILaboratoryReportTypes",
+      "title" : "eHDSI Laboratory Report Types",
+      "description" : "eHDSI Laboratory Report Types",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.52"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.52"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DiagnosticReport-lab-myhealtheu.html" : "DiagnosticReport: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILanguage",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILanguage",
+      "title" : "eHDSI Language",
+      "description" : "The Value Set is used to identify the language the document will be written with.",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.6"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.6"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DiagnosticReport-lab-myhealtheu.html" : "DiagnosticReport: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIMedicalDevice",
+      "title" : "eHDSI Medical Device",
+      "description" : "eHDSI Medical Device",
+      "systems" : [
+        "urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.8"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.8"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIMedicalDeviceWithExceptions.html" : "eHDSI Medical Device with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIMicroorganism",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIMicroorganism",
+      "title" : "eHDSI Microorganism",
+      "description" : "eHDSI Morphologic Abnormality",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.78"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.78"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIResultsCodedValueLaboratory.html" : "eHDSI Results Coded Value Laboratory with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIMorphologicAbnormality",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIMorphologicAbnormality",
+      "title" : "eHDSI Morphologic Abnormality",
+      "description" : "The Value Set is used to code the morphological abnormalities of the anatomical location where the material is taken.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.69"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.69"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIMorphologicAbnormalityWithExceptions.html" : "eHDSI Morphologic Abnormality with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIObservationCategory",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIObservationCategory",
+      "title" : "eHDSI Observation category",
+      "description" : "This Value Set is used for the Laboratory Observation Results Category code",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.71"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.71"]
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIObservationInterpretation",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIObservationInterpretation",
+      "title" : "eHDSI Observation Interpretation",
+      "description" : "This Value Set is used for a rough qualitative interpretation of the Laboratory Observation Results",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+      ],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.73"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.73"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIObservationInterpretationWithExceptions.html" : "eHDSI Observation Interpretation with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIPerformerFunction",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIPerformerFunction",
+      "title" : "eHDSI Performer Function",
+      "description" : "Laboratory Performer Function",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.76"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.76"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIPresenceAbsence",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIPresenceAbsence",
+      "title" : "eHDSI Presence Absence",
+      "description" : "The Value Set is used to describe presence and absence findings (qualifier values) of the Laboratory Test Results",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.77"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.77"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIResultsCodedValueLaboratory.html" : "eHDSI Results Coded Value Laboratory with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIRareDisease",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIRareDisease",
+      "title" : "eHDSI Rare Disease",
+      "description" : "The Value Set is used to describe the problems and medication reasons.",
+      "systems" : ["urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.5"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.63"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.63"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIOrderReason.html" : "eHDSI Order Reason"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIReactionAllergy",
+      "title" : "eHDSI Reaction Allergy",
+      "description" : "Value Set is used to encode clinical manifestation of the allergic reaction.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.11"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.11"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIOrderReason.html" : "eHDSI Order Reason"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeAppliesTo",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIReferenceRangeAppliesTo",
+      "title" : "eHDSI Reference Range Applies To",
+      "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"
+      ],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.75"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.75"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIReferenceRangeAppliesToWithExceptions.html" : "eHDSI Reference Range Applies To with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeMeaning",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIReferenceRangeMeaning",
+      "title" : "eHDSI Reference Range Meaning",
+      "description" : "This value set defines a set of codes for a reference range qualifier",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+      ],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.74"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.74"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIReferenceRangeMeaningWithExceptions.html" : "eHDSI Reference Range Meaning with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIUnit",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIUnit",
+      "title" : "eHDSI Unit",
+      "description" : "eHDSI Unit",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.16"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.16"],
+      "uses" : {
+      },
+      "StructureDefinition-Quantity-lab-myhealtheu.html" : "Quantity: Laboratory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0371",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSAdditivePreservative",
+      "title" : "hl7VS-additivePreservative",
+      "description" : "Concepts specifying any additive introduced to the specimen before or at the time of collection.  These additives may be introduced in order to preserve, maintain or enhance the particular nature or component of the specimen.  Used in Version 2 messaging in the SPM segment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0371"],
+      "oids" : ["2.16.840.1.113883.21.245"],
+      "sources" : ["2.16.840.1.113883.21.245"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-obl-lab-myhealtheu.html" : "Specimen: Obligations",
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0493",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSSpecimenCondition",
+      "title" : "hl7VS-specimenCondition",
+      "description" : "Concepts of modes or states of being that describe the nature of a specimen.  Used in Version 2 messaging in the SPM segment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0493"],
+      "oids" : ["2.16.840.1.113883.21.333"],
+      "sources" : ["2.16.840.1.113883.21.333"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-obl-lab-myhealtheu.html" : "Specimen: Obligations",
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0916",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSRelevantClincialInformation",
+      "title" : "hl7VS-relevantClincialInformation",
+      "description" : "Value Set of codes that specify additional clinical information about the patient or specimen to report the supporting and/or suspected diagnosis and clinical findings on requests for interpreted diagnostic studies.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0916"],
+      "oids" : ["2.16.840.1.113883.21.440"],
+      "sources" : ["2.16.840.1.113883.21.440"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-obl-lab-myhealtheu.html" : "Specimen: Obligations",
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-2.7-0360",
+      "version" : "0360",
+      "status" : "active",
+      "name" : "v2.0360.2.7",
+      "title" : "v2 table 0360, Version 2.7",
+      "description" : "FHIR Value set/code system definition for HL7 v2 table 0360 ver 2.9 ( Degree/License/Certificate)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0360|2.7"],
+      "uses" : {
+      },
+      "StructureDefinition-Practitioner-eu-myhealth-eu.html" : "Practitioner: Laboratory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActCode",
+      "title" : "v3 Code System ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.  Constraints:\r\nThe kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems.  The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification",
+      "version" : "2014-03-26",
+      "status" : "active",
+      "name" : "v3.ConfidentialityClassification",
+      "title" : "V3 Value SetConfidentialityClassification",
+      "description" : " Set of codes used to value Act.Confidentiality and Role.Confidentiality attribute in accordance with the definition for concept domain \"Confidentiality\".",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+      "oids" : ["2.16.840.1.113883.1.11.10228"],
+      "sources" : ["2.16.840.1.113883.1.11.10228"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ServiceDeliveryLocationRoleType",
+      "title" : "ServiceDeliveryLocationRoleType",
+      "description" : "A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+      "oids" : ["2.16.840.1.113883.1.11.17660"],
+      "sources" : ["2.16.840.1.113883.1.11.17660"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-obl-lab-myhealtheu.html" : "ServiceRequest: Obligations",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    }
+  ]
+}

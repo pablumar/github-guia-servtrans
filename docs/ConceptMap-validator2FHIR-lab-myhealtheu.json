@@ -1,0 +1,103 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "validator2FHIR-lab-myhealtheu",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap validator2FHIR-lab-myhealtheu</b></p><a name=\"validator2FHIR-lab-myhealtheu\"> </a><a name=\"hcvalidator2FHIR-lab-myhealtheu\"> </a><a name=\"validator2FHIR-lab-myhealtheu-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-Validator.html\">Result validator</a> to <a href=\"StructureDefinition-Composition-lab-myhealtheu.html\">Composition: Laboratory</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Validator.html\">Result validator</a> to <a href=\"StructureDefinition-Composition-lab-myhealtheu.html\">Composition: Laboratory</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Validator.identifier (Result validator identifier)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.identifier</td><td>attester.where(mode='professional')</td></tr><tr><td>Validator.name (Result validator name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.name</td><td>attester.where(mode='professional').party.resolve().ofType(Practitioner).name</td></tr><tr><td>Validator.name (Result validator name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.practitioner.name</td><td>attester.where(mode='professional').party.resolve().ofType(PractitionerRole).Practitioner.resolve().name</td></tr><tr><td>Validator.organization (Result validator organization)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.organization</td><td>attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Validator.organization.name (Organization Name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.organization.name</td><td>attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Validator.organization.address (Organization Address)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.organization.address</td><td>attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Validator.organization.telecom (Organization telecom)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.organization.telecom</td><td>attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Validator.dateTime (Validation date and time)</td><td><a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.time</td><td>attester.where(mode='professional').time</td></tr></table></div>"
+  },
+  "url" : "http://fhir.ehdsi.eu/laboratory/ConceptMap/validator2FHIR-lab-myhealtheu",
+  "version" : "0.0.1",
+  "name" : "Validator2Fhir",
+  "title" : "MyHealth@EUValidator to this guide Map",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-03-03T08:58:37+01:00",
+  "publisher" : "SNS",
+  "contact" : [{
+    "name" : "SNS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://sns.gob.es"
+    }]
+  }],
+  "description" : "MyHealth@EUValidator Model to this guide Map",
+  "purpose" : "It shows how the Validator Recipient data set defined by the EU MyHealth@EUguidelines is mapped into this guide",
+  "sourceUri" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Validator",
+  "targetUri" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Composition-lab-myhealtheu",
+  "group" : [{
+    "source" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Validator",
+    "target" : "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Composition-lab-myhealtheu",
+    "element" : [{
+      "code" : "Validator.identifier",
+      "display" : "Result validator identifier",
+      "target" : [{
+        "code" : "Composition.attester.party.identifier",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional')"
+      }]
+    },
+    {
+      "code" : "Validator.name",
+      "display" : "Result validator name",
+      "target" : [{
+        "code" : "Composition.attester.party.name",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').party.resolve().ofType(Practitioner).name"
+      }]
+    },
+    {
+      "code" : "Validator.name",
+      "display" : "Result validator name",
+      "target" : [{
+        "code" : "Composition.attester.party.practitioner.name",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').party.resolve().ofType(PractitionerRole).Practitioner.resolve().name"
+      }]
+    },
+    {
+      "code" : "Validator.organization",
+      "display" : "Result validator organization",
+      "target" : [{
+        "code" : "Composition.attester.party.organization",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "Validator.organization.name",
+      "display" : "Organization Name",
+      "target" : [{
+        "code" : "Composition.attester.party.organization.name",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "Validator.organization.address",
+      "display" : "Organization Address",
+      "target" : [{
+        "code" : "Composition.attester.party.organization.address",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "Validator.organization.telecom",
+      "display" : "Organization telecom",
+      "target" : [{
+        "code" : "Composition.attester.party.organization.telecom",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "Validator.dateTime",
+      "display" : "Validation date and time",
+      "target" : [{
+        "code" : "Composition.attester.time",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').time"
+      }]
+    }]
+  }]
+}

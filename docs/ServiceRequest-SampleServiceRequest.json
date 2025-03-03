@@ -1,0 +1,47 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "SampleServiceRequest",
+  "meta" : {
+    "profile" : ["http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-lab-myhealtheu"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest SampleServiceRequest</b></p><a name=\"SampleServiceRequest\"> </a><a name=\"hcSampleServiceRequest\"> </a><a name=\"SampleServiceRequest-en-US\"> </a><p><b>identifier</b>: <code>http://example.org</code>/a4310756-a193-4a48-8feb-598c87a1d3f</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 24360-0}\">Hemoglobin and Hematocrit panel - Blood</span></p><p><b>subject</b>: <a href=\"Patient-SamplePatient.html\">John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>insurance</b>: <a href=\"#hcSampleServiceRequest/SampleCoverage\">Coverage: status = active</a></p><p><b>specimen</b>: <a href=\"Specimen-SampleSpecimen.html\">Specimen: status = available; type = Blood specimen</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Coverage #SampleCoverage</b></p><a name=\"SampleServiceRequest/SampleCoverage\"> </a><a name=\"hcSampleServiceRequest/SampleCoverage\"> </a><a name=\"SampleServiceRequest/SampleCoverage-en-US\"> </a><p><b>status</b>: Active</p><p><b>beneficiary</b>: <a href=\"Patient-SamplePatient.html\">John Albertus Doe  Male, DoB: 1989-12-12 ( https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin#89121210976\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>payor</b>: Best Insurance</p></blockquote></div>"
+  },
+  "contained" : [{
+    "resourceType" : "Coverage",
+    "id" : "SampleCoverage",
+    "meta" : {
+      "profile" : ["http://fhir.ehdsi.eu/laboratory/StructureDefinition/Coverage-lab-myhealtheu"]
+    },
+    "status" : "active",
+    "beneficiary" : {
+      "reference" : "Patient/SamplePatient"
+    },
+    "payor" : [{
+      "display" : "Best Insurance"
+    }]
+  }],
+  "identifier" : [{
+    "system" : "http://example.org",
+    "value" : "a4310756-a193-4a48-8feb-598c87a1d3f"
+  }],
+  "status" : "active",
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "24360-0",
+      "display" : "Hemoglobin and Hematocrit panel - Blood"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/SamplePatient"
+  },
+  "insurance" : [{
+    "reference" : "#SampleCoverage"
+  }],
+  "specimen" : [{
+    "reference" : "Specimen/SampleSpecimen"
+  }]
+}

@@ -1,0 +1,302 @@
+{
+  "package": "servtrans.sns.implementationGuide",
+  "version": "0.0.1",
+  "fhirVersion": "4.0.1",
+  "extensions": [],
+  "profiles": {
+    "BodyStructure": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/BodyStructure-lab-myhealtheu",
+        "title": "Body structure: Laboratory"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Bundle-lab-myhealtheu",
+        "title": "Bundle: Laboratory"
+      }
+    ],
+    "Composition": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Composition-lab-myhealtheu",
+        "title": "Composition: Laboratory"
+      }
+    ],
+    "Coverage": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Coverage-lab-myhealtheu",
+        "title": "Coverage: Laboratory"
+      }
+    ],
+    "Device": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Device-measuring-lab-myhealtheu",
+        "title": "Device: measuring"
+      },
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Device-specimen-lab-myhealtheu",
+        "title": "Device: specimen subject"
+      }
+    ],
+    "DiagnosticReport": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/DiagnosticReport-lab-myhealtheu",
+        "title": "DiagnosticReport: Laboratory"
+      }
+    ],
+    "DocumentReference": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/DocumentReference-minimal-myhealtheu",
+        "title": "DocumentReference: Minimal"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-obl-lab-myhealtheu",
+        "title": "Observation: Obligations"
+      },
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-resultslab-lab-myhealtheu",
+        "title": "Observation Results: Laboratory"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Organization-eu-myhealth-eu",
+        "title": "Organization: Laboratory"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-lab-myhealtheu",
+        "title": "Patient: Laboratory"
+      },
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-minimal-myhealtheu",
+        "title": "Patient: Minimal"
+      },
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-obl-lab-myhealtheu",
+        "title": "Patient: Obligations"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Practitioner-eu-myhealth-eu",
+        "title": "Practitioner: Laboratory"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/PractitionerRole-eu-myhealth-eu",
+        "title": "PractitionerRole: Laboratory"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-lab-myhealtheu",
+        "title": "ServiceRequest: Laboratory"
+      },
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-obl-lab-myhealtheu",
+        "title": "ServiceRequest: Obligations"
+      }
+    ],
+    "Specimen": [
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-lab-myhealtheu",
+        "title": "Specimen: Laboratory"
+      },
+      {
+        "url": "http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-obl-lab-myhealtheu",
+        "title": "Specimen: Obligations"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition": [
+      "Composition"
+    ],
+    "http://hl7.eu/fhir/StructureDefinition/information-recipient": [
+      "Composition"
+    ],
+    "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-diagnosticReportReference": [
+      "Composition"
+    ],
+    "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialCodeable": [
+      "Observation"
+    ],
+    "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialIdentifer": [
+      "Observation"
+    ],
+    "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-deviceLabTestKit": [
+      "Observation"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.contact": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.date": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.documentation": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.jurisdiction": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.name": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.publisher": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.status": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.type": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.url": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.version": [
+      "Basic"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure.laterality": [
+      "BodyStructure"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition": [
+      "Bundle.entry.resource",
+      "DiagnosticReport"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy": [
+      "Observation"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]": [
+      "Observation",
+      "Observation.component"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.container.device": [
+      "Specimen.container"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/bodySite": [
+      "Specimen.collection"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber": [
+      "Composition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "Observation.effective[x]",
+      "Patient.name"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/event-performerFunction": [
+      "Observation.performer"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family": [
+      "HumanName.family",
+      "Patient.name.family"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family": [
+      "HumanName.family",
+      "Patient.name.family"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract": [
+      "Bundle.entry.resource.address.line",
+      "Composition.contained.address.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber": [
+      "Patient.address.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox": [
+      "Patient.address.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName": [
+      "Patient.address.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-SC-coding": [
+      "Patient.address.country"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty": [
+      "Quantity",
+      "Ratio"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType": [
+      "Quantity",
+      "Ratio"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/obligation": [
+      "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-birthPlace": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo": [
+      "Observation"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/additional-binding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ]
+  }
+}

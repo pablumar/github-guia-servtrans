@@ -1,0 +1,39 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "Specimen-device-example",
+  "meta" : {
+    "profile" : ["http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-lab-myhealtheu"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen Specimen-device-example</b></p><a name=\"Specimen-device-example\"> </a><a name=\"hcSpecimen-device-example\"> </a><a name=\"Specimen-device-example-en-US\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119297000}\">Blood specimen</span></p><p><b>subject</b>: <a href=\"#hcSpecimen-device-example/DeviceSpecimenSubject\">Device: type = un-encoded</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2022-10-25 13:35:00+0100</td></tr></table><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Device #DeviceSpecimenSubject</b></p><a name=\"Specimen-device-example/DeviceSpecimenSubject\"> </a><a name=\"hcSpecimen-device-example/DeviceSpecimenSubject\"> </a><a name=\"Specimen-device-example/DeviceSpecimenSubject-en-US\"> </a><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-NullFlavor UNC}\">blood bag</span></p></blockquote></div>"
+  },
+  "contained" : [{
+    "resourceType" : "Device",
+    "id" : "DeviceSpecimenSubject",
+    "meta" : {
+      "profile" : ["http://fhir.ehdsi.eu/laboratory/StructureDefinition/Device-specimen-lab-myhealtheu"]
+    },
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "code" : "UNC"
+      }],
+      "text" : "blood bag"
+    }
+  }],
+  "status" : "available",
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "119297000",
+      "display" : "Blood specimen"
+    }]
+  },
+  "subject" : {
+    "reference" : "#DeviceSpecimenSubject"
+  },
+  "collection" : {
+    "collectedDateTime" : "2022-10-25T13:35:00+01:00"
+  }
+}

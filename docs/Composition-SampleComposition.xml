@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="SampleComposition"/>
+  <meta>
+    <profile value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Composition-lab-myhealtheu"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Composition SampleComposition</b></p><a name="SampleComposition"> </a><a name="hcSampleComposition"> </a><a name="SampleComposition-en-US"> </a><p><b>identifier</b>: <a href="http://terminology.hl7.org/5.5.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</p><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 11502-2}">Laboratory report</span></p><p><b>category</b>: <span title="Codes:{http://loinc.org 18717-9}">Blood bank studies (set)</span></p><p><b>date</b>: 2023-03-09 14:30:00+0100</p><p><b>author</b>: Dr. Patrick Dempsey</p><p><b>title</b>: Laboratory Report - 10 March, 2023 14:30</p><h3>Attesters</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td>Legal</td><td>2020-12-27 14:30:00+0100</td><td><a href="#hcSampleComposition/Organization-SampleComposition">Organization Good Organization</a></td></tr></table><p><b>custodian</b>: <a href="#hcSampleComposition/Organization-SampleComposition">Organization Good Organization</a></p><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Organization #Organization-SampleComposition</b></p><a name="SampleComposition/Organization-SampleComposition"> </a><a name="hcSampleComposition/Organization-SampleComposition"> </a><a name="SampleComposition/Organization-SampleComposition-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/120148</p><p><b>name</b>: Good Organization</p><p><b>telecom</b>: ph: 390 666 0581(Work)</p><p><b>address</b>: Via Emilio Praga 39 Roma 120 00137 100 </p></blockquote></div>
+  </text>
+  <contained>
+    <Organization>
+      <id value="Organization-SampleComposition"/>
+      <identifier>
+        <system value="urn:oid:2.16.840.1.113883.2.9.4.1.2"/>
+        <value value="120148"/>
+        <assigner>
+          <display value="Good Organization"/>
+        </assigner>
+      </identifier>
+      <name value="Good Organization"/>
+      <telecom>
+        <system value="phone"/>
+        <value value="390 666 0581"/>
+        <use value="work"/>
+      </telecom>
+      <address>
+        <line value="Via Emilio Praga 39">
+          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract">
+            <valueString value="058091"/>
+          </extension>
+        </line>
+        <city value="Roma"/>
+        <district value="RM"/>
+        <state value="120"/>
+        <postalCode value="00137"/>
+        <country value="100"/>
+      </address>
+    </Organization>
+  </contained>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"/>
+  </identifier>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11502-2"/>
+      <display value="Laboratory report"/>
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="18717-9"/>
+      <display value="Blood bank studies (set)"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/SamplePatient"/>
+  </subject>
+  <date value="2023-03-09T14:30:00+01:00"/>
+  <author>
+    <display value="Dr. Patrick Dempsey"/>
+  </author>
+  <title value="Laboratory Report - 10 March, 2023 14:30"/>
+  <attester>
+    <mode value="legal"/>
+    <time value="2020-12-27T14:30:00+01:00"/>
+    <party>
+      <reference value="#Organization-SampleComposition"/>
+    </party>
+  </attester>
+  <custodian>
+    <reference value="#Organization-SampleComposition"/>
+  </custodian>
+  <section>
+    <title value="Blood group lab result report"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="26436-6"/>
+        <display value="Laboratory studies (set)"/>
+      </coding>
+      <text value="Laboratory studies"/>
+    </code>
+    <entry>
+      <reference value="Observation/SampleBloodGroupObservation"/>
+    </entry>
+  </section>
+</Composition>

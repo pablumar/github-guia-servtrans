@@ -1,0 +1,2419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="servtrans.sns.implementationGuide"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide servtrans.sns.implementationGuide</b></p><a name="servtrans.sns.implementationGuide"> </a><a name="hcservtrans.sns.implementationGuide"> </a><a name="servtrans.sns.implementationGuide-en-US"> </a><h2>ServiciosTransfronterizosIG</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.ehdsi.eu/laboratory/ImplementationGuide/servtrans.sns.implementationGuide</pre><div><p>Guía de Implementación Servicios Transfronterizos</p>
+</div></div>
+  </text>
+  <url value="http://fhir.ehdsi.eu/laboratory/ImplementationGuide/servtrans.sns.implementationGuide"/>
+  <version value="0.0.1"/>
+  <name value="ServiciosTransfronterizosIG"/>
+  <title value="Guía de Implementación Servicios Transfronterizos"/>
+  <status value="draft"/>
+  <date value="2025-03-03T08:58:37+01:00"/>
+  <publisher value="SNS"/>
+  <contact>
+    <name value="SNS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sns.gob.es"/>
+    </telecom>
+  </contact>
+  <description value="Guía de Implementación Servicios Transfronterizos"/>
+  <packageId value="servtrans.sns.implementationGuide"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_ips">
+    <uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+    <packageId value="hl7.fhir.uv.ips"/>
+    <version value="1.1.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_eu_laboratory">
+    <uri value="http://fhir.org/packages/hl7.fhir.eu.laboratory/ImplementationGuide/hl7.fhir.eu.laboratory"/>
+    <packageId value="hl7.fhir.eu.laboratory"/>
+    <version value="0.1.x"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_eu_extensions">
+    <uri value="http://fhir.org/packages/hl7.fhir.eu.extensions/ImplementationGuide/hl7.fhir.eu.extensions"/>
+    <packageId value="hl7.fhir.eu.extensions"/>
+    <version value="0.1.x"/>
+  </dependsOn>
+  <dependsOn id="hl7_terminology">
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology"/>
+    <version value="5.5.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2025+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="qa-preview"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="produce-jekyll-data"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="usage-stats-opt-out"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.eu/fhir/laboratory/actor-creator-eu-lab"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.eu/fhir/laboratory/actor-repos-eu-lab"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.eu/fhir/laboratory/actor-handler-eu-lab"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIBodySite"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSICountry"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILanguage"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIAnimalSpecies"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIBodySiteLaterality"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIBodyStructureLocation"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabCode"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabCodeWithExceptions"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILaboratoryReportTypes"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabSpecimenType"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabSpecimenTypeWithExceptions"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabStudyType"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabTechnique"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIMicroorganism"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIMorphologicAbnormality"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIObservationCategory"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIObservationInterpretation"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIPerformerFunction"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIPresenceAbsence"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeAppliesTo"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeMeaning"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIUnit"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILanguage"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIRareDisease"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://fhir.ehdsi.eu/laboratory/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#0.3.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2025+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="qa-preview"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="produce-jekyll-data"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="usage-stats-opt-out"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.eu/fhir/laboratory/actor-creator-eu-lab"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.eu/fhir/laboratory/actor-repos-eu-lab"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.eu/fhir/laboratory/actor-handler-eu-lab"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIBodySite"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSICountry"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILanguage"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIAnimalSpecies"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIBodySiteLaterality"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIBodyStructureLocation"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabCode"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabCodeWithExceptions"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILaboratoryReportTypes"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabSpecimenType"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabSpecimenTypeWithExceptions"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabStudyType"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILabTechnique"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIMicroorganism"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIMorphologicAbnormality"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIObservationCategory"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIObservationInterpretation"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIPerformerFunction"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIPresenceAbsence"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeAppliesTo"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeMeaning"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIUnit"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSILanguage"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIRareDisease"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://fhir.ehdsi.eu/laboratory/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <grouping id="myHEURequirements">
+      <name value="MyHealth@EU Requirements Catalogue"/>
+      <description value="Logical models representing the data sets specified in the MyHealth@EU Requirements Catalogue"/>
+    </grouping>
+    <grouping id="logicalModelsMaps">
+      <name value="MyHealth@EU Logical Model mappings"/>
+      <description value="Concept Maps describing how the MyHealth@EU Requirements Catalogue model should be implemented by using this guide"/>
+    </grouping>
+    <grouping id="obligations">
+      <name value="Actors and Obligations (Informative)"/>
+      <description value="Actors and Obligations used to describe the Laboratory Report functional requirements for the specified data elements. Informative for this version of the guide."/>
+    </grouping>
+    <grouping id="mvc">
+      <name value="Master Value Catalogue"/>
+      <description value="Value Sets belonging the MyHealth@EU Master Value Catalogue (MVC)"/>
+    </grouping>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/labRpt2FHIR-lab-myhealtheu"/>
+      </reference>
+      <name value="1 - Laboratory Report model to this guide"/>
+      <description value="It shows how the Laboratory Report data set defined by the MyHealth@EU Requirements Catalogue is mapped into this guide."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="logicalModelsMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LabReport"/>
+      </reference>
+      <name value="1 Laboratory Result Content"/>
+      <description value="Laboratory Report Content as defined by the MyHealth@EU business requirement ‘13.01 Create the MyHealth@EU Laboratory Result Report Content’."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="myHEURequirements"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Subject"/>
+      </reference>
+      <name value="1.1 Patient/subject"/>
+      <description value="Identification of the patient/subject and Patient/subject related contact information  as defined by the MyHealth@EU business requirement ‘13.01 Create the MyHealth@EU Laboratory Result Report Content’."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="myHEURequirements"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/subject2FHIR-lab-myhealtheu"/>
+      </reference>
+      <name value="1.1 Subject of care model to this guide"/>
+      <description value="It shows how the Subject data set defined by the MyHealth@EU Requirements Catalogue is mapped into this guide."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="logicalModelsMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Payer"/>
+      </reference>
+      <name value="1.2 Health insurance and payment information"/>
+      <description value="Health insurance and payment information as defined by the MyHealth@EU business requirement ‘13.01 Create the MyHealth@EU Laboratory Result Report Content’."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="myHEURequirements"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/payer2FHIR-lab-myhealtheu"/>
+      </reference>
+      <name value="1.2 Health insurance and payment information model to this guide"/>
+      <description value="It shows how the Health insurance and payment information data set defined by the MyHealth@EU Requirements Catalogue is mapped into this guide."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="logicalModelsMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Recipient"/>
+      </reference>
+      <name value="1.3 Information recipient"/>
+      <description value="Information recipient as defined by the MyHealth@EU business requirement ‘13.01 Create the MyHealth@EU Laboratory Result Report Content’."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="myHEURequirements"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/recipient2FHIR-lab-myhealtheu"/>
+      </reference>
+      <name value="1.3 Information recipient model to this guide"/>
+      <description value="It shows how the Information recipient data set defined by the MyHealth@EU Requirements Catalogue is mapped into this guide."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="logicalModelsMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Author"/>
+      </reference>
+      <name value="1.4 Author"/>
+      <description value="Author as defined by the MyHealth@EU business requirement ‘13.01 Create the MyHealth@EU Laboratory Result Report Content’."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="myHEURequirements"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/author2FHIR-lab-myhealtheu"/>
+      </reference>
+      <name value="1.4 Author model to this guide"/>
+      <description value="It shows how the Author data set defined by the MyHealth@EU Requirements Catalogue is mapped into this guide."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="logicalModelsMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/LegalAuthenticator"/>
+      </reference>
+      <name value="1.5 Legal authenticator"/>
+      <description value="Legal authenticator as defined by the MyHealth@EU business requirement ‘13.01 Create the MyHealth@EU Laboratory Result Report Content’."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="myHEURequirements"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/legalAuth2FHIR-lab-myhealtheu"/>
+      </reference>
+      <name value="1.5 Legal authenticator model to this guide"/>
+      <description value="It shows how the Legal authenticator data set defined by the MyHealth@EU Requirements Catalogue is mapped into this guide."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="logicalModelsMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Validator"/>
+      </reference>
+      <name value="1.6 Result validator"/>
+      <description value="Result validator as defined by the MyHealth@EU business requirement ‘13.01 Create the MyHealth@EU Laboratory Result Report Content’."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="myHEURequirements"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/validator2FHIR-lab-myhealtheu"/>
+      </reference>
+      <name value="1.6 Result validator model to this guide"/>
+      <description value="It shows how the Result validator data set defined by the MyHealth@EU Requirements Catalogue is mapped into this guide."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="logicalModelsMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Order"/>
+      </reference>
+      <name value="1.7 Order information and reason"/>
+      <description value="Order information and reason as defined by the MyHealth@EU business requirement ‘13.01 Create the MyHealth@EU Laboratory Result Report Content’."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="myHEURequirements"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/order2FHIR-lab-myhealtheu"/>
+      </reference>
+      <name value="1.7 Order model to this guide"/>
+      <description value="It shows how the Order data set defined by the MyHealth@EU Requirements Catalogue is mapped into this guide."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="logicalModelsMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/SpecimenLab"/>
+      </reference>
+      <name value="1.8 Specimen information"/>
+      <description value="Specimen information as defined by the MyHealth@EU business requirement ‘13.01 Create the MyHealth@EU Laboratory Result Report Content’."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="myHEURequirements"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/specimen2FHIR-lab-myhealtheu"/>
+      </reference>
+      <name value="1.8 Specimen information model to this guide"/>
+      <description value="It shows how the Specimen information data set defined by the MyHealth@EU Requirements Catalogue is mapped into this guide."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="logicalModelsMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Result"/>
+      </reference>
+      <name value="1.9 Results data elements"/>
+      <description value="Results data elements as defined by the MyHealth@EU business requirement ‘13.01 Create the MyHealth@EU Laboratory Result Report Content’."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="myHEURequirements"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/result2FHIR-lab-myhealtheu"/>
+      </reference>
+      <name value="1.9 Results data model to this guide"/>
+      <description value="It shows how the Results data elements data set defined by the MyHealth@EU Requirements Catalogue is mapped into this guide."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="logicalModelsMaps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/actor-consumer-eu-lab"/>
+      </reference>
+      <name value="Actor Laboratory Report Consumer"/>
+      <description value="Laboratory Report Report Consumer: a system receiving/querying and using a Laboratory Report."/>
+      <exampleBoolean value="true"/>
+      <groupingId value="obligations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/actor-creator-eu-lab"/>
+      </reference>
+      <name value="Actor Laboratory Report Creator"/>
+      <description value="Laboratory Report Creator: a system generating and sending/providing a Laboratory Report to a Consumer or to a Repository for report storage and sharing."/>
+      <exampleBoolean value="true"/>
+      <groupingId value="obligations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/actor-handler-eu-lab"/>
+      </reference>
+      <name value="Actor Laboratory Report Handler"/>
+      <description value="Laboratory Report Handler: a generic system dealing with Laboratory Reports"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="obligations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/actor-repos-eu-lab"/>
+      </reference>
+      <name value="Actor Laboratory Report Repository"/>
+      <description value="Laboratory Report Report Repository: a system maintaining a copy of the received Laboratory Report, to store and make it availaìble for the consumers."/>
+      <exampleBoolean value="true"/>
+      <groupingId value="obligations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BodyStructure-lab-myhealtheu"/>
+      </reference>
+      <name value="Body structure: Laboratory"/>
+      <description value="This profile defines how to represent Body Structure in HL7 FHIR for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BundleLabResultReportPOC"/>
+      </reference>
+      <name value="Bundle: example"/>
+      <description value="Bundle: Laboratory Result Report for POC"/>
+      <exampleCanonical value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Bundle-lab-myhealtheu"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Bundle-lab-myhealtheu"/>
+      </reference>
+      <name value="Bundle: Laboratory"/>
+      <description value="This profile defines how to use a Bundle to represent a Laboratory Result Report in HL7 FHIR for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/SampleComposition"/>
+      </reference>
+      <name value="Composition: example"/>
+      <description value="Composition: example of Laboratory Report"/>
+      <exampleCanonical value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Composition-lab-myhealtheu"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Composition-lab-myhealtheu"/>
+      </reference>
+      <name value="Composition: Laboratory"/>
+      <description value="This profile defines how to constrain the Clinical document profile (Composition) to represent a Laboratory Report for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Coverage-lab-myhealtheu"/>
+      </reference>
+      <name value="Coverage: Laboratory"/>
+      <description value="This profile defines how to represent Health insurance and payment information in HL7 FHIR for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Device-measuring-lab-myhealtheu"/>
+      </reference>
+      <name value="Device: measuring"/>
+      <description value="This profile defines how to represent a measuring Device in HL7 FHIR for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Device-specimen-lab-myhealtheu"/>
+      </reference>
+      <name value="Device: specimen subject"/>
+      <description value="This profile defines how to represent a device in HL7 FHIR, when used as specimen subject, for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/SampleDiagnosticReport"/>
+      </reference>
+      <name value="DiagnosticReport: example"/>
+      <description value="DiagnosticReport: example of Laboratory Report"/>
+      <exampleCanonical value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/DiagnosticReport-lab-myhealtheu"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiagnosticReport-lab-myhealtheu"/>
+      </reference>
+      <name value="DiagnosticReport: Laboratory"/>
+      <description value="This profile defines how to constrain the DiagnosticReport resource to represent a Laboratory Report for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/SimpleChemistryResultDocRef"/>
+      </reference>
+      <name value="DocumentReference: example"/>
+      <description value="Example of DocumentReference assoicated to the SimpleChemistryResultReport Laboratory Report (Bundle) example"/>
+      <exampleCanonical value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/DocumentReference-minimal-myhealtheu"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DocumentReference-minimal-myhealtheu"/>
+      </reference>
+      <name value="DocumentReference: Minimal"/>
+      <description value="This profile defines the minimal data set returned by the Myhealth@EU Document search service"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIAnimalSpecies"/>
+      </reference>
+      <name value="eHDSI Animal Species"/>
+      <description value="The Value Set is used to code the animal species of specimen subject (animal of the patient)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIAnimalSpeciesWithExceptions"/>
+      </reference>
+      <name value="eHDSI Animal Species with exceptions"/>
+      <description value="The Value Set is used to code the animal species of specimen subject (animal of the patient). It also includes exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIBloodGroup"/>
+      </reference>
+      <name value="eHDSI Blood Group"/>
+      <description value="The Value Set is used to code the value of patient's blood group + Rh"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIBodySite"/>
+      </reference>
+      <name value="eHDSI Body Site"/>
+      <description value="The Value Set is used for the details about the anatomical location of a specimen in the Laboratory Result Report or the target body location of a procedure in the Patient Summary."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIBodySiteLaterality"/>
+      </reference>
+      <name value="eHDSI Body Site Laterality"/>
+      <description value="This Value Set is used for the body structure site laterality qualifier. It indicates the body site laterality from which a laboratory specimen is collected."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIBodySiteWithExceptions"/>
+      </reference>
+      <name value="eHDSI Body Site with exceptions"/>
+      <description value="The Value Set is used for the details about the anatomical location of a specimen in the Laboratory Result Report or the target body location of a procedure in the Patient Summary.&#xA;It includes also exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIBodyStructureLocation"/>
+      </reference>
+      <name value="eHDSI Body Structure Location Qualifier"/>
+      <description value="This Value Set is used for the body structure location qualifier. Concepts modifying the anatomic location."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIBodyStructureLocationWithExceptions"/>
+      </reference>
+      <name value="eHDSI Body Structure Location Qualifier with exceptions"/>
+      <description value="This Value Set is used for the body structure location qualifier. Concepts modifying the anatomic location.&#xA;It also includes exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSICountry"/>
+      </reference>
+      <name value="eHDSI Country"/>
+      <description value="The Value Set is used to identify the nationality of all persons and organizations."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIExceptionalValue"/>
+      </reference>
+      <name value="eHDSI Exceptional Value"/>
+      <description value="The Value Set is used to code exceptional values for the required binding in FHIR IGs"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIHealthcareProfessionalRole"/>
+      </reference>
+      <name value="eHDSI Healthcare Professional Role"/>
+      <description value="This Value Set is used to define Healthcare Professional Role"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIIllnessandDisorder"/>
+      </reference>
+      <name value="eHDSI Illness and Disorder"/>
+      <description value="The complete content of ICD-10, excluding Chapter XX."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILabCode"/>
+      </reference>
+      <name value="eHDSI Laboratory Codes"/>
+      <description value="This Value Set is used for the standard laboratory codes"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILabCodeWithExceptions"/>
+      </reference>
+      <name value="eHDSI Laboratory Codes with exceptions"/>
+      <description value="This Value Set is used for the standard laboratory codes.&#xA;It also includes exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILaboratoryReportTypes"/>
+      </reference>
+      <name value="eHDSI Laboratory Report Types"/>
+      <description value="eHDSI Laboratory Report Types"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILabSpecimenType"/>
+      </reference>
+      <name value="eHDSI Laboratory Specimen Type"/>
+      <description value="This Value Set is used for the kind of material that forms the specimen"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILabSpecimenTypeWithExceptions"/>
+      </reference>
+      <name value="eHDSI Laboratory Specimen Type with exceptions"/>
+      <description value="This Value Set is used for the kind of material that forms the specimen.&#xA;It also includes exceptional values"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILabStudyTypes"/>
+      </reference>
+      <name value="eHDSI Laboratory Study Types"/>
+      <description value="eHDSI Laboratory Study Types. &#xA;Notes:&#xA;Note 1: 26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.&#xA;Note 2: Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.&#xA;Note 3: Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILabStudyType"/>
+      </reference>
+      <name value="eHDSI Laboratory Study Types"/>
+      <description value="eHDSI Laboratory Study Types. &#xA;Notes:&#xA;Note 1: 26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.&#xA;Note 2: Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.&#xA;Note 3: Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILabStudyTypeWithExceptions"/>
+      </reference>
+      <name value="eHDSI Laboratory Study Types with exceptions"/>
+      <description value="eHDSI Laboratory Study Types. &#xA;Notes:&#xA;Note 1: 26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.&#xA;Note 2: Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.&#xA;Note 3: Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.&#xA;It includes also exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILabTechnique"/>
+      </reference>
+      <name value="eHDSI Laboratory Technique"/>
+      <description value="This Value Set is used to encode laboratory technique for the result measurement"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILabTechniqueWithExceptions"/>
+      </reference>
+      <name value="eHDSI Laboratory Technique with exceptions"/>
+      <description value="This Value Set is used to encode laboratory technique for the result measurement. It also includes exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILanguage"/>
+      </reference>
+      <name value="eHDSI Language"/>
+      <description value="The Value Set is used to identify the language the document will be written with."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIMedicalDevice"/>
+      </reference>
+      <name value="eHDSI Medical Device"/>
+      <description value="eHDSI Medical Device"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIMedicalDeviceWithExceptions"/>
+      </reference>
+      <name value="eHDSI Medical Device with exceptions"/>
+      <description value="eHDSI Medical Device. The Value Set contains exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIMicroorganism"/>
+      </reference>
+      <name value="eHDSI Microorganism"/>
+      <description value="eHDSI Morphologic Abnormality"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIMorphologicAbnormality"/>
+      </reference>
+      <name value="eHDSI Morphologic Abnormality"/>
+      <description value="The Value Set is used to code the morphological abnormalities of the anatomical location where the material is taken."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIMorphologicAbnormalityWithExceptions"/>
+      </reference>
+      <name value="eHDSI Morphologic Abnormality with exceptions"/>
+      <description value="The Value Set is used to code the morphological abnormalities of the anatomical location where the material is taken.&#xA;It also includes exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIObservationCategory"/>
+      </reference>
+      <name value="eHDSI Observation category"/>
+      <description value="This Value Set is used for the Laboratory Observation Results Category code"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIObservationInterpretation"/>
+      </reference>
+      <name value="eHDSI Observation Interpretation"/>
+      <description value="This Value Set is used for a rough qualitative interpretation of the Laboratory Observation Results"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIObservationInterpretationWithExceptions"/>
+      </reference>
+      <name value="eHDSI Observation Interpretation with exceptions"/>
+      <description value="This Value Set is used for a rough qualitative interpretation of the Laboratory Observation Results.&#xA;It also includes exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIOrderReason"/>
+      </reference>
+      <name value="eHDSI Order Reason"/>
+      <description value="The Value Set is used to code clinical conditions relevant for the laboratory results interpretation.&#xA;It is defined as the union of:&#xA;(a) EHDSIIllnessandDisorder&#xA;(b) EHDSIRareDisease&#xA;(c) EHDSIReactionAllergy&#xA;(d) EHDSIExceptionalValue"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIPerformerFunction"/>
+      </reference>
+      <name value="eHDSI Performer Function"/>
+      <description value="Laboratory Performer Function"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIPresenceAbsence"/>
+      </reference>
+      <name value="eHDSI Presence Absence"/>
+      <description value="The Value Set is used to describe presence and absence findings (qualifier values) of the Laboratory Test Results"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIRareDisease"/>
+      </reference>
+      <name value="eHDSI Rare Disease"/>
+      <description value="The Value Set is used to describe the problems and medication reasons."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIReactionAllergy"/>
+      </reference>
+      <name value="eHDSI Reaction Allergy"/>
+      <description value="Value Set is used to encode clinical manifestation of the allergic reaction."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIReferenceRangeAppliesTo"/>
+      </reference>
+      <name value="eHDSI Reference Range Applies To"/>
+      <description value="This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIReferenceRangeAppliesToWithExceptions"/>
+      </reference>
+      <name value="eHDSI Reference Range Applies To with exceptions"/>
+      <description value="This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to. It also includes exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIReferenceRangeMeaning"/>
+      </reference>
+      <name value="eHDSI Reference Range Meaning"/>
+      <description value="This value set defines a set of codes for a reference range qualifier"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIReferenceRangeMeaningWithExceptions"/>
+      </reference>
+      <name value="eHDSI Reference Range Meaning with exceptions"/>
+      <description value="This value set defines a set of codes for a reference range qualifier. It also includes exceptional values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIResultsCodedValueLaboratory"/>
+      </reference>
+      <name value="eHDSI Results Coded Value Laboratory with exceptions"/>
+      <description value="The Value Set is used to code the value of laboratory observation result.&#xA;It is defined as the union of:&#xA;(a) eHDSIBloodGroup&#xA;(b) eHDSIPresenceAbsence&#xA;(c) eHDSIMicroorganism&#xA;(d) eHDSIExceptionalValue"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSIUnit"/>
+      </reference>
+      <name value="eHDSI Unit"/>
+      <description value="eHDSI Unit"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mvc"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/HumanName-obl-lab-myhealtheu"/>
+      </reference>
+      <name value="Human Name Obligations"/>
+      <description value="Specify the functional capabilities that the defined actors may, should or shall applied to the Human Name profile elements."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="obligations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/eHDSILaboratoryReportType"/>
+      </reference>
+      <name value="Laboratory Report Type"/>
+      <description value="Laboratory Report Type"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-obl-lab-myhealtheu"/>
+      </reference>
+      <name value="Observation Obligations"/>
+      <description value="Specify the functional capabilities that the defined actors may, should or shall applied to the Observation profile elements."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="obligations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-resultslab-lab-myhealtheu"/>
+      </reference>
+      <name value="Observation Results: Laboratory"/>
+      <description value="This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the purpose of this guide.&#xA;This observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and or a global interpretation by the producer of the study, in the comment element; and references the atomic results of the study as &quot;has-member&quot; child observations."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/SampleBloodGroupObservation"/>
+      </reference>
+      <name value="Observation: Blood Group"/>
+      <description value="Observation: example of Blood Group result"/>
+      <exampleCanonical value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-resultslab-lab-myhealtheu"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/d29b286d-b99c-410f-af4e-9455ea49d0af"/>
+      </reference>
+      <name value="Observation: Ratio example"/>
+      <description value="Observation: example with ratio result and test kit specified"/>
+      <exampleCanonical value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-resultslab-lab-myhealtheu"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Organization-eu-myhealth-eu"/>
+      </reference>
+      <name value="Organization: Laboratory"/>
+      <description value="This profile defines how to represent Organizations in HL7 FHIR for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Patient-obl-lab-myhealtheu"/>
+      </reference>
+      <name value="Patient Obligations"/>
+      <description value="Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="obligations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/SamplePatient"/>
+      </reference>
+      <name value="Patient: example"/>
+      <description value="Patient: example"/>
+      <exampleCanonical value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-lab-myhealtheu"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Patient-lab-myhealtheu"/>
+      </reference>
+      <name value="Patient: Laboratory"/>
+      <description value="This profile defines how to represent Patients in HL7 FHIR for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Patient-minimal-myhealtheu"/>
+      </reference>
+      <name value="Patient: Minimal"/>
+      <description value="This profile defines the minimal data set returned by the Myhealth@EU patient 'identification' service"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Practitioner-eu-myhealth-eu"/>
+      </reference>
+      <name value="Practitioner: Laboratory"/>
+      <description value="This profile defines how to represent Practitioners in HL7 FHIR for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PractitionerRole-eu-myhealth-eu"/>
+      </reference>
+      <name value="PractitionerRole: Laboratory"/>
+      <description value="This profile defines how to represent Practitioners (with thier roles) in HL7 FHIR for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Quantity-lab-myhealtheu"/>
+      </reference>
+      <name value="Quantity: Laboratory"/>
+      <description value="This profile of the Quantity data type constraints the Quantity (Eu Lab) profile defining a core value set for UCUM. The Quantity (Eu Lab) imposes the usage of the UCUM as the code system for units and allows expressing uncertainty of measurement."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ratio-lab-myhealtheu"/>
+      </reference>
+      <name value="Ratio: Laboratory"/>
+      <description value="This profile of the Ratio data type constraints the Ratio (Eu Lab) profile defining a core value set for UCUM. The Ratio (Eu Lab) imposes the usage of the UCUM as the code system for units and allows expressing uncertainty of measurement."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ServiceRequest-obl-lab-myhealtheu"/>
+      </reference>
+      <name value="ServiceRequest Obligations"/>
+      <description value="Specify the functional capabilities that the defined actors may, should or shall applied to the ServiceRequest profile elements."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="obligations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/SampleServiceRequest"/>
+      </reference>
+      <name value="ServiceRequest: example"/>
+      <description value="ServiceRequest: example of Hemoglobin and Hematocrit panel order"/>
+      <exampleCanonical value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-lab-myhealtheu"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ServiceRequest-lab-myhealtheu"/>
+      </reference>
+      <name value="ServiceRequest: Laboratory"/>
+      <description value="This profile defines how to represent a Laboratory Order in HL7 FHIR for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Specimen-obl-lab-myhealtheu"/>
+      </reference>
+      <name value="Specimen Obligations"/>
+      <description value="Specify the functional capabilities that the defined actors may, should or shall applied to the Specimen profile elements."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="obligations"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/SampleSpecimen"/>
+      </reference>
+      <name value="Specimen: bodyStructure example"/>
+      <description value="Specimen: example of Blood specimen with BodyStructure specified"/>
+      <exampleCanonical value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-lab-myhealtheu"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/Specimen-device-example"/>
+      </reference>
+      <name value="Specimen: device subject"/>
+      <description value="Specimen: example of device subject"/>
+      <exampleCanonical value="http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-lab-myhealtheu"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Specimen-lab-myhealtheu"/>
+      </reference>
+      <name value="Specimen: Laboratory"/>
+      <description value="This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Introducción"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="consultaReferenciasROL-A.html"/>
+        </extension>
+        <nameUrl value="consultaReferenciasROL-A.html"/>
+        <title value="Transfronterizo - ROL A Consulta de referencias de informes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="consultaDocuEstructuradoROL-A.html"/>
+        </extension>
+        <nameUrl value="consultaDocuEstructuradoROL-A.html"/>
+        <title value="Transfronterizo - ROL A Consulta de documento estructurado"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="consultaPacienteROL-B.html"/>
+        </extension>
+        <nameUrl value="consultaPacienteROL-B.html"/>
+        <title value="Transfronterizo - ROL B Consulta de Paciente"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="consultaReferenciasROL-B.html"/>
+        </extension>
+        <nameUrl value="consultaReferenciasROL-B.html"/>
+        <title value="Transfronterizo - ROL B Consulta de referencias de informes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="consultaDocuEstructuradoROL-B.html"/>
+        </extension>
+        <nameUrl value="consultaDocuEstructuradoROL-B.html"/>
+        <title value="Transfronterizo - ROL B Consulta de documento"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="ConsultaCiudadanoTransfronterizoCUROL-A.html"/>
+        </extension>
+        <nameUrl value="ConsultaCiudadanoTransfronterizoCUROL-A.html"/>
+        <title value="Transfronterizo - ROL A Consulta de un ciudadano desde servicio transfronterizo"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="consultaReferenciasCUROL-A.html"/>
+        </extension>
+        <nameUrl value="consultaReferenciasCUROL-A.html"/>
+        <title value="Transfronterizo - ROL A Consulta de referencias de informes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="consultaDocuEstructuradoCUROL-A.html"/>
+        </extension>
+        <nameUrl value="consultaDocuEstructuradoCUROL-A.html"/>
+        <title value="Transfronterizo - ROL A Consulta de documento estructurado"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="consultaPacienteCUROL-B.html"/>
+        </extension>
+        <nameUrl value="consultaPacienteCUROL-B.html"/>
+        <title value="Transfronterizo - ROL B Consulta de Paciente"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="consultaReferenciasCUROL-B.html"/>
+        </extension>
+        <nameUrl value="consultaReferenciasCUROL-B.html"/>
+        <title value="Transfronterizo - ROL B Consulta de referencias de informes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="consultaDocuEstructuradoCUROL-B.html"/>
+        </extension>
+        <nameUrl value="consultaDocuEstructuradoCUROL-B.html"/>
+        <title value="Transfronterizo - ROL B Consulta de documento estructurado"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="auditoriaOperacionesCU.html"/>
+        </extension>
+        <nameUrl value="auditoriaOperacionesCU.html"/>
+        <title value="Transfronterizo - Auditoría de operaciones"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="mapeo.html"/>
+        </extension>
+        <nameUrl value="mapeo.html"/>
+        <title value="Mapeos"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="terminologias.html"/>
+        </extension>
+        <nameUrl value="terminologias.html"/>
+        <title value="Terminologías"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="seguridad.html"/>
+        </extension>
+        <nameUrl value="seguridad.html"/>
+        <title value="Seguridad"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="diagramaSecInf.html"/>
+        </extension>
+        <nameUrl value="diagramaSecInf.html"/>
+        <title value="Busqueda de Pacientes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="diagramaSecPac.html"/>
+        </extension>
+        <nameUrl value="diagramaSecPac.html"/>
+        <title value="Funcionamiento roles"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

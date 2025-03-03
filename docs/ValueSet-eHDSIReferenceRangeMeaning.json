@@ -1,0 +1,85 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "eHDSIReferenceRangeMeaning",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet eHDSIReferenceRangeMeaning</b></p><a name=\"eHDSIReferenceRangeMeaning\"> </a><a name=\"hceHDSIReferenceRangeMeaning\"> </a><a name=\"eHDSIReferenceRangeMeaning-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html\"><code>http://terminology.hl7.org/CodeSystem/referencerange-meaning</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-normal\">normal</a></td><td>Normal Range</td><td>Values expected for a normal member of the relevant control population being measured. Typically each results producer such as a laboratory has specific normal ranges and they are usually defined as within two standard deviations from the mean and account for 95.45% of this population.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-recommended\">recommended</a></td><td>Recommended Range</td><td>The range that is recommended by a relevant professional body.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-treatment\">treatment</a></td><td>Treatment Range</td><td>The range at which treatment would/should be considered.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-therapeutic\">therapeutic</a></td><td>Therapeutic Desired Level</td><td>The optimal range for best therapeutic outcomes.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-pre-puberty\">pre-puberty</a></td><td>Pre-Puberty</td><td>An expected range in an individual prior to puberty.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-follicular\">follicular</a></td><td>Follicular Stage</td><td>An expected range in an individual during the follicular stage of the cycle.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-midcycle\">midcycle</a></td><td>MidCycle</td><td>An expected range in an individual during the midcycle stage of the cycle.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-luteal\">luteal</a></td><td>Luteal</td><td>An expected range in an individual during the luteal stage of the cycle.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-postmenopausal\">postmenopausal</a></td><td>Post-Menopause</td><td>An expected range in an individual post-menopause.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-pre\">pre</a></td><td>Pre Therapeutic Desired Level</td><td>The optimal range for best therapeutic outcomes for a specimen taken immediately before administration.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-referencerange-meaning.html#referencerange-meaning-post\">post</a></td><td>Post Therapeutic Desired Level</td><td>The optimal range for best therapeutic outcomes for a specimen taken immediately after administration.</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "draft"
+  }],
+  "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeMeaning",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.42.74"
+  }],
+  "version" : "0.0.1",
+  "name" : "EHDSIReferenceRangeMeaning",
+  "title" : "eHDSI Reference Range Meaning",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-03-03T08:58:37+01:00",
+  "publisher" : "SNS",
+  "contact" : [{
+    "name" : "SNS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://sns.gob.es"
+    }]
+  }],
+  "description" : "This value set defines a set of codes for a reference range qualifier",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+      "concept" : [{
+        "code" : "normal",
+        "display" : "Normal Range"
+      },
+      {
+        "code" : "recommended",
+        "display" : "Recommended Range"
+      },
+      {
+        "code" : "treatment",
+        "display" : "Treatment Range"
+      },
+      {
+        "code" : "therapeutic",
+        "display" : "Therapeutic Desired Level"
+      },
+      {
+        "code" : "pre-puberty",
+        "display" : "Pre-Puberty"
+      },
+      {
+        "code" : "follicular",
+        "display" : "Follicular Stage"
+      },
+      {
+        "code" : "midcycle",
+        "display" : "MidCycle"
+      },
+      {
+        "code" : "luteal",
+        "display" : "Luteal"
+      },
+      {
+        "code" : "postmenopausal",
+        "display" : "Post-Menopause"
+      },
+      {
+        "code" : "pre",
+        "display" : "Pre Therapeutic Desired Level"
+      },
+      {
+        "code" : "post",
+        "display" : "Post Therapeutic Desired Level"
+      }]
+    }]
+  }
+}

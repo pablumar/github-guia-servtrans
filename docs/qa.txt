@@ -1,0 +1,324 @@
+ServiciosTransfronterizosIG : Validation Results
+=========================================
+
+err = 31, warn = 17, info = 33
+IG Publisher Version: 1.8.13 Out of date - current version is 1.8.15
+Generated Mon Mar 03 09:18:23 CET 2025. FHIR version 4.0.1 for servtrans.sns.implementationGuide#0.0.1 (canonical = http://fhir.ehdsi.eu/laboratory)
+ Build Errors : 32 / 5 / 0
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ActorDefinition-actor-consumer-eu-lab : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ActorDefinition-actor-creator-eu-lab : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ActorDefinition-actor-handler-eu-lab : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ActorDefinition-actor-repos-eu-lab : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\Bundle-BundleLabResultReportPOC : 1 / 2 / 28
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\Composition-SampleComposition : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ConceptMap-author2FHIR-lab-myhealtheu : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ConceptMap-labRpt2FHIR-lab-myhealtheu : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ConceptMap-legalAuth2FHIR-lab-myhealtheu : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ConceptMap-order2FHIR-lab-myhealtheu : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ConceptMap-payer2FHIR-lab-myhealtheu : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ConceptMap-recipient2FHIR-lab-myhealtheu : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ConceptMap-result2FHIR-lab-myhealtheu : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ConceptMap-specimen2FHIR-lab-myhealtheu : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ConceptMap-subject2FHIR-lab-myhealtheu : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ConceptMap-validator2FHIR-lab-myhealtheu : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\DiagnosticReport-SampleDiagnosticReport : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\DocumentReference-SimpleChemistryResultDocRef : 1 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ImplementationGuide-servtrans.sns.implementationGuide : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\Observation-SampleBloodGroupObservation : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\Observation-d29b286d-b99c-410f-af4e-9455ea49d0af : 0 / 0 / 5
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\Patient-SamplePatient : 0 / 0 / 4
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ServiceRequest-SampleServiceRequest : 0 / 0 / 3
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\Specimen-SampleSpecimen : 1 / 0 / 3
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\Specimen-Specimen-device-example : 0 / 0 / 3
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Author : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-BodyStructure-lab-myhealtheu : 0 / 0 / 3
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Bundle-lab-myhealtheu : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Composition-lab-myhealtheu : 0 / 0 / 3
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Coverage-lab-myhealtheu : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Device-measuring-lab-myhealtheu : 0 / 0 / 4
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Device-specimen-lab-myhealtheu : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-DiagnosticReport-lab-myhealtheu : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-DocumentReference-minimal-myhealtheu : 0 / 0 / 3
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-HumanName-obl-lab-myhealtheu : 0 / 1 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-LabReport : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-LegalAuthenticator : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Observation-obl-lab-myhealtheu : 0 / 1 / 3
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Observation-resultslab-lab-myhealtheu : 0 / 0 / 3
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Order : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Organization-eu-myhealth-eu : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Patient-lab-myhealtheu : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Patient-minimal-myhealtheu : 0 / 1 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Patient-obl-lab-myhealtheu : 0 / 1 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Payer : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Practitioner-eu-myhealth-eu : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-PractitionerRole-eu-myhealth-eu : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Quantity-lab-myhealtheu : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Ratio-lab-myhealtheu : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Recipient : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Result : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-ServiceRequest-lab-myhealtheu : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-ServiceRequest-obl-lab-myhealtheu : 0 / 1 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Specimen-lab-myhealtheu : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Specimen-obl-lab-myhealtheu : 0 / 1 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-SpecimenLab : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Subject : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\StructureDefinition-Validator : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIAnimalSpecies : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIAnimalSpeciesWithExceptions : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIBloodGroup : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIBodySite : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIBodySiteLaterality : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIBodySiteWithExceptions : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIBodyStructureLocation : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIBodyStructureLocationWithExceptions : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSICountry : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIExceptionalValue : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIHealthcareProfessionalRole : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIIllnessandDisorder : 1 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabCode : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabCodeWithExceptions : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabSpecimenType : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabSpecimenTypeWithExceptions : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabStudyType : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabStudyTypeWithExceptions : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabStudyTypes : 2 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabTechnique : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabTechniqueWithExceptions : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILaboratoryReportType : 0 / 1 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILaboratoryReportTypes : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILanguage : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIMedicalDevice : 0 / 1 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIMedicalDeviceWithExceptions : 0 / 1 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIMicroorganism : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIMorphologicAbnormality : 0 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIMorphologicAbnormalityWithExceptions : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIObservationCategory : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIObservationInterpretation : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIObservationInterpretationWithExceptions : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIOrderReason : 1 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIPerformerFunction : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIPresenceAbsence : 1 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIRareDisease : 1 / 0 / 2
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIReactionAllergy : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIReferenceRangeAppliesTo : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIReferenceRangeAppliesToWithExceptions : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIReferenceRangeMeaning : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIReferenceRangeMeaningWithExceptions : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIResultsCodedValueLaboratory : 0 / 0 / 1
+ C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIUnit : 0 / 1 / 1
+</table>
+== n/a ==
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\ConsultaCiudadanoTransfronterizoCUROL-A.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/p/img at Line 253, column 5: The image source 'media/image19.png' cannot be resolved
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\ConsultaCiudadanoTransfronterizoCUROL-A.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/p/img at Line 255, column 5: The image source 'media/image20.png' cannot be resolved
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\consultaDocuEstructuradoROL-A.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/p/a at Line 295, column 57: The link '#referencias' for "(Referencia 7)" cannot be resolved (valid targets: [transfronterizo-rol-a-consulta-de-documento-estructurado, ig-status, segment-header, top, publish-box, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\consultaDocuEstructuradoROL-B.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/p/a at Line 292, column 57: The link '#referencias' for "(Referencia 7)" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, transfronterizo-rol-b-consulta-de-documento, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\consultaPacienteROL-B.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/p/a at Line 294, column 47: The link '#referencias' for "(Referencia 6)" cannot be resolved (valid targets: [ig-status, transfronterizo-rol-b-consulta-de-paciente, segment-header, top, publish-box, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\consultaPacienteROL-B.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/p/a at Line 297, column 57: The link '#referencias' for "(Referencia 7)" cannot be resolved (valid targets: [ig-status, transfronterizo-rol-b-consulta-de-paciente, segment-header, top, publish-box, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\consultaReferenciasROL-A.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/p/a at Line 304, column 47: The link '#referencias' for "(Referencia 6)" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, bottom, stripe, transfronterizo-rol-a-consulta-de-referencias-de-informes, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\consultaReferenciasROL-A.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/p/a at Line 307, column 57: The link '#referencias' for "(Referencia 7)" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, bottom, stripe, transfronterizo-rol-a-consulta-de-referencias-de-informes, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\consultaReferenciasROL-B.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/p/a at Line 304, column 47: The link '#referencias' for "(Referencia 6)" cannot be resolved (valid targets: [ig-status, transfronterizo-rol-b-consulta-de-referencias-de-informes, segment-header, top, publish-box, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\consultaReferenciasROL-B.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/p/a at Line 307, column 57: The link '#referencias' for "(Referencia 7)" cannot be resolved (valid targets: [ig-status, transfronterizo-rol-b-consulta-de-referencias-de-informes, segment-header, top, publish-box, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\index.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/blockquote/p/img at Line 371, column 5: The image source 'media/image4.png' cannot be resolved
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\index.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/blockquote/p/img at Line 387, column 5: The image source 'media/image5.png' cannot be resolved
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 270, column 32: The link '#identificadores' for "identifier" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 276, column 32: The link '#identificadores' for "identifier" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 282, column 32: The link '#identificadores' for "identifier" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 288, column 32: The link '#identificadores' for "identifier" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 302, column 32: The link '#extensiones' for "Name extension fathersFamily" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 309, column 32: The link '#extensiones' for "Name extension mothersFamily" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 321, column 32: The link '#extensiones' for "Extension patient-birth-community" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 334, column 46: The link '#identificadores' for "Identifier (CIP)" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 350, column 32: The link '#extensiones' for "Extension patient-adscription-community" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 357, column 32: The link '#extensiones' for "Extension patient-birth-country" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 371, column 32: The link '#extensiones' for "Extensión patient-pharmacy-indicator" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 378, column 32: The link '#extensiones' for "Extension patient-pharmacy-subindicator" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 458, column 32: The link '#extensiones' for "Extension patient-birth-country" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 471, column 32: The link '#extensiones' for "Extension patient-nationality" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 574, column 32: The link '#extensiones' for "Extensión patient-coverage-insurance " cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 582, column 32: The link '#extensiones' for "Extensión patient-coverage-mgt" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 589, column 32: The link '#extensiones' for "Extensión patient-coverage-entities" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 597, column 32: The link '#extensiones' for "Extensión patient-coverage-providers" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 611, column 32: The link '#extensiones' for "Extensión  patient-coverage-title" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\output\mapeo.html#/html/body/div/div/div/table/tr/td/img/div/div/div/div/div/table/tbody/tr/td/a at Line 618, column 32: The link '#extensiones' for "Extension patient-coverage-situation" cannot be resolved (valid targets: [ig-status, segment-header, top, publish-box, mapeos, bottom, stripe, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+WARNING: IG: The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
+== fsh-generated\resources\ActorDefinition-actor-consumer-eu-lab.json ==
+INFORMATION: Resource: The resource ActorDefinition/actor-consumer-eu-lab could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated\resources\ActorDefinition-actor-creator-eu-lab.json ==
+INFORMATION: Resource: The resource ActorDefinition/actor-creator-eu-lab could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated\resources\ActorDefinition-actor-handler-eu-lab.json ==
+INFORMATION: Resource: The resource ActorDefinition/actor-handler-eu-lab could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated\resources\ActorDefinition-actor-repos-eu-lab.json ==
+INFORMATION: Resource: The resource ActorDefinition/actor-repos-eu-lab could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated\resources\Bundle-BundleLabResultReportPOC.json ==
+ERROR: Bundle/BundleLabResultReportPOC: Bundle.entry[1].resource/*DiagnosticReport/Inline-Diagnostic-Report-lab-report*/.extension[0].value.ofType(Reference): Tipo de Recurso Destino Inválido. Se encontró DiagnosticReport, pero se esperaba uno de ([Composition])
+INFORMATION: Bundle/BundleLabResultReportPOC: Bundle.entry[5].resource/*Organization/ce122b36-f942-4cee-8c6d-b13ece8cf23c*/.address[0].line[0].extension[0]: !!Este elemento no coincide con ninguna partición conocida defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/Address-eu|0.1.0
+WARNING: Bundle/BundleLabResultReportPOC: Bundle.entry[9]: Entry 'urn:uuid:f5d20fe5-6d14-46de-80ea-8124f427a754' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+WARNING: Bundle/BundleLabResultReportPOC: Bundle.entry[9]: Entry 'urn:uuid:2e861278-2e99-4ffa-befa-049467a095b2' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+== fsh-generated\resources\Composition-SampleComposition.json ==
+== fsh-generated\resources\ConceptMap-author2FHIR-lab-myhealtheu.json ==
+ERROR: ConceptMap/author2FHIR-lab-myhealtheu: ConceptMap.source: Reference must be to a ValueSet, but found a StructureDefinition instead
+ERROR: ConceptMap/author2FHIR-lab-myhealtheu: ConceptMap.target: Reference must be to a ValueSet, but found a StructureDefinition instead
+== fsh-generated\resources\ConceptMap-labRpt2FHIR-lab-myhealtheu.json ==
+ERROR: ConceptMap/labRpt2FHIR-lab-myhealtheu: ConceptMap.source: Reference must be to a ValueSet, but found a StructureDefinition instead
+ERROR: ConceptMap/labRpt2FHIR-lab-myhealtheu: ConceptMap.target: Reference must be to a ValueSet, but found a StructureDefinition instead
+== fsh-generated\resources\ConceptMap-legalAuth2FHIR-lab-myhealtheu.json ==
+ERROR: ConceptMap/legalAuth2FHIR-lab-myhealtheu: ConceptMap.source: Reference must be to a ValueSet, but found a StructureDefinition instead
+ERROR: ConceptMap/legalAuth2FHIR-lab-myhealtheu: ConceptMap.target: Reference must be to a ValueSet, but found a StructureDefinition instead
+== fsh-generated\resources\ConceptMap-order2FHIR-lab-myhealtheu.json ==
+ERROR: ConceptMap/order2FHIR-lab-myhealtheu: ConceptMap.source: Reference must be to a ValueSet, but found a StructureDefinition instead
+ERROR: ConceptMap/order2FHIR-lab-myhealtheu: ConceptMap.target: Reference must be to a ValueSet, but found a StructureDefinition instead
+== fsh-generated\resources\ConceptMap-payer2FHIR-lab-myhealtheu.json ==
+ERROR: ConceptMap/payer2FHIR-lab-myhealtheu: ConceptMap.source: Reference must be to a ValueSet, but found a StructureDefinition instead
+ERROR: ConceptMap/payer2FHIR-lab-myhealtheu: ConceptMap.target: Reference must be to a ValueSet, but found a StructureDefinition instead
+== fsh-generated\resources\ConceptMap-recipient2FHIR-lab-myhealtheu.json ==
+ERROR: ConceptMap/recipient2FHIR-lab-myhealtheu: ConceptMap.source: Reference must be to a ValueSet, but found a StructureDefinition instead
+ERROR: ConceptMap/recipient2FHIR-lab-myhealtheu: ConceptMap.target: Reference must be to a ValueSet, but found a StructureDefinition instead
+== fsh-generated\resources\ConceptMap-result2FHIR-lab-myhealtheu.json ==
+ERROR: ConceptMap/result2FHIR-lab-myhealtheu: ConceptMap.source: Reference must be to a ValueSet, but found a StructureDefinition instead
+ERROR: ConceptMap/result2FHIR-lab-myhealtheu: ConceptMap.target: Reference must be to a ValueSet, but found a StructureDefinition instead
+== fsh-generated\resources\ConceptMap-specimen2FHIR-lab-myhealtheu.json ==
+ERROR: ConceptMap/specimen2FHIR-lab-myhealtheu: ConceptMap.source: Reference must be to a ValueSet, but found a StructureDefinition instead
+ERROR: ConceptMap/specimen2FHIR-lab-myhealtheu: ConceptMap.target: Reference must be to a ValueSet, but found a StructureDefinition instead
+== fsh-generated\resources\ConceptMap-subject2FHIR-lab-myhealtheu.json ==
+ERROR: ConceptMap/subject2FHIR-lab-myhealtheu: ConceptMap.source: Reference must be to a ValueSet, but found a StructureDefinition instead
+ERROR: ConceptMap/subject2FHIR-lab-myhealtheu: ConceptMap.target: Reference must be to a ValueSet, but found a StructureDefinition instead
+== fsh-generated\resources\ConceptMap-validator2FHIR-lab-myhealtheu.json ==
+ERROR: ConceptMap/validator2FHIR-lab-myhealtheu: ConceptMap.source: Reference must be to a ValueSet, but found a StructureDefinition instead
+ERROR: ConceptMap/validator2FHIR-lab-myhealtheu: ConceptMap.target: Reference must be to a ValueSet, but found a StructureDefinition instead
+== fsh-generated\resources\DiagnosticReport-SampleDiagnosticReport.json ==
+== fsh-generated\resources\DocumentReference-SimpleChemistryResultDocRef.json ==
+ERROR: DocumentReference/SimpleChemistryResultDocRef: DocumentReference.subject: Incapaz de resolver el recurso con la referencia 'urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8'
+== fsh-generated\resources\ImplementationGuide-servtrans.sns.implementationGuide.json ==
+== fsh-generated\resources\Observation-SampleBloodGroupObservation.json ==
+== fsh-generated\resources\Observation-d29b286d-b99c-410f-af4e-9455ea49d0af.json ==
+== fsh-generated\resources\Patient-SamplePatient.json ==
+== fsh-generated\resources\ServiceRequest-SampleServiceRequest.json ==
+== fsh-generated\resources\Specimen-SampleSpecimen.json ==
+ERROR: Specimen/SampleSpecimen: Specimen.collection: La extensión http://hl7.org/fhir/StructureDefinition/bodySite no está permitida en este punto (permitido = e:Condition.bodySite, e:Observation.bodySite, e:Procedure.bodySite, e:MedicationAdministration.dose, e:Dosage.site; este elemento es [BackboneElement, Specimen.collection])
+== fsh-generated\resources\Specimen-Specimen-device-example.json ==
+== fsh-generated\resources\StructureDefinition-Author.json ==
+== fsh-generated\resources\StructureDefinition-BodyStructure-lab-myhealtheu.json ==
+INFORMATION: StructureDefinition/BodyStructure-lab-myhealtheu: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+INFORMATION: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/BodyStructure-lab-myhealtheu'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-Bundle-lab-myhealtheu.json ==
+== fsh-generated\resources\StructureDefinition-Composition-lab-myhealtheu.json ==
+INFORMATION: StructureDefinition/Composition-lab-myhealtheu: Composition.extension: The extension http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber|5.2.0 is deprecated
+INFORMATION: StructureDefinition/Composition-lab-myhealtheu: StructureDefinition.snapshot.element[35].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+== fsh-generated\resources\StructureDefinition-Coverage-lab-myhealtheu.json ==
+INFORMATION: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/Coverage-lab-myhealtheu'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-Device-measuring-lab-myhealtheu.json ==
+INFORMATION: StructureDefinition/Device-measuring-lab-myhealtheu: StructureDefinition.differential.element[3].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/Device-measuring-lab-myhealtheu: StructureDefinition.snapshot.element[29].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/Device-measuring-lab-myhealtheu'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-Device-specimen-lab-myhealtheu.json ==
+INFORMATION: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/Device-specimen-lab-myhealtheu'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-DiagnosticReport-lab-myhealtheu.json ==
+INFORMATION: StructureDefinition/DiagnosticReport-lab-myhealtheu: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+== fsh-generated\resources\StructureDefinition-DocumentReference-minimal-myhealtheu.json ==
+INFORMATION: StructureDefinition/DocumentReference-minimal-myhealtheu: StructureDefinition.differential.element[6].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/DocumentReference-minimal-myhealtheu: StructureDefinition.snapshot.element[14].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+== fsh-generated\resources\StructureDefinition-HumanName-obl-lab-myhealtheu.json ==
+INFORMATION: StructureDefinition/HumanName-obl-lab-myhealtheu: StructureDefinition.snapshot.element[10].type[0].extension[1]: The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex
+WARNING: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/HumanName-obl-lab-myhealtheu'): The Implementation Guide contains no examples for this data type profile
+== fsh-generated\resources\StructureDefinition-LabReport.json ==
+== fsh-generated\resources\StructureDefinition-LegalAuthenticator.json ==
+== fsh-generated\resources\StructureDefinition-Observation-obl-lab-myhealtheu.json ==
+INFORMATION: StructureDefinition/Observation-obl-lab-myhealtheu: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
+INFORMATION: StructureDefinition/Observation-obl-lab-myhealtheu: StructureDefinition.snapshot.element[42].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+WARNING: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/Observation-obl-lab-myhealtheu'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-Observation-resultslab-lab-myhealtheu.json ==
+INFORMATION: StructureDefinition/Observation-resultslab-lab-myhealtheu: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
+INFORMATION: StructureDefinition/Observation-resultslab-lab-myhealtheu: StructureDefinition.snapshot.element[42].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+== fsh-generated\resources\StructureDefinition-Order.json ==
+== fsh-generated\resources\StructureDefinition-Organization-eu-myhealth-eu.json ==
+INFORMATION: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/Organization-eu-myhealth-eu'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-Patient-lab-myhealtheu.json ==
+INFORMATION: StructureDefinition/Patient-lab-myhealtheu: Patient.address.country.extension: The extension http://hl7.org/fhir/StructureDefinition/iso21090-SC-coding|5.2.0 is deprecated with the note Replaced by [[[http://hl7.org/fhir/StructureDefinition/iso21090-codedString]]]
+== fsh-generated\resources\StructureDefinition-Patient-minimal-myhealtheu.json ==
+WARNING: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-minimal-myhealtheu'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-Patient-obl-lab-myhealtheu.json ==
+WARNING: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/Patient-obl-lab-myhealtheu'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-Payer.json ==
+== fsh-generated\resources\StructureDefinition-Practitioner-eu-myhealth-eu.json ==
+INFORMATION: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/Practitioner-eu-myhealth-eu'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-PractitionerRole-eu-myhealth-eu.json ==
+INFORMATION: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/PractitionerRole-eu-myhealth-eu'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-Quantity-lab-myhealtheu.json ==
+== fsh-generated\resources\StructureDefinition-Ratio-lab-myhealtheu.json ==
+== fsh-generated\resources\StructureDefinition-Recipient.json ==
+== fsh-generated\resources\StructureDefinition-Result.json ==
+== fsh-generated\resources\StructureDefinition-ServiceRequest-lab-myhealtheu.json ==
+== fsh-generated\resources\StructureDefinition-ServiceRequest-obl-lab-myhealtheu.json ==
+WARNING: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/ServiceRequest-obl-lab-myhealtheu'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-Specimen-lab-myhealtheu.json ==
+== fsh-generated\resources\StructureDefinition-Specimen-obl-lab-myhealtheu.json ==
+WARNING: StructureDefinition.where(url = 'http://fhir.ehdsi.eu/laboratory/StructureDefinition/Specimen-obl-lab-myhealtheu'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-SpecimenLab.json ==
+== fsh-generated\resources\StructureDefinition-Subject.json ==
+== fsh-generated\resources\StructureDefinition-Validator.json ==
+== fsh-generated\resources\ValueSet-eHDSIAnimalSpecies.json ==
+== fsh-generated\resources\ValueSet-eHDSIAnimalSpeciesWithExceptions.json ==
+== fsh-generated\resources\ValueSet-eHDSIBloodGroup.json ==
+== fsh-generated\resources\ValueSet-eHDSIBodySite.json ==
+INFORMATION: ValueSet/eHDSIBodySite: ValueSet.compose.include[0]: The value set include has too many codes to validate (2.721), so each individual code has not been checked
+== fsh-generated\resources\ValueSet-eHDSIBodySiteLaterality.json ==
+== fsh-generated\resources\ValueSet-eHDSIBodySiteWithExceptions.json ==
+INFORMATION: ValueSet.where(id = 'eHDSIBodySiteWithExceptions'): The value set expansion is too large, and only a subset has been displayed
+== fsh-generated\resources\ValueSet-eHDSIBodyStructureLocation.json ==
+== fsh-generated\resources\ValueSet-eHDSIBodyStructureLocationWithExceptions.json ==
+== fsh-generated\resources\ValueSet-eHDSICountry.json ==
+== fsh-generated\resources\ValueSet-eHDSIExceptionalValue.json ==
+== fsh-generated\resources\ValueSet-eHDSIHealthcareProfessionalRole.json ==
+ERROR: ValueSet.where(url = 'http://terminology.ehdsi.eu/ValueSet/EHDSIHealthcareProfessionalRole'): Conformance resource C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIHealthcareProfessionalRole.json - the canonical URL (http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIHealthcareProfessionalRole) does not match the URL (http://terminology.ehdsi.eu/ValueSet/EHDSIHealthcareProfessionalRole)
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSIHealthcareProfessionalRole: URL Mismatch http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIHealthcareProfessionalRole vs http://terminology.ehdsi.eu/ValueSet/EHDSIHealthcareProfessionalRole
+== fsh-generated\resources\ValueSet-eHDSIIllnessandDisorder.json ==
+INFORMATION: ValueSet/eHDSIIllnessandDisorder: ValueSet.compose.include[0]: The value set include has too many codes to validate (14.158), so each individual code has not been checked
+ERROR: ValueSet.where(id = 'eHDSIIllnessandDisorder'): Error from http://tx.fhir.org/r4: The value set 'http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder|0.0.1' expansion took too long to process (>30sec)
+== fsh-generated\resources\ValueSet-eHDSILabCode.json ==
+== fsh-generated\resources\ValueSet-eHDSILabCodeWithExceptions.json ==
+== fsh-generated\resources\ValueSet-eHDSILabSpecimenType.json ==
+== fsh-generated\resources\ValueSet-eHDSILabSpecimenTypeWithExceptions.json ==
+== fsh-generated\resources\ValueSet-eHDSILabStudyType.json ==
+== fsh-generated\resources\ValueSet-eHDSILabStudyTypeWithExceptions.json ==
+== fsh-generated\resources\ValueSet-eHDSILabStudyTypes.json ==
+ERROR: ValueSet.where(url = 'http://fhir.ehdsi.eu/mvc/eHDSILabStudyTypes'): Conformance resource C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabStudyTypes.json - the canonical URL (http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabStudyTypes) does not match the URL (http://fhir.ehdsi.eu/mvc/eHDSILabStudyTypes)
+ERROR: C:\fhir\IGDockerizada\ServiciosTransfronterizosIGBackup\fsh-generated\resources\ValueSet-eHDSILabStudyTypes: URL Mismatch http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabStudyTypes vs http://fhir.ehdsi.eu/mvc/eHDSILabStudyTypes
+== fsh-generated\resources\ValueSet-eHDSILabTechnique.json ==
+== fsh-generated\resources\ValueSet-eHDSILabTechniqueWithExceptions.json ==
+== fsh-generated\resources\ValueSet-eHDSILaboratoryReportType.json ==
+WARNING: ValueSet/eHDSILaboratoryReportType: ValueSet: The resource status 'active' and the standards status 'draft' are not consistent
+== fsh-generated\resources\ValueSet-eHDSILaboratoryReportTypes.json ==
+== fsh-generated\resources\ValueSet-eHDSILanguage.json ==
+== fsh-generated\resources\ValueSet-eHDSIMedicalDevice.json ==
+INFORMATION: ValueSet/eHDSIMedicalDevice: ValueSet.compose.include[0]: The value set include has too many codes to validate (1.052), so each individual code has not been checked
+WARNING: ValueSet.where(id = 'eHDSIMedicalDevice'): Error from http://tx.fhir.org/r4: Unable to provide support for code system urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6
+== fsh-generated\resources\ValueSet-eHDSIMedicalDeviceWithExceptions.json ==
+WARNING: ValueSet.where(id = 'eHDSIMedicalDeviceWithExceptions'): Unable to expand included value set 'http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice': Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6 (and Error from http://tx.fhir.org/r4: Unable to provide support for code system urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6)
+== fsh-generated\resources\ValueSet-eHDSIMicroorganism.json ==
+INFORMATION: ValueSet/eHDSIMicroorganism: ValueSet.compose.include[0]: The value set include has too many codes to validate (1.630), so each individual code has not been checked
+== fsh-generated\resources\ValueSet-eHDSIMorphologicAbnormality.json ==
+INFORMATION: ValueSet/eHDSIMorphologicAbnormality: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Meningeal neoplasm (morphology), Crushing injury (morphology)] and examples for no FSN: [Catheter exit site, Pilonidal cyst, Morton's neuroma, Urine retention, Myelodysplastic neoplasm with low blasts])
+== fsh-generated\resources\ValueSet-eHDSIMorphologicAbnormalityWithExceptions.json ==
+== fsh-generated\resources\ValueSet-eHDSIObservationCategory.json ==
+== fsh-generated\resources\ValueSet-eHDSIObservationInterpretation.json ==
+== fsh-generated\resources\ValueSet-eHDSIObservationInterpretationWithExceptions.json ==
+== fsh-generated\resources\ValueSet-eHDSIOrderReason.json ==
+ERROR: ValueSet.where(id = 'eHDSIOrderReason'): Unable to expand included value set 'http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder': Unable to expand imported value set: Error from http://tx.fhir.org/r4: The value set '' expansion took too long to process (>30sec) (and closed)
+== fsh-generated\resources\ValueSet-eHDSIPerformerFunction.json ==
+== fsh-generated\resources\ValueSet-eHDSIPresenceAbsence.json ==
+ERROR: ValueSet.where(id = 'eHDSIPresenceAbsence'): tx.fhir.org
+== fsh-generated\resources\ValueSet-eHDSIRareDisease.json ==
+INFORMATION: ValueSet/eHDSIRareDisease: ValueSet.compose.include[0]: The value set include has too many codes to validate (7.325), so each individual code has not been checked
+ERROR: ValueSet.where(id = 'eHDSIRareDisease'): tx.fhir.org
+== fsh-generated\resources\ValueSet-eHDSIReactionAllergy.json ==
+== fsh-generated\resources\ValueSet-eHDSIReferenceRangeAppliesTo.json ==
+== fsh-generated\resources\ValueSet-eHDSIReferenceRangeAppliesToWithExceptions.json ==
+== fsh-generated\resources\ValueSet-eHDSIReferenceRangeMeaning.json ==
+== fsh-generated\resources\ValueSet-eHDSIReferenceRangeMeaningWithExceptions.json ==
+== fsh-generated\resources\ValueSet-eHDSIResultsCodedValueLaboratory.json ==
+== fsh-generated\resources\ValueSet-eHDSIUnit.json ==
+WARNING: ValueSet/eHDSIUnit: ValueSet.compose.include[0].concept[725]: !!El código Torr no es válido en el sistema http://unitsofmeasure.org

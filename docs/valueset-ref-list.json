@@ -1,0 +1,642 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIAnimalSpeciesWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIAnimalSpeciesWithExceptions",
+      "title" : "eHDSI Animal Species with exceptions",
+      "description" : "The Value Set is used to code the animal species of specimen subject (animal of the patient). It also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ]
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIBodySiteWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBodySiteWithExceptions",
+      "title" : "eHDSI Body Site with exceptions",
+      "description" : "The Value Set is used for the details about the anatomical location of a specimen in the Laboratory Result Report or the target body location of a procedure in the Patient Summary.\nIt includes also exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory",
+      "StructureDefinition-BodyStructure-lab-myhealtheu.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIBodyStructureLocationWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBodyStructureLocationWithExceptions",
+      "title" : "eHDSI Body Structure Location Qualifier with exceptions",
+      "description" : "This Value Set is used for the body structure location qualifier. Concepts modifying the anatomic location.\nIt also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructure-lab-myhealtheu.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabCodeWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabCodeWithExceptions",
+      "title" : "eHDSI Laboratory Codes with exceptions",
+      "description" : "This Value Set is used for the standard laboratory codes.\nIt also includes exceptional values.",
+      "systems" : [
+        "http://loinc.org",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory",
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabSpecimenTypeWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabSpecimenTypeWithExceptions",
+      "title" : "eHDSI Laboratory Specimen Type with exceptions",
+      "description" : "This Value Set is used for the kind of material that forms the specimen.\nIt also includes exceptional values",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-lab-myhealtheu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabStudyTypeWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabStudyTypeWithExceptions",
+      "title" : "eHDSI Laboratory Study Types with exceptions",
+      "description" : "eHDSI Laboratory Study Types. \nNotes:\nNote 1: 26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2: Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3: Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.\nIt includes also exceptional values.",
+      "systems" : [
+        "http://loinc.org",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILabTechniqueWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabTechniqueWithExceptions",
+      "title" : "eHDSI Laboratory Technique with exceptions",
+      "description" : "This Value Set is used to encode laboratory technique for the result measurement. It also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSILaboratoryReportType",
+      "version" : "0.0.1",
+      "status" : "active",
+      "name" : "EHDSILaboratoryReportType",
+      "title" : "Laboratory Report Type",
+      "description" : "Laboratory Report Type",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.52"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.52"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIMedicalDeviceWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIMedicalDeviceWithExceptions",
+      "title" : "eHDSI Medical Device with exceptions",
+      "description" : "eHDSI Medical Device. The Value Set contains exceptional values.",
+      "systems" : [
+        "urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Device-specimen-lab-myhealtheu.html" : "Device: specimen subject"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIMorphologicAbnormalityWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIMorphologicAbnormalityWithExceptions",
+      "title" : "eHDSI Morphologic Abnormality with exceptions",
+      "description" : "The Value Set is used to code the morphological abnormalities of the anatomical location where the material is taken.\nIt also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructure-lab-myhealtheu.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIObservationInterpretationWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIObservationInterpretationWithExceptions",
+      "title" : "eHDSI Observation Interpretation with exceptions",
+      "description" : "This Value Set is used for a rough qualitative interpretation of the Laboratory Observation Results.\nIt also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIOrderReason",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIOrderReason",
+      "title" : "eHDSI Order Reason",
+      "description" : "The Value Set is used to code clinical conditions relevant for the laboratory results interpretation.\nIt is defined as the union of:\n(a) EHDSIIllnessandDisorder\n(b) EHDSIRareDisease\n(c) EHDSIReactionAllergy\n(d) EHDSIExceptionalValue",
+      "systems" : [
+        "urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.5",
+        "http://hl7.org/fhir/sid/icd-10",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-lab-myhealtheu.html" : "ServiceRequest: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIReferenceRangeAppliesToWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIReferenceRangeAppliesToWithExceptions",
+      "title" : "eHDSI Reference Range Applies To with exceptions",
+      "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to. It also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIReferenceRangeMeaningWithExceptions",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIReferenceRangeMeaningWithExceptions",
+      "title" : "eHDSI Reference Range Meaning with exceptions",
+      "description" : "This value set defines a set of codes for a reference range qualifier. It also includes exceptional values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/laboratory/ValueSet/eHDSIResultsCodedValueLaboratory",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIResultsCodedValueLaboratory",
+      "title" : "eHDSI Results Coded Value Laboratory with exceptions",
+      "description" : "The Value Set is used to code the value of laboratory observation result.\nIt is defined as the union of:\n(a) eHDSIBloodGroup\n(b) eHDSIPresenceAbsence\n(c) eHDSIMicroorganism\n(d) eHDSIExceptionalValue",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://fhir.ehdsi.eu/mvc/eHDSILabStudyTypes",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabStudyTypes",
+      "title" : "eHDSI Laboratory Study Types",
+      "description" : "eHDSI Laboratory Study Types. \nNotes:\nNote 1: 26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2: Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3: Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.66"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.66"]
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/EHDSIHealthcareProfessionalRole",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIHealthcareProfessionalRole",
+      "title" : "eHDSI Healthcare Professional Role",
+      "description" : "This Value Set is used to define Healthcare Professional Role",
+      "systems" : ["urn:oid:2.16.840.1.113883.2.9.6.2.7"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.1"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.1"],
+      "uses" : {
+      },
+      "StructureDefinition-PractitionerRole-eu-myhealth-eu.html" : "PractitionerRole: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIAnimalSpecies",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIAnimalSpecies",
+      "title" : "eHDSI Animal Species",
+      "description" : "The Value Set is used to code the animal species of specimen subject (animal of the patient)",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.72"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.72"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIAnimalSpeciesWithExceptions.html" : "eHDSI Animal Species with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBloodGroup",
+      "title" : "eHDSI Blood Group",
+      "description" : "The Value Set is used to code the value of patient's blood group + Rh",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.20"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.20"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIResultsCodedValueLaboratory.html" : "eHDSI Results Coded Value Laboratory with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBodySite",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBodySite",
+      "title" : "eHDSI Body Site",
+      "description" : "The Value Set is used for the details about the anatomical location of a specimen in the Laboratory Result Report or the target body location of a procedure in the Patient Summary.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.65"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.65"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIBodySiteWithExceptions.html" : "eHDSI Body Site with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBodySiteLaterality",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBodySiteLaterality",
+      "title" : "eHDSI Body Site Laterality",
+      "description" : "This Value Set is used for the body structure site laterality qualifier. It indicates the body site laterality from which a laboratory specimen is collected.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.68"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.68"],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructure-lab-myhealtheu.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIBodyStructureLocation",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIBodyStructureLocation",
+      "title" : "eHDSI Body Structure Location Qualifier",
+      "description" : "This Value Set is used for the body structure location qualifier. Concepts modifying the anatomic location.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.80"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.80"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIBodyStructureLocationWithExceptions.html" : "eHDSI Body Structure Location Qualifier with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSICountry",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSICountry",
+      "title" : "eHDSI Country",
+      "description" : "The Value Set is used to identify the nationality of all persons and organizations.",
+      "systems" : ["urn:iso:std:iso:3166"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-lab-myhealtheu.html" : "Patient: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIExceptionalValue",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIExceptionalValue",
+      "title" : "eHDSI Exceptional Value",
+      "description" : "The Value Set is used to code exceptional values for the required binding in FHIR IGs",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.81"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.81"],
+      "uses" : {
+      },
+      "ValueSet-eHDSILabStudyTypeWithExceptions.html" : "eHDSI Laboratory Study Types with exceptions",
+      "ValueSet-eHDSILabSpecimenTypeWithExceptions.html" : "eHDSI Laboratory Specimen Type with exceptions",
+      "ValueSet-eHDSILabTechniqueWithExceptions.html" : "eHDSI Laboratory Technique with exceptions",
+      "ValueSet-eHDSIMorphologicAbnormalityWithExceptions.html" : "eHDSI Morphologic Abnormality with exceptions",
+      "ValueSet-eHDSIBodyStructureLocationWithExceptions.html" : "eHDSI Body Structure Location Qualifier with exceptions",
+      "ValueSet-eHDSIOrderReason.html" : "eHDSI Order Reason",
+      "ValueSet-eHDSIMedicalDeviceWithExceptions.html" : "eHDSI Medical Device with exceptions",
+      "ValueSet-eHDSIResultsCodedValueLaboratory.html" : "eHDSI Results Coded Value Laboratory with exceptions",
+      "ValueSet-eHDSIBodySiteWithExceptions.html" : "eHDSI Body Site with exceptions",
+      "ValueSet-eHDSIReferenceRangeAppliesToWithExceptions.html" : "eHDSI Reference Range Applies To with exceptions",
+      "ValueSet-eHDSIObservationInterpretationWithExceptions.html" : "eHDSI Observation Interpretation with exceptions",
+      "ValueSet-eHDSILabCodeWithExceptions.html" : "eHDSI Laboratory Codes with exceptions",
+      "ValueSet-eHDSIReferenceRangeMeaningWithExceptions.html" : "eHDSI Reference Range Meaning with exceptions",
+      "ValueSet-eHDSIAnimalSpeciesWithExceptions.html" : "eHDSI Animal Species with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIIllnessandDisorder",
+      "title" : "eHDSI Illness and Disorder",
+      "description" : "The complete content of ICD-10, excluding Chapter XX.",
+      "systems" : ["http://hl7.org/fhir/sid/icd-10"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.5"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.5"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIOrderReason.html" : "eHDSI Order Reason"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabCode",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabCode",
+      "title" : "eHDSI Laboratory Codes",
+      "description" : "This Value Set is used for the standard laboratory codes",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.70"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.70"],
+      "uses" : {
+      },
+      "ValueSet-eHDSILabCodeWithExceptions.html" : "eHDSI Laboratory Codes with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabSpecimenType",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabSpecimenType",
+      "title" : "eHDSI Laboratory Specimen Type",
+      "description" : "This Value Set is used for the kind of material that forms the specimen",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.67"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.67"],
+      "uses" : {
+      },
+      "ValueSet-eHDSILabSpecimenTypeWithExceptions.html" : "eHDSI Laboratory Specimen Type with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabStudyType",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabStudyType",
+      "title" : "eHDSI Laboratory Study Types",
+      "description" : "eHDSI Laboratory Study Types. \nNotes:\nNote 1: 26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2: Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3: Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.66"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.66"],
+      "uses" : {
+      },
+      "ValueSet-eHDSILabStudyTypeWithExceptions.html" : "eHDSI Laboratory Study Types with exceptions",
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DiagnosticReport-lab-myhealtheu.html" : "DiagnosticReport: Laboratory",
+      "StructureDefinition-DocumentReference-minimal-myhealtheu.html" : "DocumentReference: Minimal",
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILabTechnique",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILabTechnique",
+      "title" : "eHDSI Laboratory Technique",
+      "description" : "This Value Set is used to encode laboratory technique for the result measurement",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.79"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.79"],
+      "uses" : {
+      },
+      "ValueSet-eHDSILabTechniqueWithExceptions.html" : "eHDSI Laboratory Technique with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILaboratoryReportTypes",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILaboratoryReportTypes",
+      "title" : "eHDSI Laboratory Report Types",
+      "description" : "eHDSI Laboratory Report Types",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.52"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.52"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DiagnosticReport-lab-myhealtheu.html" : "DiagnosticReport: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSILanguage",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSILanguage",
+      "title" : "eHDSI Language",
+      "description" : "The Value Set is used to identify the language the document will be written with.",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.6"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.6"],
+      "uses" : {
+      },
+      "StructureDefinition-Composition-lab-myhealtheu.html" : "Composition: Laboratory",
+      "StructureDefinition-DiagnosticReport-lab-myhealtheu.html" : "DiagnosticReport: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIMedicalDevice",
+      "title" : "eHDSI Medical Device",
+      "description" : "eHDSI Medical Device",
+      "systems" : [
+        "urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.8"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.8"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIMedicalDeviceWithExceptions.html" : "eHDSI Medical Device with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIMicroorganism",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIMicroorganism",
+      "title" : "eHDSI Microorganism",
+      "description" : "eHDSI Morphologic Abnormality",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.78"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.78"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIResultsCodedValueLaboratory.html" : "eHDSI Results Coded Value Laboratory with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIMorphologicAbnormality",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIMorphologicAbnormality",
+      "title" : "eHDSI Morphologic Abnormality",
+      "description" : "The Value Set is used to code the morphological abnormalities of the anatomical location where the material is taken.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.69"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.69"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIMorphologicAbnormalityWithExceptions.html" : "eHDSI Morphologic Abnormality with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIObservationCategory",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIObservationCategory",
+      "title" : "eHDSI Observation category",
+      "description" : "This Value Set is used for the Laboratory Observation Results Category code",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.71"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.71"]
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIObservationInterpretation",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIObservationInterpretation",
+      "title" : "eHDSI Observation Interpretation",
+      "description" : "This Value Set is used for a rough qualitative interpretation of the Laboratory Observation Results",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+      ],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.73"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.73"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIObservationInterpretationWithExceptions.html" : "eHDSI Observation Interpretation with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIPerformerFunction",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIPerformerFunction",
+      "title" : "eHDSI Performer Function",
+      "description" : "Laboratory Performer Function",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.76"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.76"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-lab-myhealtheu.html" : "Observation Results: Laboratory"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIPresenceAbsence",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIPresenceAbsence",
+      "title" : "eHDSI Presence Absence",
+      "description" : "The Value Set is used to describe presence and absence findings (qualifier values) of the Laboratory Test Results",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.77"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.77"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIResultsCodedValueLaboratory.html" : "eHDSI Results Coded Value Laboratory with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIRareDisease",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIRareDisease",
+      "title" : "eHDSI Rare Disease",
+      "description" : "The Value Set is used to describe the problems and medication reasons.",
+      "systems" : ["urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.5"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.63"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.63"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIOrderReason.html" : "eHDSI Order Reason"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIReactionAllergy",
+      "title" : "eHDSI Reaction Allergy",
+      "description" : "Value Set is used to encode clinical manifestation of the allergic reaction.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.11"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.11"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIOrderReason.html" : "eHDSI Order Reason"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeAppliesTo",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIReferenceRangeAppliesTo",
+      "title" : "eHDSI Reference Range Applies To",
+      "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"
+      ],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.75"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.75"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIReferenceRangeAppliesToWithExceptions.html" : "eHDSI Reference Range Applies To with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIReferenceRangeMeaning",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIReferenceRangeMeaning",
+      "title" : "eHDSI Reference Range Meaning",
+      "description" : "This value set defines a set of codes for a reference range qualifier",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+      ],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.74"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.74"],
+      "uses" : {
+      },
+      "ValueSet-eHDSIReferenceRangeMeaningWithExceptions.html" : "eHDSI Reference Range Meaning with exceptions"
+    },
+    {
+      "url" : "http://terminology.ehdsi.eu/ValueSet/eHDSIUnit",
+      "version" : "0.0.1",
+      "status" : "draft",
+      "name" : "EHDSIUnit",
+      "title" : "eHDSI Unit",
+      "description" : "eHDSI Unit",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.16"],
+      "sources" : ["1.3.6.1.4.1.12559.11.10.1.3.1.42.16"],
+      "uses" : {
+      },
+      "StructureDefinition-Quantity-lab-myhealtheu.html" : "Quantity: Laboratory"
+    }
+  ]
+}
